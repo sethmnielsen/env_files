@@ -93,7 +93,7 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -hgo --file-type'
+alias ll='ls -lhGa --color=always | sed -re "s/^[^ ]* //"'
 alias la='ls -A'
 alias l='ls -1'
 
@@ -124,13 +124,17 @@ fi
 source ~/.rosrc
 
 # tmux current directory in status
-[[ -n "$TMUX" ]] && PROMPT_COMMAND='echo -n -e "\e]2;${PWD/${HOME}/~}\e\\"'
+# [[ -n "$TMUX" ]] && PROMPT_COMMAND='echo -n -e "\e]2;${PWD/${HOME}/~}\e\\"'
 
 . ~/.other
 LS_COLORS=$LS_COLORS:*.py=33:*.ipynb=35:*.cpp=32:*.h=32
 export PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH
+
 # For Tensorflow object detection
 #export PYTHONPATH=$PYTHONPATH:~/tb_detection/models/research:~/tb_detection/models/research/slim
 #export PATH=$PATH:/opt/gcc-arm-none-eabi-5_4-2016q3/bin
+
+# TeX
+export PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

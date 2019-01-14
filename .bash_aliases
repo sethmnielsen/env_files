@@ -5,7 +5,11 @@ alias udev_info='udevadm info -a -p $(udevadm info -q path -n /dev/bus/usb/002/0
 alias ros_env='env | grep ROS'
 alias sbash='source ~/.bashrc'
 alias qt='~/apps/Qt/Tools/QtCreator/bin/qtcreator'
+alias matlab='matlab -nosplash -nodesktop'
+alias sizes='find . -mindepth 1 -maxdepth 1|xargs du -hsc |sort -hr'
 
+
+alias catkin_make_cuda='catkin_make -DOpenCV_DIR=/usr/local/share/OpenCV -DVISUAL_MTT_CUDA=ON'
 
 
 
