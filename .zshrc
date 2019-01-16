@@ -135,10 +135,12 @@ pull_changes() {
 }
 push_changes() {
   B=$(pwd)
+  echo "\n--ENV--"
   cd ~/env
   git add -A
   git commit -m "Pushed changes"
   git push
+  echo "\n--SCHOOL--"
   cd ~/school
   git add -A
   git commit -m "Pushed changes"
@@ -147,11 +149,11 @@ push_changes() {
 }
 status_changes() {
   C=$(pwd)
+  echo "\n--ENV--"
   cd ~/env
-  echo "--ENV--"
   git status
-  cd ~/school
   echo "\n--SCHOOL--"
+  cd ~/school
   git status
   echo "\n"
   cd $C
