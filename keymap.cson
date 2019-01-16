@@ -35,6 +35,14 @@
   'ctrl-tab': 'pane:show-next-item'
   'ctrl-shift-tab': 'pane:show-previous-item'
 
+'atom-text-editor':
+  'ctrl-tab': 'pane:show-next-item'
+  'ctrl-shift-tab': 'pane:show-previous-item'
+  'ctrl-i': 'custom:move-cursor-up'
+  'ctrl-k': 'custom:move-cursor-down'
+  'ctrl-j': 'custom:move-cursor-left'
+  'ctrl-l': 'custom:move-cursor-right'
+
 'atom-text-editor:not([mini])':
   'ctrl-shift-X': 'editor:delete-line'
   'ctrl-shift-right': 'move-panes:move-right'

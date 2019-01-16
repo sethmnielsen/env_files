@@ -147,14 +147,13 @@ push_changes() {
   git push
   cd $B
 }
-status_changes() {
+gstats() {
   C=$(pwd)
   echo "\n--ENV--"
   cd ~/env
   git status
-  echo "\n--SCHOOL--"
+  echo "--SCHOOL--"
   cd ~/school
   git status
-  echo "\n"
   cd $C
 }
