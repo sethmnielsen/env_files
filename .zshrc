@@ -124,3 +124,35 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias python=ipython3
+
+pull_changes() {
+  A=$(pwd)
+  cd ~/env
+  git pull
+  cd ~/school
+  git pull
+  cd $A
+}
+push_changes() {
+  B=$(pwd)
+  cd ~/env
+  git add -A
+  git commit -m "Pushed changes"
+  git push
+  cd ~/school
+  git add -A
+  git commit -m "Pushed changes"
+  git push
+  cd $B
+}
+status_changes() {
+  C=$(pwd)
+  cd ~/env
+  echo "--ENV--"
+  git status
+  cd ~/school
+  echo "\n--SCHOOL--"
+  git status
+  echo "\n"
+  cd $C
+}
