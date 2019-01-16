@@ -13,8 +13,11 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-
+# For shortening prompt
 export DEFAULT_USER=seth
+
+# CUDA
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -37,7 +40,7 @@ ZSH_THEME="robbyrussell"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -59,7 +62,7 @@ ZSH_THEME="robbyrussell"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -85,6 +88,8 @@ ZSH_THEME="robbyrussell"
 plugins=(
   git
   tmux
+  fzf
+  pip
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -117,3 +122,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias python=ipython3
