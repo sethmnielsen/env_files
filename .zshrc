@@ -145,6 +145,7 @@ push_changes() {
   git add -A
   git commit -m "Pushed changes"
   git push
+  echo "\n"
   cd $B
 }
 gstats() {
