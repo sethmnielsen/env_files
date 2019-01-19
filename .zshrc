@@ -13,11 +13,9 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# For shortening prompt
-export DEFAULT_USER=seth
-
-# CUDA
-export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+export DEFAULT_USER=seth  # for shortening prompt
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
+export PIP_USER=yes  # default to pip install --user
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH

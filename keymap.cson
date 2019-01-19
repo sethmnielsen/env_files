@@ -32,16 +32,24 @@
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
 
 'body':
-  'ctrl-tab': 'pane:show-next-item'
-  'ctrl-shift-tab': 'pane:show-previous-item'
+  # 'ctrl-tab': 'pane:show-next-item'
+  # 'ctrl-shift-tab': 'pane:show-previous-item'
+  'alt-i': 'core:move-up'
+  'alt-k': 'core:move-down'
+  'alt-j': 'core:move-left'
+  'alt-l': 'core:move-right'
+
 
 'atom-text-editor':
   'ctrl-tab': 'pane:show-next-item'
   'ctrl-shift-tab': 'pane:show-previous-item'
-  'ctrl-i': 'custom:move-cursor-up'
-  'ctrl-k': 'custom:move-cursor-down'
-  'ctrl-j': 'custom:move-cursor-left'
-  'ctrl-l': 'custom:move-cursor-right'
+  # 'alt-i': 'custom:move-cursor-up'
+  # 'alt-k': 'custom:move-cursor-down'
+  # 'alt-j': 'custom:move-cursor-left'
+  # 'alt-l': 'custom:move-cursor-right'
+  'alt-shift-l': 'editor:select-to-next-subword-boundary'
+  'alt-shift-j': 'editor:select-to-previous-subword-boundary'
+
 
 'atom-text-editor:not([mini])':
   'ctrl-shift-X': 'editor:delete-line'
@@ -49,6 +57,12 @@
   'ctrl-shift-left': 'move-panes:move-left'
   'ctrl-shift-down': 'move-panes:move-down'
   'ctrl-shift-up': 'move-panes:move-up'
+
+  'ctrl-alt-i': 'editor:move-line-up'
+  'ctrl-alt-k': 'editor:move-line-down'
+  'alt-shift-i': 'editor:add-selection-above'
+  'alt-shift-k': 'editor:add-selection-below'
+
 
 'atom-workspace':
   'ctrl-shift-right': 'move-panes:move-right'
