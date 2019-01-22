@@ -1,0 +1,41 @@
+alias python=ipython3
+alias subup='git submodule update --init --recursive'
+alias ros_env='env | grep ROS'
+alias szsh='source ~/.zshrc'
+alias sizes='find . -mindepth 1 -maxdepth 1|xargs du -hsc |sort -hr'
+alias catkin_make_cuda='catkin_make -DOpenCV_DIR=/usr/local/share/OpenCV -DVISUAL_MTT_CUDA=ON'
+alias sdevel='source devel/setup.zsh'
+
+pull_changes() {
+  A=$(pwd)
+  cd ~/env
+  git pull
+  cd ~/school
+  git pull
+  cd $A
+}
+push_changes() {
+  B=$(pwd)
+  echo "\n--ENV--"
+  cd ~/env
+  git add -A
+  git commit -m "Pushed changes"
+  git push
+  echo "\n--SCHOOL--"
+  cd ~/school
+  git add -A
+  git commit -m "Pushed changes"
+  git push
+  echo "\n"
+  cd $B
+}
+gstats() {
+  C=$(pwd)
+  echo "\n--ENV--"
+  cd ~/env
+  git status
+  echo "--SCHOOL--"
+  cd ~/school
+  git status
+  cd $C
+}
