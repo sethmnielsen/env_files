@@ -33,9 +33,9 @@ gstats() {
   C=$(pwd)
   echo "\n--ENV--"
   cd ~/env
-  git status
+  git status -sb
   echo "--SCHOOL--"
   cd ~/school
-  git status
+  git status -sb
   cd $C
 }
