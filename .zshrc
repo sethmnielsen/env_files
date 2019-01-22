@@ -13,9 +13,19 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+
+
+
+##### Added by me #####
+
 export DEFAULT_USER=seth  # for shortening prompt
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
 export PIP_USER=yes  # default to pip install --user
+
+source /opt/ros/kinetic/setup.zsh
+
+
+##### oh-my-zsh #####
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -122,6 +132,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias python=ipython3
+alias subup='git submodule update --init --recursive'
+alias ros_env='env | grep ROS'
+alias szsh='source ~/.zshrc'
+alias sizes='find . -mindepth 1 -maxdepth 1|xargs du -hsc |sort -hr'
+alias catkin_make_cuda='catkin_make -DOpenCV_DIR=/usr/local/share/OpenCV -DVISUAL_MTT_CUDA=ON'
+alias sdevel='source devel/setup.zsh'
 
 pull_changes() {
   A=$(pwd)
