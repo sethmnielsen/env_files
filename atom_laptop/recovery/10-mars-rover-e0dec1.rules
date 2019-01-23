@@ -1,0 +1,45 @@
+# Rules for BYU Mars Rover
+
+# USB2Dynamixel
+DRIVERS=="usb", KERNELS=="2-2", ATTRS{product}=="FT232R USB UART", ATTRS{serial}=="AL02L2HN", SYMLINK+="rover/USB2Dynamixel"
+
+
+
+###################
+#     Cameras     #
+###################
+# Rear Wheel
+SUBSYSTEM=="video4linux", KERNEL=="video[0-9]", SUBSYSTEMS=="usb", DRIVERS=="usb", ATTRS{bMaxPower}=="500mA", ATTRS{serial}=="FE380960", SYMLINK+="rover/cameras/back_wheel"
+
+# Logitech c922x
+SUBSYSTEM=="video4linux", KERNEL=="video[0-9]*", ATTR{name}=="C922 Pro Stream Webcam", SUBSYSTEMS=="usb", DRIVERS=="usb", ATTRS{bMaxPower}=="500mA", ATTRS{product}=="C922 Pro Stream Webcam", ATTRS{serial}=="A3EAC4BF", SYMLINK+="rover/cameras/Logitech_C922x"
+
+# Camera 1
+SUBSYSTEM=="video4linux", KERNEL=="video[0-9]", ATTR{name}=="UVC Camera (046d:0807)",  SUBSYSTEMS=="usb", DRIVERS=="usb", ATTRS{bMaxPower}=="500mA", ATTRS{serial}=="9B86F460", SYMLINK+="rover/cameras/camera_1"
+
+# Camera 2
+SUBSYSTEM=="video4linux", KERNEL=="video[0-9]", ATTR{name}=="UVC Camera (046d:0807)",  SUBSYSTEMS=="usb", DRIVERS=="usb", ATTRS{bMaxPower}=="500mA", ATTRS{serial}=="2A1F4F80", SYMLINK+="rover/cameras/camera_2"
+
+# Forearm
+SUBSYSTEM=="video4linux", KERNEL=="video[0-9]", ATTR{name}=="UVC Camera (046d:0807)",  SUBSYSTEMS=="usb", DRIVERS=="usb", ATTRS{bMaxPower}=="500mA", ATTRS{serial}=="55A0E560", SYMLINK+="rover/cameras/forearm"
+
+#Inertial Sense
+SUBSYSTEM=="tty", KERNEL=="ttyUSB[0-9]", ATTRS{serial}=="AI05IGWJ", ATTRS{product}=="FT232R USB UART", ATTRS{bMaxPower}=="90mA", SYMLINK+="rover/ins"
+
+#Inertial Sense
+SUBSYSTEM=="tty", KERNEL=="ttyUSB[0-9]", ATTRS{serial}=="AI05IGVM", ATTRS{product}=="FT232R USB UART", ATTRS{bMaxPower}=="90mA", SYMLINK+="rover/ins"
+
+
+# Hand Camera
+SUBSYSTEM=="video4linux", KERNEL=="video[0-9]", ATTR{name}=="UVC Camera (046d:081b)",  SUBSYSTEMS=="usb", DRIVERS=="usb", ATTRS{bMaxPower}=="500mA", ATTRS{serial}=="0C6756E0", SYMLINK+="rover/cameras/hand"
+
+# Science Arduino
+SUBSYSTEM=="tty", KERNEL=="ttyUSB[0-9]", ATTRS{serial}=="A703BX2Z", ATTRS{product}=="FT232R USB UART", ATTRS{bMaxPower}=="90mA", SYMLINK+="rover/arduino"
+
+# ZED Camera
+KERNEL=="video*", SUBSYSTEM=="video", ATTRS{idProduct}=="f580", MODE:="0777", SYMLINK+="videoZED"
+
+##################
+#    Serial      #
+#################
+ATTRS{bInterfaceNumber}=="02", ATTRS{interface}=="FT4232H Hub Module", SYMLINK+="rover/jetson_to_psoc_serial"

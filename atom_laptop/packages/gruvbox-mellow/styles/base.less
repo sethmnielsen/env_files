@@ -1,0 +1,301 @@
+@import "syntax-variables";
+
+atom-text-editor {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+
+  .bracket-matcher .region {
+    // border-bottom: 1px solid #d5c4a1;
+    // box-sizing: border-box;
+    border: 1px solid rgba(222, 149, 54, 0.4);
+    border-radius: 3px;
+    background-color: rgba(255, 217, 0, 0.2);
+    z-index: 100;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+
+  .cursor {
+    border-color: @syntax-cursor-color;
+  }
+
+  .gutter {
+      background-color: @syntax-gutter-background-color;
+      color: @syntax-gutter-text-color;
+  }
+}
+
+
+atom-text-editor .gutter .line-number.cursor-line {
+  background-color: @syntax-gutter-background-color-selected;
+  color: @syntax-gutter-text-color-selected;
+}
+
+atom-text-editor .gutter .line-number.cursor-line-no-selection {
+  color: @syntax-gutter-text-color-selected;
+}
+
+atom-text-editor .wrap-guide {
+  color: @syntax-wrap-guide-color;
+}
+
+atom-text-editor .indent-guide {
+  color: @syntax-indent-guide-color;
+}
+
+atom-text-editor .invisible-character {
+  color: @syntax-invisible-character-color;
+}
+
+atom-text-editor .search-results .syntax--marker .region {
+  background-color: transparent;
+  border: @syntax-result-marker-color;
+}
+
+atom-text-editor .search-results .syntax--marker.current-result .region {
+  border: @syntax-result-marker-color-selected;
+}
+
+
+.syntax--punctuation.syntax--definition.syntax--tag {
+  color: #83a598;
+}
+
+.syntax--punctuation.syntax--definition.syntax--entity {
+  color: #d3869b;
+}
+
+.syntax--constant {
+  color: #d3869b;
+}
+
+.syntax--entity {
+  color: @darkgreen;
+}
+
+.syntax--keyword.syntax--operator.syntax--comparison, .syntax--keyword.syntax--operator, .syntax--keyword.syntax--operator.syntax--symbolic, .syntax--keyword.syntax--operator.syntax--string, .syntax--keyword.syntax--operator.syntax--assignment, .syntax--keyword.syntax--operator.syntax--arithmetic, .syntax--keyword.syntax--operator.syntax--class, .syntax--keyword.syntax--operator.syntax--key, .syntax--keyword.syntax--operator.syntax--logical {
+  color: #fe8019;
+}
+
+.syntax--keyword, .syntax--keyword.syntax--operator.syntax--new, .syntax--keyword.syntax--other, .syntax--keyword.syntax--control {
+  color: #d391e6;
+}
+
+.syntax--storage {
+  color: #83a598;
+}
+
+.syntax--string:not(.syntax--string.syntax--unquoted.syntax--old-plist:not(.syntax--string.syntax--unquoted.syntax--heredoc)), .syntax--string.syntax--unquoted.syntax--heredoc .syntax--string, .syntax--string .syntax--constant.syntax--character.syntax--escape {
+  color: #b8bb26;
+}
+
+.syntax--string.syntax--quoted.syntax--double.syntax--html .syntax--invalid.syntax--illegal.syntax--bad-ampersand.syntax--html {
+  color: #b8bb26;
+}
+
+.syntax--comment {
+  font-style: italic;
+  // color: #928374;
+  color: #928C86;
+}
+
+.syntax--string.syntax--regexp .syntax--constant.syntax--character.syntax--escape {
+  color: #b8bb26;
+}
+
+.syntax--support {
+  color: @yellow;
+}
+
+.syntax--entity.syntax--name.syntax--val.syntax--declaration,
+.syntax--entity.syntax--name.syntax--variable,
+.syntax--meta.syntax--definition.syntax--variable,
+.syntax--storage.syntax--type.syntax--variable,
+.syntax--variable,
+.syntax--variable.syntax--interpolation .syntax--variable,
+.syntax--variable.syntax--other.syntax--interpolation .syntax--variable,
+.syntax--variable.syntax--parameter.syntax--output.syntax--function.syntax--matlab,
+.syntax--variable.syntax--parameter.syntax--sass,
+.syntax--variable.syntax--other.syntax--interpolation.syntax--less,
+.syntax--variable.syntax--control.syntax--import.syntax--include.syntax--pug {
+  color: #83a598;
+}
+
+.syntax--variable.syntax--language,
+.syntax--meta.syntax--function-call,
+.syntax--text .syntax--source, .syntax--string.syntax--unquoted.syntax--heredoc, .syntax--source .syntax--source {
+  color: #fdf4c1;
+}
+
+.syntax--invalid {
+  color: #fdf4c1;
+  background-color: #932b1e;
+}
+
+.syntax--string.syntax--quoted .syntax--source {
+  color: #b8bb26;
+}
+
+.syntax--string {
+  color: #b8bb26;
+}
+
+.syntax--support.syntax--constant {
+  color: @yellow;
+}
+
+.syntax--support.syntax--class {
+  color: @darkgreen;
+}
+
+
+.syntax--constant.syntax--other.syntax--color.syntax--rgb-value {
+  color: #83a598;
+   .syntax--punctuation.syntax--definition {
+    color: inherit;
+  }
+}
+
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--name.syntax--tag {
+  color: #fa5c4b;
+}
+
+.syntax--meta.syntax--selector.syntax--css, .syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #b8bb26;
+}
+
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--class {
+  color: #b8bb26;
+}
+
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--placeholder.syntax--scss {
+  color: #d5859b;
+  .syntax--punctuation.syntax--definition.syntax--entity.syntax--scss {
+    color: inherit;
+  }
+}
+
+.syntax--support.syntax--type.syntax--property-name.syntax--css {
+  color: @darkgreen;
+}
+
+.syntax--meta.syntax--preprocessor.syntax--at-rule .syntax--keyword.syntax--control.syntax--at-rule {
+  color: @yellow;
+}
+
+.syntax--meta.syntax--property-value .syntax--constant {
+  color: @yellow;
+}
+
+.syntax--meta.syntax--property-value .syntax--support.syntax--constant.syntax--named-color.syntax--css {
+  color: #fe8019;
+}
+
+.syntax--meta.syntax--constructor.syntax--argument.syntax--css {
+  color: @yellow;
+}
+
+.syntax--meta.syntax--diff, .syntax--meta.syntax--diff.syntax--header {
+  color: #fdf4c1;
+  background-color: #83a598;
+}
+
+//  MARKDOWN
+
+.syntax--markup.syntax--deleted {
+  color: #fdf4c1;
+  background-color: #fa5c4b;
+}
+
+.syntax--markup.syntax--changed {
+  color: #fdf4c1;
+  background-color: @yellow;
+}
+
+.syntax--markup.syntax--inserted {
+  color: #fdf4c1;
+  background-color: @darkgreen;
+}
+
+.syntax--markup.syntax--bold {
+  font-weight: bold;
+}
+
+.syntax--markup.syntax--italic {
+  font-style: italic;
+}
+
+.syntax--markup.syntax--heading {
+  font-weight: bold;
+  color: @darkgreen;
+}
+
+.syntax--entity.syntax--name.syntax--type.syntax--class.syntax--php {
+  color: @darkgreen;
+}
+
+.syntax--keyword.syntax--other.syntax--phpdoc {
+  color: #928374;
+}
+
+.syntax--constant.syntax--numeric.syntax--css, .syntax--keyword.syntax--other.syntax--unit.syntax--css {
+  color: #d3869b;
+}
+
+.syntax--punctuation.syntax--definition.syntax--entity.syntax--css,.syntax--punctuation.syntax--definition.syntax--entity.syntax--scss {
+  color: inherit;
+}
+
+.syntax--variable.syntax--language.syntax--js {
+  color: @yellow;
+}
+
+.syntax--storage.syntax--type.syntax--dired.syntax--item.syntax--directory, .syntax--dired.syntax--item.syntax--directory {
+  color: @darkgreen;
+}
+
+.syntax--entity.syntax--name.syntax--tag.syntax--block.syntax--any.syntax--html, .syntax--meta.syntax--tag.syntax--inline.syntax--any.syntax--html, .syntax--entity.syntax--name.syntax--tag.syntax--inline.syntax--any.syntax--html, .syntax--meta.syntax--tag.syntax--block.syntax--any.syntax--html {
+  color: @darkgreen;
+}
+
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--html {
+  color: #6fa598;
+}
+.syntax--constant.syntax--character.syntax--entity.syntax--html, .syntax--punctuation.syntax--definition.syntax--entity.syntax--html {
+  color: #d5859b;
+}
+.syntax--string.syntax--quoted.syntax--double.syntax--html {
+  color: #b8bb26;
+}
+
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--attribute.syntax--scss {
+  color: #CC6666;
+}
+
+atom-text-editor {
+  .gutter {
+    .line-number.linter-warning .icon-right:before {
+      color: @syntax-color-modified;
+    }
+    .line-number.linter-error .icon-right:before {
+      color: @syntax-color-removed;
+    }
+  }
+}
+
+atom-text-editor {
+  .highlights {
+    .linter-warning .region {
+      border: 1px solid @syntax-color-modified;
+      background-image: none;
+      background-color: fade(saturate(@syntax-color-modified, 50%), 20%);
+    }
+    .linter-error .region {
+      border: 1px solid @syntax-color-removed;
+      background-image: none;
+      background-color: fade(saturate(@syntax-color-removed, 50%), 20%);
+    }
+  }
+}
