@@ -5,6 +5,7 @@ alias szsh='source ~/.zshrc'
 alias sizes='find . -mindepth 1 -maxdepth 1|xargs du -hsc |sort -hr'
 alias catkin_make_cuda='catkin_make -DOpenCV_DIR=/usr/local/share/OpenCV -DVISUAL_MTT_CUDA=ON'
 alias sdevel='source devel/setup.zsh'
+alias catkin_make_py3='catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3'
 
 pull_changes() {
   A=$(pwd)

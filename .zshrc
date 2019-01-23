@@ -21,8 +21,9 @@ compinit
 export DEFAULT_USER=seth  # for shortening prompt
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
 export PIP_USER=yes  # default to pip install --user
+export PYTHONPATH=$PYTHONPATH:/home/seth/dev/boat_landing_sim/holodeck
 
-source /opt/ros/kinetic/setup.zsh
+source ~/.rosrc
 
 
 ##### oh-my-zsh #####
