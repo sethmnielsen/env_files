@@ -1,0 +1,73 @@
+"*":
+  "autocomplete-plus":
+    enableAutoActivation: false
+  core:
+    autoHideMenuBar: false
+    closeDeletedFileTabs: true
+    customFileTypes:
+      "source.cmake": [
+        "CMakeLists.txt"
+      ]
+      "source.octave": [
+        "m"
+      ]
+      "source.shell": [
+        "aliasrc"
+        "rosrc"
+      ]
+      "source.yaml": [
+        "rviz"
+      ]
+      "text.xml": [
+        "launch"
+      ]
+    disabledPackages: [
+      "spell-check"
+      "wrap-guide"
+      "dbg-gdb"
+      "dbg"
+      "output-panel"
+    ]
+    packagesWithKeymapsDisabled: [
+      "move-panes"
+    ]
+    projectHome: "/home/seth/BYU-Mars-Rover/"
+    telemetryConsent: "limited"
+    themes: [
+      "gruvbox-dark-ui"
+      "gruvbox-mellow"
+    ]
+  "dark-flat-ui":
+    accentColor: "purple"
+  "dbg-gdb":
+    logToConsole: true
+  "disable-keybindings":
+    prefixKeys: [
+      "ctrl-k"
+    ]
+  editor:
+    showIndentGuide: true
+    tabLength: 4
+    tabType: "soft"
+  "exception-reporting":
+    userId: "27ba0f0a-acd2-4c24-8aa1-8d3d29fe1e8e"
+  "neutron-dark-ui":
+    fontSize: 10
+  "northem-dark-atom-ui": {}
+  "one-dark-ui":
+    stickyHeaders: true
+  "one-light-ui":
+    tabSizing: "Minimum"
+  script: {}
+  "tree-view": {}
+  welcome:
+    showOnStartup: false
+".plist.text.xml":
+  editor:
+    tabLength: 2
+".text.xml":
+  editor:
+    tabLength: 2
+".text.xml.xsl":
+  editor:
+    tabLength: 42
