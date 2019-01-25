@@ -20,11 +20,15 @@ compinit
 
 export DEFAULT_USER=seth  # for shortening prompt
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
-export PIP_USER=yes  # default to pip install --user
+# export PIP_USER=yes  # default to pip install --user
 export PYTHONPATH=$PYTHONPATH:/home/seth/dev/boat_landing_sim/holodeck
+source ~/.rosrc
 
-#source ~/.rosrc
-
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/projects
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source $HOME/.local/bin/virtualenvwrapper.sh
+source $HOME/.virtualenvs/default/bin/activate
 
 ##### oh-my-zsh #####
 
