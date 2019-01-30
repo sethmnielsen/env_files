@@ -8,6 +8,7 @@ alias catkin_make_py3='catkin_make -DPYTHON_EXECUTABLE=/home/seth/.virtualenvs/d
 alias sdevel='source devel/setup.zsh'
 alias unzip='unzip -q'
 alias rf_holodeck='python ~/dev/boat_landing_sim/src/rosflight_holodeck/python/rosflight_holodeck.py'
+alias gs='git status'
 
 pull_changes() {
   A=$(pwd)

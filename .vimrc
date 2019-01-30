@@ -133,4 +133,4 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 "Sets xml syntax highlighting for .launch files
 au BufRead,BufNewFile *.launch set filetype=xml
 au BufRead,BufNewFile .rosrc set filetype=sh
-au BufRead,BufNewFile .aliasrc set fileypte=sh
+au BufRead,BufNewFile .aliasrc set filetype=sh
