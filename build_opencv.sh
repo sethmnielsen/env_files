@@ -187,6 +187,7 @@ if $CUDA ; then
                  -DWITH_NVCUVID=ON \
                  -DWITH_QT=ON \
                  -DWITH_GTK=OFF \
+                 -DBUILD_opencv_cudacodec=OFF \
                  -DOPENCV_EXTRA_MODULES_PATH=~/Downloads/opencv_contrib-${OPENCV_VERSION}/modules .. >> cmake_log.txt 2>&1
 else
 

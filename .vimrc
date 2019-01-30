@@ -52,9 +52,12 @@ nmap <space> <leader>
 vmap <space> <leader>
 set backspace=indent,eol,start
 
+" Change arrowkeys to i,j,k,l
+
+
 " Escape Mappings for insert and visual modes
-inoremap jk <esc>
-vnoremap jk <esc>
+"inoremap jk <esc>
+"vnoremap jk <esc>
 
 " Mappings to edit .vimrc and source/save .vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -129,4 +132,5 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 "Sets xml syntax highlighting for .launch files
 au BufRead,BufNewFile *.launch set filetype=xml
-au BufRead,BufNewFile *.rosrc set filetype=sh
+au BufRead,BufNewFile .rosrc set filetype=sh
+au BufRead,BufNewFile .aliasrc set fileypte=sh

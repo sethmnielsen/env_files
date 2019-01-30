@@ -6,6 +6,8 @@ alias sizes='find . -mindepth 1 -maxdepth 1|xargs du -hsc |sort -hr'
 alias catkin_make_cuda='catkin_make -DOpenCV_DIR=/usr/local/share/OpenCV -DVISUAL_MTT_CUDA=ON'
 alias catkin_make_py3='catkin_make -DPYTHON_EXECUTABLE=/home/seth/.virtualenvs/default/bin/python3'
 alias sdevel='source devel/setup.zsh'
+alias unzip='unzip -q'
+alias rf_holodeck='python ~/dev/boat_landing_sim/src/rosflight_holodeck/python/rosflight_holodeck.py'
 
 pull_changes() {
   A=$(pwd)
