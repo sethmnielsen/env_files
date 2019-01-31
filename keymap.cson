@@ -32,32 +32,32 @@
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
 
 'body':
-  # 'ctrl-tab': 'pane:show-next-item'
-  # 'ctrl-shift-tab': 'pane:show-previous-item'
-  'alt-i': 'core:move-up'
-  'alt-k': 'core:move-down'
-  'alt-j': 'core:move-left'
+  'alt-k': 'core:move-up'
+  'alt-j': 'core:move-down'
+  'alt-h': 'core:move-left'
   'alt-l': 'core:move-right'
   'shift-backspace': 'core:delete'
-  'ctrl-i': 'core:page-up'
-  'ctrl-k': 'core:page-down'
+  'ctrl-k': 'core:page-up'
+  'ctrl-j': 'core:page-down'
+  'ctrl-shift-right': 'move-panes:move-right'
+  'ctrl-shift-left': 'move-panes:move-left'
+  'ctrl-shift-down': 'move-panes:move-down'
+  'ctrl-shift-up': 'move-panes:move-up'
 
 
 'atom-text-editor':
-  'ctrl-tab': 'pane:show-next-item'
-  'ctrl-shift-tab': 'pane:show-previous-item'
   'alt-shift-l': 'editor:select-to-next-subword-boundary'
-  'alt-shift-j': 'editor:select-to-previous-subword-boundary'
+  'alt-shift-h': 'editor:select-to-previous-subword-boundary'
 
-  'ctrl-j': 'editor:move-to-first-character-of-line'
-  'ctrl-shift-j': 'editor:select-to-first-character-of-line'
+  'ctrl-h': 'editor:move-to-first-character-of-line'
+  'ctrl-shift-h': 'editor:select-to-first-character-of-line'
   'ctrl-l': 'editor:move-to-end-of-screen-line'
   'ctrl-shift-l': 'editor:select-to-end-of-line'
   'ctrl-alt-g': 'core:move-to-top'
   'ctrl-shift-G': 'core:move-to-bottom'
 
-  'ctrl-j': 'editor:move-to-first-character-of-line'
-  'ctrl-shift-j': 'editor:select-to-first-character-of-line'
+  'ctrl-h': 'editor:move-to-first-character-of-line'
+  'ctrl-shift-h': 'editor:select-to-first-character-of-line'
   'ctrl-l': 'editor:move-to-end-of-screen-line'
   'ctrl-shift-l': 'editor:select-to-end-of-line'
   'ctrl-alt-g': 'core:move-to-top'
@@ -67,13 +67,16 @@
 
 'atom-text-editor:not([mini])':
   'ctrl-shift-X': 'editor:delete-line'
-  'ctrl-alt-i': 'editor:move-line-up'
-  'ctrl-alt-k': 'editor:move-line-down'
-  'alt-shift-i': 'editor:add-selection-above'
-  'alt-shift-k': 'editor:add-selection-below'
+  'ctrl-alt-k': 'editor:move-line-up'
+  'ctrl-alt-j': 'editor:move-line-down'
+  'alt-shift-k': 'editor:add-selection-above'
+  'alt-shift-j': 'editor:add-selection-below'
+  'ctrl-j': 'core:page-down'
 
-  'ctrl-h': 'editor:join-lines'
-
+  'ctrl-shift-right': 'move-panes:move-right'
+  'ctrl-shift-left': 'move-panes:move-left'
+  'ctrl-shift-down': 'move-panes:move-down'
+  'ctrl-shift-up': 'move-panes:move-up'
 
 'atom-workspace':
   'ctrl-shift-right': 'move-panes:move-right'
@@ -81,8 +84,8 @@
   'ctrl-shift-down': 'move-panes:move-down'
   'ctrl-shift-up': 'move-panes:move-up'
 
-  'ctrl-j': 'editor:move-to-first-character-of-line'
-  'ctrl-shift-j': 'editor:select-to-first-character-of-line'
+  'ctrl-h': 'editor:move-to-first-character-of-line'
+  'ctrl-shift-h': 'editor:select-to-first-character-of-line'
   'ctrl-l': 'editor:move-to-end-of-screen-line'
   'ctrl-shift-l': 'editor:select-to-end-of-line'
   'ctrl-alt-g': 'core:move-to-top'
