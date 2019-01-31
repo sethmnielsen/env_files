@@ -38,30 +38,41 @@
   'alt-k': 'core:move-down'
   'alt-j': 'core:move-left'
   'alt-l': 'core:move-right'
+  'shift-backspace': 'core:delete'
+  'ctrl-i': 'core:page-up'
+  'ctrl-k': 'core:page-down'
 
 
 'atom-text-editor':
   'ctrl-tab': 'pane:show-next-item'
   'ctrl-shift-tab': 'pane:show-previous-item'
-  # 'alt-i': 'custom:move-cursor-up'
-  # 'alt-k': 'custom:move-cursor-down'
-  # 'alt-j': 'custom:move-cursor-left'
-  # 'alt-l': 'custom:move-cursor-right'
   'alt-shift-l': 'editor:select-to-next-subword-boundary'
   'alt-shift-j': 'editor:select-to-previous-subword-boundary'
+
+  'ctrl-j': 'editor:move-to-first-character-of-line'
+  'ctrl-shift-j': 'editor:select-to-first-character-of-line'
+  'ctrl-l': 'editor:move-to-end-of-screen-line'
+  'ctrl-shift-l': 'editor:select-to-end-of-line'
+  'ctrl-alt-g': 'core:move-to-top'
+  'ctrl-shift-G': 'core:move-to-bottom'
+
+  'ctrl-j': 'editor:move-to-first-character-of-line'
+  'ctrl-shift-j': 'editor:select-to-first-character-of-line'
+  'ctrl-l': 'editor:move-to-end-of-screen-line'
+  'ctrl-shift-l': 'editor:select-to-end-of-line'
+  'ctrl-alt-g': 'core:move-to-top'
+  'ctrl-shift-G': 'core:move-to-bottom'
+
 
 
 'atom-text-editor:not([mini])':
   'ctrl-shift-X': 'editor:delete-line'
-  'ctrl-shift-right': 'move-panes:move-right'
-  'ctrl-shift-left': 'move-panes:move-left'
-  'ctrl-shift-down': 'move-panes:move-down'
-  'ctrl-shift-up': 'move-panes:move-up'
-
   'ctrl-alt-i': 'editor:move-line-up'
   'ctrl-alt-k': 'editor:move-line-down'
   'alt-shift-i': 'editor:add-selection-above'
   'alt-shift-k': 'editor:add-selection-below'
+
+  'ctrl-h': 'editor:join-lines'
 
 
 'atom-workspace':
@@ -69,3 +80,10 @@
   'ctrl-shift-left': 'move-panes:move-left'
   'ctrl-shift-down': 'move-panes:move-down'
   'ctrl-shift-up': 'move-panes:move-up'
+
+  'ctrl-j': 'editor:move-to-first-character-of-line'
+  'ctrl-shift-j': 'editor:select-to-first-character-of-line'
+  'ctrl-l': 'editor:move-to-end-of-screen-line'
+  'ctrl-shift-l': 'editor:select-to-end-of-line'
+  'ctrl-alt-g': 'core:move-to-top'
+  'ctrl-shift-G': 'core:move-to-bottom'
