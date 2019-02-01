@@ -16,6 +16,7 @@ pull_changes() {
   git pull
   cd ~/school
   git pull
+  git submodule update --recursive
   cd $A
 }
 push_changes() {
@@ -23,12 +24,16 @@ push_changes() {
   echo "\n--ENV--"
   cd ~/env
   git add -A
-  git commit -m "Pushed changes"
+  git commit -m "Auto-pushed changes"
   git push
   echo "\n--SCHOOL--"
-  cd ~/school
+  cd ~/school/flight_dynamics/
   git add -A
-  git commit -m "Pushed changes"
+  git commit -m "Auto-pushed changes"
+  git push
+  cd ..
+  git add -A
+  git commit -m "Auto-pushed changes"
   git push
   echo "\n"
   cd $B
@@ -40,6 +45,9 @@ gstats() {
   git status -s
   echo "--SCHOOL--"
   cd ~/school
+  git status -s
+  cd ~/school/flight_dynamics
+  echo "  --flight_dynamics--"
   git status -s
   cd $C
 }
