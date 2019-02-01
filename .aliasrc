@@ -26,12 +26,13 @@ push_changes() {
   git add -A
   git commit -m "Auto-pushed changes"
   git push
-  echo "\n--SCHOOL--"
+  echo "\n--flight_dyanamics--"
   cd ~/school/flight_dynamics/
   git add -A
   git commit -m "Auto-pushed changes"
   git push
   cd ..
+  echo "\n--SCHOOL--"
   git add -A
   git commit -m "Auto-pushed changes"
   git push
