@@ -30,7 +30,7 @@ push_changes() {
   cd ~/school/flight_dynamics/
   git add -A
   git commit -m "Auto-pushed changes"
-  git push
+  git push -u origin master
   cd ..
   echo "\n--SCHOOL--"
   git add -A
