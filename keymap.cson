@@ -55,6 +55,7 @@
   'ctrl-shift-l': 'editor:select-to-end-of-line'
   # 'ctrl-alt-g': 'core:move-to-top'
   'ctrl-shift-G': 'core:move-to-bottom'
+  'ctrl-alt-l': 'editor:select-line'
 
 
 'atom-text-editor:not([mini])':
@@ -82,3 +83,4 @@
   'ctrl-shift-l': 'editor:select-to-end-of-line'
   # 'ctrl-alt-g': 'core:move-to-top'
   'ctrl-shift-G': 'core:move-to-bottom'
+  'ctrl-alt-l': 'editor:select-line'
