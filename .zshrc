@@ -30,6 +30,10 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source $HOME/.local/bin/virtualenvwrapper.sh
 source $HOME/.virtualenvs/default/bin/activate
 
+# For autocomplete-python to work correctly
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 ##### oh-my-zsh #####
 
 # If you come from bash you might have to change your $PATH.
