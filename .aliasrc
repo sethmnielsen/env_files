@@ -11,6 +11,7 @@ alias unzip='unzip -q'
 alias rf_holodeck='roslaunch rosflight_holodeck rf_holodeck.launch'
 alias gs='git status'
 alias atm='atom ~/dev/boat_landing_sim'
+alias atmf='atom ~/school/flight_dynamics/mavsim_python'
 
 pull_changes() {
   A=$(pwd)

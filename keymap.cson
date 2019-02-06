@@ -37,8 +37,6 @@
   'alt-h': 'core:move-left'
   'alt-l': 'core:move-right'
   'shift-backspace': 'core:delete'
-  'ctrl-k': 'core:page-up'
-  'ctrl-j': 'core:page-down'
   'ctrl-shift-right': 'move-panes:move-right'
   'ctrl-shift-left': 'move-panes:move-left'
   'ctrl-shift-down': 'move-panes:move-down'
@@ -59,9 +57,10 @@
   'ctrl-shift-h': 'editor:select-to-first-character-of-line'
   'ctrl-l': 'editor:move-to-end-of-screen-line'
   'ctrl-shift-l': 'editor:select-to-end-of-line'
-  # 'ctrl-alt-g': 'core:move-to-top'
   'ctrl-shift-G': 'core:move-to-bottom'
   'ctrl-alt-l': 'editor:select-line'
+  'ctrl-k': 'user:up-10-lines'
+  'ctrl-j': 'user:down-10-lines'
 
 
 'atom-text-editor:not([mini])':
@@ -70,7 +69,6 @@
   'ctrl-alt-j': 'editor:move-line-down'
   'alt-shift-k': 'editor:add-selection-above'
   'alt-shift-j': 'editor:add-selection-below'
-  'ctrl-j': 'core:page-down'
   'ctrl-shift-j': 'editor:join-lines'
 
   'ctrl-shift-right': 'move-panes:move-right'
