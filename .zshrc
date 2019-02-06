@@ -17,13 +17,13 @@ compinit
 
 
 ##### Added by me #####
-
 export DEFAULT_USER=seth  # for shortening prompt
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
 # export PIP_USER=yes  # default to pip install --user
-export PYTHONPATH=/home/seth/dev/boat_landing_sim/holodeck:$PYTHONPATH
-export PYTHONPATH=/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python:$PYTHONPATH
-# export PYTHONPATH=/home/seth/.virtualenvs/default/lib/python3.6/site-packages:$PYTHONPATH
+export PYTHONPATH=/home/seth/dev/boat_landing_sim/holodeck
+export PYTHONPATH=$PYTHONPATH:/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python
+# export PYTHONPATH=$PYTHONPATH:/home/seth/.virtualenvs/default/lib/python3.6/site-packages
+
 source ~/.rosrc
 
 export WORKON_HOME=$HOME/.virtualenvs
@@ -42,7 +42,7 @@ export LANG=en_US.UTF-8
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/seth/.oh-my-zsh"
+export ZSH="/home/seth/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
