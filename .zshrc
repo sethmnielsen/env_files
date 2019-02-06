@@ -21,7 +21,9 @@ compinit
 export DEFAULT_USER=seth  # for shortening prompt
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
 # export PIP_USER=yes  # default to pip install --user
-export PYTHONPATH=$PYTHONPATH:/home/seth/dev/boat_landing_sim/holodeck
+export PYTHONPATH=/home/seth/dev/boat_landing_sim/holodeck:$PYTHONPATH
+export PYTHONPATH=/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python:$PYTHONPATH
+# export PYTHONPATH=/home/seth/.virtualenvs/default/lib/python3.6/site-packages:$PYTHONPATH
 source ~/.rosrc
 
 export WORKON_HOME=$HOME/.virtualenvs
