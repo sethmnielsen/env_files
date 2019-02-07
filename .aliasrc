@@ -24,7 +24,8 @@ pull_changes() {
   git pull
   cd ~/school
   git pull
-  git submodule update --init --recursive
+  cd flight_dynamics
+  git pull
   cd $A
 }
 push_changes() {
