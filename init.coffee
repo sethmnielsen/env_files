@@ -11,18 +11,34 @@
 #     console.log "Saved! #{editor.getPath()}"
 
 atom.commands.add 'atom-text-editor', 'user:up-10-lines', ->
-    return unless editor = atom.workspace.getActiveTextEditor()
+  return unless editor = atom.workspace.getActiveTextEditor()
 
-    editor.moveUp(10)
+  editor.moveUp(10)
 
 atom.commands.add 'atom-text-editor', 'user:down-10-lines', ->
-    return unless editor = atom.workspace.getActiveTextEditor()
+  return unless editor = atom.workspace.getActiveTextEditor()
 
-    editor.moveDown(10)
+  editor.moveDown(10)
 
 atom.commands.add 'atom-text-editor', 'user:new-paragraph', ->
-    return unless editor = atom.workspace.getActiveTextEditor()
+  return unless editor = atom.workspace.getActiveTextEditor()
 
-    editor.insertNewlineBelow()
-    editor.insertNewlineBelow()
-    editor.insertNewlineAbove()
+  editor.insertNewlineBelow()
+  editor.insertNewlineBelow()
+  editor.insertNewlineAbove()
+
+atom.commands.add 'atom-text-editor', 'user:select-line-up', ->
+  return unless editor = atom.workspace.getActiveTextEditor()
+
+  col = editor.getCursorBufferPosition().column
+  editor.moveToBeginningOfLine() if col != 0
+  editor.selectUp()
+
+atom.commands.add 'atom-text-editor', 'user:deselect', (e) ->
+  return unless editor = atom.workspace.getActiveTextEditor()
+  if editor
+    for selection in editor.getSelections()
+        if selection.isEmpty()
+            e.abortKeyBinding()
+        else
+            selection.clear()
