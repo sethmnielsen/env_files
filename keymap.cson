@@ -75,6 +75,7 @@
   'ctrl-shift-left': 'move-panes:move-left'
   'ctrl-shift-down': 'move-panes:move-down'
   'ctrl-shift-up': 'move-panes:move-up'
+  'ctrl-alt-enter': 'user:new-paragraph'
 
 'atom-workspace':
   'ctrl-shift-right': 'move-panes:move-right'

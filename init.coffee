@@ -19,3 +19,10 @@ atom.commands.add 'atom-text-editor', 'user:down-10-lines', ->
     return unless editor = atom.workspace.getActiveTextEditor()
 
     editor.moveDown(10)
+
+atom.commands.add 'atom-text-editor', 'user:new-paragraph', ->
+    return unless editor = atom.workspace.getActiveTextEditor()
+
+    editor.insertNewlineBelow()
+    editor.insertNewlineBelow()
+    editor.insertNewlineAbove()
