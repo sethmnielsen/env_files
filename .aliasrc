@@ -27,6 +27,7 @@ pull_changes() {
   cd ~/school
   git pull
   cd flight_dynamics
+  git checkout master
   git pull
   cd $A
 }
