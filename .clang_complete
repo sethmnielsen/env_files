@@ -1,0 +1,10 @@
+-I/opt/ros/melodic/include
+-I/usr/include/eigen3
+-I/usr/include/python3.6
+-I/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/include
+-I/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/lib/geometry/include
+-I/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/lib/firmware/lib
+-I/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/lib/firmware/comms
+-I/home/seth/dev/boat_landing_sim/src/rosflight/rosflight_firmware/include
+-I/home/seth/dev/boat_landing_sim/src/rosflight/rosflight_firmware/firmware/include
+-I/home/seth/dev/boat_landing_sim/devel/include
