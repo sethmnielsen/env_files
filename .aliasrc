@@ -24,10 +24,9 @@ pull_changes() {
   A=$(pwd)
   cd ~/env
   git pull
-  cd ~/school
+  cd ~/school/flight_dynamics
   git pull
-  cd flight_dynamics
-  git checkout master
+  cd .. 
   git pull
   cd $A
 }
