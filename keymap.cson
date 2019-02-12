@@ -36,7 +36,7 @@
   'alt-j': 'core:move-down'
   'alt-k': 'core:move-up'
   'alt-l': 'core:move-right'
-  'shift-backspace': 'core:delete'
+  'shift-alt-backspace': 'core:delete'
 
 'atom-text-editor:not([mini])':
   'ctrl-shift-X': 'editor:delete-line'
