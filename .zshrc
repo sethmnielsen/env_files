@@ -17,6 +17,7 @@ compinit
 
 
 ##### Added by me #####
+export EDITOR=vim
 export DEFAULT_USER=seth  # for shortening prompt
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
 # export PIP_USER=yes  # default to pip install --user
