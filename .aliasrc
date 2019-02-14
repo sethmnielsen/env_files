@@ -15,6 +15,7 @@ alias rf_holodeck='roslaunch rosflight_holodeck rf_holodeck.launch'
 alias rfh="cd ~/dev/boat_landing_sim/src/rosflight_holodeck"
 alias atmb='atom ~/dev/boat_landing_sim'
 alias atmf='atom ~/school/flight_dynamics/mavsim_python'
+alias atmr='atom ~/school/robotic_vision'
 alias o='exit'
 
 ### git ###

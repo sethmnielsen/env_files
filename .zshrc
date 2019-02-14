@@ -22,7 +22,7 @@ export DEFAULT_USER=seth  # for shortening prompt
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
 # export PIP_USER=yes  # default to pip install --user
 export PYTHONPATH=/home/seth/dev/boat_landing_sim/holodeck
-export PYTHONPATH=$PYTHONPATH:/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python
+# export PYTHONPATH=$PYTHONPATH:/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python
 # export PYTHONPATH=$PYTHONPATH:/home/seth/.virtualenvs/default/lib/python3.6/site-packages
 
 source ~/.rosrc
