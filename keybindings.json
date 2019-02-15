@@ -86,6 +86,17 @@
         "command": "-editor.action.moveLinesDownAction",
         "when": "editorTextFocus && !editorReadonly"
     },
+
+    {
+        "key": "alt+k",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "alt+j",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
     {
         "key": "alt+k",
         "command": "cursorUp",
@@ -201,32 +212,6 @@
         "key": "ctrl+i",
         "command": "-expandLineSelection",
         "when": "textInputFocus"
-    },
-    {
-        "key": "alt+j",
-        "command": "selectNextSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-    },
-    {
-        "key": "alt+k",
-        "command": "selectPrevSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-    },
-    {
-        "key": "alt+j",
-        "command": "workbench.action.quickOpenSelectNext"
-    },
-    {
-        "key": "alt+k",
-        "command": "workbench.action.quickOpenSelectPrevious"
-    },
-    {
-        "key": "alt+j",
-        "command": "editor.emmet.action.selectNextItem"
-    },
-    {
-        "key": "alt+k",
-        "command": "editor.emmet.action.selectPrevItem"
     },
     {
         "key": "ctrl+shift+alt+j",
