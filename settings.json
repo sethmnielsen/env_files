@@ -29,5 +29,7 @@
     "editor.fontSize": 13,
     "workbench.activityBar.visible": false,
     "window.menuBarVisibility": "default",
-    "editor.scrollBeyondLastLine": false
+    "editor.scrollBeyondLastLine": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.acceptSuggestionOnEnter": "smart"
 }
