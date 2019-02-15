@@ -1,4 +1,0 @@
-# channel for the xenial (16.04) partner channel
-# 
-#:description:This channel contains the partner software for xenial
-deb http://archive.canonical.com/ubuntu xenial partner
