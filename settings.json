@@ -1,5 +1,5 @@
 {
-    "files.autoSave": "onFocusChange",
+    "files.autoSave": "afterDelay",
     "terminal.integrated.fontFamily": "'Ubuntu Mono', 'PowerlineSymbols'",
     "terminal.integrated.fontSize": 16,
     "terminal.external.linuxExec": "gnome-terminal",
@@ -11,16 +11,21 @@
         "**/*.vscode": true,
         "**/*.pdf": true,
     },
+    "files.associations": {
+        ".aliasrc": "shellscript",
+        ".rosrc": "shellscript",
+        "*.launch": "xml",
+        "CMakeLists.txt": "cmake"
+    },
     "explorer.autoReveal": false,
     "workbench.tree.indent": 20,
     "explorer.openEditors.visible": 0,
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "Gruvbox Dark Hard",
     "atomKeymap.promptV3Features": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.formatOnPaste": true,
     "workbench.editor.tabSizing": "shrink",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "keyboard.dispatch": "keyCode",
     "python.pythonPath": "/home/seth/.virtualenvs/default/bin/python3",
     "python.terminal.executeInFileDir": true,
@@ -31,5 +36,14 @@
     "window.menuBarVisibility": "default",
     "editor.scrollBeyondLastLine": false,
     "workbench.startupEditor": "newUntitledFile",
-    "editor.acceptSuggestionOnEnter": "smart"
+    "workbench.colorTheme": "Gruvbox Dark - Custom",
+    "workbench.iconTheme": "file-icons",
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideTabs": false,
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "activitusbar.activeColour": "#4989b6",
+    "activitusbar.toggleSidebar": false,
+    "clock.dateFormat": "h:MM TT",
+    "editor.folding": false
 }

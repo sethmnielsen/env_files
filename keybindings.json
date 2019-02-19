@@ -82,22 +82,6 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "alt+down",
-        "command": "-editor.action.moveLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-
-    {
-        "key": "alt+k",
-        "command": "selectPrevSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-    },
-    {
-        "key": "alt+j",
-        "command": "selectNextSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-    },
-    {
         "key": "alt+k",
         "command": "cursorUp",
         "when": "textInputFocus"
@@ -164,13 +148,13 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "home",
+        "key": "ctrl+h",
         "command": "cursorHome",
         "when": "textInputFocus"
     },
     {
-        "key": "ctrl+h",
-        "command": "cursorHome",
+        "key": "home",
+        "command": "-cursorHome",
         "when": "textInputFocus"
     },
     {
@@ -180,17 +164,17 @@
     },
     {
         "key": "shift+home",
-        "command": "cursorHomeSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "end",
-        "command": "cursorEnd",
+        "command": "-cursorHomeSelect",
         "when": "textInputFocus"
     },
     {
         "key": "ctrl+l",
         "command": "cursorEnd",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "end",
+        "command": "-cursorEnd",
         "when": "textInputFocus"
     },
     {
@@ -200,7 +184,7 @@
     },
     {
         "key": "shift+end",
-        "command": "cursorEndSelect",
+        "command": "-cursorEndSelect",
         "when": "textInputFocus"
     },
     {
@@ -212,22 +196,5 @@
         "key": "ctrl+i",
         "command": "-expandLineSelection",
         "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+shift+alt+j",
-        "command": "editor.action.joinLines"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "-editor.action.joinLines"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "-workbench.action.togglePanel"
-    },
-    {
-        "key": "ctrl+down",
-        "command": "-selectNextSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
     }
 ]
