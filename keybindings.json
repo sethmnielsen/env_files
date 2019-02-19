@@ -224,5 +224,18 @@
         "key": "alt+k",
         "command": "workbench.action.quickOpenSelectPrevious",
         "when": "inQuickOpen"
+    },
+    {
+        "key": "alt+delete",
+        "command": "deleteWordPartRight"
+    },
+    {
+        "key": "shift+alt+backspace",
+        "command": "deleteRight",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+backspace",
+        "command": "deleteWordPartLeft"
     }
 ]
