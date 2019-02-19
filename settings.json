@@ -33,7 +33,7 @@
     "python.terminal.activateEnvironment": false,
     "editor.fontSize": 13,
     "workbench.activityBar.visible": false,
-    "window.menuBarVisibility": "default",
+    "window.menuBarVisibility": "hidden",
     "editor.scrollBeyondLastLine": false,
     "workbench.startupEditor": "newUntitledFile",
     "workbench.colorTheme": "Gruvbox Dark - Custom",
@@ -45,5 +45,6 @@
     "activitusbar.activeColour": "#4989b6",
     "activitusbar.toggleSidebar": false,
     "clock.dateFormat": "h:MM TT",
-    "editor.folding": false
+    "editor.folding": false,
+    "editor.occurrencesHighlight": false
 }
