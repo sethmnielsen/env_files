@@ -4,12 +4,18 @@
     "terminal.integrated.fontSize": 16,
     "terminal.external.linuxExec": "gnome-terminal",
     "files.exclude": {
-        "**/*.zip": true,
-        "**/*.pyc": true,
         "**/*__pycache__": true,
+        "**/*.clang_complete": true,
+        "**/*.github/": true,
+        "**/*.gitignore": true,
+        "**/*.gitmodules": true,
+        "**/*.pdf": true,
+        "**/*.pyc": true,
         "**/*.swp": true,
         "**/*.vscode": true,
-        "**/*.pdf": true,
+        "**/*.zip": true,
+        "**/*CMakeLists.txt.user": true,
+        "**/*rosflight_memory": true
     },
     "files.associations": {
         ".aliasrc": "shellscript",
@@ -48,5 +54,6 @@
     "editor.folding": false,
     "editor.occurrencesHighlight": false,
     "breadcrumbs.enabled": false,
-    "python.jediEnabled": false
+    "python.jediEnabled": false,
+    "C_Cpp.default.intelliSenseMode": "msvc-x64",
 }

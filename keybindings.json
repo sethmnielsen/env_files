@@ -280,4 +280,13 @@
         "key": "ctrl+p",
         "command": "-workbench.action.quickOpenPreviousEditor"
     },
+    {
+        "key": "ctrl+\\",
+        "command": "-workbench.action.terminal.split",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+\\",
+        "command": "-workbench.action.splitEditor"
+    },
 ]

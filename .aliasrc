@@ -20,7 +20,7 @@ alias rfh="cd ~/dev/boat_landing_sim/src/rosflight_holodeck"
 alias atmb='atom ~/dev/boat_landing_sim'
 alias atmf='atom ~/school/flight_dynamics/mavsim_python'
 alias atmr='atom ~/school/robotic_vision'
-alias cdb='code ~/dev/boat_landing_sim/src'
+alias cdb='code ~/dev/boat_landing_sim'
 alias cdf='code ~/school/flight_dynamics/mavsim_python'
 alias cdr='code ~/school/robotic_vision'
 
