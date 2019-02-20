@@ -279,5 +279,5 @@
     {
         "key": "ctrl+p",
         "command": "-workbench.action.quickOpenPreviousEditor"
-    }
+    },
 ]
