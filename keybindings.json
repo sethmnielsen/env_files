@@ -237,5 +237,29 @@
     {
         "key": "alt+backspace",
         "command": "deleteWordPartLeft"
+    },
+    {
+        "key": "ctrl+f11",
+        "command": "workbench.action.toggleFullScreen"
+    },
+    {
+        "key": "f11",
+        "command": "-workbench.action.toggleFullScreen"
+    },
+    {
+        "key": "ctrl+shift+f11",
+        "command": "workbench.action.toggleZenMode"
+    },
+    {
+        "key": "shift+f11",
+        "command": "-workbench.action.toggleZenMode"
+    },
+    {
+        "key": "alt+right",
+        "command": "workbench.action.navigateForward"
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "-workbench.action.navigateForward"
     }
 ]

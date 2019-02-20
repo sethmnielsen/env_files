@@ -46,5 +46,7 @@
     "activitusbar.toggleSidebar": false,
     "clock.dateFormat": "h:MM TT",
     "editor.folding": false,
-    "editor.occurrencesHighlight": false
+    "editor.occurrencesHighlight": false,
+    "breadcrumbs.enabled": false,
+    "python.jediEnabled": false
 }
