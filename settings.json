@@ -18,8 +18,7 @@
         "**/*rosflight_memory": true
     },
     "files.associations": {
-        ".aliasrc": "shellscript",
-        ".rosrc": "shellscript",
+        "*.*rc": "shellscript",
         "*.launch": "xml",
         "CMakeLists.txt": "cmake"
     },
@@ -38,7 +37,7 @@
     "python.terminal.activateEnvironment": false,
     "editor.fontSize": 13,
     "workbench.activityBar.visible": false,
-    "window.menuBarVisibility": "hidden",
+    "window.menuBarVisibility": "default",
     "editor.scrollBeyondLastLine": false,
     "workbench.startupEditor": "newUntitledFile",
     "workbench.colorTheme": "Gruvbox Dark - Custom",
@@ -54,5 +53,39 @@
     "editor.occurrencesHighlight": false,
     "breadcrumbs.enabled": false,
     "python.jediEnabled": false,
+    "python.linting.lintOnSave": true,
+    "python.linting.pylintEnabled": true,
     "C_Cpp.default.intelliSenseMode": "msvc-x64",
+    "macros": {
+        "down10Lines": [
+            "cursorDown",
+            "cursorDown",
+            "cursorDown",
+            "cursorDown",
+            "cursorDown",
+            "cursorDown",
+            "cursorDown",
+            "cursorDown",
+            "cursorDown",
+            "cursorDown",
+        ],
+        "up10Lines": [
+            "cursorUp",
+            "cursorUp",
+            "cursorUp",
+            "cursorUp",
+            "cursorUp",
+            "cursorUp",
+            "cursorUp",
+            "cursorUp",
+            "cursorUp",
+            "cursorUp",
+        ],
+        "closePanelSidebar": [
+            "workbench.action.toggleSidebarVisibility",
+            "workbench.action.closePanel"
+        ]
+    },
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
 }
