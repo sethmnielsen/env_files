@@ -158,11 +158,6 @@
         "when": "textInputFocus"
     },
     {
-        "key": "shift+home",
-        "command": "-cursorHomeSelect",
-        "when": "textInputFocus"
-    },
-    {
         "key": "ctrl+l",
         "command": "cursorEnd",
         "when": "textInputFocus"
@@ -170,11 +165,6 @@
     {
         "key": "ctrl+shift+l",
         "command": "cursorEndSelect",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "shift+end",
-        "command": "-cursorEndSelect",
         "when": "textInputFocus"
     },
     {
@@ -224,6 +214,26 @@
         "key": "alt+k",
         "command": "workbench.action.quickOpenSelectPrevious",
         "when": "inQuickOpen"
+    },
+    {
+        "key": "alt+j",
+        "command": "list.focusDown",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "alt+k",
+        "command": "list.focusUp",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "alt+h",
+        "command": "list.collapse",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "alt+l",
+        "command": "list.expand",
+        "when": "listFocus && !inputFocus"
     },
     {
         "key": "alt+delete",
@@ -288,5 +298,18 @@
     {
         "key": "ctrl+\\",
         "command": "-workbench.action.splitEditor"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "pyPasteIndent.pasteIndent",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+\\",
+        "command": "workbench.action.focusSideBar"
+    },
+    {
+        "key": "ctrl+0",
+        "command": "-workbench.action.focusSideBar"
     },
 ]

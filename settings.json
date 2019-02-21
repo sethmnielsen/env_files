@@ -29,7 +29,6 @@
     "editor.minimap.enabled": false,
     "atomKeymap.promptV3Features": true,
     "editor.multiCursorModifier": "ctrlCmd",
-    "editor.formatOnPaste": true,
     "workbench.editor.tabSizing": "shrink",
     "window.zoomLevel": 1,
     "keyboard.dispatch": "keyCode",
