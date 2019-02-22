@@ -2,7 +2,7 @@
     "files.autoSave": "afterDelay",
     "terminal.integrated.fontFamily": "'Ubuntu Mono', 'PowerlineSymbols'",
     "terminal.integrated.fontSize": 16,
-    "terminal.external.linuxExec": "gnome-terminal",
+    "terminal.integrated.shellArgs.linux": ["-c", "tmux"],
     "files.exclude": {
         "**/*__pycache__": true,
         "**/*.clang_complete": true,
@@ -27,7 +27,7 @@
     "explorer.openEditors.visible": 0,
     "editor.minimap.enabled": false,
     "atomKeymap.promptV3Features": true,
-    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.multiCursorModifier": "alt",
     "workbench.editor.tabSizing": "shrink",
     "window.zoomLevel": 1,
     "keyboard.dispatch": "keyCode",
