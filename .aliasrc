@@ -16,6 +16,7 @@ alias catkin_make_py3_debug='catkin_make_py3 -DCMAKE_BUILD_TYPE=Debug'
 alias qt='~/dev/Qt/Tools/QtCreator/bin/qtcreator'
 alias qtb='qt ~/dev/boat_landing_sim/src/CMakeLists.txt'
 alias rf_holodeck='roslaunch rosflight_holodeck rf_holodeck.launch'
+alias rf_holodeck_debug='roslaunch rosflight_holodeck rf_holodeck_debug.launch'
 alias rfh="cd ~/dev/boat_landing_sim/src/rosflight_holodeck"
 alias atmb='atom ~/dev/boat_landing_sim'
 alias atmf='atom ~/school/flight_dynamics/mavsim_python'

@@ -2,7 +2,7 @@
     "files.autoSave": "afterDelay",
     "terminal.integrated.fontFamily": "'Ubuntu Mono', 'PowerlineSymbols'",
     "terminal.integrated.fontSize": 16,
-    "terminal.integrated.shellArgs.linux": ["-c", "tmux"],
+    // "terminal.integrated.shellArgs.linux": ["-c", "tmux"],
     "files.exclude": {
         "**/*__pycache__": true,
         "**/*.clang_complete": true,
@@ -15,7 +15,9 @@
         "**/*.vscode": true,
         "**/*.zip": true,
         "**/*CMakeLists.txt.user": true,
-        "**/*rosflight_memory": true
+        "**/*rosflight_memory": true,
+        "build/": true,
+        "devel/": true,
     },
     "files.associations": {
         "*.*rc": "shellscript",
@@ -32,7 +34,7 @@
     "window.zoomLevel": 1,
     "keyboard.dispatch": "keyCode",
     "python.pythonPath": "/home/seth/.virtualenvs/default/bin/python3",
-    "python.terminal.executeInFileDir": true,
+    // "python.terminal.executeInFileDir": true,
     "python.venvPath": "~/.virtualenvs",
     "python.terminal.activateEnvironment": false,
     "editor.fontSize": 13,
@@ -52,7 +54,7 @@
     "editor.folding": false,
     "editor.occurrencesHighlight": false,
     "breadcrumbs.enabled": false,
-    "python.jediEnabled": false,
+    "python.jediEnabled": true,
     "python.linting.lintOnSave": true,
     "python.linting.pylintEnabled": true,
     "C_Cpp.default.intelliSenseMode": "msvc-x64",
@@ -86,6 +88,4 @@
             "workbench.action.closePanel"
         ]
     },
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
 }
