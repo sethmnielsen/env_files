@@ -39,7 +39,7 @@
     "python.terminal.activateEnvironment": false,
     "editor.fontSize": 13,
     "workbench.activityBar.visible": false,
-    "window.menuBarVisibility": "default",
+    "window.menuBarVisibility": "hidden",
     "editor.scrollBeyondLastLine": false,
     "workbench.startupEditor": "newUntitledFile",
     "workbench.colorTheme": "Gruvbox Dark - Custom",
@@ -54,9 +54,10 @@
     "editor.folding": false,
     "editor.occurrencesHighlight": false,
     "breadcrumbs.enabled": false,
-    "python.jediEnabled": true,
+    "python.jediEnabled": false,
     "python.linting.lintOnSave": true,
     "python.linting.pylintEnabled": true,
+    "python.autoComplete.extraPaths": ["/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python"],
     "C_Cpp.default.intelliSenseMode": "msvc-x64",
     "macros": {
         "down10Lines": [
@@ -88,4 +89,5 @@
             "workbench.action.closePanel"
         ]
     },
+    "scm.diffDecorationsGutterWidth": 1,
 }
