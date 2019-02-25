@@ -54,7 +54,6 @@
     "editor.folding": false,
     "editor.occurrencesHighlight": false,
     "breadcrumbs.enabled": false,
-    "python.jediEnabled": false,
     "python.linting.lintOnSave": true,
     "python.linting.pylintEnabled": true,
     "python.autoComplete.extraPaths": ["/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python"],
