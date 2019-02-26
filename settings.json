@@ -89,4 +89,5 @@
         ]
     },
     "scm.diffDecorationsGutterWidth": 1,
+    "explorer.confirmDragAndDrop": false,
 }
