@@ -39,6 +39,8 @@
     { "key": "ctrl+shift+l",        "command": "cursorEndSelect", "when": "textInputFocus" },
     { "key": "ctrl+alt+l",          "command": "expandLineSelection", "when": "textInputFocus" },
     { "key": "ctrl+i",              "command": "-expandLineSelection", "when": "textInputFocus" },
+    { "key": "shift+alt+l",         "command": "cursorRightSelect", "when": "textInputFocus" },
+    { "key": "shift+alt+h",         "command": "cursorLeftSelect", "when": "textInputFocus" },
     { "key": "ctrl+shift+`",        "command": "-workbench.action.terminal.new" },
     { "key": "ctrl+shift+`",        "command": "macros.closePanelSidebar" },
     { "key": "alt+j",               "command": "selectNextSuggestion", "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
