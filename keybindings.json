@@ -74,5 +74,12 @@
     { "key": "ctrl+k",              "command": "macros.up10Lines", "when": "textInputFocus" },
     { "key": "ctrl+j",              "command": "macros.down10Lines", "when": "textInputFocus" },
     { "key": "ctrl+j",              "command": "-editor.action.joinLines" },
-    { "key": "ctrl+shift+alt+j",    "command": "editor.action.joinLines" },
+    {
+        "key": "ctrl+shift+alt+j",
+        "command": "editor.action.joinLines"
+    },
+    {
+        "key": "alt+s",
+        "command": "workbench.debug.action.focusCallStackView"
+    },
 ]
