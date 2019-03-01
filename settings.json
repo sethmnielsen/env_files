@@ -42,7 +42,7 @@
     "window.menuBarVisibility": "hidden",
     "editor.scrollBeyondLastLine": false,
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.colorTheme": "Gruvbox Dark - Custom",
+    "workbench.colorTheme": "Gruvbox Dark Hard - Custom",
     "workbench.iconTheme": "file-icons",
     "zenMode.hideLineNumbers": false,
     "zenMode.hideTabs": false,
@@ -58,6 +58,7 @@
     "python.linting.pylintEnabled": true,
     "python.autoComplete.extraPaths": ["/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python"],
     "C_Cpp.default.intelliSenseMode": "msvc-x64",
+    "editor.rulers": [90],
     "macros": {
         "down10Lines": [
             "cursorDown",

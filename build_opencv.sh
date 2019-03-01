@@ -201,6 +201,8 @@ else
                  -DENABLE_PRECOMPILED_HEADERS=OFF \
                  -DWITH_OPENMP=ON \
                  -DWITH_NVCUVID=OFF \
+                 -DWITH_QT=ON \
+                 -DWITH_GTK=OFF \
                  -DOPENCV_EXTRA_MODULES_PATH=~/Downloads/opencv_contrib-${OPENCV_VERSION}/modules .. >> cmake_log.txt 2>&1
 
 
