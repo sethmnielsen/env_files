@@ -4,6 +4,7 @@ alias unzip='unzip -q'
 alias sizes='find . -mindepth 1 -maxdepth 1|xargs du -hsc |sort -hr'
 alias open='open_command'
 alias o='exit'
+alias tm='gio trash'
 
 # ROS / sourcing
 alias ros_env='env | grep ROS'
