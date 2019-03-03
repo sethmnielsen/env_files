@@ -95,3 +95,6 @@ boat_pull() {
   cd $A
   echo "\nboat_landing_sim repo updated locally.\n"
 }
+
+
+source ~/.other

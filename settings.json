@@ -16,7 +16,6 @@
         "**/*.zip": true,
         "**/*CMakeLists.txt.user": true,
         "**/*rosflight_memory": true,
-        "build/": true,
         "devel/": true,
     },
     "files.associations": {
@@ -90,5 +89,6 @@
     },
     "scm.diffDecorationsGutterWidth": 1,
     "explorer.confirmDragAndDrop": false,
-    "editor.fontSize": 12,
+    "editor.fontSize": 13,
+    "python.jediEnabled": false,
 }
