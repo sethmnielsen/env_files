@@ -27,7 +27,7 @@
     { "key": "ctrl+alt+j",          "command": "editor.action.moveLinesDownAction", "when": "editorTextFocus" },
     { "key": "alt+left",            "command": "workbench.action.navigateBack" },
     { "key": "ctrl+alt+-",          "command": "-workbench.action.navigateBack" },
-    { "key": "alt+t",               "command": "workbench.action.terminal.focus" },
+    { "key": "alt+r",               "command": "workbench.action.terminal.focus" },
     { "key": "alt+e",               "command": "workbench.action.focusActiveEditorGroup" },
     { "key": "shift+alt+k",         "command": "editor.action.insertCursorAbove", "when": "editorTextFocus" },
     { "key": "shift+alt+up",        "command": "-editor.action.insertCursorAbove", "when": "editorTextFocus" },
@@ -75,12 +75,10 @@
     { "key": "ctrl+j",              "command": "macros.down10Lines", "when": "textInputFocus" },
     { "key": "ctrl+j",              "command": "-editor.action.joinLines" },
     { "key": "ctrl+shift+alt+j",    "command": "editor.action.joinLines" },
-    {
-        "key": "alt+s",
-        "command": "workbench.debug.action.focusCallStackView"
-    },
-    {
-        "key": "ctrl+t",
-        "command": "-workbench.action.showAllSymbols"
-    },
+    { "key": "alt+s",               "command": "workbench.debug.action.focusCallStackView" },
+    { "key": "ctrl+t",              "command": "-workbench.action.showAllSymbols" },
+    { "key": "alt+r",               "command": "-workbench.action.terminal.toggleFindRegexTerminalFocus", "when": "terminalFocus" },
+    { "key": "alt+r",               "command": "-workbench.action.terminal.toggleFindRegex", "when": "terminalFindWidgetFocused" },
+    { "key": "alt+r",               "command": "-toggleFindRegex", "when": "editorFocus" },
+    { "key": "alt+r",               "command": "-toggleSearchRegex", "when": "searchViewletFocus && searchViewletVisible" },
 ]
