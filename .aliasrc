@@ -13,7 +13,7 @@ alias sdevel='source devel/setup.zsh'
 
 # Catkin
 alias catkin_make_cuda='catkin_make -DOpenCV_DIR=/usr/local/share/OpenCV -DVISUAL_MTT_CUDA=ON'
-#alias catkin_make_py3='catkin_make -DPYTHON_EXECUTABLE=/home/seth/.virtualenvs/default/bin/python3'
+alias catkin_make_py3='catkin_make -DPYTHON_EXECUTABLE=/home/seth/.virtualenvs/default/bin/python3'
 alias catkin_make_debug='catkin_make -DCMAKE_BUILD_TYPE=Debug'
 
 # Handy repo-related aliases
