@@ -16,7 +16,7 @@
         "**/*.zip": true,
         "**/*CMakeLists.txt.user": true,
         "**/*rosflight_memory": true,
-        "devel/": true,
+        "devel/": true
     },
     "files.associations": {
         "*.*rc": "shellscript",
@@ -80,7 +80,7 @@
             "cursorUp",
             "cursorUp",
             "cursorUp",
-            "cursorUp",
+            "cursorUp"
         ],
         "closePanelSidebar": [
             "workbench.action.toggleSidebarVisibility",
@@ -91,5 +91,4 @@
     "explorer.confirmDragAndDrop": false,
     "editor.fontSize": 13,
     "python.jediEnabled": false,
-    "githubNotificationsBell.oauthToken": "f4b9529eeb9538e1a1e2ee363b6307f1a173dc82", // OAuth token used for requesting the notifications
 }
