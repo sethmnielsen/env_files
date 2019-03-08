@@ -85,10 +85,11 @@
         "closePanelSidebar": [
             "workbench.action.toggleSidebarVisibility",
             "workbench.action.closePanel"
-        ]
+        ],2
     },
     "scm.diffDecorationsGutterWidth": 1,
     "explorer.confirmDragAndDrop": false,
     "editor.fontSize": 13,
     "python.jediEnabled": false,
+    "githubNotificationsBell.oauthToken": "f4b9529eeb9538e1a1e2ee363b6307f1a173dc82", // OAuth token used for requesting the notifications
 }
