@@ -33,7 +33,6 @@
     "window.zoomLevel": 1,
     "keyboard.dispatch": "keyCode",
     "python.pythonPath": "/home/seth/.virtualenvs/default/bin/python3",
-    // "python.terminal.executeInFileDir": true,
     "python.venvPath": "~/.virtualenvs",
     "python.terminal.activateEnvironment": false,
     "workbench.activityBar.visible": false,
@@ -85,10 +84,12 @@
         "closePanelSidebar": [
             "workbench.action.toggleSidebarVisibility",
             "workbench.action.closePanel"
-        ],2
+        ],
     },
     "scm.diffDecorationsGutterWidth": 1,
     "explorer.confirmDragAndDrop": false,
     "editor.fontSize": 13,
     "python.jediEnabled": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 }

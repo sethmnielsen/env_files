@@ -63,7 +63,7 @@
     { "key": "alt+right",           "command": "workbench.action.navigateForward" },
     { "key": "ctrl+shift+-",        "command": "-workbench.action.navigateForward" },
     { "key": "ctrl+p",              "command": "-workbench.action.quickOpen" },
-    { "key": "ctrl+p",              "command": "workbench.action.quickOpen", "when": "!terminalFocus" },
+    { "key": "ctrl+p",              "command": "workbench.action.quickOpen", "when": "!terminalFocus && !inDebugRepl" },
     { "key": "ctrl+p",              "command": "workbench.action.quickOpenPreviousEditor", "when": "!terminalFocus" },
     { "key": "ctrl+p",              "command": "-workbench.action.quickOpenPreviousEditor" },
     { "key": "ctrl+\\",             "command": "-workbench.action.terminal.split", "when": "terminalFocus" },
