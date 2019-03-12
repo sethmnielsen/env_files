@@ -47,7 +47,6 @@
     "activitusbar.activeColour": "#4989b6",
     "activitusbar.toggleSidebar": false,
     "clock.dateFormat": "h:MM TT",
-    "editor.folding": false,
     "editor.occurrencesHighlight": false,
     "breadcrumbs.enabled": false,
     "python.linting.lintOnSave": true,
@@ -91,6 +90,6 @@
     "python.jediEnabled": false,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "window.menuBarVisibility": "hidden",
     "C_Cpp.default.cppStandard": "c++17",
+    "window.menuBarVisibility": "hidden",
 }
