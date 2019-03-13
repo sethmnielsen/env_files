@@ -82,6 +82,11 @@
         "closePanelSidebar": [
             "workbench.action.toggleSidebarVisibility",
             "workbench.action.closePanel"
+        ],
+        "buildTaskImproved": [
+            "workbench.action.tasks.build",
+                {"command": "$delay", "args": {"milliseconds": 500}},
+            "workbench.action.terminal.focus"
         ]
     },
     "scm.diffDecorationsGutterWidth": 1,
@@ -90,5 +95,6 @@
     "python.jediEnabled": false,
     "editor.suggestSelection": "first",
     "C_Cpp.default.cppStandard": "c++17",
+    "explorer.confirmDelete": false,
     "window.menuBarVisibility": "hidden",
 }

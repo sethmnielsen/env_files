@@ -21,14 +21,15 @@ export EDITOR=vim
 export DEFAULT_USER=seth  # for shortening prompt
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
 export PATH=$PATH:~/.local/share/fonts
-export PYTHONPATH=/home/seth/dev/boat_landing_sim/holodeck
-export PYTHONPATH=$PYTHONPATH:/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python
+export PYTHONPATH=~/dev/boat_landing_sim/holodeck:/home/seth/.virtualenvs/default/lib/python3.6
+export PYTHONPATH=$PYTHONPATH:~/dev/boat_landing_sim/src/rosflight_holodeck/python
+export PYTHONPATH=$PYTHONPATH:~/school/robotic_vision/4/python
 
-source ~/.rosrc
+# source ~/.rosrc
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/projects
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_PYTHON=/home/seth/.virtualenvs/default/bin/python3 
 source $HOME/.local/bin/virtualenvwrapper.sh
 source $HOME/.virtualenvs/default/bin/activate
 

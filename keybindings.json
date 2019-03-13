@@ -1,4 +1,4 @@
-// Place your key bindings in this file to override the defaultsauto[]
+// Place your key bindings in this file to override the defaults
 [
     { "key": "ctrl+shift+d",        "command": "-workbench.view.debug" },
     { "key": "ctrl+shift+x",        "command": "editor.action.deleteLines", "when": "textInputFocus && !editorReadonly" },
@@ -27,7 +27,7 @@
     { "key": "ctrl+alt+j",          "command": "editor.action.moveLinesDownAction", "when": "editorTextFocus" },
     { "key": "alt+left",            "command": "workbench.action.navigateBack" },
     { "key": "ctrl+alt+-",          "command": "-workbench.action.navigateBack" },
-    { "key": "alt+r",               "command": "workbench.action.terminal.focus" },
+    { "key": "alt+r",               "command": "workbench.action.terminal.toggleTerminal" },
     { "key": "alt+e",               "command": "workbench.action.focusActiveEditorGroup" },
     { "key": "shift+alt+k",         "command": "editor.action.insertCursorAbove", "when": "editorTextFocus" },
     { "key": "shift+alt+up",        "command": "-editor.action.insertCursorAbove", "when": "editorTextFocus" },
@@ -82,4 +82,11 @@
     { "key": "alt+r",               "command": "-toggleFindRegex", "when": "editorFocus" },
     { "key": "alt+r",               "command": "-toggleSearchRegex", "when": "searchViewletFocus && searchViewletVisible" },
     { "key": "alt+down",            "command": "-editor.action.moveLinesDownAction", "when": "editorTextFocus && !editorReadonly" },
+    // { "key": "ctrl+shift+b",        "command": "-workbench.action.tasks.build" },
+    // { "key": "ctrl+shift+b",        "command": "macros.buildTaskImproved" },
+
+
+
+
+
 ]
