@@ -16,7 +16,8 @@
         "**/*.zip": true,
         "**/*CMakeLists.txt.user": true,
         "**/*rosflight_memory": true,
-        "devel/": true
+        "devel/": true,
+        "**/*.o": true
     },
     "files.associations": {
         "*.*rc": "shellscript",
