@@ -133,4 +133,8 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+# Keybindings
+bindkey "^P" up-line-or-search
+bindkey "^N" down-line-or-search
+
 source ~/.aliasrc
