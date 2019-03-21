@@ -17,7 +17,8 @@
         "**/*CMakeLists.txt.user": true,
         "**/*rosflight_memory": true,
         "devel/": true,
-        "**/*.o": true
+        "**/*.o": true,
+        "**/*.catkin_workspace": true,
     },
     "files.associations": {
         "*.*rc": "shellscript",
