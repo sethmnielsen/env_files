@@ -81,33 +81,12 @@
     { "key": "alt+r",               "command": "-workbench.action.terminal.toggleFindRegex", "when": "terminalFindWidgetFocused" },
     { "key": "alt+r",               "command": "-toggleFindRegex", "when": "editorFocus" },
     { "key": "alt+r",               "command": "-toggleSearchRegex", "when": "searchViewletFocus && searchViewletVisible" },
-    {
-        "key": "alt+down",
-        "command": "-editor.action.moveLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "f6",
-        "command": "workbench.action.debug.stop",
-        "when": "inDebugMode"
-    },
-    {
-        "key": "shift+f5",
-        "command": "-workbench.action.debug.stop",
-        "when": "inDebugMode"
-    },
-    {
-        "key": "shift+f5",
-        "command": "workbench.action.debug.pause",
-        "when": "inDebugMode"
-    },
-    {
-        "key": "f6",
-        "command": "-workbench.action.debug.pause",
-        "when": "inDebugMode"
-    },
-    // { "key": "ctrl+shift+b",        "command": "-workbench.action.tasks.build" },
-    // { "key": "ctrl+shift+b",        "command": "macros.buildTaskImproved" },
+    { "key": "alt+down",            "command": "-editor.action.moveLinesDownAction", "when": "editorTextFocus && !editorReadonly" },
+    { "key": "f6",                  "command": "-workbench.action.debug.pause", "when": "inDebugMode" },
+    { "key": "f6",                  "command": "workbench.action.debug.stop", "when": "inDebugMode" },
+    { "key": "shift+f5",            "command": "-workbench.action.debug.stop", "when": "inDebugMode" },
+    { "key": "shift+f5",            "command": "workbench.action.debug.pause", "when": "inDebugMode" },
+    { "key": "ctrl+shift+alt+backspace", "command": "deleteWordRight", "when": "textInputFocus && !editorReadonly" },
 
 
 
