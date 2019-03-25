@@ -19,6 +19,7 @@
         "devel/": true,
         "**/*.o": true,
         "**/*.catkin_workspace": true,
+        "**/*.~*": true,
     },
     "files.associations": {
         "*.*rc": "shellscript",
