@@ -6,6 +6,11 @@ alias open='open_command'
 alias o='exit'
 alias tm='gio trash'
 
+# Move/Copy and follow
+cpf() { cp "$@" && goto "$_"; }
+mvf() { mv "$@" && goto "$_"; }
+goto() { [ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; }
+
 # ROS / sourcing
 alias ros_env='env | grep ROS'
 alias szsh='source ~/.zshrc'
