@@ -38,7 +38,7 @@
     "python.pythonPath": "/home/seth/.virtualenvs/default/bin/python3",
     "python.venvPath": "~/.virtualenvs",
     "python.terminal.activateEnvironment": false,
-    "workbench.activityBar.visible": false,
+    "workbench.activityBar.visible": true,
     "editor.scrollBeyondLastLine": false,
     "workbench.startupEditor": "newUntitledFile",
     "workbench.colorTheme": "Gruvbox Dark Hard - Custom",
@@ -100,5 +100,5 @@
     "C_Cpp.default.cppStandard": "c++17",
     "explorer.confirmDelete": false,
     "vsicons.dontShowNewVersionMessage": true,
-    "window.menuBarVisibility": "hidden",
+    "window.menuBarVisibility": "default",
 }
