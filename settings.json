@@ -51,7 +51,7 @@
     "activitusbar.toggleSidebar": false,
     "clock.dateFormat": "h:MM TT",
     "editor.occurrencesHighlight": false,
-    "breadcrumbs.enabled": false,
+    "breadcrumbs.enabled": true,
     "python.linting.lintOnSave": true,
     "python.linting.pylintEnabled": true,
     "python.autoComplete.extraPaths": ["/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python"],
@@ -100,7 +100,7 @@
     "C_Cpp.default.cppStandard": "c++17",
     "explorer.confirmDelete": false,
     "vsicons.dontShowNewVersionMessage": true,
-    "window.menuBarVisibility": "default",
+    "window.menuBarVisibility": "hidden",
     "workbench.statusBar.visible": true,
     "editor.renderWhitespace": "none",
 }
