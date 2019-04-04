@@ -100,6 +100,7 @@
     "C_Cpp.default.cppStandard": "c++17",
     "explorer.confirmDelete": false,
     "vsicons.dontShowNewVersionMessage": true,
-    "window.menuBarVisibility": "hidden",
+    "window.menuBarVisibility": "default",
     "workbench.statusBar.visible": true,
+    "editor.renderWhitespace": "none",
 }
