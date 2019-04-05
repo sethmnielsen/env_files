@@ -5,6 +5,7 @@ alias sizes='find . -mindepth 1 -maxdepth 1|xargs du -hsc |sort -hr'
 alias open='open_command'
 alias o='exit'
 alias tm='gio trash'
+alias lsg='ls |grep '
 
 # Move/Copy and follow
 goto() { [ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; }
