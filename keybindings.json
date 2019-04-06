@@ -107,5 +107,13 @@
     {
         "key": "ctrl+shift+'",
         "command": "workbench.action.toggleMaximizedPanel"
+    },
+    {
+        "key": "ctrl+shift+q",
+        "command": "clock.insertDateTime"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "-workbench.action.quit"
     }
 ]
