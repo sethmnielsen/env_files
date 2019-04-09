@@ -36,7 +36,7 @@ alias atmr='atom ~/school/robotic_vision'
 alias cdb='code ~/dev/boat_landing_sim'
 alias cdf='code ~/school/flight_dynamics/mavsim_python'
 alias cdr='code ~/school/robotic_vision'
-alias opencv-docs='google-chrome ~/Documents/opencv-docs-4.1.0/pages.html'
+alias opencv-docs='google-chrome ~/Documents/opencv-docs-4.0.1/pages.html'
 
 # git
 alias gs='git status'
