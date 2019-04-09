@@ -22,7 +22,7 @@ alias catkin_make_cuda='catkin_make -DOpenCV_DIR=/usr/local/share/OpenCV -DVISUA
 alias catkin_make_py3='catkin_make -DPYTHON_EXECUTABLE=/home/seth/.virtualenvs/default/bin/python3'
 alias catkin_make_py3_debug='catkin_make_py3 -DCMAKE_BUILD_TYPE=Debug'
 
-# Handy repo-related aliases
+# Handy code-related aliases
 alias qt='~/dev/Qt/Tools/QtCreator/bin/qtcreator'
 alias qtb='qt ~/dev/boat_landing_sim/src/CMakeLists.txt'
 alias rf_holodeck='roslaunch rosflight_holodeck rf_holodeck.launch'
@@ -36,6 +36,7 @@ alias atmr='atom ~/school/robotic_vision'
 alias cdb='code ~/dev/boat_landing_sim'
 alias cdf='code ~/school/flight_dynamics/mavsim_python'
 alias cdr='code ~/school/robotic_vision'
+alias opencv-docs='google-chrome ~/Documents/opencv-docs-4.1.0/pages.html'
 
 # git
 alias gs='git status'
