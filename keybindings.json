@@ -99,21 +99,20 @@
     { "key": "ctrl+shift+j",             "command": "scrollLineDown", "when": "textInputFocus" },
     { "key": "ctrl+down",                "command": "-scrollLineDown", "when": "textInputFocus" },
     { "key": "ctrl+shift+j",             "command": "-workbench.action.search.toggleQueryDetails", "when": "searchViewletVisible" },
+    { "key": "alt+\\",                   "command": "workbench.debug.action.focusVariablesView", "when": "inDebugMode" },
+    { "key": "ctrl+shift+'",             "command": "workbench.action.toggleMaximizedPanel" },
+    { "key": "ctrl+shift+q",             "command": "clock.insertDateTime" },
+    { "key": "ctrl+q",                   "command": "-workbench.action.quit" },
     {
-        "key": "alt+\\",
-        "command": "workbench.debug.action.focusVariablesView",
-        "when": "inDebugMode"
+        "key": "ctrl+alt+backspace",
+        "command": "bracketeer.removeBrackets"
     },
     {
-        "key": "ctrl+shift+'",
-        "command": "workbench.action.toggleMaximizedPanel"
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
     },
-    {
-        "key": "ctrl+shift+q",
-        "command": "clock.insertDateTime"
-    },
-    {
-        "key": "ctrl+q",
-        "command": "-workbench.action.quit"
-    }
 ]
+
+
+
+

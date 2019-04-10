@@ -53,7 +53,7 @@ pull_changes() {
   cd .. 
   git pull
   cd $A
-  echo "\nschool and env repos updated locally.\n"
+  echo "\nschool and env repos have been updated on this machine.\n"
 }
 push_changes() {
   A=$(pwd)
@@ -101,7 +101,7 @@ boat_pull() {
   cd ..
   git pull
   cd $A
-  echo "\nboat_landing_sim repo updated locally.\n"
+  echo "\nboat_landing_sim repo has been updated on this machine.\n"
 }
 
 
