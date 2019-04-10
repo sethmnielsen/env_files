@@ -102,5 +102,5 @@
     "vsicons.dontShowNewVersionMessage": true,
     "workbench.statusBar.visible": true,
     "editor.renderWhitespace": "none",
-    "window.menuBarVisibility": "visible",
+    "window.menuBarVisibility": "hidden",
 }
