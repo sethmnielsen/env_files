@@ -21,8 +21,14 @@
     { "key": "alt+up",                   "command": "-editor.action.moveLinesUpAction", "when": "editorTextFocus && !editorReadonly" },
     { "key": "alt+k",                    "command": "cursorUp", "when": "textInputFocus" },
     { "key": "alt+j",                    "command": "cursorDown", "when": "textInputFocus" },
-    { "key": "alt+h",                    "command": "cursorLeft", "when": "textInputFocus" },
-    { "key": "alt+l",                    "command": "cursorRight", "when": "textInputFocus" },
+    {
+        "key": "alt+h",
+        "command": "cursorLeft"
+    },
+    {
+        "key": "alt+l",
+        "command": "cursorRight"
+    },
     { "key": "ctrl+alt+k",               "command": "editor.action.moveLinesUpAction", "when": "editorTextFocus" },
     { "key": "ctrl+alt+j",               "command": "editor.action.moveLinesDownAction", "when": "editorTextFocus" },
     { "key": "alt+left",                 "command": "workbench.action.navigateBack" },
@@ -103,65 +109,22 @@
     { "key": "ctrl+shift+'",             "command": "workbench.action.toggleMaximizedPanel" },
     { "key": "ctrl+shift+q",             "command": "clock.insertDateTime" },
     { "key": "ctrl+q",                   "command": "-workbench.action.quit" },
-    {
-        "key": "ctrl+alt+backspace",
-        "command": "bracketeer.removeBrackets"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "-workbench.action.togglePanel"
-    },
-    {
-        "key": "ctrl+a h",
-        "command": "workbench.action.focusLeftGroup"
-    },
-    {
-        "key": "ctrl+k ctrl+left",
-        "command": "-workbench.action.focusLeftGroup"
-    },
-    {
-        "key": "ctrl+a l",
-        "command": "workbench.action.focusRightGroup"
-    },
-    {
-        "key": "ctrl+k ctrl+right",
-        "command": "-workbench.action.focusRightGroup"
-    },
-    {
-        "key": "ctrl+a ctrl+a",
-        "command": "editor.action.selectAll",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+a",
-        "command": "-editor.action.selectAll",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+a ctrl+a",
-        "command": "selectAll"
-    },
-    {
-        "key": "ctrl+a",
-        "command": "-editor.action.selectAll",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+a k",
-        "command": "workbench.action.focusAboveGroup"
-    },
-    {
-        "key": "ctrl+k ctrl+up",
-        "command": "-workbench.action.focusAboveGroup"
-    },
-    {
-        "key": "ctrl+a j",
-        "command": "workbench.action.focusBelowGroup"
-    },
-    {
-        "key": "ctrl+k ctrl+down",
-        "command": "-workbench.action.focusBelowGroup"
-    },
+    { "key": "ctrl+alt+backspace",       "command": "bracketeer.removeBrackets" },
+    { "key": "ctrl+j",                   "command": "-workbench.action.togglePanel" },
+    { "key": "ctrl+a h",                 "command": "workbench.action.focusLeftGroup" },
+    { "key": "ctrl+k ctrl+left",         "command": "-workbench.action.focusLeftGroup" },
+    { "key": "ctrl+a l",                 "command": "workbench.action.focusRightGroup" },
+    { "key": "ctrl+k ctrl+right",        "command": "-workbench.action.focusRightGroup" },
+    { "key": "ctrl+a ctrl+a",            "command": "editor.action.selectAll", "when": "textInputFocus" },
+    { "key": "ctrl+a",                   "command": "-editor.action.selectAll", "when": "textInputFocus" },
+    { "key": "ctrl+a ctrl+a",            "command": "selectAll" },
+    { "key": "ctrl+a",                   "command": "-editor.action.selectAll", "when": "textInputFocus" },
+    { "key": "ctrl+a k",                 "command": "workbench.action.focusAboveGroup" },
+    { "key": "ctrl+k ctrl+up",           "command": "-workbench.action.focusAboveGroup" },
+    { "key": "ctrl+a j",                 "command": "workbench.action.focusBelowGroup" },
+    { "key": "ctrl+k ctrl+down",         "command": "-workbench.action.focusBelowGroup" },
+    { "key": "ctrl+alt+enter",           "command": "search.action.replaceAll", "when": "searchViewletVisible && !findWidgetVisible" },
+    { "key": "ctrl+alt+enter",           "command": "-search.action.replaceAll", "when": "replaceActive && searchViewletVisible && !findWidgetVisible" }
 ]
 
 
