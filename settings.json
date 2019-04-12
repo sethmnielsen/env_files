@@ -108,5 +108,6 @@
         "Olive",
         "Teal",
     ],
-    "window.menuBarVisibility": "hidden"
+    "window.menuBarVisibility": "hidden",
+    "liveshare.featureSet": "insiders"
 }
