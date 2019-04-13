@@ -5,6 +5,8 @@ alias sizes='find . -mindepth 1 -maxdepth 1|xargs du -hsc |sort -hr'
 alias open='open_command'
 alias o='exit'
 alias tm='gio trash'
+alias mntjet='sshfs nvidia@tx2_rv:/home/nvidia/ /home/seth/kbcar_home'
+alias umntjet='fusermount -u /home/seth/kbcar_home'
 lsg() {
   ls | grep $1
 }
