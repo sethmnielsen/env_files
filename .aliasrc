@@ -44,6 +44,8 @@ alias cdb='code ~/dev/boat_landing_sim'
 alias cdf='code ~/school/flight_dynamics/mavsim_python'
 alias cdr='code ~/school/robotic_vision'
 alias opencv-docs='google-chrome ~/Documents/opencv-docs-4.0.1/pages.html'
+alias cdbmav='code ~/school/flight_dynamics/bmav'
+alias cdmmav='code ~/school/flight_dynamics/mmav'
 
 # git
 alias gs='git status'
