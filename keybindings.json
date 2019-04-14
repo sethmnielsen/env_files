@@ -21,14 +21,8 @@
     { "key": "alt+up",                   "command": "-editor.action.moveLinesUpAction", "when": "editorTextFocus && !editorReadonly" },
     { "key": "alt+k",                    "command": "cursorUp", "when": "textInputFocus" },
     { "key": "alt+j",                    "command": "cursorDown", "when": "textInputFocus" },
-    {
-        "key": "alt+h",
-        "command": "cursorLeft"
-    },
-    {
-        "key": "alt+l",
-        "command": "cursorRight"
-    },
+    { "key": "alt+h",                    "command": "cursorLeft" },
+    { "key": "alt+l",                    "command": "cursorRight" },
     { "key": "ctrl+alt+k",               "command": "editor.action.moveLinesUpAction", "when": "editorTextFocus" },
     { "key": "ctrl+alt+j",               "command": "editor.action.moveLinesDownAction", "when": "editorTextFocus" },
     { "key": "alt+left",                 "command": "workbench.action.navigateBack" },
@@ -74,7 +68,6 @@
     { "key": "ctrl+p",                   "command": "-workbench.action.quickOpenPreviousEditor" },
     { "key": "ctrl+\\",                  "command": "-workbench.action.terminal.split", "when": "terminalFocus" },
     { "key": "ctrl+\\",                  "command": "-workbench.action.splitEditor" },
-    { "key": "ctrl+shift+v",             "command": "pyPasteIndent.pasteIndent", "when": "textInputFocus && !editorReadonly" },
     { "key": "alt+\\",                   "command": "workbench.action.focusSideBar" },
     { "key": "ctrl+0",                   "command": "-workbench.action.focusSideBar" },
     { "key": "ctrl+k",                   "command": "macros.up10Lines", "when": "textInputFocus" },
@@ -124,7 +117,7 @@
     { "key": "ctrl+a j",                 "command": "workbench.action.focusBelowGroup" },
     { "key": "ctrl+k ctrl+down",         "command": "-workbench.action.focusBelowGroup" },
     { "key": "ctrl+alt+enter",           "command": "search.action.replaceAll", "when": "searchViewletVisible && !findWidgetVisible" },
-    { "key": "ctrl+alt+enter",           "command": "-search.action.replaceAll", "when": "replaceActive && searchViewletVisible && !findWidgetVisible" }
+    { "key": "ctrl+alt+enter",           "command": "-search.action.replaceAll", "when": "replaceActive && searchViewletVisible && !findWidgetVisible" },
 ]
 
 

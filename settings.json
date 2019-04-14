@@ -109,5 +109,6 @@
         "Teal",
     ],
     "window.menuBarVisibility": "hidden",
-    "liveshare.featureSet": "insiders"
+    "liveshare.featureSet": "insiders",
+    "editor.formatOnPaste": true
 }
