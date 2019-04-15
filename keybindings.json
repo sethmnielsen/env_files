@@ -118,6 +118,9 @@
     { "key": "ctrl+k ctrl+down",         "command": "-workbench.action.focusBelowGroup" },
     { "key": "ctrl+alt+enter",           "command": "search.action.replaceAll", "when": "searchViewletVisible && !findWidgetVisible" },
     { "key": "ctrl+alt+enter",           "command": "-search.action.replaceAll", "when": "replaceActive && searchViewletVisible && !findWidgetVisible" },
+    { "key": "ctrl+shift+y",             "command": "-workbench.debug.action.toggleRepl" },
+    { "key": "ctrl+shift+y",             "command": "workbench.action.debug.start", "when": "!inDebugMode" },
+    { "key": "ctrl+shift+alt+y",         "command": "workbench.action.debug.selectandstart", "when": "!inDebugMode" },
 ]
 
 

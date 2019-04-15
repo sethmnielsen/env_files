@@ -95,7 +95,6 @@
     "scm.diffDecorationsGutterWidth": 1,
     "explorer.confirmDragAndDrop": false,
     "editor.fontSize": 12.5,
-    "python.jediEnabled": false,
     "editor.suggestSelection": "first",
     "C_Cpp.default.cppStandard": "c++17",
     "explorer.confirmDelete": false,
@@ -110,5 +109,11 @@
     ],
     "window.menuBarVisibility": "hidden",
     "liveshare.featureSet": "insiders",
-    "editor.formatOnPaste": true
+    "editor.formatOnPaste": true,
+    "files.watcherExclude": {
+        "/home/seth/.local/share/**": true,
+        "/home/seth/.virtualenvs/default/lib/python3.6/site-packages/holodeck/**": true,
+        "/home/seth/dev/**": true,
+        "/home/seth/Downloads/**": true
+    }
 }

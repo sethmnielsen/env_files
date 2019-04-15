@@ -22,7 +22,8 @@ export DEFAULT_USER=seth  # for shortening prompt
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
 export PATH=$PATH:~/.local/share/fonts
 export PYTHONPATH=$PYTHONPATH:~/dev/models/research:~/dev/models/research/slim  # tensorflow
-export PYTHONPATH=$PYTHONPATH:~/dev/boat_landing_sim/holodeck
+export PYTHONPATH=$PYTHONPATH:~/school/flight_dynamics/mavsim_holodeck/holodeck
+#export PYTHONPATH=$PYTHONPATH:~/dev/boat_landing_sim/holodeck
 export PYTHONPATH=$PYTHONPATH:~/dev/boat_landing_sim/src/rosflight_holodeck/python
 
 source ~/.rosrc
