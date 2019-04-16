@@ -115,5 +115,6 @@
         "/home/seth/.virtualenvs/default/lib/python3.6/site-packages/holodeck/**": true,
         "/home/seth/dev/**": true,
         "/home/seth/Downloads/**": true
-    }
+    },
+    "python.jediEnabled": false
 }
