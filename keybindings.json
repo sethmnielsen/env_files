@@ -25,7 +25,7 @@
     { "key": "alt+l",                    "command": "cursorRight" },
     { "key": "ctrl+alt+k",               "command": "editor.action.moveLinesUpAction", "when": "editorTextFocus" },
     { "key": "ctrl+alt+j",               "command": "editor.action.moveLinesDownAction", "when": "editorTextFocus" },
-    { "key": "alt+left",                 "command": "workbench.action.navigateBack" },
+    { "key": "shift+alt+,",                 "command": "workbench.action.navigateBack" },
     { "key": "ctrl+alt+-",               "command": "-workbench.action.navigateBack" },
     { "key": "alt+r",                    "command": "workbench.action.terminal.toggleTerminal" },
     { "key": "alt+e",                    "command": "workbench.action.focusActiveEditorGroup" },
@@ -60,7 +60,7 @@
     { "key": "f11",                      "command": "-workbench.action.toggleFullScreen" },
     { "key": "ctrl+shift+f11",           "command": "workbench.action.toggleZenMode" },
     { "key": "shift+f11",                "command": "-workbench.action.toggleZenMode" },
-    { "key": "alt+right",                "command": "workbench.action.navigateForward" },
+    { "key": "shift+alt+.",                "command": "workbench.action.navigateForward" },
     { "key": "ctrl+shift+-",             "command": "-workbench.action.navigateForward" },
     { "key": "ctrl+p",                   "command": "-workbench.action.quickOpen" },
     { "key": "ctrl+p",                   "command": "workbench.action.quickOpen", "when": "!terminalFocus && !inDebugRepl" },
@@ -121,6 +121,10 @@
     { "key": "ctrl+shift+y",             "command": "-workbench.debug.action.toggleRepl" },
     { "key": "ctrl+shift+y",             "command": "workbench.action.debug.start", "when": "!inDebugMode" },
     { "key": "ctrl+shift+alt+y",         "command": "workbench.action.debug.selectandstart", "when": "!inDebugMode" },
+    { "key": "alt+left",                 "command": "cursorWordPartLeft", "when": "textInputFocus" },
+    { "key": "alt+right",                "command": "cursorWordPartRight", "when": "textInputFocus" },
+    { "key": "ctrl+shift+m",             "command": "-markdown.showPreviewToSide" },
+    { "key": "ctrl+shift+m",             "command": "bracket-pair-colorizer-2.expandBracketSelection" },
 ]
 
 
