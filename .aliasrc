@@ -47,6 +47,33 @@ alias opencv-docs='google-chrome ~/Documents/opencv-docs-4.0.1/pages.html'
 alias cdbmav='code ~/school/flight_dynamics/bmav'
 alias cdmmav='code ~/school/flight_dynamics/mmav'
 
+# FFMPEG converting MP4 or MOV to MOV for Resolve video editor
+# ffmpeg_mp4_resolve() {
+#   if [[ "$#" -ne 1 ]]; then
+#     echo "Usage: $0 [dir OR infile]"
+#     exit 1
+#   elif ! [[ -e $1]]; then
+#     echo "$1 does not exist"
+#     exit 1
+#   else
+#     if [[ -d $1 ]]; then
+#       if [[ "${1: -1}" == "/" ]]; then
+#         FILES="${1}*"
+#       else
+#         FILES="${1}/*"
+#       fi
+        
+#       for f in $FILES; do
+#         if [[ -f $f ]]; then
+#           fname=${1::-4}
+#           ffmpeg -i ${f} -vcodec dnxhd -acodec pcm_s16le -s 1920x1080 -r 30000/1001 \
+#                                         -b:v 45M -pix_fmt yuv422p -f mov ${f}.MOV
+#   fi
+# }
+# ffmpeg_mov_mp4() {
+
+# }
+
 # git
 alias gs='git status'
 alias gch='git checkout'
