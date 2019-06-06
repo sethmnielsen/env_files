@@ -125,6 +125,8 @@
     { "key": "alt+right",                "command": "cursorWordPartRight", "when": "textInputFocus" },
     { "key": "ctrl+shift+m",             "command": "-markdown.showPreviewToSide" },
     { "key": "ctrl+shift+m",             "command": "bracket-pair-colorizer-2.expandBracketSelection" },
+    { "key": "alt+d",                    "command": "workbench.debug.action.toggleRepl" },
+    { "key": "alt+d",                    "command": "workbench.action.previousPanelView", "when": "terminalFocus" },
 ]
 
 
