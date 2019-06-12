@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # General
 alias python=ipython3
 alias unzip='unzip -q'
@@ -54,26 +56,37 @@ ffmpeg_conv_resolve() {
   elif ! [[ -e $1 ]]; then
     echo "$1 does not exist"
   else
-    echo "else"
     if [[ -d $1 ]]; then
       if [[ "${1: -1}" == "/" ]]; then
-        FILES="${1}*"
+        FILES=${1}*
       else
-        echo "second else"
-        FILES="${1}/*"
+        FILES=${1}/*
       fi
-        
-      for f in $FILES; do
-        echo "$f"
+      CONV_DIR=${FILES:0:-2}/converted_resolve
+      if [[ -e $CONV_DIR ]]; then
+        echo "Error: directory for converted files already exists!"
+        return 1
+      fi
+      mkdir $CONV_DIR
+      for f in $~FILES; do
+        echo "\n\n ------- Converting file $f -------\n\n"
         if [[ -f $f ]]; then
-          fname=${f::-4}
+          fname=${f:2:-4}
           ffmpeg -i ${f} -vcodec dnxhd -acodec pcm_s16le -s 1920x1080 -r 30000/1001 \
-                                        -b:v 45M -pix_fmt yuv422p -f mov ${fname}_1.MOV
+                                        -b:v 45M -pix_fmt yuv422p -f mov "${CONV_DIR}/${fname}_R.MOV"
         fi
       done
-    else
-      echo "not dir"
     fi
+  fi
+}
+ffmpeg_resolve_to_mp4() {
+  if [[ "$#" -ne 1 ]]; then
+    echo "Usage: $0 [infile.mov]"
+  elif ! [[ -e $1 ]]; then
+    echo "$1 does not exist"
+  else
+    fname=${${1:0:-4}}
+    ffmpeg -i ${1} -vf yadif -codec:v libx264 -crf 1 -bf 2 -flags +cgop -pix_fmt yuv420p -codec:a aac -strict -2 -b:a 384k -r:a 48000 -movflags faststart ${fname}.MP4
   fi
 }
 
