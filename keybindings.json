@@ -104,17 +104,19 @@
     { "key": "ctrl+q",                   "command": "-workbench.action.quit" },
     { "key": "ctrl+alt+backspace",       "command": "bracketeer.removeBrackets" },
     { "key": "ctrl+j",                   "command": "-workbench.action.togglePanel" },
-    { "key": "ctrl+a h",                 "command": "workbench.action.focusLeftGroup" },
+    { "key": "ctrl+a h",                 "command": "workbench.action.focusLeftGroup", "when": "editorFocus" },
     { "key": "ctrl+k ctrl+left",         "command": "-workbench.action.focusLeftGroup" },
-    { "key": "ctrl+a l",                 "command": "workbench.action.focusRightGroup" },
+    { "key": "ctrl+a l",                 "command": "workbench.action.focusRightGroup", "when": "editorFocus" },
     { "key": "ctrl+k ctrl+right",        "command": "-workbench.action.focusRightGroup" },
-    { "key": "ctrl+a ctrl+a",            "command": "editor.action.selectAll", "when": "textInputFocus" },
-    { "key": "ctrl+a",                   "command": "-editor.action.selectAll", "when": "textInputFocus" },
-    { "key": "ctrl+a ctrl+a",            "command": "selectAll" },
-    { "key": "ctrl+a",                   "command": "-editor.action.selectAll", "when": "textInputFocus" },
-    { "key": "ctrl+a k",                 "command": "workbench.action.focusAboveGroup" },
+    { "key": "ctrl+a ctrl+a",            "command": "editor.action.selectAll", "when": "editorFocus" },
+    {
+        "key": "ctrl+a",
+        "command": "-editor.action.selectAll",
+        "when": "textInputFocus"
+    },
+    { "key": "ctrl+a k",                 "command": "workbench.action.focusAboveGroup", "when": "editorFocus" },
     { "key": "ctrl+k ctrl+up",           "command": "-workbench.action.focusAboveGroup" },
-    { "key": "ctrl+a j",                 "command": "workbench.action.focusBelowGroup" },
+    { "key": "ctrl+a j",                 "command": "workbench.action.focusBelowGroup", "when": "editorFocus" },
     { "key": "ctrl+k ctrl+down",         "command": "-workbench.action.focusBelowGroup" },
     { "key": "ctrl+alt+enter",           "command": "search.action.replaceAll", "when": "searchViewletVisible && !findWidgetVisible" },
     { "key": "ctrl+alt+enter",           "command": "-search.action.replaceAll", "when": "replaceActive && searchViewletVisible && !findWidgetVisible" },
@@ -126,7 +128,6 @@
     { "key": "ctrl+shift+m",             "command": "-markdown.showPreviewToSide" },
     { "key": "ctrl+shift+m",             "command": "bracket-pair-colorizer-2.expandBracketSelection" },
     { "key": "alt+d",                    "command": "workbench.debug.action.toggleRepl" },
-    { "key": "alt+d",                    "command": "workbench.action.previousPanelView", "when": "terminalFocus" },
 ]
 
 
