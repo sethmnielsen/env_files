@@ -27,8 +27,8 @@ export PATH=$PATH:~/.local/share/fonts
 #export PYTHONPATH=$PYTHONPATH:~/dev/boat_landing_sim/src/rosflight_holodeck/python
 
 ## OVERWRITING PYTHONPATH
-export PYTHONPATH=~/dev/boat_landing_sim/holodeck
-export PYTHONPATH=$PYTHONPATH:~/dev/boat_landing_sim/src/rosflight_holodeck/python
+export PYTHONPATH=~/dev/boat_landing_sim/src/rosflight_holodeck/python
+export PYTHONPATH=$PYTHONPATH:~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck
 
 source ~/.rosrc
 

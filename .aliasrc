@@ -9,6 +9,9 @@ alias o='exit'
 alias tm='gio trash'
 alias mntjet='sshfs nvidia@tx2_rv:/home/nvidia/ /home/seth/kbcar_home'
 alias umntjet='fusermount -u /home/seth/kbcar_home'
+upload_gdrive() { # upload file to Sync dir on Google Drive
+   gdrive upload -p 0B0rj1VEWGIltcmJ1UGNIQTVfTmc $1
+}
 lsg() {
   ls | grep $1
 }
