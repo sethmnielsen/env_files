@@ -1,0 +1,8 @@
+prefix=/home/seth/dev/ws/install
+
+Name: rosflight
+Description: Description of rosflight
+Version: 1.0.0
+Cflags: -I/home/seth/dev/ws/install/include -I/usr/include -I/usr/local/include/eigen3
+Libs: -L/home/seth/dev/ws/install/lib -lmavrosflight /usr/lib/x86_64-linux-gnu/libboost_system.so /usr/lib/x86_64-linux-gnu/libboost_thread.so /usr/lib/x86_64-linux-gnu/libboost_chrono.so /usr/lib/x86_64-linux-gnu/libboost_date_time.so /usr/lib/x86_64-linux-gnu/libboost_atomic.so /usr/lib/x86_64-linux-gnu/libpthread.so -lyaml-cpp
+Requires: roscpp geometry_msgs rosflight_msgs sensor_msgs std_msgs tf tf

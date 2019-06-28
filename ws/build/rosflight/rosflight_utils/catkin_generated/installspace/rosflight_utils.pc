@@ -1,0 +1,8 @@
+prefix=/home/seth/dev/ws/install
+
+Name: rosflight_utils
+Description: Description of rosflight_utils
+Version: 1.0.0
+Cflags: -I/home/seth/dev/ws/install/include
+Libs: -L/home/seth/dev/ws/install/lib -lrosflight_utils
+Requires: roscpp rospy rosflight_msgs sensor_msgs std_srvs visualization_msgs

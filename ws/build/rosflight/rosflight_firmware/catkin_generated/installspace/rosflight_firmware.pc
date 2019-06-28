@@ -1,0 +1,8 @@
+prefix=/home/seth/dev/ws/install
+
+Name: rosflight_firmware
+Description: Description of rosflight_firmware
+Version: 1.0.0
+Cflags: -I/home/seth/dev/ws/install/include
+Libs: -L/home/seth/dev/ws/install/lib -lrosflight_firmware -lrosflight_udp_board
+Requires: roscpp

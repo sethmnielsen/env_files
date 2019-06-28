@@ -1,0 +1,2 @@
+rosflight/rosflight:rosflight/rosflight_firmware:rosflight/rosflight_msgs:rosflight/rosflight_pkgs:rosflight/rosflight_sim:rosflight/rosflight_utils:rosflight_holodeck
+-DPYTHON_EXECUTABLE=/home/seth/.virtualenvs/default/bin/python3 -DCATKIN_DEVEL_PREFIX=/home/seth/dev/ws/devel -DCMAKE_INSTALL_PREFIX=/home/seth/dev/ws/install -G Unix Makefiles

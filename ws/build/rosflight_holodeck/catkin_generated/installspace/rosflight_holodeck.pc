@@ -1,0 +1,8 @@
+prefix=/home/seth/dev/ws/install
+
+Name: rosflight_holodeck
+Description: Description of rosflight_holodeck
+Version: 1.0.0
+Cflags: -I/home/seth/dev/ws/install/include -I/usr/local/include/eigen3
+Libs: -L/home/seth/dev/ws/install/lib -lrosflight_holodeck
+Requires: roscpp rosflight_firmware rosflight_msgs geometry_msgs std_msgs
