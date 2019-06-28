@@ -25,7 +25,7 @@
     { "key": "alt+l",                    "command": "cursorRight" },
     { "key": "ctrl+alt+k",               "command": "editor.action.moveLinesUpAction", "when": "editorTextFocus" },
     { "key": "ctrl+alt+j",               "command": "editor.action.moveLinesDownAction", "when": "editorTextFocus" },
-    { "key": "shift+alt+,",                 "command": "workbench.action.navigateBack" },
+    { "key": "alt+,",                 "command": "workbench.action.navigateBack" },
     { "key": "ctrl+alt+-",               "command": "-workbench.action.navigateBack" },
     { "key": "alt+r",                    "command": "workbench.action.terminal.toggleTerminal" },
     { "key": "alt+e",                    "command": "workbench.action.focusActiveEditorGroup" },
