@@ -15,8 +15,8 @@ upload_gdrive() { # upload file to Sync dir on Google Drive
 lsg() {
   ls | grep $1
 }
-llg() {
-  ll | grep $1
+lg() {
+  la | grep $1
 }
 
 # Move/Copy and follow
