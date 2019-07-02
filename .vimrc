@@ -52,9 +52,6 @@ nmap <space> <leader>
 vmap <space> <leader>
 set backspace=indent,eol,start
 
-" Change arrowkeys to i,j,k,l
-
-
 " Escape Mappings for insert and visual modes
 "inoremap jk <esc>
 "vnoremap jk <esc>
