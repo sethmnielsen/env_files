@@ -109,11 +109,7 @@
     { "key": "ctrl+a l",                 "command": "workbench.action.focusRightGroup", "when": "editorFocus" },
     { "key": "ctrl+k ctrl+right",        "command": "-workbench.action.focusRightGroup" },
     { "key": "ctrl+a ctrl+a",            "command": "editor.action.selectAll", "when": "editorFocus" },
-    {
-        "key": "ctrl+a",
-        "command": "-editor.action.selectAll",
-        "when": "textInputFocus"
-    },
+    { "key": "ctrl+a",                   "command": "-editor.action.selectAll", "when": "editorFocus" }, 
     { "key": "ctrl+a k",                 "command": "workbench.action.focusAboveGroup", "when": "editorFocus" },
     { "key": "ctrl+k ctrl+up",           "command": "-workbench.action.focusAboveGroup" },
     { "key": "ctrl+a j",                 "command": "workbench.action.focusBelowGroup", "when": "editorFocus" },
@@ -127,7 +123,7 @@
     { "key": "alt+right",                "command": "cursorWordPartRight", "when": "textInputFocus" },
     { "key": "ctrl+shift+m",             "command": "-markdown.showPreviewToSide" },
     { "key": "ctrl+shift+m",             "command": "bracket-pair-colorizer-2.expandBracketSelection" },
-    { "key": "alt+d",                    "command": "workbench.debug.action.toggleRepl" },
+    { "key": "alt+d",                    "command": "workbench.debug.action.toggleRepl" }
 ]
 
 
