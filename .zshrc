@@ -140,7 +140,7 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Keybindings
-bindkey "^P" up-line-or-search
-bindkey "^N" down-line-or-search
+bindkey "^P" up-line-or-beginning-search 
+bindkey "^N" down-line-or-beginning-search 
 
 source ~/.aliasrc
