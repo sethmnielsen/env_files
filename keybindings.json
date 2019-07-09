@@ -130,6 +130,14 @@
     {
         "key": "shift+alt+n",
         "command": "notifications.focusToasts"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-workbench.view.scm"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-activitusbar.showScmView"
     }
 ]
 

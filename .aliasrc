@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
 # General
-alias python=ipython3
+alias sudo='sudo '
+alias python='ipython3'
 alias unzip='unzip -q'
-alias sizes='find . -mindepth 1 -maxdepth 1|xargs du -hsc |sort -hr'
+alias sizes='find . -mindepth 1 -maxdepth 1 -print0|xargs -0 du -hsc |sort -hr'
 alias open='open_command'
 alias o='exit'
 alias tm='gio trash'
@@ -31,7 +32,7 @@ alias sdevel='source devel/setup.zsh'
 
 # Catkin
 alias catkin_make_cuda='catkin_make -DOpenCV_DIR=/usr/local/share/OpenCV -DVISUAL_MTT_CUDA=ON'
-alias catkin_make_py3='catkin_make -DPYTHON_EXECUTABLE=/home/seth/.virtualenvs/default/bin/python3'
+alias catkin_make_py3='catkin_make -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DPYTHON_EXECUTABLE=/home/seth/.virtualenvs/default/bin/python3'
 alias catkin_make_py3_debug='catkin_make_py3 -DCMAKE_BUILD_TYPE=Debug'
 
 # Handy code-related aliases
