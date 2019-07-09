@@ -12,11 +12,11 @@ alias umntjet='fusermount -u /home/seth/kbcar_home'
 upload_gdrive() { # upload file to Sync dir on Google Drive
    gdrive upload -p 0B0rj1VEWGIltcmJ1UGNIQTVfTmc $1
 }
-lsg() {
-  ls | grep $1
-}
 lg() {
   la | grep $1
+}
+lsg() {
+  ls | grep $1
 }
 
 # Move/Copy and follow
@@ -40,17 +40,15 @@ alias qtb='qt ~/dev/boat_landing_sim/src/CMakeLists.txt'
 alias rf_holodeck='roslaunch rosflight_holodeck rf_holodeck.launch'
 alias rf_holodeck_debug='roslaunch rosflight_holodeck rf_holodeck_debug.launch'
 alias rf_holodeck_solo='roslaunch rosflight_holodeck rf_holodeck_solo.launch'
-alias rfh="cd ~/dev/boat_landing_sim/src/rosflight_holodeck"
 alias serv_call='rosservice call /param_set MIXER 2 && rosservice call /calibrate_imu'
-alias atmb='atom ~/dev/boat_landing_sim'
-alias atmf='atom ~/school/flight_dynamics/mavsim_python'
-alias atmr='atom ~/school/robotic_vision'
 alias cdb='code ~/dev/boat_landing_sim'
 alias cdf='code ~/school/flight_dynamics/mavsim_python'
 alias cdr='code ~/school/robotic_vision'
 alias opencv-docs='google-chrome ~/Documents/opencv-docs-4.0.1/pages.html'
-alias cdbmav='code ~/school/flight_dynamics/bmav'
-alias cdmmav='code ~/school/flight_dynamics/mmav'
+
+# Common directories
+alias cd_rfh="cd ~/dev/boat_landing_sim/src/rosflight_holodeck"
+alias cd_boat="cd ~/dev/boat_landing_sim"
 
 # FFMPEG converting MP4 or MOV to MOV for Resolve video editor
 ffmpeg_conv_resolve() {
@@ -151,9 +149,9 @@ boat_pull() {
   git pull
   cd ../rf_joy 
   git pull
-  cd ../../holodeck
+  cd ../roscopter
   git pull
-  cd ..
+  cd ../..
   git pull
   cd $A
   echo "\nboat_landing_sim repo has been updated on this machine.\n"
