@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # General
-alias sudo='sudo '
 alias python='ipython3'
 alias unzip='unzip -q'
 alias open='open_command'
