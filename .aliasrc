@@ -4,7 +4,6 @@
 alias sudo='sudo '
 alias python='ipython3'
 alias unzip='unzip -q'
-alias sizes='find . -mindepth 1 -maxdepth 1 -print0|xargs -0 du -hsc |sort -hr'
 alias open='open_command'
 alias o='exit'
 alias tm='gio trash'
@@ -18,6 +17,9 @@ lg() {
 }
 lsg() {
   ls | grep $1
+}
+sizes() {
+    find . -mindepth 1 -maxdepth 1 -print0|xargs -0 du -hsc |sort -hr
 }
 
 # Move/Copy and follow
@@ -157,6 +159,5 @@ boat_pull() {
   cd $A
   echo "\nboat_landing_sim repo has been updated on this machine.\n"
 }
-
 
 source ~/.other
