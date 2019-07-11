@@ -21,7 +21,8 @@ alias tkss='tmux kill-session -t'
 # Automatically connect to a previous session if it exists
 : ${ZSH_TMUX_AUTOCONNECT:=false}
 # Automatically close the terminal when tmux exits
-: ${ZSH_TMUX_AUTOQUIT:=$ZSH_TMUX_AUTOSTART}
+#: ${ZSH_TMUX_AUTOQUIT:=$ZSH_TMUX_AUTOSTART}
+: ${ZSH_TMUX_AUTOQUIT:=false}
 # Set term to screen or screen-256color based on current terminal support
 : ${ZSH_TMUX_FIXTERM:=true}
 # Set '-CC' option for iTerm2 tmux integration
