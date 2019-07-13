@@ -131,6 +131,8 @@
     { "key": "ctrl+alt+p",               "command": "workbench.actions.view.problems" },
     { "key": "ctrl+shift+m",             "command": "markdown.showPreview", "when": "editorLangId == 'markdown'" },
     { "key": "ctrl+shift+m",             "command": "-workbench.actions.view.problems" },
+    { "key": "ctrl+shift+]",             "command": "-editor.unfold", "when": "editorTextFocus" },
+    { "key": "ctrl+shift+]",             "command": "editor.action.revealDefinition", "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" }
 ]
 
 

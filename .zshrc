@@ -20,7 +20,7 @@ compinit
 export EDITOR=vim
 export DEFAULT_USER=seth  # for shortening prompt
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
-export PATH=$PATH:~/.local/share/fonts
+export PATH=$PATH:~/.local/share/fonts:~/dev/UnrealEngine:~/dev/UnrealEngine/Engine/Binaries/Linux
 #export PYTHONPATH=$PYTHONPATH:~/dev/models/research:~/dev/models/research/slim  # tensorflow
 #export PYTHONPATH=$PYTHONPATH:~/school/flight_dynamics/mavsim_holodeck/holodeck
 #export PYTHONPATH=$PYTHONPATH:~/dev/boat_landing_sim/holodeck
