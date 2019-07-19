@@ -10,6 +10,7 @@ alias mntjet='sshfs nvidia@tx2_rv:/home/nvidia/ /home/seth/kbcar_home'
 alias umntjet='fusermount -u /home/seth/kbcar_home'
 alias ue4='~/dev/UnrealEngine/Engine/Binaries/Linux/UE4Editor'
 alias scaedm='ssh smn45@ssh.et.byu.edu'
+alias nuke='pkill -SIGKILL -fe '
 upload_gdrive() { # upload file to Sync dir on Google Drive
    gdrive upload -p 0B0rj1VEWGIltcmJ1UGNIQTVfTmc $1
 }

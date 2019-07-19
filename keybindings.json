@@ -132,7 +132,34 @@
     { "key": "ctrl+shift+m",             "command": "markdown.showPreview", "when": "editorLangId == 'markdown'" },
     { "key": "ctrl+shift+m",             "command": "-workbench.actions.view.problems" },
     { "key": "ctrl+shift+]",             "command": "-editor.unfold", "when": "editorTextFocus" },
-    { "key": "ctrl+shift+]",             "command": "editor.action.revealDefinition", "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" }
+    {
+        "key": "ctrl+shift+]",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "bracketeer.selectBracketContent"
+    },
+    {
+        "key": "ctrl+shift+alt+h",
+        "command": "-bracketeer.selectBracketContent"
+    },
+    {
+        "key": "shift+alt+o",
+        "command": "-editor.action.organizeImports",
+        "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
+    },
+    {
+        "key": "shift+alt+o",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+k ctrl+i",
+        "command": "-editor.action.showHover",
+        "when": "editorTextFocus"
+    }
 ]
 
 
