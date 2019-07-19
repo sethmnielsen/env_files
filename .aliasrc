@@ -22,6 +22,12 @@ lsg() {
 sizes() {
     find . -mindepth 1 -maxdepth 1 -print0|xargs -0 du -hsc |sort -hr
 }
+alias watch='watch -n 0.2 '
+power_draw() {
+    echo - | awk "{printf \"%.1f\", \
+      $(( $(cat /sys/class/power_supply/BAT0/current_now) * \
+          $(cat /sys/class/power_supply/BAT0/voltage_now) )) / 1000000000000 }" ; echo " W "
+}
 
 # Move/Copy and follow
 goto() { [ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; }
