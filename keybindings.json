@@ -103,8 +103,11 @@
     { "key": "ctrl+shift+q",             "command": "clock.insertDateTime" },
     { "key": "ctrl+q",                   "command": "-workbench.action.quit" },
     { "key": "ctrl+alt+backspace",       "command": "bracketeer.removeBrackets" },
-    { "key": "ctrl+j",                   "command": "-workbench.action.togglePanel" },
-    { "key": "ctrl+a h",                 "command": "workbench.action.focusLeftGroup", "when": "editorFocus" },
+    {
+        "key": "ctrl+a h",
+        "command": "workbench.action.focusLeftGroup",
+        "when": "editorFocus"
+    },
     { "key": "ctrl+k ctrl+left",         "command": "-workbench.action.focusLeftGroup" },
     { "key": "ctrl+a l",                 "command": "workbench.action.focusRightGroup", "when": "editorFocus" },
     { "key": "ctrl+k ctrl+right",        "command": "-workbench.action.focusRightGroup" },
@@ -132,36 +135,30 @@
     { "key": "ctrl+shift+m",             "command": "markdown.showPreview", "when": "editorLangId == 'markdown'" },
     { "key": "ctrl+shift+m",             "command": "-workbench.actions.view.problems" },
     { "key": "ctrl+shift+]",             "command": "-editor.unfold", "when": "editorTextFocus" },
+    { "key": "ctrl+shift+]", "command": "editor.action.revealDefinition", "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" },
+    { "key": "ctrl+alt+b", "command": "bracketeer.selectBracketContent" },
+    { "key": "ctrl+shift+alt+h", "command": "-bracketeer.selectBracketContent" },
+    { "key": "shift+alt+o", "command": "-editor.action.organizeImports", "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/" },
+    { "key": "shift+alt+o", "command": "editor.action.showHover", "when": "editorTextFocus" },
+    { "key": "ctrl+k ctrl+i", "command": "-editor.action.showHover", "when": "editorTextFocus" },
+    { "key": "ctrl+a g", "command": "cursorTop", "when": "editorFocus" },
+    { "key": "ctrl+a e", "command": "cursorBottom", "when": "editorFocus" },
+    { "key": "ctrl+a shift+g", "command": "cursorTopSelect", "when": "editorFocus" },
     {
-        "key": "ctrl+shift+]",
-        "command": "editor.action.revealDefinition",
-        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+        "key": "ctrl+a shift+e",
+        "command": "cursorBottomSelect",
+        "when": "editorFocus"
     },
     {
-        "key": "ctrl+alt+b",
-        "command": "bracketeer.selectBracketContent"
+        "key": "ctrl+`",
+        "command": "workbench.action.togglePanel"
     },
     {
-        "key": "ctrl+shift+alt+h",
-        "command": "-bracketeer.selectBracketContent"
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
     },
     {
-        "key": "shift+alt+o",
-        "command": "-editor.action.organizeImports",
-        "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal"
     },
-    {
-        "key": "shift+alt+o",
-        "command": "editor.action.showHover",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+k ctrl+i",
-        "command": "-editor.action.showHover",
-        "when": "editorTextFocus"
-    }
 ]
-
-
-
-
