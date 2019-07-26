@@ -161,4 +161,28 @@
         "key": "ctrl+`",
         "command": "-workbench.action.terminal.toggleTerminal"
     },
+    {
+        "key": "ctrl+shift+g l",
+        "command": "gitlens.toggleLineBlame"
+    },
+    {
+        "key": "ctrl+f2",
+        "command": "editor.action.selectAllMatches",
+        "when": "editorFocus && findWidgetVisible"
+    },
+    {
+        "key": "alt+enter",
+        "command": "-editor.action.selectAllMatches",
+        "when": "editorFocus && findWidgetVisible"
+    },
+    {
+        "key": "alt+enter",
+        "command": "editor.action.changeAll",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+f2",
+        "command": "-editor.action.changeAll",
+        "when": "editorTextFocus && !editorReadonly"
+    },
 ]
