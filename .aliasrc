@@ -1,6 +1,7 @@
 #!/usr/bin/env bash 
 
 # General
+alias sudo='sudo '
 alias python='ipython3'
 alias unzip='unzip -q'
 alias open='open_command'
@@ -11,6 +12,7 @@ alias umntjet='fusermount -u /home/seth/kbcar_home'
 alias ue4='~/dev/UnrealEngine/Engine/Binaries/Linux/UE4Editor'
 alias scaedm='ssh smn45@ssh.et.byu.edu'
 alias nuke='pkill -SIGKILL -fe '
+alias lsblk_='lsblk |grep -v loop'
 upload_gdrive() { # upload file to Sync dir on Google Drive
    gdrive upload -p 0B0rj1VEWGIltcmJ1UGNIQTVfTmc $1
 }
@@ -60,6 +62,7 @@ alias opencv-docs='google-chrome ~/Documents/opencv-docs-4.0.1/pages.html'
 # Common directories
 alias cd_rfh="cd ~/dev/boat_landing_sim/src/rosflight_holodeck"
 alias cd_boat="cd ~/dev/boat_landing_sim"
+alias cd_holodeck=" cd ~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck"
 
 # FFMPEG converting MP4 or MOV to MOV for Resolve video editor
 ffmpeg_conv_resolve() {
@@ -154,14 +157,19 @@ gstats() {
 }
 boat_pull() {
   A=$(pwd)
+  echo "\n--rosflight_holodeck--"
   cd ~/dev/boat_landing_sim/src/rosflight_holodeck
   git pull
+  echo "\n--rosflight--"
   cd ../ROSFLIGHT_fork
   git pull
+  echo "\n--rosflight_joy--"
   cd ../rf_joy 
   git pull
+  echo "\n--roscopter--"
   cd ../roscopter
   git pull
+  echo "\n--boat_landing_sim--"
   cd ../..
   git pull
   cd $A
