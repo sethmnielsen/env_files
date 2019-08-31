@@ -4,6 +4,7 @@
     { "key": "shift+alt+2",              "command": "workbench.action.editorLayoutTwoColumns" },
     { "key": "shift+alt+1",              "command": "workbench.action.editorLayoutSingle" },
     { "key": "ctrl+shift+alt+l",         "command": "workbench.action.moveEditorToNextGroup" },
+    { "key": "ctrl+a \\",                "command": "workbench.action.moveEditorToNextGroup" },
     { "key": "ctrl+shift+alt+h",         "command": "workbench.action.moveEditorToPreviousGroup" },
     { "key": "ctrl+tab",                 "command": "workbench.action.nextEditor" },
     { "key": "ctrl+shift+tab",           "command": "workbench.action.previousEditor" },
