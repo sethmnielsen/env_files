@@ -111,7 +111,7 @@ plugins=(
   git
   tmux
   fzf
-#  pip
+  pip
 )
 
 source $ZSH/oh-my-zsh.sh
