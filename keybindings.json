@@ -83,8 +83,6 @@
     { "key": "ctrl+a shift+e",           "command": "cursorBottomSelect", "when": "editorFocus" },
     { "key": "ctrl+`",                   "command": "workbench.action.togglePanel" },
     { "key": "ctrl+shift+g l",           "command": "gitlens.toggleLineBlame" },
-    { "key": "ctrl+f2",                  "command": "editor.action.selectAllMatches", "when": "editorFocus && findWidgetVisible" },
-    { "key": "alt+enter",                "command": "editor.action.changeAll", "when": "editorTextFocus && !editorReadonly" },
     
 
 
@@ -150,10 +148,33 @@
     { "key": "shift+alt+o",              "command": "-editor.action.organizeImports", "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/" },
     { "key": "ctrl+k ctrl+i",            "command": "-editor.action.showHover", "when": "editorTextFocus" },
     { "key": "ctrl+j",                   "command": "-workbench.action.togglePanel" },
-    { "key": "ctrl+`",                   "command": "-workbench.action.terminal.toggleTerminal" },
-    { "key": "ctrl+f2",                  "command": "-editor.action.changeAll", "when": "editorTextFocus && !editorReadonly" },
-    { "key": "alt+enter",                "command": "-editor.action.selectAllMatches", "when": "editorFocus && findWidgetVisible" },
-
-
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+f2",
+        "command": "-editor.action.changeAll",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+f2",
+        "command": "editor.action.selectAllMatches",
+        "when": "editorFocus && findWidgetVisible"
+    },
+    {
+        "key": "alt+enter",
+        "command": "editor.action.changeAll",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+enter",
+        "command": "-editor.action.selectAllMatches",
+        "when": "editorFocus && findWidgetVisible"
+    },
+    {
+        "key": "ctrl+f9",
+        "command": "workbench.debug.viewlet.action.removeAllBreakpoints"
+    },
 
 ]
