@@ -3,9 +3,9 @@
     { "key": "ctrl+shift+x",             "command": "editor.action.deleteLines", "when": "textInputFocus && !editorReadonly" },
     { "key": "shift+alt+2",              "command": "workbench.action.editorLayoutTwoColumns" },
     { "key": "shift+alt+1",              "command": "workbench.action.editorLayoutSingle" },
-    { "key": "ctrl+shift+alt+l",         "command": "workbench.action.moveEditorToNextGroup" },
-    { "key": "ctrl+a \\",                "command": "workbench.action.moveEditorToNextGroup" },
-    { "key": "ctrl+shift+alt+h",         "command": "workbench.action.moveEditorToPreviousGroup" },
+    { "key": "ctrl+alt+shift+l",         "command": "workbench.action.moveEditorToNextGroup", "when": "editorFocus" },
+    { "key": "ctrl+a \\",                "command": "workbench.action.moveEditorToNextGroup", "when": "editorFocus" },
+    { "key": "ctrl+shift+alt+h",         "command": "workbench.action.moveEditorToPreviousGroup", "when": "editorFocus" },
     { "key": "ctrl+tab",                 "command": "workbench.action.nextEditor" },
     { "key": "ctrl+shift+tab",           "command": "workbench.action.previousEditor" },
     { "key": "alt+k",                    "command": "cursorUp", "when": "textInputFocus" },
@@ -74,7 +74,8 @@
     { "key": "shift+alt+n",              "command": "notifications.focusToasts" },
     { "key": "ctrl+alt+p",               "command": "workbench.actions.view.problems" },
     { "key": "ctrl+shift+m",             "command": "markdown.showPreview", "when": "editorLangId == 'markdown'" },
-    { "key": "ctrl+shift+]",             "command": "editor.action.revealDefinition", "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" },
+    { "key": "ctrl+shift+[",             "command": "editor.action.revealDefinition", "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" },
+    { "key": "ctrl+shift+]",             "command": "editor.action.revealDeclaration", "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" },
     { "key": "ctrl+alt+b",               "command": "bracketeer.selectBracketContent" },
     { "key": "shift+alt+o",              "command": "editor.action.showHover", "when": "editorTextFocus" },
     { "key": "ctrl+a g",                 "command": "cursorTop", "when": "editorFocus" },
@@ -175,6 +176,11 @@
     {
         "key": "ctrl+f9",
         "command": "workbench.debug.viewlet.action.removeAllBreakpoints"
+    },
+    {
+        "key": "ctrl+shift+[",
+        "command": "-editor.fold",
+        "when": "editorTextFocus && foldingEnabled"
     },
 
 ]
