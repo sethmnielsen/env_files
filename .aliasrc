@@ -116,9 +116,9 @@ pull_changes() {
   A=$(pwd)
   cd ~/env
   git pull
-  cd ~/school/flight_dynamics
+  cd ~/school/deep_learning/cs474_labs_f2019
   git pull
-  cd .. 
+  cd ~/school 
   git pull
   cd $A
   echo "\nschool and env repos have been updated on this machine.\n"
@@ -130,13 +130,13 @@ push_changes() {
   git add -A
   git commit -m "Auto-pushed changes"
   git push
-  echo "\n--flight_dyanamics--"
-  cd ~/school/flight_dynamics/
+  echo "\n-- cs474 --"
+  cd ~/school/deep_learning/cs474_labs_f2019
   git add -A
   git commit -m "Auto-pushed changes"
   git push -u origin master
-  cd ..
   echo "\n--SCHOOL--"
+  cd ~/school
   git add -A
   git commit -m "Auto-pushed changes"
   git push
@@ -151,8 +151,8 @@ gstats() {
   echo "--SCHOOL--"
   cd ~/school
   git status -s
-  cd ~/school/flight_dynamics
-  echo "  --flight_dynamics--"
+  cd ~/school/deep_learning/cs474_labs_f2019
+  echo "  -- cs474 --"
   git status -s
   cd $A
 }
