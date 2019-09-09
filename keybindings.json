@@ -73,7 +73,6 @@
     { "key": "alt+d",                    "command": "workbench.debug.action.toggleRepl" },
     { "key": "shift+alt+n",              "command": "notifications.focusToasts" },
     { "key": "ctrl+alt+p",               "command": "workbench.actions.view.problems" },
-    { "key": "ctrl+shift+m",             "command": "markdown.showPreview", "when": "editorLangId == 'markdown'" },
     { "key": "ctrl+shift+[",             "command": "editor.action.revealDefinition", "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" },
     { "key": "ctrl+shift+]",             "command": "editor.action.revealDeclaration", "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" },
     { "key": "ctrl+alt+b",               "command": "bracketeer.selectBracketContent" },
@@ -182,5 +181,22 @@
         "command": "-editor.fold",
         "when": "editorTextFocus && foldingEnabled"
     },
-
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.quickOpenNavigateNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.showAllEditors"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+shift+m",
+        "command": "markdown.extension.togglePreviewToSide",
+        "when": "!terminalFocus && editorLangId == 'markdown'"
+    }
 ]
