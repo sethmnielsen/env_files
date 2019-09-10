@@ -1,7 +1,7 @@
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=3000
-SAVEHIST=3000
+HISTSIZE=8000
+SAVEHIST=8000
 setopt appendhistory autocd extendedglob nomatch
 unsetopt beep notify
 bindkey -v
@@ -29,6 +29,7 @@ export PYTHONPATH=$PYTHONPATH:~/dev/boat_landing_sim/src/rosflight_holodeck/pyth
 
 source ~/.rosrc
 
+# virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/projects
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
