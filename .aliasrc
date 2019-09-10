@@ -14,6 +14,7 @@ alias scaedm='ssh smn45@ssh.et.byu.edu'
 alias nuke='pkill -SIGKILL -fe '
 alias lsblk_='lsblk |grep -v loop'
 alias kill_holodeck='killall Holodeck && killall Holodeck'
+alias msger='fb-messenger-cli'
 upload_gdrive() { # upload file to Sync dir on Google Drive
    gdrive upload -p 0B0rj1VEWGIltcmJ1UGNIQTVfTmc $1
 }
@@ -49,16 +50,13 @@ alias catkin_make_py3='catkin_make -DPYTHON_EXECUTABLE=/home/seth/.virtualenvs/d
 alias catkin_make_py3_debug='catkin_make_py3 -DCMAKE_BUILD_TYPE=Debug'
 
 # Handy code-related aliases
-alias qt='~/dev/Qt/Tools/QtCreator/bin/qtcreator'
-alias qtb='qt ~/dev/boat_landing_sim/src/CMakeLists.txt'
-alias rf_holodeck='roslaunch rosflight_holodeck rf_holodeck.launch'
-alias rf_holodeck_debug='roslaunch rosflight_holodeck rf_holodeck_debug.launch'
-alias rf_holodeck_solo='roslaunch rosflight_holodeck rf_holodeck_solo.launch'
+alias opencv-docs='google-chrome ~/Documents/opencv-docs-4.0.1/pages.html'
+alias rf_holodeck='roslaunch rosflight_holodeck roscopter.launch'
+alias rf_holodeck_debug='roslaunch rosflight_holodeck debug.launch'
 alias serv_call='rosservice call /param_set MIXER 2 && rosservice call /calibrate_imu'
 alias cdb='code ~/dev/boat_landing_sim'
-alias cdf='code ~/school/flight_dynamics/mavsim_python'
+alias cdc='code ~/school/deep_learning'
 alias cdr='code ~/school/robotic_vision'
-alias opencv-docs='google-chrome ~/Documents/opencv-docs-4.0.1/pages.html'
 
 # Common directories
 alias cd_rfh="cd ~/dev/boat_landing_sim/src/rosflight_holodeck"
@@ -112,13 +110,17 @@ alias gch='git checkout'
 alias gcm='git commit -m'
 alias subup='git submodule update --init --recursive'
 
+dir1=~/env
+dir2=~/school/deep_learning
+dir3=~/school
+
 pull_changes() {
   A=$(pwd)
-  cd ~/env
+  cd $dir1 
   git pull
-  cd ~/school/deep_learning/cs474_labs_f2019
+  cd $dir2 
   git pull
-  cd ~/school 
+  cd $dir3 
   git pull
   cd $A
   echo "\nschool and env repos have been updated on this machine.\n"
@@ -126,17 +128,17 @@ pull_changes() {
 push_changes() {
   A=$(pwd)
   echo "\n--ENV--"
-  cd ~/env
+  cd $dir1
   git add -A
   git commit -m "Auto-pushed changes"
   git push
-  echo "\n-- cs474 --"
-  cd ~/school/deep_learning/cs474_labs_f2019
+  echo "\n-- deep_learning --"
+  cd $dir2
   git add -A
   git commit -m "Auto-pushed changes"
-  git push -u origin master
+  git push
   echo "\n--SCHOOL--"
-  cd ~/school
+  cd $dir3
   git add -A
   git commit -m "Auto-pushed changes"
   git push
@@ -146,13 +148,13 @@ push_changes() {
 gstats() {
   A=$(pwd)
   echo "\n--ENV--"
-  cd ~/env
+  cd $dir1
   git status -s
   echo "--SCHOOL--"
-  cd ~/school
+  cd $dir3 
   git status -s
-  cd ~/school/deep_learning/cs474_labs_f2019
-  echo "  -- cs474 --"
+  echo " -- deep_learning --"
+  cd $dir2
   git status -s
   cd $A
 }

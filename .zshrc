@@ -21,11 +21,12 @@ export EDITOR=vim
 export DEFAULT_USER=seth  # for shortening prompt
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
 export PATH=$PATH:~/.local/share/fonts:~/dev/UnrealEngine:~/dev/UnrealEngine/Engine/Binaries/Linux
-#export PYTHONPATH=$PYTHONPATH:~/dev/models/research:~/dev/models/research/slim  # tensorflow
+export PATH=~/.npm-global/bin:$PATH
 
 #### OVERWRITING PYTHONPATH ####
 export PYTHONPATH=~/dev/boat_landing_sim/src/rosflight_holodeck/python
 export PYTHONPATH=$PYTHONPATH:~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck
+#export PYTHONPATH=$PYTHONPATH:~/dev/models/research:~/dev/models/research/slim  # tensorflow
 
 source ~/.rosrc
 
