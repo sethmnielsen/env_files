@@ -114,6 +114,7 @@ alias subup='git submodule update --init --recursive'
 dir1=~/env
 dir2=~/school/deep_learning
 dir3=~/school
+dir4=~/notes
 
 pull_changes() {
   A=$(pwd)
@@ -123,8 +124,10 @@ pull_changes() {
   git pull
   cd $dir3 
   git pull
+  cd $dir4
+  git pull
   cd $A
-  echo "\nschool and env repos have been updated on this machine.\n"
+  echo "\npersonal repos have been updated on this machine.\n"
 }
 push_changes() {
   A=$(pwd)
@@ -143,6 +146,11 @@ push_changes() {
   git add -A
   git commit -m "Auto-pushed changes"
   git push
+  echo "\n--NOTES--"
+  cd $dir4
+  git add -A
+  git commit -m "Auto-pushed changes"
+  git push
   echo "\n"
   cd $A
 }
@@ -156,6 +164,9 @@ gstats() {
   git status -s
   echo " -- deep_learning --"
   cd $dir2
+  git status -s
+  echo "--NOTES--"
+  cd $dir4
   git status -s
   cd $A
 }
