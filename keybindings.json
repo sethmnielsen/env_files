@@ -69,7 +69,11 @@
     { "key": "ctrl+shift+alt+y",         "command": "workbench.action.debug.selectandstart", "when": "!inDebugMode" },
     { "key": "alt+left",                 "command": "cursorWordPartLeft", "when": "textInputFocus" },
     { "key": "alt+right",                "command": "cursorWordPartRight", "when": "textInputFocus" },
-    { "key": "ctrl+shift+m",             "command": "bracket-pair-colorizer-2.expandBracketSelection" },
+    {
+        "key": "ctrl+shift+m",
+        "command": "bracket-pair-colorizer-2.expandBracketSelection",
+        "when": "!terminalFocus && editorLangId != 'markdown'"
+    },
     { "key": "alt+d",                    "command": "workbench.debug.action.toggleRepl" },
     { "key": "shift+alt+n",              "command": "notifications.focusToasts" },
     { "key": "ctrl+alt+p",               "command": "workbench.actions.view.problems" },
