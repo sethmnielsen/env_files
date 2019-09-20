@@ -73,8 +73,8 @@
     { "key": "alt+d",                    "command": "workbench.debug.action.toggleRepl" },
     { "key": "shift+alt+n",              "command": "notifications.focusToasts" },
     { "key": "ctrl+alt+p",               "command": "workbench.actions.view.problems" },
-    { "key": "ctrl+shift+[",             "command": "editor.action.revealDefinition", "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" },
-    { "key": "ctrl+shift+]",             "command": "editor.action.revealDeclaration", "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" },
+    { "key": "ctrl+shift+[",             "command": "editor.action.revealDeclaration", "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" },
+    { "key": "ctrl+shift+]",             "command": "editor.action.revealDefinition", "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" },
     { "key": "ctrl+alt+b",               "command": "bracketeer.selectBracketContent" },
     { "key": "shift+alt+o",              "command": "editor.action.showHover", "when": "editorTextFocus" },
     { "key": "ctrl+a g",                 "command": "cursorTop", "when": "editorFocus" },
@@ -243,5 +243,9 @@
         "key": "alt+.",
         "command": "-gitlens.key..",
         "when": "gitlens:key:."
+    },
+    {
+        "key": "ctrl+alt+y",
+        "command": "python.execInTerminal"
     },
 ]
