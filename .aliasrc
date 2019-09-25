@@ -1,4 +1,4 @@
-#!/usr/bin/env bash 
+#!/usr/bin/env bash
 
 # General
 alias ipy='ipython3'
@@ -18,7 +18,7 @@ alias kill_holodeck='killall Holodeck && killall Holodeck'
 alias explode='rm -rf build devel && catkin_make_py3_debug'
 alias msger='fb-messenger-cli'
 upload_gdrive() { # upload file to Sync dir on Google Drive
-   gdrive upload -p 0B0rj1VEWGIltcmJ1UGNIQTVfTmc $1
+  gdrive upload -p 0B0rj1VEWGIltcmJ1UGNIQTVfTmc $1
 }
 lg() {
   la | grep $1
@@ -27,13 +27,13 @@ lsg() {
   ls | grep $1
 }
 sizes() {
-    find . -mindepth 1 -maxdepth 1 -print0 | xargs -0 du -hsc |sort -hr
+  find . -mindepth 1 -maxdepth 1 -print0 | xargs -0 du -hsc | sort -hr
 }
 alias watch='watch -n 0.2 '
 power_draw() {
-    echo - | awk "{printf \"%.1f\", \
-      $(( $(cat /sys/class/power_supply/BAT0/current_now) * \
-          $(cat /sys/class/power_supply/BAT0/voltage_now) )) / 1000000000000 }" ; echo " W "
+  echo - | awk "{printf \"%.1f\", \
+      $(($(cat /sys/class/power_supply/BAT0/current_now) * $(cat /sys/class/power_supply/BAT0/voltage_now))) / 1000000000000 }"
+  echo " W "
 }
 
 # Move/Copy and follow
@@ -90,7 +90,7 @@ ffmpeg_conv_resolve() {
         if [[ -f $f ]]; then
           fname=${f:2:-4}
           ffmpeg -i ${f} -vcodec dnxhd -acodec pcm_s16le -s 1920x1080 -r 30000/1001 \
-                                        -b:v 45M -pix_fmt yuv422p -f mov "${CONV_DIR}/${fname}_R.MOV"
+            -b:v 45M -pix_fmt yuv422p -f mov "${CONV_DIR}/${fname}_R.MOV"
         fi
       done
     fi
@@ -120,11 +120,11 @@ dir4=~/notes
 
 pull_changes() {
   A=$(pwd)
-  cd $dir1 
+  cd $dir1
   git pull
-  cd $dir2 
+  cd $dir2
   git pull
-  cd $dir3 
+  cd $dir3
   git pull
   cd $dir4
   git pull
@@ -162,7 +162,7 @@ gstats() {
   cd $dir1
   git status -s
   echo "--SCHOOL--"
-  cd $dir3 
+  cd $dir3
   git status -s
   echo " -- deep_learning --"
   cd $dir2
@@ -181,7 +181,7 @@ boat_pull() {
   cd ../ROSFLIGHT_fork
   git pull
   echo "\n--rosflight_joy--"
-  cd ../rf_joy 
+  cd ../rf_joy
   git pull
   echo "\n--roscopter--"
   cd ../roscopter
@@ -204,7 +204,7 @@ bstats() {
   cd ~/dev/boat_landing_sim/src/ROSFLIGHT_fork/rosflight_firmware/firmware
   git status -s
   echo "\n--rosflight_joy--"
-  cd ../rf_joy 
+  cd ../rf_joy
   git status -s
   echo "\n--roscopter--"
   cd ../roscopter
@@ -212,6 +212,5 @@ bstats() {
   cd $A
   echo "\n"
 }
-
 
 source ~/.other
