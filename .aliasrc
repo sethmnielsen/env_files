@@ -27,7 +27,7 @@ lsg() {
   ls | grep $1
 }
 sizes() {
-    find . -mindepth 1 -maxdepth 1 -print0|xargs -0 du -hsc |sort -hr
+    find . -mindepth 1 -maxdepth 1 -print0 | xargs -0 du -hsc |sort -hr
 }
 alias watch='watch -n 0.2 '
 power_draw() {
@@ -192,5 +192,26 @@ boat_pull() {
   cd $A
   echo "\nboat_landing_sim repo has been updated on this machine.\n"
 }
+bstats() {
+  A=$(pwd)
+  echo "\n--rosflight_holodeck--"
+  cd ~/dev/boat_landing_sim/src/rosflight_holodeck
+  git status -s
+  echo "\n--rosflight--"
+  cd ../ROSFLIGHT_fork
+  git status -s
+  echo "    --firmware--"
+  cd ~/dev/boat_landing_sim/src/ROSFLIGHT_fork/rosflight_firmware/firmware
+  git status -s
+  echo "\n--rosflight_joy--"
+  cd ../rf_joy 
+  git status -s
+  echo "\n--roscopter--"
+  cd ../roscopter
+  git status -s
+  cd $A
+  echo "\n"
+}
+
 
 source ~/.other
