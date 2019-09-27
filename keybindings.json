@@ -248,4 +248,9 @@
         "key": "ctrl+alt+y",
         "command": "python.execInTerminal"
     },
+    {
+        "key": "shift+enter",
+        "command": "-python.execSelectionInTerminal",
+        "when": "editorTextFocus && !findInputFocussed && !python.datascience.ownsSelection && !replaceInputFocussed && editorLangId == 'python'"
+    },
 ]

@@ -198,16 +198,16 @@ bstats() {
   cd ~/dev/boat_landing_sim/src/rosflight_holodeck
   git status -s
   echo "\n--rosflight--"
-  cd ../ROSFLIGHT_fork
+  cd ~/dev/boat_landing_sim/src/ROSFLIGHT_fork
   git status -s
   echo "    --firmware--"
   cd ~/dev/boat_landing_sim/src/ROSFLIGHT_fork/rosflight_firmware/firmware
   git status -s
   echo "\n--rosflight_joy--"
-  cd ../rf_joy
+  cd ~/dev/boat_landing_sim/src/rf_joy
   git status -s
   echo "\n--roscopter--"
-  cd ../roscopter
+  cd ~/dev/boat_landing_sim/src/roscopter
   git status -s
   cd $A
   echo "\n"

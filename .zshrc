@@ -24,15 +24,13 @@ export PATH=$PATH:~/.local/share/fonts:~/dev/UnrealEngine:~/dev/UnrealEngine/Eng
 export PATH=~/.npm-global/bin:$PATH
 
 #### OVERWRITING PYTHONPATH ####
-export PYTHONPATH=~/dev/boat_landing_sim/src/rosflight_holodeck/python
-export PYTHONPATH=$PYTHONPATH:~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck
+#export PYTHONPATH=~/dev/boat_landing_sim/src/rosflight_holodeck/python
 #export PYTHONPATH=$PYTHONPATH:~/dev/models/research:~/dev/models/research/slim  # tensorflow
 
 source ~/.rosrc
 
 # virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/projects
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source $HOME/.local/bin/virtualenvwrapper.sh
 source $HOME/.virtualenvs/default/bin/activate
