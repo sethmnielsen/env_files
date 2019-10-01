@@ -17,6 +17,8 @@ alias lsblk='lsblk |grep -v loop'
 alias kill_holodeck='killall Holodeck && killall Holodeck'
 alias explode='rm -rf build devel && catkin_make_py3_debug'
 alias msger='fb-messenger-cli'
+alias watch='watch -n 0.2 '
+alias nv='nvidia-smi'
 upload_gdrive() { # upload file to Sync dir on Google Drive
   gdrive upload -p 0B0rj1VEWGIltcmJ1UGNIQTVfTmc $1
 }
@@ -29,7 +31,6 @@ lsg() {
 sizes() {
   find . -mindepth 1 -maxdepth 1 -print0 | xargs -0 du -hsc | sort -hr
 }
-alias watch='watch -n 0.2 '
 power_draw() {
   echo - | awk "{printf \"%.1f\", \
       $(($(cat /sys/class/power_supply/BAT0/current_now) * $(cat /sys/class/power_supply/BAT0/voltage_now))) / 1000000000000 }"
