@@ -273,4 +273,8 @@
         "command": "python.datascience.runallcells",
         "when": "editorTextFocus && python.datascience.featureenabled && python.datascience.hascodecells && !editorHasSelection && !inDebugMode"
     },
+    {
+        "key": "ctrl+\\",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
 ]
