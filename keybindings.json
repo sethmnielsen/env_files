@@ -27,9 +27,11 @@
     { "key": "shift+alt+l",              "command": "cursorRightSelect", "when": "textInputFocus" },
     { "key": "shift+alt+h",              "command": "cursorLeftSelect", "when": "textInputFocus" },
     { "key": "ctrl+shift+`",             "command": "macros.closePanelSidebar" },
-    { "key": "alt+j",                    "command": "selectNextSuggestion", "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
-    { "key": "alt+k",                    "command": "selectPrevSuggestion", "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
-    { "key": "alt+j",                    "command": "workbench.action.quickOpenSelectNext", "when": "inQuickOpen" },
+    {
+        "key": "alt+j",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
     { "key": "alt+k",                    "command": "workbench.action.quickOpenSelectPrevious", "when": "inQuickOpen" },
     { "key": "alt+j",                    "command": "list.focusDown", "when": "listFocus && !inputFocus" },
     { "key": "alt+k",                    "command": "list.focusUp", "when": "listFocus && !inputFocus" },
@@ -53,8 +55,8 @@
     { "key": "ctrl+shift+alt+backspace", "command": "deleteWordRight", "when": "textInputFocus && !editorReadonly" },
     { "key": "ctrl+f5",                  "command": "workbench.action.debug.selectandstart" },
     { "key": "ctrl+shift+w",             "command": "activitusbar.showDebugView" },
-    { "key": "ctrl+shift+k",             "command": "scrollLineUp", "when": "textInputFocus" },
-    { "key": "ctrl+shift+j",             "command": "scrollLineDown", "when": "textInputFocus" },
+    { "key": "ctrl+shift+k",             "command": "scrollLineUp", "when": "textInputFocus && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible" },
+    { "key": "ctrl+shift+j",             "command": "scrollLineDown", "when": "textInputFocus && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible" },
     { "key": "alt+\\",                   "command": "workbench.debug.action.focusVariablesView", "when": "inDebugMode" },
     { "key": "ctrl+shift+'",             "command": "workbench.action.toggleMaximizedPanel" },
     { "key": "ctrl+shift+q",             "command": "clock.insertDateTime" },
@@ -83,7 +85,8 @@
     { "key": "ctrl+a shift+e",           "command": "cursorBottomSelect", "when": "editorFocus" },
     { "key": "ctrl+`",                   "command": "workbench.action.togglePanel" },
     { "key": "ctrl+shift+g l",           "command": "gitlens.toggleLineBlame" },
-    
+    { "key": "ctrl+shift+j",             "command": "selectNextSuggestion", "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
+    { "key": "ctrl+shift+k",             "command": "selectPrevSuggestion", "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
 
 
     { "key": "ctrl+shift+d",             "command": "-workbench.view.debug" },
