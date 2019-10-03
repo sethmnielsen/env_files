@@ -283,4 +283,18 @@
         "key": "ctrl+a shift+enter",
         "command": "python.datascience.debugcurrentcell.palette"
     },
+    {
+        "key": "alt+c p",
+        "command": "-extension.colorHelper.pick",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+c c",
+        "command": "-extension.colorHelper.convert",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+a ctrl+alt+u",
+        "command": "python.datascience.runallcellsabove.palette"
+    },
 ]
