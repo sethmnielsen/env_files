@@ -264,11 +264,6 @@
         "when": "editorTextFocus && python.datascience.featureenabled && python.datascience.hascodecells && !editorHasSelection"
     },
     {
-        "key": "f5",
-        "command": "python.datascience.runallcells",
-        "when": "editorTextFocus && python.datascience.featureenabled && python.datascience.hascodecells && !editorHasSelection"
-    },
-    {
         "key": "ctrl+alt+u",
         "command": "python.datascience.runallcells",
         "when": "editorTextFocus && python.datascience.featureenabled && python.datascience.hascodecells && !editorHasSelection && !inDebugMode"
@@ -276,5 +271,13 @@
     {
         "key": "ctrl+\\",
         "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "shift+alt+enter",
+        "command": "python.datascience.runcurrentcell"
+    },
+    {
+        "key": "ctrl+a shift+enter",
+        "command": "python.datascience.debugcurrentcell.palette"
     },
 ]
