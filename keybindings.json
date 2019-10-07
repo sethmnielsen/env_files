@@ -67,7 +67,7 @@
     { "key": "ctrl+a k",                 "command": "workbench.action.focusAboveGroup", "when": "editorFocus" },
     { "key": "ctrl+a j",                 "command": "workbench.action.focusBelowGroup", "when": "editorFocus" },
     { "key": "ctrl+alt+enter",           "command": "search.action.replaceAll", "when": "searchViewletVisible && !findWidgetVisible" },
-    { "key": "ctrl+shift+y",             "command": "workbench.action.debug.start", "when": "!inDebugMode" },
+    { "key": "f5",             "command": "workbench.action.debug.start", "when": "!inDebugMode && !python.datascience.featureenabled && !python.datascience.hascodecells" },
     { "key": "ctrl+shift+alt+y",         "command": "workbench.action.debug.selectandstart", "when": "!inDebugMode" },
     { "key": "alt+left",                 "command": "cursorWordPartLeft", "when": "textInputFocus" },
     { "key": "alt+right",                "command": "cursorWordPartRight", "when": "textInputFocus" },
@@ -267,11 +267,6 @@
         "when": "editorTextFocus && python.datascience.featureenabled && python.datascience.hascodecells && !editorHasSelection"
     },
     {
-        "key": "ctrl+alt+u",
-        "command": "python.datascience.runallcells",
-        "when": "editorTextFocus && python.datascience.featureenabled && python.datascience.hascodecells && !editorHasSelection && !inDebugMode"
-    },
-    {
         "key": "ctrl+\\",
         "command": "workbench.action.toggleSidebarVisibility"
     },
@@ -294,7 +289,20 @@
         "when": "editorTextFocus"
     },
     {
+        "key": "ctrl+a ctrl+u",
+        "command": "macros.runAboveAndDebugCurrentCell"
+    },
+    {
         "key": "ctrl+a ctrl+alt+u",
-        "command": "python.datascience.runallcellsabove.palette"
+        "command": "macros.runAboveAndRestartKernel"
+    },
+    {
+        "key": "ctrl+alt+u",
+        "command": "macros.runAllAndRestartKernel"
+    },
+    {
+        "key": "f5",
+        "command": "-workbench.action.debug.start",
+        "when": "!inDebugMode"
     },
 ]
