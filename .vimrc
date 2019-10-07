@@ -4,6 +4,8 @@ set encoding=utf-8
 filetype off                  " required
 set number
 
+set shell=bash
+
 set tags=tags
 
 " set the runtime path to include Vundle and initialize
@@ -22,14 +24,16 @@ Plugin 'tpope/vim-rhubarb'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'lervag/vimtex'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'honza/vim-snippets'
 "Plugin 'taketwo/vim-ros'
 Plugin 'Raimondi/delimitMate'
 Plugin 'morhetz/gruvbox'
+Plugin 'Jamedjo/setcolors.vim'
+Plugin 'doums/darcula'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
