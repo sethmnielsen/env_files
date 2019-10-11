@@ -4,7 +4,7 @@ set encoding=utf-8
 filetype off                  " required
 set number
 
-set shell=bash
+" set shell=bash
 
 set tags=tags
 
