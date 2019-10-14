@@ -60,13 +60,14 @@ alias rf_holodeck_debug='roslaunch rosflight_holodeck debug.launch'
 alias serv_call='rosservice call /param_set MIXER 2 && rosservice call /calibrate_imu'
 alias cdb='code ~/dev/boat_landing_sim'
 alias cdd='code ~/school/deep_learning'
-alias cda='code ~/school/autonomous_systems'
+alias cdt='code ~/school/autonomous_systems/turtlebot_sim'
 
 # Common directories
 alias cd_rfh='cd ~/dev/boat_landing_sim/src/rosflight_holodeck'
 alias cd_boat='cd ~/dev/boat_landing_sim'
 alias cd_holodeck='cd ~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck'
 alias cd_deep='cd ~/school/deep_learning'
+alias cd_turtle='cd ~/school/autonomous_systems/turtlebot_sim'
 
 # FFMPEG converting MP4 or MOV to MOV for Resolve video editor
 ffmpeg_conv_resolve() {
