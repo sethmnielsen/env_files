@@ -20,6 +20,7 @@ alias msger='fb-messenger-cli'
 alias watch='watch -n 0.2 '
 alias nv='nvidia-smi'
 alias ssh_desktop='ssh desktop'
+alias remarkable='reMarkable'
 upload_gdrive() { # upload file to Sync dir on Google Drive
   gdrive upload -p 0B0rj1VEWGIltcmJ1UGNIQTVfTmc $1
 }

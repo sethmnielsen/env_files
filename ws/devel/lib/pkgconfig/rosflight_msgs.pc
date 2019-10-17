@@ -1,8 +1,0 @@
-prefix=/home/seth/dev/ws/devel
-
-Name: rosflight_msgs
-Description: Description of rosflight_msgs
-Version: 1.0.0
-Cflags: -I/home/seth/dev/ws/devel/include
-Libs: -L/home/seth/dev/ws/devel/lib 
-Requires: geometry_msgs std_msgs
