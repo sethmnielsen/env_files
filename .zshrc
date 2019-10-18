@@ -25,6 +25,9 @@ export PATH=$PATH:~/.local/share/fonts:~/dev/UnrealEngine:~/dev/UnrealEngine/Eng
 export PATH=~/.npm-global/bin:$PATH
 
 #### OVERWRITING PYTHONPATH ####
+# pytype
+export PYTHONPATH=/home/seth/school/autonomous_systems/turtlebot_sim:$PYTHONPATH  
+
 #export PYTHONPATH=~/dev/boat_landing_sim/src/rosflight_holodeck/python
 #export PYTHONPATH=$PYTHONPATH:~/dev/models/research:~/dev/models/research/slim  # tensorflow
 
