@@ -13,7 +13,7 @@ alias umntjet='fusermount -u /home/seth/kbcar_home'
 alias ue4='~/dev/UnrealEngine/Engine/Binaries/Linux/UE4Editor'
 alias scaedm='ssh smn45@ssh.et.byu.edu'
 alias nuke='pkill -SIGKILL -fe '
-alias lsblk='lsblk |grep -v loop'
+alias lsblk_='lsblk |grep -v loop'
 alias kill_holodeck='killall Holodeck && killall Holodeck'
 alias explode='rm -rf build devel && catkin_make_py3_debug'
 alias msger='fb-messenger-cli'
@@ -38,6 +38,9 @@ power_draw() {
       $(($(cat /sys/class/power_supply/BAT0/current_now) * $(cat /sys/class/power_supply/BAT0/voltage_now))) / 1000000000000 }"
   echo " W "
 }
+
+# Copying with progress/speed info
+alias rcopy="rsync -ah --progress $1 $2"
 
 # Move/Copy and follow
 goto() { [ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; }
