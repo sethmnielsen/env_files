@@ -32,7 +32,7 @@ lsg() {
   ls | grep $1
 }
 sizes() {
-  find . -mindepth 1 -maxdepth 1 -print0 | xargs -0 du -hsc | sort -hr
+  sudo find . -mindepth 1 -maxdepth 1 -print0 | xargs -0 du -hsc | sort -hr
 }
 power_draw() {
   echo - | awk "{printf \"%.1f\", \
