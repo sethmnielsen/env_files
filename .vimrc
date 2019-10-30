@@ -48,8 +48,11 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set t_Co=256
-colorscheme gruvbox
+
+" Colorscheme
+let g:gruvbox_contrast_dark="hard"
 set background=dark
+colorscheme gruvbox
 
 let mapleader = "\\"
 nmap <space> <leader>
