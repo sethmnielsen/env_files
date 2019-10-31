@@ -8,6 +8,10 @@ import sys
 np.set_printoptions(precision=4, suppress=True, sign=' ', linewidth=160)
 
 
+def npaddr(x):
+    # Returns the memory block address of an array x.
+    return x.__array_interface__['data'][0]
+
 def meters(feet):
     return int(feet / 3.2808)
 
