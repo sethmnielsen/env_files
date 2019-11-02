@@ -23,7 +23,7 @@ export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 export PATH=$PATH:~/.local/share/fonts:~/dev/UnrealEngine:~/dev/UnrealEngine/Engine/Binaries/Linux
 export PATH=~/.npm-global/bin:$PATH
-
+export PATH=$PATH:/usr/local/texlive/2019
 #### OVERWRITING PYTHONPATH ####
 # pytype
 export PYTHONPATH=/home/seth/school/autonomous_systems/turtlebot_sim:$PYTHONPATH  

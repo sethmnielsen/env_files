@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # General
-alias python='ipython3'
+alias python3='ipython3'
 alias htop='htop -u seth'
 alias unzip='unzip -q'
 alias open='open_command'
