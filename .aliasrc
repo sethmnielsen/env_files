@@ -67,6 +67,9 @@ alias cdb='code ~/dev/boat_landing_sim'
 alias cdd='code ~/school/deep_learning'
 alias cdt='code ~/school/autonomous_systems/turtlebot_sim'
 
+code2pdf() { for var in "$@"; do vim "$var" -c ":hardcopy > temp.ps" -c ":q"; 
+    ps2pdf temp.ps "${var%.*}".pdf; rm temp.ps; done; }
+
 # Common directories
 alias cd_rfh='cd ~/dev/boat_landing_sim/src/rosflight_holodeck'
 alias cd_boat='cd ~/dev/boat_landing_sim'
