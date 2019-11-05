@@ -301,4 +301,8 @@
         "command": "-workbench.action.debug.start",
         "when": "!inDebugMode"
     },
+    {
+        "key": "ctrl+shift+alt+,",
+        "command": "editor.action.smartSelect.grow"
+    },
 ]
