@@ -8,7 +8,7 @@
     { "key": "ctrl+shift+alt+h",         "command": "workbench.action.moveEditorToPreviousGroup", "when": "editorFocus" },
     { "key": "ctrl+tab",                 "command": "workbench.action.nextEditor" },
     { "key": "ctrl+shift+tab",           "command": "workbench.action.previousEditor" },
-    { "key": "alt+k",                    "command": "cursorUp", "when": "inputFocus" },
+    { "key": "alt+k",                    "command": "cursorUp", "when": "inputFocus && !inKeybindings" },
     { "key": "alt+j",                    "command": "cursorDown", "when": "inputFocus" },
     { "key": "alt+h",                    "command": "cursorLeft", "when": "inputFocus" },
     { "key": "alt+l",                    "command": "cursorRight", "when": "inputFocus" },
@@ -40,7 +40,7 @@
     { "key": "ctrl+shift+f11",           "command": "workbench.action.toggleZenMode" },
     { "key": "alt+.",                    "command": "workbench.action.navigateForward" },
     { "key": "ctrl+p",                   "command": "workbench.action.quickOpen", "when": "!terminalFocus && !inDebugRepl" },
-    { "key": "ctrl+p",                   "command": "workbench.action.quickOpenPreviousEditor", "when": "!terminalFocus" },
+    { "key": "ctrl+p",                   "command": "workbench.action.quickOpenPreviousEditor", "when": "!terminalFocus && !inDebugRepl" },
     { "key": "alt+\\",                   "command": "workbench.action.focusSideBar" },
     { "key": "ctrl+k",                   "command": "macros.up10Lines", "when": "textInputFocus" },
     { "key": "ctrl+j",                   "command": "macros.down10Lines", "when": "textInputFocus" },
@@ -305,4 +305,10 @@
         "key": "ctrl+shift+alt+,",
         "command": "editor.action.smartSelect.grow"
     },
+    {
+        "key": "ctrl+alt+shift+p",
+        "command": "cursorUp",
+        "when": "inDebugRepl"
+    }
+    
 ]
