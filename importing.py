@@ -5,7 +5,7 @@ import holodeck
 import os
 import sys
 
-np.set_printoptions(precision=4, suppress=True, sign=' ', linewidth=160)
+np.set_printoptions(precision=4, suppress=True, sign=' ', linewidth=120)
 
 
 def npaddr(x):
