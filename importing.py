@@ -5,6 +5,11 @@ import holodeck
 import os
 import sys
 
+try:
+    import cupy as cp
+except ImportError:
+    pass
+
 np.set_printoptions(precision=4, suppress=True, sign=' ', linewidth=120)
 
 

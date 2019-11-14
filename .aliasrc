@@ -2,6 +2,7 @@
 
 # General
 alias python3='ipython3'
+alias python3_6='~/.virtualenvs/default/bin/python3'
 alias htop='htop -u seth'
 alias unzip='unzip -q'
 alias open='open_command'
@@ -42,7 +43,8 @@ power_draw() {
 }
 
 # Copying with progress/speed info
-alias rcopy="rsync -ah --progress $1 $2"
+alias rp="rsync -ah --no-owner"
+alias rpprog="rsync -ah --no-owner --progress"
 
 # Move/Copy and follow
 goto() { [ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; }
