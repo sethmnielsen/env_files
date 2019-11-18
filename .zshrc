@@ -17,6 +17,8 @@ compinit
 
 
 ##### Added by me #####
+source ~/.rosrc
+
 export EDITOR=vim
 export DEFAULT_USER=seth  # for shortening prompt
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
@@ -25,14 +27,13 @@ export PATH=$PATH:~/.local/share/fonts
 export PATH=$PATH:~/dev/UnrealEngine:~/dev/UnrealEngine/Engine/Binaries/Linux
 export PATH=~/.npm-global/bin:$PATH
 export PATH=$PATH:/usr/local/texlive/2019
-#### OVERWRITING PYTHONPATH ####
-# pytype
-export PYTHONPATH=/home/seth/school/autonomous_systems/turtlebot_sim:$PYTHONPATH  
+export PATH=/usr/local/opencv/bin:$PATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/opencv/lib
 
+#### OVERWRITING PYTHONPATH ####
+export PYTHONPATH=/home/seth/school/autonomous_systems/turtlebot_sim:$PYTHONPATH  
 #export PYTHONPATH=~/dev/boat_landing_sim/src/rosflight_holodeck/python
 #export PYTHONPATH=$PYTHONPATH:~/dev/models/research:~/dev/models/research/slim  # tensorflow
-
-source ~/.rosrc
 
 # virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
@@ -89,7 +90,7 @@ DISABLE_AUTO_UPDATE="true"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+#COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -139,7 +140,10 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Other custom stuff 
+setopt rmstarsilent
 
 # Keybindings
 bindkey "^P" up-line-or-beginning-search 

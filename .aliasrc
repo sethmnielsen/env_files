@@ -51,12 +51,14 @@ goto() { [ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; }
 cpf() { cp "$@" && goto "$_"; }
 mvf() { mv "$@" && goto "$_"; }
 
-# ROS / sourcing
-alias ros_env='env | grep ROS'
+# zsh / sourcing / environment
+alias vzsh='vim ~/.zshrc'
 alias szsh='source ~/.zshrc'
 alias sdevel='source devel/setup.zsh'
+alias path='sed "s/:/\n/g" <<< "$PATH"'
 
-# Catkin
+# ROS/Catkin
+alias ros_env='env | grep ROS'
 alias catkin_make_cuda='catkin_make -DOpenCV_DIR=/usr/local/share/OpenCV -DVISUAL_MTT_CUDA=ON'
 alias catkin_make_py3='catkin_make -DPYTHON_EXECUTABLE=/home/seth/.virtualenvs/default/bin/python3'
 alias catkin_make_py3_debug='catkin_make_py3 -DCMAKE_BUILD_TYPE=Debug'

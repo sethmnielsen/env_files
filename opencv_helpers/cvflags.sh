@@ -1,4 +1,4 @@
-cmake -DCMAKE_INSTALL_PREFIX=/usr/local/opencv \
+cmake -DCMAKE_INSTALL_PREFIX=/usr/include/opencv \
       -DCMAKE_BUILD_TYPE=RELEASE \
       -DWITH_CUDA=ON \
       -DENABLE_FAST_MATH=1 \
