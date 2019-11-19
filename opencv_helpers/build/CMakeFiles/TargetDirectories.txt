@@ -1,3 +1,0 @@
-/home/seth/env/opencv_helpers/build/CMakeFiles/rebuild_cache.dir
-/home/seth/env/opencv_helpers/build/CMakeFiles/opencv_version.dir
-/home/seth/env/opencv_helpers/build/CMakeFiles/edit_cache.dir

@@ -27,7 +27,7 @@ export PATH=$PATH:~/.local/share/fonts
 export PATH=$PATH:~/dev/UnrealEngine:~/dev/UnrealEngine/Engine/Binaries/Linux
 export PATH=~/.npm-global/bin:$PATH
 export PATH=$PATH:/usr/local/texlive/2019
-export PATH=/usr/local/opencv/bin:$PATH
+#export PATH=/usr/local/opencv/bin:$PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/opencv/lib
 
 #### OVERWRITING PYTHONPATH ####

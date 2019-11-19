@@ -28,4 +28,5 @@ cmake -DCMAKE_INSTALL_PREFIX=/usr/include/opencv \
       -DPYTHON3_INCLUDE_DIR2=/home/seth/.virtualenvs/default/lib/python3.6/site-packages \
       -DBUILD_opencv_cudacodec=OFF \
       -DOPENCV_EXTRA_MODULES_PATH=~/Downloads/opencv_contrib/modules \
+      -DCUDA_ARCH_BIN=6.0 6.1 7.0 7.5 \
       -DWITH_TBB=ON  .. \
