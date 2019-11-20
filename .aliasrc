@@ -14,7 +14,7 @@ alias umntjet='fusermount -u /home/seth/kbcar_home'
 alias unreal='~/dev/UnrealEngine/Engine/Binaries/Linux/UE4Editor'
 alias scaedm='ssh smn45@ssh.et.byu.edu'
 alias nuke='pkill -SIGKILL -fe '
-alias lsblk_='lsblk -o NAME,FSTYPE,SIZE,TYPE,MOUNTPOINT |grep -v loop'
+alias lsblk_='lsblk -o NAME,FSTYPE,SIZE,STATE,TYPE,MOUNTPOINT |grep -v loop'
 alias df_='df -h |grep -v loop'
 alias kill_holodeck='killall Holodeck && killall Holodeck'
 alias explode='rm -rf build devel && catkin_make_py3_debug'
@@ -45,6 +45,9 @@ power_draw() {
 # Copying with progress/speed info
 alias rp="rsync -ah --no-owner"
 alias rpprog="rsync -ah --no-owner --progress"
+
+alias sudo_rp="sudo rsync -ah --no-owner"
+alias sudo_rpprog="sudo rsync -ah --no-owner --progress"
 
 # Move/Copy and follow
 goto() { [ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; }
