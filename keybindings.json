@@ -76,7 +76,7 @@
     { "key": "ctrl+alt+b",               "command": "bracketeer.selectBracketContent" },
     { "key": "shift+alt+o",              "command": "editor.action.showHover", "when": "editorTextFocus" },
     { "key": "ctrl+a g",                 "command": "cursorTop", "when": "editorFocus" },
-    { "key": "ctrl+a shift+g",           "command": "cursorBottom", "when": "editorFocus" },
+    { "key": "ctrl+a e",                 "command": "cursorBottom", "when": "editorFocus" },
     { "key": "ctrl+`",                   "command": "workbench.action.togglePanel" },
     { "key": "ctrl+shift+g l",           "command": "gitlens.toggleLineBlame" },
     { "key": "ctrl+shift+j",             "command": "selectNextSuggestion", "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
