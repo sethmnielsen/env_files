@@ -34,6 +34,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'morhetz/gruvbox'
 Plugin 'Jamedjo/setcolors.vim'
 Plugin 'doums/darcula'
+Plugin 'cespare/vim-toml'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
