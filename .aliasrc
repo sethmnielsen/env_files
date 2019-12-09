@@ -3,6 +3,7 @@
 # General
 alias python3='ipython3'
 alias python3_6='~/.virtualenvs/default/bin/python3'
+alias rust_evcxr='evcxr'
 alias htop='htop -u seth'
 alias unzip='unzip -q'
 alias open='open_command'
