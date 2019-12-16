@@ -58,6 +58,9 @@ goto() { [ -d "$1" ] && cd "$1" || cd "$(dirname "$1")"; }
 cpf() { cp "$@" && goto "$_"; }
 mvf() { mv "$@" && goto "$_"; }
 
+# cd and ll
+cdl() {cd "$@" && ls}
+
 # zsh / sourcing / environment
 alias vzsh='vim ~/.zshrc'
 alias szsh='source ~/.zshrc'
