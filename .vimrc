@@ -61,9 +61,12 @@ vmap <space> <leader>
 set backspace=indent,eol,start
 
 " Escape Mappings for insert and visual modes
-"inoremap jk <esc>
-"vnoremap jk <esc>
+inoremap jk <esc>
+vnoremap jk <esc>
 
+" Replace all highlighted text with new text
+nnoremap <c-n> :%s///g<left><left>
+ 
 " Mappings to edit .vimrc and source/save .vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
