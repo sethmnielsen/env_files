@@ -66,6 +66,9 @@ vnoremap jk <esc>
 
 " Replace all highlighted text with new text
 nnoremap <c-n> :%s///g<left><left>
+
+nnoremap <c-y> <c-a>
+
  
 " Mappings to edit .vimrc and source/save .vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>

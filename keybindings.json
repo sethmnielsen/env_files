@@ -15,8 +15,10 @@
     { "key": "ctrl+alt+k",               "command": "editor.action.moveLinesUpAction", "when": "editorTextFocus" },
     { "key": "ctrl+alt+j",               "command": "editor.action.moveLinesDownAction", "when": "editorTextFocus" },
     { "key": "alt+,",                    "command": "workbench.action.navigateBack" },
-    { "key": "alt+r",                    "command": "workbench.action.terminal.toggleTerminal" },
-    { "key": "alt+e",                    "command": "workbench.action.focusActiveEditorGroup" },
+    {
+        "key": "alt+e",
+        "command": "workbench.action.focusActiveEditorGroup"
+    },
     { "key": "shift+alt+k",              "command": "editor.action.insertCursorAbove", "when": "editorTextFocus" },
     { "key": "shift+alt+j",              "command": "editor.action.insertCursorBelow", "when": "editorTextFocus" },
     { "key": "ctrl+h",                   "command": "cursorHome", "when": "textInputFocus" },
@@ -59,9 +61,7 @@
     { "key": "ctrl+alt+backspace",       "command": "bracketeer.removeBrackets" },
     { "key": "ctrl+a h",                 "command": "workbench.action.focusLeftGroup", "when": "editorFocus" },
     { "key": "ctrl+a l",                 "command": "workbench.action.focusRightGroup", "when": "editorFocus" },
-    { "key": "ctrl+a ctrl+a",            "command": "editor.action.selectAll", "when": "editorFocus" },
-    { "key": "ctrl+a k",                 "command": "workbench.action.focusAboveGroup", "when": "editorFocus" },
-    { "key": "ctrl+a j",                 "command": "workbench.action.focusBelowGroup", "when": "editorFocus" },
+    { "key": "ctrl+a a",            "command": "editor.action.selectAll", "when": "editorFocus" },
     { "key": "ctrl+alt+enter",           "command": "search.action.replaceAll", "when": "searchViewletVisible && !findWidgetVisible" },
     { "key": "f5",             "command": "workbench.action.debug.start", "when": "!inDebugMode" },
     { "key": "ctrl+shift+alt+y",         "command": "workbench.action.debug.selectandstart", "when": "!inDebugMode" },
@@ -76,8 +76,10 @@
     { "key": "ctrl+alt+b",               "command": "bracketeer.selectBracketContent" },
     { "key": "shift+alt+o",              "command": "editor.action.showHover", "when": "editorTextFocus" },
     { "key": "ctrl+a g",                 "command": "cursorTop", "when": "editorFocus" },
-    { "key": "ctrl+a e",                 "command": "cursorBottom", "when": "editorFocus" },
-    { "key": "ctrl+`",                   "command": "workbench.action.togglePanel" },
+    {
+        "key": "ctrl+`",
+        "command": "workbench.action.togglePanel"
+    },
     { "key": "ctrl+shift+g l",           "command": "gitlens.toggleLineBlame" },
     { "key": "ctrl+shift+j",             "command": "selectNextSuggestion", "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
     { "key": "ctrl+shift+k",             "command": "selectPrevSuggestion", "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
@@ -148,6 +150,12 @@
     {
         "key": "ctrl+`",
         "command": "-workbench.action.terminal.toggleTerminal"
+    },
+    { "key": "alt+r", "command": "workbench.action.terminal.toggleTerminal" },
+    { "key": "ctrl+a j", "command": "workbench.action.terminal.toggleTerminal", "when": "editorFocus"},
+    {
+        "key": "ctrl+a k",
+        "command": "workbench.action.focusActiveEditorGroup"
     },
     {
         "key": "ctrl+f2",
@@ -307,6 +315,15 @@
         "key": "ctrl+alt+shift+p",
         "command": "cursorUp",
         "when": "inDebugRepl"
+    },
+    {
+        "key": "ctrl+y",
+        "command": "-redo",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+y",
+        "command": "-redo"
     }
     
 ]
