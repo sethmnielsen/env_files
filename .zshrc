@@ -32,6 +32,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/opencv/lib
 
 #### OVERWRITING PYTHONPATH ####
 export PYTHONPATH=/home/seth/school/autonomous_systems/turtlebot_sim:$PYTHONPATH  
+export PYTHONPATH=$PYTHONPATH:/home/seth/dev/coco_dataset/cocoapi
 #export PYTHONPATH=~/dev/boat_landing_sim/src/rosflight_holodeck/python
 #export PYTHONPATH=$PYTHONPATH:~/dev/models/research:~/dev/models/research/slim  # tensorflow
 
