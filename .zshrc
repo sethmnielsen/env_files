@@ -26,7 +26,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PAT
 export PATH=$PATH:~/.local/share/fonts
 export PATH=$PATH:~/dev/UnrealEngine:~/dev/UnrealEngine/Engine/Binaries/Linux
 export PATH=~/.npm-global/bin:$PATH
-export PATH=$PATH:/usr/local/texlive/2019
+export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
 #export PATH=/usr/local/opencv/bin:$PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/opencv/lib
 
