@@ -1,0 +1,363 @@
+{
+    "workbench.startupEditor": "none",
+    "search.location": "sidebar",
+    "files.autoSave": "afterDelay",
+    "terminal.integrated.fontFamily": "'Cousine for Powerline'",
+    "terminal.integrated.fontSize": 14,
+    "files.exclude": {
+        "**/*__pycache__": true,
+        "**/*.catkin_workspace": true,
+        "**/*.clang_complete": true,
+        "**/*.github/": true,
+        "**/*.gitignore": true,
+        "**/*.gitmodules": true,
+        "**/*.ipynb_checkpoints": true,
+        "**/*.o": true,
+        "**/*.pdf": true,
+        "**/*.pyc": true,
+        "**/*.mypy_cache": true,
+        "**/*.rst": true,
+        "**/*.so": true,
+        "**/*.swp": true,
+        "**/*.vscode": true,
+        "**/*.zip": true,
+        "**/*.tar.gz": true,
+        "**/*airbourne": true,
+        "**/*breezy": true,
+        "**/*CMakeLists.txt.user": true,
+        "**/*docs": true,
+        "**/*rosflight_memory": true,
+        "**/build": true,
+        "**/devel": true,
+        "**F450.yaml": true,
+        ".env": true,
+        "**/target/": true,
+        "**/Cargo.lock": true,
+        "**/*.ods": true,
+        "**/*.odt": true
+    },
+    "files.associations": {
+        "*.*rc": "shellscript",
+        "*.launch": "xml",
+        "CMakeLists.txt": "cmake",
+        "<ipython-input*": "python",
+        "*.tex": "latex"
+    },
+    "explorer.autoReveal": false,
+    "workbench.tree.indent": 20,
+    "explorer.openEditors.visible": 0,
+    "editor.minimap.enabled": false,
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "alt",
+    "workbench.editor.tabSizing": "shrink",
+    "keyboard.dispatch": "keyCode",
+    "python.pythonPath": "/home/seth/.virtualenvs/default/bin/python3",
+    "python.venvPath": "~/.virtualenvs",
+    "python.terminal.activateEnvironment": false,
+    "workbench.activityBar.visible": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideTabs": false,
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.acceptSuggestionOnEnter": "off",
+    "activitusbar.activeColour": "#4989b6",
+    "activitusbar.toggleSidebar": false,
+    "clock.dateFormat": "h:MM TT",
+    "breadcrumbs.enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.pylintEnabled": true,
+    "python.autoComplete.extraPaths": [
+        "/home/seth/dev/boat_landing_sim/devel/lib/python3/dist-packages",
+        "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src",
+        "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python",
+        "/home/seth/dev/boat_landing_sim/src/rf_joy/src/rosflight_joy",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ],
+    "C_Cpp.default.intelliSenseMode": "msvc-x64",
+    "editor.rulers": [90],
+    "macros": {
+        "down10Lines": [
+            "cursorDown",
+            "cursorDown",
+            "cursorDown",
+            "cursorDown",
+            "cursorDown",
+            "cursorDown",
+            "cursorDown",
+            "cursorDown",
+            "cursorDown",
+            "cursorDown"
+        ],
+        "up10Lines": [
+            "cursorUp",
+            "cursorUp",
+            "cursorUp",
+            "cursorUp",
+            "cursorUp",
+            "cursorUp",
+            "cursorUp",
+            "cursorUp",
+            "cursorUp",
+            "cursorUp"
+        ],
+        "closePanelSidebar": [
+            "workbench.action.toggleSidebarVisibility",
+            "workbench.action.closePanel"
+        ],
+        "runAllAndRestartKernel": [
+            "python.datascience.restartkernel",
+            "python.datascience.runallcells",
+        ],
+        "runAboveAndRestartKernel": [
+            "python.datascience.restartkernel",
+            "python.datascience.runallcellsabove.palette",
+        ],
+        "runAboveAndDebugCurrentCell": [
+            "python.datascience.restartkernel",
+            "python.datascience.runallcellsabove.palette",
+            "python.datascience.debugcurrentcell.palette"
+        ]
+    },
+    "scm.diffDecorationsGutterWidth": 1,
+    "explorer.confirmDragAndDrop": false,
+    "editor.suggestSelection": "first",
+    "explorer.confirmDelete": false,
+    "workbench.statusBar.visible": true,
+    "editor.renderWhitespace": "none",
+    "bracket-pair-colorizer-2.colors": [
+        "Gold",
+        "Teal",
+        "DarkOrange",
+        "OliveDrab",
+        // "Crimson",
+        // "BlueViolet",
+    ],
+    "liveshare.featureSet": "insiders",
+    "files.watcherExclude": {
+        "/home/seth/.local/share/**": true,
+        "/home/seth/.virtualenvs/default/lib/python3.6/site-packages/holodeck/**": true,
+        "/home/seth/dev/**": true,
+        "/home/seth/Downloads/**": true
+    },
+    "workbench.sideBar.location": "left",
+    "editor.fontFamily": "'Inconsolata for Powerline', 'monospace', monospace, 'Droid Sans Fallback', 'PowerlineSymbols'",
+    "activitusbar.views": [
+        {
+            "name": "explorer",
+            "octicon": "file-text"
+        },
+        {
+            "name": "search",
+            "octicon": "search"
+        },
+        {
+            "name": "debug",
+            "octicon": "bug"
+        },
+        {
+            "name": "extensions",
+            "octicon": "package"
+        }
+    ],
+    "gitlens.views.repositories.location": "gitlens",
+    "gitlens.views.fileHistory.location": "gitlens",
+    "gitlens.views.lineHistory.location": "gitlens",
+    "gitlens.views.compare.location": "gitlens",
+    "gitlens.views.search.location": "gitlens",
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.codeLens.recentChange.enabled": false,
+    "C_Cpp.default.cppStandard": "c++14",
+    "C_Cpp.intelliSenseCacheSize": 1024,
+    "workbench.list.automaticKeyboardNavigation": false,
+    "gitlens.currentLine.enabled": false,
+    "problems.decorations.enabled": false,
+    "python.workspaceSymbols.exclusionPatterns": [],
+    "markdown.preview.breaks": true,
+    "markdown.preview.markEditorSelection": false,
+    "editor.fontWeight": "500",
+    "todohighlight.keywords": [
+        {
+            "text": "HACK:",
+            "color": "#000",
+            "isWholeLine": false,
+        },
+        {
+            "text": "NOTE:",
+            "color": "turquoise",
+            "backgroundColor": "none",
+        },
+        {
+            "text": "TODO:",
+            "color": "crimson",
+            "backgroundColor": "none",
+            // "border": "1px solid red",
+            // "borderRadius": "2px", //NOTE: using borderRadius along with `border` or you will see nothing change
+            //other styling properties goes here ... 
+        }
+    ],
+    "shellformat.effectLanguages": [
+        "shellscript",
+        "dockerfile",
+        "dotenv",
+        "hosts",
+        "jvmoptions",
+        "ignore",
+        "gitignore",
+        "properties",
+        "spring-boot-properties",
+        "azcli"
+    ],
+    "python.dataScience.askForKernelRestart": false,
+    "materialTheme.accent": "Remove accents",
+    "workbench.colorCustomizations": {
+        "[Nord]": {
+            "editor.background": "#242933",
+            "sideBar.background": "#272d38",
+            "editorGutter.background": "#242933"
+        }
+    },
+    "python.linting.flake8Args": [
+        "--ignore=E50,E231,F401"
+    ],
+    "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    }
+  ],
+"vim.leader": "<space>",
+"diffEditor.renderSideBySide": true,
+"window.zoomLevel": 0,
+"python.dataScience.changeDirOnImportExport": false,
+"window.enableMenuBarMnemonics": false,
+"window.customMenuBarAltFocus": false,
+"git.enabled": false,
+"python.jediEnabled": false,
+"matlab.lintOnSave": false,
+"latex-workshop.view.pdf.viewer": "external",
+"editor.snippetSuggestions": "bottom",
+"window.menuBarVisibility": "hidden",
+"rust-client.enableMultiProjectSetup": true,
+"rust.show_warnings": false,
+"workbench.editor.showTabs": true,
+"workbench.colorTheme": "Ayu Mirage Bordered",
+"extensions.autoUpdate": true,
+"editor.links": false,
+"latex-workshop.latex.recipes": [
+    {
+        "name": "lualatexmk-seth",
+        "tools": [
+            "lualatexmk-seth"
+        ]
+    },
+    {
+        "name": "latexmk 🔃",
+        "tools": [
+            "latexmk"
+        ]
+    },
+    {
+        "name": "latexmk (latexmkrc)",
+        "tools": [
+            "latexmk_rconly"
+        ]
+    },
+    {
+        "name": "latexmk (lualatex)",
+        "tools": [
+            "lualatexmk"
+        ]
+    },
+    {
+        "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+        "tools": [
+            "pdflatex",
+            "bibtex",
+            "pdflatex",
+            "pdflatex"
+        ]
+    }
+],
+"latex-workshop.latex.tools": [
+    {
+        "name": "lualatexmk-seth",
+        "command": "latexmk",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-lualatex",
+            "-outdir=/home/seth/Documents/sethnielsen_resume",
+            "%DOC%"
+        ],
+        "env": {}
+    },    
+    {
+        "name": "latexmk",
+        "command": "latexmk",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-pdf",
+            "-outdir=/home/seth/Documents/sethnielsen_resume",
+            "%DOC%"
+        ],
+        "env": {}
+    },
+    {
+        "name": "lualatexmk",
+        "command": "latexmk",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-lualatex",
+            "-outdir=%OUTDIR%",
+            "%DOC%"
+        ],
+        "env": {}
+    },
+    {
+        "name": "latexmk_rconly",
+        "command": "latexmk",
+        "args": [
+            "%DOC%"
+        ],
+        "env": {}
+    },
+    {
+        "name": "pdflatex",
+        "command": "pdflatex",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "%DOC%"
+        ],
+        "env": {}
+    },
+    {
+        "name": "bibtex",
+        "command": "bibtex",
+        "args": [
+            "%DOCFILE%"
+        ],
+        "env": {}
+    },
+],
+"latex-workshop.chktex.run": "onType",
+"latex-workshop.hover.preview.newcommand.newcommandFile": "/home/seth/texmf/tex/latex/resume/documentMETADATA.cls",
+"latex-workshop.chktex.delay": 2000,
+"latex-workshop.latex.autoBuild.run": "never",
+"latex-workshop.bind.altKeymap.enabled": true
+}
