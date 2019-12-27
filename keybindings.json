@@ -340,7 +340,7 @@
     {
         "key": "ctrl+shift+alt+b",
         "command": "latex-workshop.build",
-        "when": "config.latex-workshop.bind.altKeymap.enabled && editorLangId == 'latex'"
+        "when": "config.latex-workshop.bind.altKeymap.enabled"
     },
     {
         "key": "ctrl+l alt+b",
