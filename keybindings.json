@@ -45,8 +45,6 @@
     { "key": "alt+\\",                   "command": "workbench.action.focusSideBar" },
     { "key": "ctrl+k",                  "command": "macros.up10Lines", "when": "textInputFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'" },
     { "key": "ctrl+j",                  "command": "macros.down10Lines", "when": "textInputFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'" },
-    { "key": "shift+k",                  "command": "macros.up10Lines", "when": "textInputFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'" },
-    { "key": "shift+j",                  "command": "macros.down10Lines", "when": "textInputFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'" },
     { "key": "ctrl+shift+alt+j",         "command": "editor.action.joinLines" },
     { "key": "alt+s",                    "command": "workbench.debug.action.focusCallStackView" },
     { "key": "f6",                       "command": "workbench.action.debug.stop", "when": "inDebugMode" },

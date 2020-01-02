@@ -4,6 +4,7 @@
     "files.autoSave": "afterDelay",
     "terminal.integrated.fontFamily": "'Cousine for Powerline'",
     "terminal.integrated.fontSize": 14,
+    "workbench.colorTheme": "Ayu Mirage Bordered",
     "files.exclude": {
         "**/*__pycache__": true,
         "**/*.catkin_workspace": true,
@@ -131,7 +132,6 @@
         // "Crimson",
         // "BlueViolet",
     ],
-    "liveshare.featureSet": "insiders",
     "files.watcherExclude": {
         "/home/seth/.local/share/**": true,
         "/home/seth/.virtualenvs/default/lib/python3.6/site-packages/holodeck/**": true,
@@ -218,22 +218,11 @@
     "python.linting.flake8Args": [
         "--ignore=E50,E231,F401"
     ],
-    "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "j"],
-      "after": ["<Esc>"]
-    }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<leader>", "d"],
-      "after": ["d", "d"]
+    "vim.vimrc.enable": true,
+    "vim.handleKeys": {
+        "<C-]>": false,
+        "<C-[>": false
     },
-    {
-      "before": ["<C-n>"],
-      "commands": [":nohl"]
-    }
-  ],
 "vim.leader": "<space>",
 "diffEditor.renderSideBySide": true,
 "window.zoomLevel": 0,
@@ -249,7 +238,6 @@
 "rust-client.enableMultiProjectSetup": true,
 "rust.show_warnings": false,
 "workbench.editor.showTabs": true,
-"workbench.colorTheme": "Ayu Mirage Bordered",
 "extensions.autoUpdate": true,
 "editor.links": false,
 "latex-workshop.latex.recipes": [
@@ -359,5 +347,5 @@
 "latex-workshop.hover.preview.newcommand.newcommandFile": "/home/seth/texmf/tex/latex/resume/documentMETADATA.cls",
 "latex-workshop.chktex.delay": 2000,
 "latex-workshop.latex.autoBuild.run": "never",
-"latex-workshop.bind.altKeymap.enabled": true
+"latex-workshop.bind.altKeymap.enabled": true,
 }
