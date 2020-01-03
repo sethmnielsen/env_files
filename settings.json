@@ -222,6 +222,7 @@
     "vim.handleKeys": {
         "<C-]>": false,
         "<C-[>": false
+        "<C-x>": false,
     },
 "vim.leader": "<space>",
 "diffEditor.renderSideBySide": true,
