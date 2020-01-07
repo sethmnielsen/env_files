@@ -207,7 +207,6 @@
         "azcli"
     ],
     "python.dataScience.askForKernelRestart": false,
-    "materialTheme.accent": "Remove accents",
     "workbench.colorCustomizations": {
         "[Nord]": {
             "editor.background": "#242933",
@@ -221,7 +220,7 @@
     "vim.vimrc.enable": true,
     "vim.handleKeys": {
         "<C-]>": false,
-        "<C-[>": false
+        "<C-[>": false,
         "<C-x>": false,
     },
 "vim.leader": "<space>",
@@ -349,4 +348,5 @@
 "latex-workshop.chktex.delay": 2000,
 "latex-workshop.latex.autoBuild.run": "never",
 "latex-workshop.bind.altKeymap.enabled": true,
+"editor.autoClosingBrackets": "always",
 }
