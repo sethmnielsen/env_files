@@ -348,6 +348,16 @@
         "key": "ctrl+k",
         "command": "-extension.vim_ctrl+k",
         "when": "editorTextFocus && vim.active && vim.use<C-k> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+a n",
+        "command": "workbench.action.focusNextGroup",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+a p",
+        "command": "workbench.action.focusPreviousGroup",
+        "when": "editorFocus"
     }
     
 ]
