@@ -358,6 +358,26 @@
         "key": "ctrl+a p",
         "command": "workbench.action.focusPreviousGroup",
         "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+shift+alt+'",
+        "command": "bracketeer.swapQuotes"
+    },
+    {
+        "key": "ctrl+shift+alt+;",
+        "command": "-bracketeer.swapQuotes"
+    },
+    {
+        "key": "ctrl+alt+'",
+        "command": "bracketeer.removeQuotes"
+    },
+    {
+        "key": "ctrl+shift+alt+'",
+        "command": "-bracketeer.removeQuotes"
+    },
+    {
+        "key": "ctrl+shift+alt+;",
+        "command": "workbench.action.togglePanelPosition"
     }
     
 ]
