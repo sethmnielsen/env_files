@@ -143,9 +143,14 @@ alias gcm='git commit -m'
 alias subup='git submodule update --init --recursive'
 
 dir1=~/env
-dir2=~/school/deep_learning
-dir3=~/school
-dir4=~/notes
+dir2=~/school/nonlinear
+dir3=~/school/optimization
+dir4=~/school
+
+name1=$(echo $(echo "print('$dir1'.upper())"| python3_6) | cut -d'/' -f 4)
+name2=$(echo $dir2 | cut -d'/' -f 5)
+name3=$(echo $dir3 | cut -d'/' -f 5)
+name4=$(echo $(echo "print('$dir4'.upper())"| python3_6) | cut -d'/' -f 4)
 
 pull_changes() {
   A=$(pwd)
@@ -162,22 +167,22 @@ pull_changes() {
 }
 push_changes() {
   A=$(pwd)
-  echo "\n--ENV--"
+  echo "\n--$name1--"
   cd $dir1
   git add -A
   git commit -m "Auto-pushed changes"
   git push
-  echo "\n-- deep_learning --"
+  echo "\n--$name2--"
   cd $dir2
   git add -A
   git commit -m "Auto-pushed changes"
   git push
-  echo "\n--SCHOOL--"
+  echo "\n--$name3--"
   cd $dir3
   git add -A
   git commit -m "Auto-pushed changes"
   git push
-  echo "\n--NOTES--"
+  echo "\n--$name4--"
   cd $dir4
   git add -A
   git commit -m "Auto-pushed changes"
@@ -187,17 +192,17 @@ push_changes() {
 }
 gstats() {
   A=$(pwd)
-  echo "\n--ENV--"
+  echo "\n--$name1--"
   cd $dir1
   git status -s
-  echo "--SCHOOL--"
-  cd $dir3
+  echo "--$name4--"
+  cd $dir4
   git status -s
-  echo " -- deep_learning --"
+  echo " -- $name2 --"
   cd $dir2
   git status -s
-  echo "--NOTES--"
-  cd $dir4
+  echo " -- $name3 --"
+  cd $dir3
   git status -s
   cd $A
 }
