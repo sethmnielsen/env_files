@@ -31,6 +31,7 @@ alias start-m720-config='python3 ~/.virtualenvs/default/bin/m720-config'
 upload_gdrive() { # upload file to Sync dir on Google Drive
   gdrive upload -p 0B0rj1VEWGIltcmJ1UGNIQTVfTmc $1
 }
+alias lld='ll --group-directories-first'
 lg() {
   la | grep $1
 }
