@@ -91,8 +91,6 @@ code2pdf() { for var in "$@"; do vim "$var" -c ":hardcopy > temp.ps" -c ":q";
 alias cd_rfh='cd ~/dev/boat_landing_sim/src/rosflight_holodeck'
 alias cd_boat='cd ~/dev/boat_landing_sim'
 alias cd_holodeck='cd ~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck'
-alias cd_deep='cd ~/school/deep_learning'
-alias cd_turtle='cd ~/school/autonomous_systems/turtlebot_sim'
 alias cd_models='cd ~/dev/models/research/deeplab'
 
 # FFMPEG converting MP4 or MOV to MOV for Resolve video editor
@@ -151,6 +149,9 @@ name1=$(echo $(echo "print('$dir1'.upper())"| python3_6) | cut -d'/' -f 4)
 name2=$(echo $dir2 | cut -d'/' -f 5)
 name3=$(echo $dir3 | cut -d'/' -f 5)
 name4=$(echo $(echo "print('$dir4'.upper())"| python3_6) | cut -d'/' -f 4)
+
+alias cd_nonlinear='cd $dir2'
+alias cd_optimization='cd $dir3'
 
 pull_changes() {
   A=$(pwd)
