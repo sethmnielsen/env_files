@@ -80,8 +80,6 @@ alias rf_holodeck='roslaunch rosflight_holodeck roscopter.launch'
 alias rf_holodeck_debug='roslaunch rosflight_holodeck debug.launch'
 alias serv_call='rosservice call /param_set MIXER 2 && rosservice call /calibrate_imu'
 alias cdb='code ~/dev/boat_landing_sim'
-alias cdd='code ~/school/deep_learning'
-alias cdt='code ~/school/autonomous_systems/turtlebot_sim'
 alias cdm='code ~/dev/models/research/deeplab'
 
 code2pdf() { for var in "$@"; do vim "$var" -c ":hardcopy > temp.ps" -c ":q"; 
@@ -152,6 +150,8 @@ name4=$(echo $(echo "print('$dir4'.upper())"| python3_6) | cut -d'/' -f 4)
 
 alias cd_nonlinear='cd $dir2'
 alias cd_optimization='cd $dir3'
+alias cdn='code $dir2'
+alias cdo='code $dir3'
 
 pull_changes() {
   A=$(pwd)
@@ -205,6 +205,7 @@ gstats() {
   echo " -- $name3 --"
   cd $dir3
   git status -s
+  echo "\n"
   cd $A
 }
 boat_pull() {
