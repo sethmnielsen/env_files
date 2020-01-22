@@ -1,10 +1,9 @@
 {
     "workbench.startupEditor": "none",
-    "search.location": "sidebar",
     "files.autoSave": "afterDelay",
     "terminal.integrated.fontFamily": "'Cousine for Powerline'",
     "terminal.integrated.fontSize": 14,
-    "workbench.colorTheme": "Ayu Mirage Bordered",
+    "workbench.colorTheme": "Ayu Mirage",
     "files.exclude": {
         "**/*__pycache__": true,
         "**/*.catkin_workspace": true,
@@ -194,36 +193,29 @@
             //other styling properties goes here ... 
         }
     ],
-    "shellformat.effectLanguages": [
-        "shellscript",
-        "dockerfile",
-        "dotenv",
-        "hosts",
-        "jvmoptions",
-        "ignore",
-        "gitignore",
-        "properties",
-        "spring-boot-properties",
-        "azcli"
-    ],
-    "python.dataScience.askForKernelRestart": false,
-    "workbench.colorCustomizations": {
-        "[Nord]": {
-            "editor.background": "#242933",
-            "sideBar.background": "#272d38",
-            "editorGutter.background": "#242933"
-        }
+"shellformat.effectLanguages": [
+    "shellscript",
+    "dockerfile",
+    "dotenv",
+    "hosts",
+    "jvmoptions",
+    "ignore",
+    "gitignore",
+    "properties",
+    "spring-boot-properties",
+    "azcli"
+],
+"python.dataScience.askForKernelRestart": false,
+"workbench.colorCustomizations": {
+    "[Nord]": {
+        "editor.background": "#242933",
+        "sideBar.background": "#272d38",
+        "editorGutter.background": "#242933"
     },
-    "python.linting.flake8Args": [
-        "--ignore=E50,E231,F401"
-    ],
-    "vim.vimrc.enable": true,
-    "vim.handleKeys": {
-        "<C-]>": false,
-        "<C-[>": false,
-        "<C-x>": false,
-    },
-"vim.leader": "<space>",
+},
+"python.linting.flake8Args": [
+    "--ignore=E50,E231,F401"
+],
 "diffEditor.renderSideBySide": true,
 "window.zoomLevel": 0,
 "python.dataScience.changeDirOnImportExport": false,
@@ -349,4 +341,18 @@
 "latex-workshop.latex.autoBuild.run": "never",
 "latex-workshop.bind.altKeymap.enabled": true,
 "editor.autoClosingBrackets": "always",
+"cmake.configureOnOpen": false,
+"latex-workshop.message.update.show": false,
+"vim.vimrc.enable": true,
+"vim.smartcase": false,
+"vim.ignorecase": false,
+"vim.handleKeys": {
+    "<C-]>": false,
+    "<C-[>": false,
+    ".": true
+},
+// "vim.leader": "<space>",
+"vim.searchHighlightColor": "gray",
+"activitusbar.searchViewInPanel": false,
+"vim.visualstar": true,
 }

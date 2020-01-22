@@ -4,8 +4,6 @@ set encoding=utf-8
 filetype off                  " required
 set number
 
-" set shell=bash
-
 set tags=tags
 
 " set the runtime path to include Vundle and initialize
@@ -56,9 +54,11 @@ let g:gruvbox_contrast_dark="hard"
 set background=dark
 colorscheme gruvbox
 
-let mapleader = "\\"
-nmap <space> <leader>
-vmap <space> <leader>
+" ---------------------------- KEY MAPPINGS ------------------------------
+
+"let mapleader = "\\"
+"nmap <space> <leader>
+"vmap <space> <leader>
 set backspace=indent,eol,start
 
 " Escape Mappings for insert and visual modes
@@ -68,7 +68,14 @@ vnoremap jk <esc>
 " Replace all highlighted text with new text
 nnoremap <c-n> :%s///g<left><left>
 
+" Increment number
 nnoremap <c-y> <c-a>
+
+" press // to search for highlighted text (visual mode)
+" vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>")
+"
+" Highlight search term in file
+nnoremap <C-L> :set invhlsearch<cr> 
 
  
 " Mappings to edit .vimrc and source/save .vimrc
@@ -83,9 +90,12 @@ nnoremap <leader>l <C-W><C-L>
 nnoremap <leader>h <C-W><C-H>
 nnoremap <leader>j <C-W><C-J>
 nnoremap <leader>k <C-W><C-K>
+" Split panes vertically, horizontally
+nnoremap <c-w>\ <c-w>v
+nnoremap <c-w>- <c-w>s
 
 " Mapping for jumping
-nnoremap <S-Tab> <C-O>
+nnoremap <shift-Tab> <C-O>
 
 " Mappings for Git (vim-fugitive and git-gutter)
 nnoremap <leader>gc :Gcommit <CR>
@@ -106,7 +116,6 @@ vnoremap H 0
 nnoremap J 10j
 nnoremap K 10k
 vnoremap J 10j
-
 vnoremap K 10k
 
 " Mappings for tree list netrw
@@ -142,7 +151,7 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-"Sets xml syntax highlighting for .launch files
+"Sets syntax highlighting for files or filetypes
 au BufRead,BufNewFile *.launch set filetype=xml
 au BufRead,BufNewFile .rosrc set filetype=sh
 au BufRead,BufNewFile .aliasrc set filetype=sh

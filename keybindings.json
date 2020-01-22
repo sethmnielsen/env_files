@@ -4,7 +4,6 @@
     { "key": "shift+alt+2",              "command": "workbench.action.editorLayoutTwoColumns" },
     { "key": "shift+alt+1",              "command": "workbench.action.editorLayoutSingle" },
     { "key": "ctrl+alt+shift+l",         "command": "workbench.action.moveEditorToNextGroup", "when": "editorFocus" },
-    { "key": "ctrl+a \\",                "command": "workbench.action.moveEditorToNextGroup", "when": "editorFocus" },
     { "key": "ctrl+shift+alt+h",         "command": "workbench.action.moveEditorToPreviousGroup", "when": "editorFocus" },
     { "key": "ctrl+tab",                 "command": "workbench.action.nextEditor" },
     { "key": "ctrl+shift+tab",           "command": "workbench.action.previousEditor" },
@@ -22,8 +21,6 @@
     { "key": "ctrl+shift+l",             "command": "cursorEndSelect", "when": "textInputFocus" },
     { "key": "ctrl+h",                   "command": "cursorHome", "when": "textInputFocus" },
     { "key": "ctrl+l",                   "command": "cursorEnd", "when": "textInputFocus" },
-    { "key": "shift+h",                  "command": "cursorHome", "when": "editorTextFocus && vim.active && vim.mode != 'Insert' && !inDebugRepl" },
-    { "key": "shift+l",                  "command": "cursorEnd", "when": "editorTextFocus && vim.active && vim.mode != 'Insert' && !inDebugRepl" },
     { "key": "ctrl+alt+l",               "command": "expandLineSelection", "when": "textInputFocus" },
     { "key": "shift+alt+l",              "command": "cursorRightSelect", "when": "textInputFocus" },
     { "key": "shift+alt+h",              "command": "cursorLeftSelect", "when": "textInputFocus" },
@@ -58,13 +55,9 @@
     { "key": "ctrl+shift+'",             "command": "workbench.action.toggleMaximizedPanel" },
     { "key": "ctrl+shift+q",             "command": "clock.insertDateTime" },
     { "key": "ctrl+alt+backspace",       "command": "bracketeer.removeBrackets" },
-    { "key": "ctrl+a h",                 "command": "workbench.action.focusLeftGroup", "when": "editorFocus" },
-    { "key": "ctrl+a l",                 "command": "workbench.action.focusRightGroup", "when": "editorFocus" },
-    { "key": "ctrl+a k",                 "command": "workbench.action.focusAboveGroup", "when": "editorFocus" },
-    { "key": "ctrl+a j",                 "command": "workbench.action.focusBelowGroup", "when": "editorFocus" },
     { "key": "ctrl+0",                   "command": "workbench.action.terminal.toggleTerminal", "when": "!terminalFocus" },
     { "key": "ctrl+0",                   "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus" },
-    { "key": "ctrl+a a",                 "command": "editor.action.selectAll", "when": "editorFocus" },
+    // { "key": "ctrl+a a",                 "command": "editor.action.selectAll", "when": "editorFocus" },
     { "key": "ctrl+alt+enter",           "command": "search.action.replaceAll", "when": "searchViewletVisible && !findWidgetVisible" },
     { "key": "f5",             "command": "workbench.action.debug.start", "when": "!inDebugMode" },
     { "key": "ctrl+shift+alt+y",         "command": "workbench.action.debug.selectandstart", "when": "!inDebugMode" },
@@ -78,7 +71,7 @@
     { "key": "ctrl+shift+]",             "command": "editor.action.revealDefinition", "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" },
     { "key": "ctrl+alt+b",               "command": "bracketeer.selectBracketContent" },
     { "key": "shift+alt+o",              "command": "editor.action.showHover", "when": "editorTextFocus" },
-    { "key": "ctrl+a g",                 "command": "cursorTop", "when": "editorFocus" },
+    // { "key": "ctrl+a g",                 "command": "cursorTop", "when": "editorFocus" },
     { "key": "ctrl+`", "command": "workbench.action.togglePanel" },
     { "key": "ctrl+shift+g l",           "command": "gitlens.toggleLineBlame" },
     { "key": "ctrl+shift+j",             "command": "selectNextSuggestion", "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
@@ -266,10 +259,7 @@
         "key": "shift+alt+enter",
         "command": "python.datascience.runcurrentcell"
     },
-    {
-        "key": "ctrl+a shift+enter",
-        "command": "python.datascience.debugcurrentcell.palette"
-    },
+    // { "key": "ctrl+a shift+enter", "command": "python.datascience.debugcurrentcell.palette" },
     {
         "key": "alt+c p",
         "command": "-extension.colorHelper.pick",
@@ -280,14 +270,8 @@
         "command": "-extension.colorHelper.convert",
         "when": "editorTextFocus"
     },
-    {
-        "key": "ctrl+a ctrl+u",
-        "command": "macros.runAboveAndDebugCurrentCell"
-    },
-    {
-        "key": "ctrl+a ctrl+alt+u",
-        "command": "macros.runAboveAndRestartKernel"
-    },
+    // { "key": "ctrl+a ctrl+u", "command": "macros.runAboveAndDebugCurrentCell" },
+    // { "key": "ctrl+a ctrl+alt+u", "command": "macros.runAboveAndRestartKernel" },
     {
         "key": "ctrl+alt+u",
         "command": "macros.runAllAndRestartKernel"
@@ -344,16 +328,6 @@
         "when": "editorTextFocus && vim.active && vim.use<C-k> && !inDebugRepl"
     },
     {
-        "key": "ctrl+a n",
-        "command": "workbench.action.focusNextGroup",
-        "when": "editorFocus"
-    },
-    {
-        "key": "ctrl+a p",
-        "command": "workbench.action.focusPreviousGroup",
-        "when": "editorFocus"
-    },
-    {
         "key": "ctrl+shift+alt+'",
         "command": "bracketeer.swapQuotes"
     },
@@ -372,6 +346,31 @@
     {
         "key": "ctrl+shift+alt+;",
         "command": "workbench.action.togglePanelPosition"
-    }
+    },
+    {
+        "key": "ctrl+a",
+        "command": "extension.vim_ctrl+a",
+        "when": "editorTextFocus && vim.active && vim.use<C-a> && vim.mode != 'Insert'  && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "-extension.vim_ctrl+a",
+        "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
+    },
     
+    // {
+    //     "key": "ctrl+a n",
+    //     "command": "workbench.action.focusNextGroup",
+    //     "when": "editorFocus"
+    // },
+    // {
+    //     "key": "ctrl+a p",
+    //     "command": "workbench.action.focusPreviousGroup",
+    //     "when": "editorFocus"
+    // },
+    // { "key": "ctrl+a \\",                "command": "workbench.action.moveEditorToNextGroup", "when": "editorFocus" },
+    // { "key": "ctrl+a h",                 "command": "workbench.action.focusLeftGroup", "when": "editorFocus" },
+    // { "key": "ctrl+a l",                 "command": "workbench.action.focusRightGroup", "when": "editorFocus" },
+    // { "key": "ctrl+a k",                 "command": "workbench.action.focusAboveGroup", "when": "editorFocus" },
+    // { "key": "ctrl+a j",                 "command": "workbench.action.focusBelowGroup", "when": "editorFocus" },
 ]
