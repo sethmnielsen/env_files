@@ -45,8 +45,7 @@
     "python.terminal.activateEnvironment": false,
     "workbench.activityBar.visible": false,
     "workbench.startupEditor": "newUntitledFile",
-    // "workbench.colorTheme": "Material Theme Darker High Contrast",
-    "workbench.colorTheme": "Legacy - Material Theme Darker High Contrast",
+    "workbench.colorTheme": "Material Theme Darker High Contrast",
     "workbench.iconTheme": "file-icons",
     "zenMode.hideLineNumbers": false,
     "editor.cursorSmoothCaretAnimation": true,
@@ -289,6 +288,7 @@
     "code-runner.executorMap": {
       "python": "python3",
     },
-    "code-runner.runInTerminal": true
+    "code-runner.runInTerminal": true,
+    "latex-workshop.view.pdf.viewer": "external"
 
 }

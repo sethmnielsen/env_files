@@ -207,7 +207,7 @@ gstats() {
   echo " -- $name3 --"
   cd $dir3
   git status -s
-  echo "\n"
+  echo ""
   cd $A
 }
 boat_pull() {
