@@ -66,6 +66,7 @@ alias vzsh='vim ~/.zshrc'
 alias szsh='source ~/.zshrc'
 alias sdevel='source devel/setup.zsh'
 alias path='sed "s/:/\n/g" <<< "$PATH"'
+alias source_remarkable='unset LD_LIBRARY_PATH && source /usr/local/oecore-x86_64/environment-setup-cortexa9hf-neon-oe-linux-gnueabi'
 
 # ROS/Catkin
 alias ros_env='env | grep ROS'
