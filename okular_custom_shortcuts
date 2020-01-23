@@ -1,0 +1,56 @@
+<gui name="okular" version="1">
+  <ActionProperties>
+    <Action name="go_goto_page" shortcut="Ctrl+G"/>
+    <Action name="go_previous" shortcut="Shift+K"/>
+    <Action name="go_next" shortcut="Shift+J"/>
+    <Action name="first_page" shortcut="Ctrl+Home"/>
+    <Action name="last_page" shortcut="Ctrl+End"/>
+    <Action name="bookmark_add" shortcut="Ctrl+B"/>
+    <Action name="previous_bookmark" shortcut="Ctrl+K"/>
+    <Action name="next_bookmark" shortcut="Ctrl+J"/>
+    <Action name="edit_find" shortcut="Ctrl+F; /"/>
+    <Action name="edit_find_next" shortcut="F3"/>
+    <Action name="edit_find_prev" shortcut="Shift+F3"/>
+    <Action name="options_configure" shortcut="Ctrl+Shift+,"/>
+    <Action name="file_reload" shortcut="F5; Refresh"/>
+    <Action name="close_find_bar" shortcut="Esc"/>
+    <Action name="edit_copy" shortcut="Ctrl+C; Ctrl+Ins"/>
+    <Action name="edit_select_all" shortcut="Ctrl+A"/>
+    <Action name="file_save" shortcut="Ctrl+S"/>
+    <Action name="file_save_as" shortcut="Ctrl+Shift+S"/>
+    <Action name="show_leftpanel" shortcut="F7"/>
+    <Action name="presentation" shortcut="Ctrl+Shift+P"/>
+    <Action name="switch_blackscreen_mode" shortcut="B"/>
+    <Action name="view_zoom_in" shortcut="Ctrl++; Ctrl+="/>
+    <Action name="view_zoom_out" shortcut="Ctrl+-"/>
+    <Action name="view_fit_to_page" shortcut="F"/>
+    <Action name="view_render_mode_single" shortcut="Alt+!"/>
+    <Action name="view_render_mode_facing" shortcut="Alt+@"/>
+    <Action name="view_render_mode_facing_center_first" shortcut="Alt+#"/>
+    <Action name="mouse_drag" shortcut="Ctrl+1"/>
+    <Action name="mouse_zoom" shortcut="Ctrl+2"/>
+    <Action name="go_document_back" shortcut="Alt+Shift+Left"/>
+    <Action name="go_document_forward" shortcut="Alt+Shift+Right"/>
+    <Action name="mouse_select" shortcut="Ctrl+3"/>
+    <Action name="mouse_textselect" shortcut="Ctrl+4"/>
+    <Action name="mouse_tableselect" shortcut="Ctrl+5"/>
+    <Action name="mouse_magnifier" shortcut="Ctrl+6"/>
+    <Action name="mouse_toggle_annotate" shortcut="F6"/>
+    <Action name="view_scroll_up" shortcut="Ctrl+Shift+K"/>
+    <Action name="view_scroll_down" shortcut="Ctrl+Shift+J; PgDown"/>
+    <Action name="view_scroll_page_up" shortcut="Shift+Space"/>
+    <Action name="view_scroll_page_down" shortcut="Space; "/>
+    <Action name="edit_undo" shortcut="Ctrl+Z"/>
+    <Action name="edit_redo" shortcut="Ctrl+Shift+Z"/>
+    <Action name="file_open" shortcut="Ctrl+O"/>
+    <Action name="file_print" shortcut="Ctrl+P"/>
+    <Action name="file_close" shortcut="Ctrl+W; Ctrl+Esc"/>
+    <Action name="file_quit" shortcut="Ctrl+Q"/>
+    <Action name="options_show_menubar" shortcut="Ctrl+M"/>
+    <Action name="fullscreen" shortcut="Ctrl+Shift+F"/>
+    <Action name="tab-next" shortcut="Ctrl+PgDown; ]"/>
+    <Action name="tab-previous" shortcut="Ctrl+PgUp; ["/>
+    <Action name="help_contents" shortcut="F1"/>
+    <Action name="help_whats_this" shortcut="Shift+F1"/>
+  </ActionProperties>
+</gui>
