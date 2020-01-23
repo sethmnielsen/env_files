@@ -1,4 +1,4 @@
-<gui name="okular" version="1">
+<gui version="1" name="okular">
   <ActionProperties>
     <Action name="go_goto_page" shortcut="Ctrl+G"/>
     <Action name="go_previous" shortcut="Shift+K"/>

@@ -156,3 +156,5 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 au BufRead,BufNewFile *.launch set filetype=xml
 au BufRead,BufNewFile .rosrc set filetype=sh
 au BufRead,BufNewFile .aliasrc set filetype=sh
+
+set iskeyword-=_
