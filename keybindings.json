@@ -51,6 +51,8 @@
     { "key": "ctrl+shift+w",             "command": "activitusbar.showDebugView" },
     { "key": "ctrl+shift+k",             "command": "scrollLineUp", "when": "textInputFocus && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible" },
     { "key": "ctrl+shift+j",             "command": "scrollLineDown", "when": "textInputFocus && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible" },
+    // { "key": "ctrl+shift+k",             "command": "scrollLineUp", "when": "parameterHintsVisible && listSupportsKeyboardNavigation" },
+    // { "key": "ctrl+shift+j",             "command": "scrollLineDown", "when": "parameterHintsVisible && listSupportsKeyboardNavigation" },
     { "key": "alt+\\",                   "command": "workbench.debug.action.focusVariablesView", "when": "inDebugMode" },
     { "key": "ctrl+shift+'",             "command": "workbench.action.toggleMaximizedPanel" },
     { "key": "ctrl+shift+q",             "command": "clock.insertDateTime" },
@@ -257,7 +259,8 @@
     },
     {
         "key": "shift+alt+enter",
-        "command": "python.datascience.runcurrentcell"
+        "command": "python.datascience.runcurrentcell",
+        "when": "editorTextFocus && python.datascience.featureenabled && python.datascience.hascodecells && !editorHasSelection"
     },
     // { "key": "ctrl+a shift+enter", "command": "python.datascience.debugcurrentcell.palette" },
     {
@@ -357,6 +360,65 @@
         "command": "-extension.vim_ctrl+a",
         "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
     },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeWindow",
+        "when": "!editorIsOpen && !multipleEditorGroups"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "activeEditor != 'workbench.editors.files.textFileEditor'"
+    },
+    { 
+        "key": "ctrl+w", 
+        "command": "macros.focusEditorAndVimCtrlW", 
+        "when": "explorerViewletFocus && vim.active && vim.use<C-w> && !inDebugRepl" },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "shift+alt+=",
+        "command": "workbench.action.terminal.resizePaneLeft"
+    },
+    {
+        "key": "ctrl+shift+left",
+        "command": "-workbench.action.terminal.resizePaneLeft",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+alt+-",
+        "command": "workbench.action.terminal.resizePaneRight"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "-workbench.action.terminal.resizePaneRight",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+left",
+        "command": "-workbench.action.terminal.resizePaneLeft",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "-workbench.action.terminal.resizePaneRight",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+alt+-",
+        "command": "workbench.action.terminal.resizePaneDown"
+    },
+    {
+        "key": "shift+alt+=",
+        "command": "workbench.action.terminal.resizePaneUp"
+    },
+    {
+        "key": "alt+shift+enter",
+        "command": "code-runner.run",
+        "when": "editorFocus && !python.datascience.hascodecells"
+    }
     
     // {
     //     "key": "ctrl+a n",

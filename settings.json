@@ -3,7 +3,7 @@
     "files.autoSave": "afterDelay",
     "terminal.integrated.fontFamily": "'Cousine for Powerline'",
     "terminal.integrated.fontSize": 14,
-    "workbench.colorTheme": "Ayu Mirage",
+    "workbench.colorTheme": "Ayu Dark Custom",
     "files.exclude": {
         "**/*__pycache__": true,
         "**/*.catkin_workspace": true,
@@ -65,13 +65,14 @@
     "breadcrumbs.enabled": true,
     "python.linting.lintOnSave": true,
     "python.linting.pylintEnabled": true,
-    "python.autoComplete.extraPaths": [
-        "/home/seth/dev/boat_landing_sim/devel/lib/python3/dist-packages",
-        "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src",
-        "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python",
-        "/home/seth/dev/boat_landing_sim/src/rf_joy/src/rosflight_joy",
-        "/opt/ros/melodic/lib/python2.7/dist-packages"
-    ],
+    "python.linting.pylintArgs": [],
+    // "python.autoComplete.extraPaths": [
+        // "/home/seth/dev/boat_landing_sim/devel/lib/python3/dist-packages",
+        // "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src",
+        // "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python",
+        // "/home/seth/dev/boat_landing_sim/src/rf_joy/src/rosflight_joy",
+        // "/opt/ros/melodic/lib/python2.7/dist-packages"
+    // ],
     "C_Cpp.default.intelliSenseMode": "msvc-x64",
     "editor.rulers": [90],
     "macros": {
@@ -115,6 +116,10 @@
             "python.datascience.restartkernel",
             "python.datascience.runallcellsabove.palette",
             "python.datascience.debugcurrentcell.palette"
+        ],
+        "focusEditorAndVimCtrlW": [
+            "workbench.action.focusActiveEditorGroup",
+            "extension.vim_ctrl+w"
         ]
     },
     "scm.diffDecorationsGutterWidth": 1,
@@ -139,6 +144,7 @@
     },
     "workbench.sideBar.location": "left",
     "editor.fontFamily": "'Inconsolata for Powerline', 'monospace', monospace, 'Droid Sans Fallback', 'PowerlineSymbols'",
+    "activitusbar.searchViewInPanel": false,
     "activitusbar.views": [
         {
             "name": "explorer",
@@ -232,6 +238,14 @@
 "workbench.editor.showTabs": true,
 "extensions.autoUpdate": true,
 "editor.links": false,
+"code-runner.executorMap": {
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "python": "python3",
+    "shellscript": "bash",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+},
+"code-runner.runInTerminal": true,
 "latex-workshop.latex.recipes": [
     {
         "name": "lualatexmk-seth",
@@ -346,14 +360,29 @@
 "vim.vimrc.enable": true,
 "vim.smartcase": false,
 "vim.ignorecase": false,
-"vim.handleKeys": {
-    "<C-]>": false,
-    "<C-[>": false,
-    ".": true
-},
+"vim.useSystemClipboard": true,
 // "vim.leader": "<space>",
 "vim.searchHighlightColor": "gray",
-"activitusbar.searchViewInPanel": false,
 "vim.visualstar": true,
+"vim.debug.silent": true,
+"vim.normalModeKeyBindingsNonRecursive": [
+    {
+        "before": ["Z","Z"],
+        "commands": [":wq"]
+
+    },
+    { 
+        "before": ["Q","Q"],
+        "commands": ["workbench.action.closeActiveEditor"]
+    }
+],
+// "vim.handleKeys": {
+    // "<C-]>": false,
+    // "<C-[>": false,
+// },
 "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?_",
+"editor.scrollBeyondLastLine": false,
+"editor.smoothScrolling": true,
+"breadcrumbs.filePath": "off",
+"python.linting.mypyEnabled": true
 }
