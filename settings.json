@@ -1,10 +1,11 @@
 {
     "workbench.startupEditor": "none",
     "files.autoSave": "afterDelay",
-    "terminal.integrated.fontFamily": "'Cousine for Powerline'",
+    "terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
     "terminal.integrated.fontSize": 14,
     "workbench.colorTheme": "Ayu Dark Custom",
     "files.exclude": {
+        "**/*.~*": true,
         "**/*__pycache__": true,
         "**/*.catkin_workspace": true,
         "**/*.clang_complete": true,
@@ -52,9 +53,10 @@
     "workbench.editor.tabSizing": "shrink",
     "keyboard.dispatch": "keyCode",
     "python.pythonPath": "/home/seth/.virtualenvs/default/bin/python3",
-    "python.venvPath": "~/.virtualenvs",
+    "python.venvPath": "/home/seth/.virtualenvs",
     "python.terminal.activateEnvironment": false,
     "workbench.activityBar.visible": false,
+    "workbench.iconTheme": "file-icons",
     "zenMode.hideLineNumbers": false,
     "zenMode.hideTabs": false,
     "editor.cursorSmoothCaretAnimation": true,
@@ -63,9 +65,12 @@
     "activitusbar.toggleSidebar": false,
     "clock.dateFormat": "h:MM TT",
     "breadcrumbs.enabled": true,
-    "python.linting.lintOnSave": true,
-    "python.linting.pylintEnabled": true,
-    "python.linting.pylintArgs": [],
+"python.linting.lintOnSave": true,
+"python.linting.pylintEnabled": true,
+"python.linting.mypyEnabled": true,
+"python.linting.flake8Args": [
+    "--ignore=E50,E231,F401"
+],
     // "python.autoComplete.extraPaths": [
         // "/home/seth/dev/boat_landing_sim/devel/lib/python3/dist-packages",
         // "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src",
@@ -128,14 +133,14 @@
     "explorer.confirmDelete": false,
     "workbench.statusBar.visible": true,
     "editor.renderWhitespace": "none",
-    "bracket-pair-colorizer-2.colors": [
-        "Gold",
-        "Teal",
-        "DarkOrange",
-        "OliveDrab",
+    // "bracket-pair-colorizer-2.colors": [
+        // "Gold",
+        // "Teal",
+        // "DarkOrange",
+        // "OliveDrab"
         // "Crimson",
         // "BlueViolet",
-    ],
+    // ],
     "files.watcherExclude": {
         "/home/seth/.local/share/**": true,
         "/home/seth/.virtualenvs/default/lib/python3.6/site-packages/holodeck/**": true,
@@ -212,16 +217,6 @@
     "azcli"
 ],
 "python.dataScience.askForKernelRestart": false,
-"workbench.colorCustomizations": {
-    "[Nord]": {
-        "editor.background": "#242933",
-        "sideBar.background": "#272d38",
-        "editorGutter.background": "#242933"
-    },
-},
-"python.linting.flake8Args": [
-    "--ignore=E50,E231,F401"
-],
 "diffEditor.renderSideBySide": true,
 "window.zoomLevel": 0,
 "python.dataScience.changeDirOnImportExport": false,
@@ -230,12 +225,10 @@
 "git.enabled": false,
 "python.jediEnabled": false,
 "matlab.lintOnSave": false,
-"latex-workshop.view.pdf.viewer": "external",
 "editor.snippetSuggestions": "bottom",
 "window.menuBarVisibility": "hidden",
 "rust-client.enableMultiProjectSetup": true,
 "rust.show_warnings": false,
-"workbench.editor.showTabs": true,
 "extensions.autoUpdate": true,
 "editor.links": false,
 "code-runner.executorMap": {
@@ -354,7 +347,7 @@
 "latex-workshop.chktex.delay": 2000,
 "latex-workshop.latex.autoBuild.run": "never",
 "latex-workshop.bind.altKeymap.enabled": true,
-"editor.autoClosingBrackets": "always",
+"latex-workshop.chktex.enabled": true,
 "cmake.configureOnOpen": false,
 "latex-workshop.message.update.show": false,
 "vim.vimrc.enable": true,
@@ -384,5 +377,4 @@
 "editor.scrollBeyondLastLine": false,
 "editor.smoothScrolling": true,
 "breadcrumbs.filePath": "off",
-"python.linting.mypyEnabled": true
 }
