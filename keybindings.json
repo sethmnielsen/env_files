@@ -362,21 +362,27 @@
     },
     {
         "key": "ctrl+w",
-        "command": "-workbench.action.closeWindow",
-        "when": "!editorIsOpen && !multipleEditorGroups"
-    },
-    {
-        "key": "ctrl+w",
         "command": "workbench.action.closeActiveEditor",
         "when": "activeEditor != 'workbench.editors.files.textFileEditor'"
     },
     { 
         "key": "ctrl+w", 
+        "command": "workbench.action.focusActiveEditorGroup", 
+        "when": "terminalFocus"
+    },
+    { 
+        "key": "ctrl+w", 
         "command": "macros.focusEditorAndVimCtrlW", 
-        "when": "explorerViewletFocus && vim.active && vim.use<C-w> && !inDebugRepl" },
+        "when": "explorerViewletFocus && vim.active && vim.use<C-w> && !inDebugRepl"
+    },
     {
         "key": "ctrl+w",
         "command": "-workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.closeWindow",
+        "when": "!editorIsOpen && !multipleEditorGroups"
     },
     {
         "key": "shift+alt+=",

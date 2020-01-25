@@ -56,7 +56,7 @@
     "python.venvPath": "/home/seth/.virtualenvs",
     "python.terminal.activateEnvironment": false,
     "workbench.activityBar.visible": false,
-    "workbench.iconTheme": "file-icons",
+    "workbench.iconTheme": "ayu",
     "zenMode.hideLineNumbers": false,
     "zenMode.hideTabs": false,
     "editor.cursorSmoothCaretAnimation": true,
@@ -64,7 +64,7 @@
     "activitusbar.activeColour": "#4989b6",
     "activitusbar.toggleSidebar": false,
     "clock.dateFormat": "h:MM TT",
-    "breadcrumbs.enabled": true,
+    "breadcrumbs.enabled": false,
 "python.linting.lintOnSave": true,
 "python.linting.pylintEnabled": true,
 "python.linting.mypyEnabled": true,
@@ -131,7 +131,6 @@
     "explorer.confirmDragAndDrop": false,
     "editor.suggestSelection": "first",
     "explorer.confirmDelete": false,
-    "workbench.statusBar.visible": true,
     "editor.renderWhitespace": "none",
     // "bracket-pair-colorizer-2.colors": [
         // "Gold",
@@ -150,25 +149,25 @@
     "workbench.sideBar.location": "left",
     "editor.fontFamily": "'Inconsolata for Powerline', 'monospace', monospace, 'Droid Sans Fallback', 'PowerlineSymbols'",
     "activitusbar.searchViewInPanel": false,
-    "activitusbar.views": [
-        {
-            "name": "explorer",
-            "octicon": "file-text"
-        },
-        {
-            "name": "search",
-            "octicon": "search"
-        },
-        {
-            "name": "debug",
-            "octicon": "bug"
-        },
-        {
-            "name": "extensions",
-            "octicon": "package"
-        }
-    ],
-    "gitlens.views.repositories.location": "gitlens",
+    // "activitusbar.views": [
+    //     {
+    //         "name": "explorer",
+    //         "octicon": "file-text"
+    //     },
+    //     {
+    //         "name": "search",
+    //         "octicon": "search"
+    //     },
+    //     {
+    //         "name": "debug",
+    //         "octicon": "bug"
+    //     },
+    //     {
+    //         "name": "extensions",
+    //         "octicon": "package"
+    //     }
+    // ],
+    "gitlens.views.repositories.location": "explorer",
     "gitlens.views.fileHistory.location": "gitlens",
     "gitlens.views.lineHistory.location": "gitlens",
     "gitlens.views.compare.location": "gitlens",
@@ -218,11 +217,10 @@
 ],
 "python.dataScience.askForKernelRestart": false,
 "diffEditor.renderSideBySide": true,
-"window.zoomLevel": 0,
+"window.zoomLevel": 1,
 "python.dataScience.changeDirOnImportExport": false,
 "window.enableMenuBarMnemonics": false,
 "window.customMenuBarAltFocus": false,
-"git.enabled": false,
 "python.jediEnabled": false,
 "matlab.lintOnSave": false,
 "editor.snippetSuggestions": "bottom",
@@ -373,8 +371,14 @@
     // "<C-]>": false,
     // "<C-[>": false,
 // },
-"editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?_",
+// "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?_",
 "editor.scrollBeyondLastLine": false,
 "editor.smoothScrolling": true,
 "breadcrumbs.filePath": "off",
+"gitlens.advanced.messages": {
+    "suppressGitDisabledWarning": true
+},
+"git.enableStatusBarSync": false,
+"gitlens.statusBar.reduceFlicker": true,
+"vim.foldfix": true,
 }
