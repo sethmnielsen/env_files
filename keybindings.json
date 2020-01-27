@@ -424,21 +424,32 @@
         "key": "alt+shift+enter",
         "command": "code-runner.run",
         "when": "editorFocus && !python.datascience.hascodecells"
-    }
-    
-    // {
-    //     "key": "ctrl+a n",
-    //     "command": "workbench.action.focusNextGroup",
-    //     "when": "editorFocus"
-    // },
-    // {
-    //     "key": "ctrl+a p",
-    //     "command": "workbench.action.focusPreviousGroup",
-    //     "when": "editorFocus"
-    // },
-    // { "key": "ctrl+a \\",                "command": "workbench.action.moveEditorToNextGroup", "when": "editorFocus" },
-    // { "key": "ctrl+a h",                 "command": "workbench.action.focusLeftGroup", "when": "editorFocus" },
-    // { "key": "ctrl+a l",                 "command": "workbench.action.focusRightGroup", "when": "editorFocus" },
-    // { "key": "ctrl+a k",                 "command": "workbench.action.focusAboveGroup", "when": "editorFocus" },
-    // { "key": "ctrl+a j",                 "command": "workbench.action.focusBelowGroup", "when": "editorFocus" },
+    },
+    {
+        "key": "shift+tab",
+        "command": "extension.vim_shift+tab",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Normal'"
+    },
+    {
+        "key": "shift+tab",
+        "command": "-extension.vim_shift+tab",
+        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+1",
+        "command": "workbench.action.focusPreviousGroup"
+    },
+    {
+        "key": "ctrl+2",
+        "command": "workbench.action.focusNextGroup"
+    },
+    {
+        "key": "ctrl+1",
+        "command": "-workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "ctrl+2",
+        "command": "-workbench.action.focusSecondEditorGroup"
+    },
+
 ]

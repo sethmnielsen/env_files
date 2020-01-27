@@ -79,6 +79,7 @@ alias explode='rm -rf build devel && catkin_make_py3'
 alias nodeprocess_edit='sudo vim /opt/ros/melodic/lib/python2.7/dist-packages/roslaunch/nodeprocess.py'
 
 # Handy code-related aliases
+alias OptView='python3 ~/dev/pyoptsparse/postprocessing/OptView.py'
 alias opencv-docs='google-chrome ~/Documents/opencv-docs-4.0.1/pages.html'
 alias rf_holodeck='roslaunch rosflight_holodeck roscopter.launch'
 alias rf_holodeck_debug='roslaunch rosflight_holodeck debug.launch'

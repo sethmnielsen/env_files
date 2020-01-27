@@ -3,6 +3,10 @@
     "files.autoSave": "afterDelay",
     "terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
     "terminal.integrated.fontSize": 14,
+    "editor.fontSize": 14,
+    "editor.fontWeight": "500",
+    "editor.wordWrapColumn": 90,
+    "editor.fontFamily": "'Inconsolata for Powerline', 'monospace', monospace, 'Droid Sans Fallback'",
     "workbench.colorTheme": "Ayu Dark Custom",
     "files.exclude": {
         "**/*.~*": true,
@@ -42,7 +46,8 @@
         "*.launch": "xml",
         "CMakeLists.txt": "cmake",
         "<ipython-input*": "python",
-        "*.tex": "latex"
+        "*.tex": "latex",
+        ".vimrc": "vimrc"
     },
     "explorer.autoReveal": false,
     "workbench.tree.indent": 20,
@@ -64,20 +69,20 @@
     "activitusbar.activeColour": "#4989b6",
     "activitusbar.toggleSidebar": false,
     "clock.dateFormat": "h:MM TT",
-    "breadcrumbs.enabled": false,
+    "breadcrumbs.enabled": true,
 "python.linting.lintOnSave": true,
 "python.linting.pylintEnabled": true,
 "python.linting.mypyEnabled": true,
 "python.linting.flake8Args": [
     "--ignore=E50,E231,F401"
 ],
-    // "python.autoComplete.extraPaths": [
-        // "/home/seth/dev/boat_landing_sim/devel/lib/python3/dist-packages",
-        // "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src",
-        // "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python",
-        // "/home/seth/dev/boat_landing_sim/src/rf_joy/src/rosflight_joy",
-        // "/opt/ros/melodic/lib/python2.7/dist-packages"
-    // ],
+    "python.autoComplete.extraPaths": [
+        "/home/seth/dev/boat_landing_sim/devel/lib/python3/dist-packages",
+        "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src",
+        "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python",
+        "/home/seth/dev/boat_landing_sim/src/rf_joy/src/rosflight_joy",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ],
     "C_Cpp.default.intelliSenseMode": "msvc-x64",
     "editor.rulers": [90],
     "macros": {
@@ -134,80 +139,76 @@
     "editor.renderWhitespace": "none",
     // "bracket-pair-colorizer-2.colors": [
         // "Gold",
-        // "Teal",
+        // "Olive",
+        // "Teal"
         // "DarkOrange",
-        // "OliveDrab"
+        // "OliveDrab",
         // "Crimson",
         // "BlueViolet",
     // ],
-    "files.watcherExclude": {
-        "/home/seth/.local/share/**": true,
-        "/home/seth/.virtualenvs/default/lib/python3.6/site-packages/holodeck/**": true,
-        "/home/seth/dev/**": true,
-        "/home/seth/Downloads/**": true
+"files.watcherExclude": {
+    "/home/seth/.local/share/**": true,
+    "/home/seth/.virtualenvs/default/lib/python3.6/site-packages/holodeck/**": true,
+    "/home/seth/dev/**": true,
+    "/home/seth/Downloads/**": true
+},
+"workbench.sideBar.location": "left",
+"workbench.list.automaticKeyboardNavigation": false,
+"vsicons.dontShowNewVersionMessage": true,
+"activitusbar.searchViewInPanel": false,
+"git.enabled": true,
+"git.decorations.enabled": false,
+"git.enableStatusBarSync": false,
+"gitlens.views.repositories.location": "explorer",
+"gitlens.views.fileHistory.location": "gitlens",
+"gitlens.views.lineHistory.location": "gitlens",
+"gitlens.views.compare.location": "gitlens",
+"gitlens.views.search.location": "gitlens",
+"gitlens.codeLens.authors.enabled": false,
+"gitlens.codeLens.recentChange.enabled": false,
+"gitlens.currentLine.enabled": false,
+"gitlens.advanced.messages": {
+"suppressGitDisabledWarning": true
+},
+"gitlens.statusBar.reduceFlicker": true,
+"C_Cpp.default.cppStandard": "c++14",
+"python.analysis.cacheFolderPath": "/home/seth/.local/share/vscode-python-cache",
+"python.analysis.memory.keepLibraryAst": true,
+"python.analysis.memory.keepLibraryLocalVariables": true,
+"python.dataScience.askForKernelRestart": false,
+"python.dataScience.changeDirOnImportExport": false,
+"diffEditor.renderSideBySide": true,
+"editor.suggest.maxVisibleSuggestions": 6,
+"window.zoomLevel": 0,
+"window.menuBarVisibility": "hidden",
+"problems.decorations.enabled": false,
+"markdown.preview.breaks": true,
+"markdown.preview.markEditorSelection": false,
+"todohighlight.keywords": [
+    {
+        "text": "HACK:",
+        "color": "#000",
+        "isWholeLine": false,
     },
-    "workbench.sideBar.location": "left",
-    "editor.fontFamily": "'Inconsolata for Powerline', 'monospace', monospace, 'Droid Sans Fallback', 'PowerlineSymbols'",
-    "activitusbar.searchViewInPanel": false,
-    // "activitusbar.views": [
-    //     {
-    //         "name": "explorer",
-    //         "octicon": "file-text"
-    //     },
-    //     {
-    //         "name": "search",
-    //         "octicon": "search"
-    //     },
-    //     {
-    //         "name": "debug",
-    //         "octicon": "bug"
-    //     },
-    //     {
-    //         "name": "extensions",
-    //         "octicon": "package"
-    //     }
-    // ],
-    "gitlens.views.repositories.location": "explorer",
-    "gitlens.views.fileHistory.location": "gitlens",
-    "gitlens.views.lineHistory.location": "gitlens",
-    "gitlens.views.compare.location": "gitlens",
-    "gitlens.views.search.location": "gitlens",
-    "gitlens.codeLens.authors.enabled": false,
-    "gitlens.codeLens.recentChange.enabled": false,
-    "C_Cpp.default.cppStandard": "c++14",
-    "C_Cpp.intelliSenseCacheSize": 1024,
-    "workbench.list.automaticKeyboardNavigation": false,
-    "gitlens.currentLine.enabled": false,
-    "problems.decorations.enabled": false,
-    "python.workspaceSymbols.exclusionPatterns": [],
-    "markdown.preview.breaks": true,
-    "markdown.preview.markEditorSelection": false,
-    "editor.fontWeight": "500",
-    "todohighlight.keywords": [
-        {
-            "text": "HACK:",
-            "color": "#000",
-            "isWholeLine": false,
-        },
-        {
-            "text": "NOTE:",
-            "color": "turquoise",
-            "backgroundColor": "none",
-        },
-        {
-            "text": "TODO:",
-            "color": "crimson",
-            "backgroundColor": "none",
-            // "border": "1px solid red",
-            // "borderRadius": "2px", //NOTE: using borderRadius along with `border` or you will see nothing change
-            //other styling properties goes here ... 
-        }
-    ],
+    {
+        "text": "NOTE:",
+        "color": "turquoise",
+        "backgroundColor": "none",
+    },
+    {
+        "text": "TODO:",
+        "color": "crimson",
+        "backgroundColor": "none",
+        // "border": "1px solid red",
+        // "borderRadius": "2px", //NOTE: using borderRadius along with `border` or you will see nothing change
+        //other styling properties goes here ... 
+    }
+],
 "shellformat.effectLanguages": [
-    "shellscript",
-    "dockerfile",
-    "dotenv",
-    "hosts",
+"shellscript",
+"dockerfile",
+"dotenv",
+"hosts",
     "jvmoptions",
     "ignore",
     "gitignore",
@@ -215,16 +216,11 @@
     "spring-boot-properties",
     "azcli"
 ],
-"python.dataScience.askForKernelRestart": false,
-"diffEditor.renderSideBySide": true,
-"window.zoomLevel": 1,
-"python.dataScience.changeDirOnImportExport": false,
-"window.enableMenuBarMnemonics": false,
 "window.customMenuBarAltFocus": false,
+"window.enableMenuBarMnemonics": false,
 "python.jediEnabled": false,
 "matlab.lintOnSave": false,
 "editor.snippetSuggestions": "bottom",
-"window.menuBarVisibility": "hidden",
 "rust-client.enableMultiProjectSetup": true,
 "rust.show_warnings": false,
 "extensions.autoUpdate": true,
@@ -351,6 +347,7 @@
 "vim.vimrc.enable": true,
 "vim.smartcase": false,
 "vim.ignorecase": false,
+"vim.foldfix": true,
 "vim.useSystemClipboard": true,
 // "vim.leader": "<space>",
 "vim.searchHighlightColor": "gray",
@@ -365,20 +362,21 @@
     { 
         "before": ["Q","Q"],
         "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+        "before": ["<tab>","<tab>"],
+        "commands": ["workbench.action.nextEditor"]
+    },
+    {
+        "before": ["<S-tab>","<S-tab>"],
+        "commands": ["workbench.action.previousEditor"]
     }
 ],
-// "vim.handleKeys": {
-    // "<C-]>": false,
-    // "<C-[>": false,
-// },
-// "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?_",
+"vim.handleKeys": {
+    "<C-]>": false,
+    "<C-[>": false,
+},
 "editor.scrollBeyondLastLine": false,
 "editor.smoothScrolling": true,
 "breadcrumbs.filePath": "off",
-"gitlens.advanced.messages": {
-    "suppressGitDisabledWarning": true
-},
-"git.enableStatusBarSync": false,
-"gitlens.statusBar.reduceFlicker": true,
-"vim.foldfix": true,
 }

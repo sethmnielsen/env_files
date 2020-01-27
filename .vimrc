@@ -22,15 +22,12 @@ Plugin 'tpope/vim-rhubarb'
 Plugin 'tpope/vim-surround'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'lervag/vimtex'
-Plugin 'scrooloose/nerdcommenter'
+Plugin 'preservim/nerdcommenter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'SirVer/ultisnips'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'honza/vim-snippets'
-"Plugin 'taketwo/vim-ros'
+"Plugin 'airblade/vim-gitgutter'
 Plugin 'Raimondi/delimitMate'
-Plugin 'morhetz/gruvbox'
+"Plugin 'morhetz/gruvbox'
 Plugin 'Jamedjo/setcolors.vim'
 Plugin 'doums/darcula'
 Plugin 'cespare/vim-toml'
@@ -98,7 +95,7 @@ nnoremap qq <c-w>q
 nnoremap QQ ZQ
 
 " Mapping for jumping
-nnoremap <shift-Tab> <C-O>
+nnoremap <shift-tab> <C-O>
 
 " Mappings for Git (vim-fugitive and git-gutter)
 nnoremap <leader>gc :Gcommit <CR>
