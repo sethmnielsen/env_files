@@ -65,6 +65,11 @@ vnoremap jk <esc>
 " Replace all highlighted text with new text
 nnoremap <c-n> :%s///g<left><left>
 
+" Send to black hole register (actually delete)
+nnoremap <leader>d "_d
+xnoremap <leader>d "_d
+xnoremap <leader>p "_dP"
+
 " Increment number
 nnoremap <c-y> <c-a>
 
