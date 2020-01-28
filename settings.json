@@ -150,6 +150,7 @@
     "/home/seth/.local/share/**": true,
     "/home/seth/.virtualenvs/default/lib/python3.6/site-packages/holodeck/**": true,
     "/home/seth/dev/**": true,
+    "~/school/optimization/.jop/*": true,
     "/home/seth/Downloads/**": true
 },
 "workbench.sideBar.location": "left",
@@ -379,4 +380,9 @@
 "editor.scrollBeyondLastLine": false,
 "editor.smoothScrolling": true,
 "breadcrumbs.filePath": "off",
+"python.linting.ignorePatterns": [
+    ".vscode/*.py",
+    "**/site-packages/**/*.py",
+    "/home/seth/school/optimization/.jop"
+],
 }

@@ -114,8 +114,8 @@ nmap <leader>gk <Plug>GitGutterPrevHunk
 " Mappings to go to end of line and beginning of line
 nnoremap L $
 vnoremap L $
-nnoremap H 0
-vnoremap H 0
+nnoremap H ^
+vnoremap H ^
 
 " Mappings to move up and down faster
 nnoremap J 10j
