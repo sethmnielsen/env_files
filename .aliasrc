@@ -97,7 +97,7 @@ alias cd_holodeck='cd ~/dev/boat_landing_sim/src/rosflight_holodeck/python/holod
 alias cd_models='cd ~/dev/models/research/deeplab'
 
 # FFMPEG converting MP4 or MOV to MOV for Resolve video editor
-ffmpeg_conv_resolve() {
+ffmpeg_mp4_to_mov_resolve() {
   if [[ "$#" -ne 1 ]]; then
     echo "Usage: $0 [dir]"
   elif ! [[ -e $1 ]]; then
@@ -118,22 +118,44 @@ ffmpeg_conv_resolve() {
       for f in $~FILES; do
         echo "\n\n ------- Converting file $f -------\n\n"
         if [[ -f $f ]]; then
-          fname=${f:2:-4}
-          ffmpeg -i ${f} -vcodec dnxhd -acodec pcm_s16le -s 1920x1080 -r 30000/1001 \
-            -b:v 45M -pix_fmt yuv422p -f mov "${CONV_DIR}/${fname}_R.MOV"
+          fname=${f:2:-4}     \
+          fps=$(ffmpeg -i ${f} 2>&1 | sed -n "s/.*, \(.*\) fp.*/\1/p")
+                              \
+          ffmpeg -i ${f}      \
+            -vcodec dnxhd     \
+            -acodec pcm_s16le \
+            -s 1920x1080      \
+            -r $fps           \
+            -b:v 45M          \
+            -pix_fmt yuv422p  \
+            -f mov            \
+            "${CONV_DIR}/${fname}_R.MOV"
         fi
       done
     fi
   fi
 }
-ffmpeg_resolve_to_mp4() {
+ffmpeg_mov_to_mp4_resolve() {
   if [[ "$#" -ne 1 ]]; then
     echo "Usage: $0 [infile.mov]"
   elif ! [[ -e $1 ]]; then
     echo "$1 does not exist"
   else
-    fname=${${1:0:-4}}
-    ffmpeg -i ${1} -vf yadif -codec:v libx264 -crf 1 -bf 2 -flags +cgop -pix_fmt yuv420p -codec:a aac -strict -2 -b:a 384k -r:a 48000 -movflags faststart ${fname}.MP4
+    fname=${${1:0:-}}   \
+
+    ffmpeg -i ${1}      \
+    -vf yadif           \
+    -codec:v libx264    \
+    -crf 1              \
+    -bf 2               \
+    -flags +cgop        \
+    -pix_fmt yuv420p    \
+    -codec:a aac        \
+    -strict -2          \
+    -b:a 128k           \
+    -r:a 48000          \
+    -movflags faststart \
+    ${fname}.MP4
   fi
 }
 

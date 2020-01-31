@@ -3,10 +3,7 @@
     "files.autoSave": "afterDelay",
     "terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
     "terminal.integrated.fontSize": 14,
-    "editor.fontSize": 14,
-    "editor.fontWeight": "500",
     "editor.wordWrapColumn": 90,
-    "editor.fontFamily": "'Inconsolata for Powerline', 'monospace', monospace, 'Droid Sans Fallback'",
     "workbench.colorTheme": "Ayu Dark Custom",
     "files.exclude": {
         "**/*.~*": true,
@@ -71,11 +68,7 @@
     "clock.dateFormat": "h:MM TT",
     "breadcrumbs.enabled": true,
 "python.linting.lintOnSave": true,
-"python.linting.pylintEnabled": true,
 "python.linting.mypyEnabled": true,
-"python.linting.flake8Args": [
-    "--ignore=E50,E231,F401"
-],
     "python.autoComplete.extraPaths": [
         "/home/seth/dev/boat_landing_sim/devel/lib/python3/dist-packages",
         "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src",
@@ -136,7 +129,6 @@
     "explorer.confirmDragAndDrop": false,
     "editor.suggestSelection": "first",
     "explorer.confirmDelete": false,
-    "editor.renderWhitespace": "none",
     // "bracket-pair-colorizer-2.colors": [
         // "Gold",
         // "Olive",
@@ -376,6 +368,7 @@
 "vim.handleKeys": {
     "<C-]>": false,
     "<C-[>": false,
+    "<C-d>": false,
 },
 "editor.scrollBeyondLastLine": false,
 "editor.smoothScrolling": true,
@@ -385,4 +378,12 @@
     "**/site-packages/**/*.py",
     "/home/seth/school/optimization/.jop"
 ],
+// "editor.fontFamily": "'Droid Sans', 'monospace'",
+// "editor.fontFamily": "'Iosevka Aile'",
+// "editor.fontFamily": "'Cascadia Mono PL'",
+"editor.fontFamily": "'Fira Code', 'monospace'",
+"editor.fontLigatures": false,
+"editor.trimAutoWhitespace": false,
+"path-intellisense.autoSlashAfterDirectory": true,
+"python.linting.pylintUseMinimalCheckers": false,
 }

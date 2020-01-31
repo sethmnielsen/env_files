@@ -69,11 +69,7 @@
     "clock.dateFormat": "h:MM TT",
     "breadcrumbs.enabled": true,
 "python.linting.lintOnSave": true,
-"python.linting.pylintEnabled": true,
 "python.linting.mypyEnabled": true,
-"python.linting.flake8Args": [
-    "--ignore=E50,E231,F401"
-],
     "python.autoComplete.extraPaths": [
         "/home/seth/dev/boat_landing_sim/devel/lib/python3/dist-packages",
         "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src",
@@ -134,7 +130,6 @@
     "explorer.confirmDragAndDrop": false,
     "editor.suggestSelection": "first",
     "explorer.confirmDelete": false,
-    "editor.renderWhitespace": "none",
     // "bracket-pair-colorizer-2.colors": [
         // "Gold",
         // "Olive",
@@ -148,6 +143,7 @@
         "/home/seth/.local/share/**": true,
         "/home/seth/.virtualenvs/default/lib/python3.6/site-packages/holodeck/**": true,
         "/home/seth/dev/**": true,
+        "~/school/optimization/.jop/*": true,
         "/home/seth/Downloads/**": true
     },
 "workbench.sideBar.location": "left",
@@ -381,5 +377,18 @@
 "editor.smoothScrolling": true,
 "breadcrumbs.filePath": "off",
 "editor.acceptSuggestionOnEnter": "off",
-"editor.trimAutoWhitespace": false
+"editor.trimAutoWhitespace": false,
+"python.linting.ignorePatterns": [
+    ".vscode/*.py",
+    "**/site-packages/**/*.py",
+    "/home/seth/school/optimization/.jop"
+],
+// "editor.fontFamily": "'Droid Sans', 'monospace'",
+// "editor.fontFamily": "'Iosevka Aile'",
+// "editor.fontFamily": "'Cascadia Mono PL'",
+"editor.fontFamily": "'Fira Code', 'monospace'",
+"editor.fontLigatures": false,
+"editor.trimAutoWhitespace": false,
+"path-intellisense.autoSlashAfterDirectory": true,
+"python.linting.pylintUseMinimalCheckers": false,
 }
