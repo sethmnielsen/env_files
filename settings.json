@@ -379,11 +379,15 @@
     "/home/seth/school/optimization/.jop"
 ],
 // "editor.fontFamily": "'Droid Sans', 'monospace'",
+"editor.fontFamily": "'Iosevka TermLig SS12', 'monospace'",
 // "editor.fontFamily": "'Iosevka Aile'",
-// "editor.fontFamily": "'Cascadia Mono PL'",
-"editor.fontFamily": "'Fira Code', 'monospace'",
+// "editor.fontFamily": "'Cascadia Mono PL', 'monospace'",
+// "editor.fontFamily": "'Fira Code', 'monospace'",
 "editor.fontLigatures": false,
 "editor.trimAutoWhitespace": false,
+// "editor.fontWeight": "100",
+// "editor.font"
 "path-intellisense.autoSlashAfterDirectory": true,
 "python.linting.pylintUseMinimalCheckers": false,
+"editor.letterSpacing": 0.2,
 }
