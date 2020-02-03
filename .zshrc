@@ -37,6 +37,7 @@ export PYTHONPATH=$HOME/dev/pyoptsparse:$PYTHONPATH
 #export PYTHONPATH=/home/seth/school/autonomous_systems/turtlebot_sim:$PYTHONPATH  
 #export PYTHONPATH=$PYTHONPATH:/home/seth/dev/coco_dataset/cocoapi
 #export PYTHONPATH=$PYTHONPATH:~/dev/models/research:~/dev/models/research/slim  # tensorflow
+export RUST_LOG=info
 
 # virtualenv
 export WORKON_HOME=$HOME/.virtualenvs
