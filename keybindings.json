@@ -25,10 +25,10 @@
     { "key": "shift+alt+l",              "command": "cursorRightSelect", "when": "textInputFocus" },
     { "key": "shift+alt+h",              "command": "cursorLeftSelect", "when": "textInputFocus" },
     { "key": "ctrl+shift+`",             "command": "macros.closePanelSidebar" },
-    { "key": "alt+j",                    "command": "workbench.action.quickOpenSelectNext", "when": "inQuickOpen" },
-    { "key": "alt+k",                    "command": "workbench.action.quickOpenSelectPrevious", "when": "inQuickOpen" },
-    { "key": "alt+j",                    "command": "list.focusDown", "when": "listFocus && !inputFocus" },
-    { "key": "alt+k",                    "command": "list.focusUp", "when": "listFocus && !inputFocus" },
+    { "key": "ctrl+shift+j",             "command": "workbench.action.quickOpenSelectNext", "when": "inQuickOpen" },
+    { "key": "ctrl+shift+k",             "command": "workbench.action.quickOpenSelectPrevious", "when": "inQuickOpen" },
+    { "key": "ctrl+shift+j",             "command": "list.focusDown", "when": "listFocus && !inputFocus" },
+    { "key": "ctrl+shift+k",             "command": "list.focusUp", "when": "listFocus && !inputFocus" },
     { "key": "alt+h",                    "command": "list.collapse", "when": "listFocus && !inputFocus" },
     { "key": "alt+l",                    "command": "list.expand", "when": "listFocus && !inputFocus" },
     { "key": "alt+delete",               "command": "deleteWordPartRight" },
@@ -346,9 +346,14 @@
         "key": "ctrl+shift+alt+'",
         "command": "-bracketeer.removeQuotes"
     },
+    // {
+    //     "key": "ctrl+shift+alt+;",
+    //     "command": "workbench.action.togglePanelPosition",
+    //     "when": "editorFocus || terminalFocus || panelFocus"
+    // },
     {
         "key": "ctrl+shift+alt+;",
-        "command": "workbench.action.togglePanelPosition"
+        "command": "macros.panelPositionToggle",
     },
     {
         "key": "ctrl+a",
@@ -385,40 +390,24 @@
         "when": "!editorIsOpen && !multipleEditorGroups"
     },
     {
-        "key": "shift+alt+=",
-        "command": "workbench.action.terminal.resizePaneLeft"
-    },
-    {
-        "key": "ctrl+shift+left",
-        "command": "-workbench.action.terminal.resizePaneLeft",
-        "when": "terminalFocus"
-    },
-    {
         "key": "shift+alt+-",
-        "command": "workbench.action.terminal.resizePaneRight"
-    },
-    {
-        "key": "ctrl+shift+right",
-        "command": "-workbench.action.terminal.resizePaneRight",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+shift+left",
-        "command": "-workbench.action.terminal.resizePaneLeft",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+shift+right",
-        "command": "-workbench.action.terminal.resizePaneRight",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "shift+alt+-",
-        "command": "workbench.action.terminal.resizePaneDown"
+        "command": "workbench.action.terminal.resizePaneRight",
+        "when": "panelPosition == 'right'"
     },
     {
         "key": "shift+alt+=",
-        "command": "workbench.action.terminal.resizePaneUp"
+        "command": "workbench.action.terminal.resizePaneLeft",
+        "when": "panelPosition == 'right'"
+    },
+    {
+        "key": "shift+alt+-",
+        "command": "workbench.action.terminal.resizePaneDown",
+        "when": "panelPosition == 'bottom'"
+    },
+    {
+        "key": "shift+alt+=",
+        "command": "workbench.action.terminal.resizePaneUp",
+        "when": "panelPosition == 'bottom'"
     },
     {
         "key": "alt+shift+enter",

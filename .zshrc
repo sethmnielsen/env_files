@@ -19,7 +19,6 @@ compinit
 ##### Added by me #####
 source ~/.rosrc
 
-export HOLODECK_PATH=/home/seth/Documents/Unreal\ Projects/ocean-world
 export EDITOR=vim
 export DEFAULT_USER=seth  # for shortening prompt
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA

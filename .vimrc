@@ -23,6 +23,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'lervag/vimtex'
 Plugin 'preservim/nerdcommenter'
+Plugin 'preservim/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'Valloric/YouCompleteMe'
 "Plugin 'airblade/vim-gitgutter'
@@ -53,7 +54,7 @@ colorscheme gruvbox
 
 " ---------------------------- KEY MAPPINGS ------------------------------
 
-"let mapleader = "\\"
+"let mapleader = \\
 "nmap <space> <leader>
 "vmap <space> <leader>
 set backspace=indent,eol,start
@@ -63,7 +64,7 @@ inoremap jk <esc>
 vnoremap jk <esc>
 
 " Replace all highlighted text with new text
-nnoremap <c-n> :%s///g<left><left>
+nnoremap <leader>r :%s///g<left><left>
 
 " Send to black hole register (actually delete)
 nnoremap <leader>d "_d
@@ -99,6 +100,8 @@ nnoremap <leader>q <c-w>q
 nnoremap qq <c-w>q
 nnoremap QQ ZQ
 
+map <C-n> :NERDTreeToggle<CR>
+
 " Mapping for jumping
 nnoremap <shift-tab> <C-O>
 
@@ -124,7 +127,7 @@ vnoremap J 10j
 vnoremap K 10k
 
 " Mappings for tree list netrw
-nnoremap <leader>r  :Rex <cr>
+"nnoremap <leader>r  :Rex <cr>
 nnoremap <leader>ex :Vex <cr>
 let g:netrw_banner = 0
 let g:netrw_winsize = 20
