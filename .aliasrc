@@ -57,7 +57,7 @@ rsync_ssh() {
     rsync -ahzP --delete seth@desktop:~/Documents/School-Nonlinear/ ~/Documents/School-Nonlinear
     rsync -ahzP --delete seth@desktop:~/Documents/School-Optimization/ ~/Documents/School-Optimization
     rsync -ahzP --delete ~/Documents/School-Nonlinear/ seth@desktop:~/Documents/School-Nonlinear 
-    rsync -ahzP --delete ~/Documents/School-Optimization/ seth@desktop:~/Documents/School-Optimization 
+    rsync -ahzP --delete ~/Documents/School-Optimization/ seth@desktop:~/Documents/School-Optimization
   elif [[ $(uname -n) == "seth-tower-3620" ]]; then
     rsync -ahzP --delete ~/Documents/School-Nonlinear/ seth@xps:~/Documents/School-Nonlinear 
     rsync -ahzP --delete ~/Documents/School-Optimization/ seth@xps:~/Documents/School-Optimization 
