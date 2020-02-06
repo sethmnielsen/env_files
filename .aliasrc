@@ -52,12 +52,11 @@ alias rpprog="rsync -ah --no-owner --progress"
 
 alias sudo_rp="sudo rsync -ah --no-owner"
 alias sudo_rpprog="sudo rsync -ah --no-owner --progress"
-rsync_ssh () {
-    echo "5" echo "\n" 
-    echo "6" echo "4"
-    echo "8" echo "99"
-    #rsync -azP --delete ~/Documents/homeworks_slides seth@desktop:~/Documents/homeworks_slides
-    #rsync -azP --delete ~/Documents/homeworks_slides seth@desktop:~/Documents/homeworks_slides
+rsync_ssh() {
+    rsync -ahzP --delete seth@desktop:~/Documents/School-Nonlinear/ ~/Documents/School-Nonlinear
+    rsync -ahzP --delete seth@desktop:~/Documents/School-Optimization/ ~/Documents/School-Optimization
+    rsync -ahzP --delete ~/Documents/School-Nonlinear/ seth@desktop:~/Documents/School-Nonlinear 
+    rsync -ahzP --delete ~/Documents/School-Optimization/ seth@desktop:~/Documents/School-Optimization 
 }
 
 # Move/Copy and follow
