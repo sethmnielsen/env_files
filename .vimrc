@@ -132,16 +132,7 @@ nnoremap <leader>ex :Vex <cr>
 let g:netrw_banner = 0
 let g:netrw_winsize = 20
 
-autocmd FileType make set noexpandtab softtabstop=0
-
-augroup cpp
-  autocmd!
-  set tabstop=2
-  set shiftwidth=2
-augroup END
-
-au FileType c,cpp setlocal comments-=:// comments+=f://
-inoremap {<CR> {<CR>}<Esc>ko
+"inoremap {<CR> {<CR>}<Esc>ko
 
 " Remap for latex compiling
 nnoremap <leader>ll :w<CR>:!rubber --pdf --warn all %<CR>
@@ -159,6 +150,16 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+autocmd FileType make set noexpandtab softtabstop=0
+
+augroup cpp
+  autocmd!
+  set tabstop=2
+  set shiftwidth=2
+augroup END
+
+au FileType c,cpp setlocal comments-=:// comments+=f://
 
 "Sets syntax highlighting for files or filetypes
 au BufRead,BufNewFile *.launch set filetype=xml

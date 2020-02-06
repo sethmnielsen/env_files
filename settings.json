@@ -16,38 +16,40 @@
 "editor.wordWrapColumn": 90,
 "workbench.colorTheme": "Ayu Dark Custom",
 "files.exclude": {
-    "**/*.~*": true,
+    ".env": true,
     "**/*__pycache__": true,
+    "**/*.~*": true,
     "**/*.catkin_workspace": true,
     "**/*.clang_complete": true,
     "**/*.github/": true,
     "**/*.gitignore": true,
     "**/*.gitmodules": true,
     "**/*.ipynb_checkpoints": true,
-    "**/*.o": true,
-    "**/*.pdf": true,
-    "**/*.pyc": true,
+    "**/*.jop": true,
+    "**/*.m": true,
     "**/*.mypy_cache": true,
+    "**/*.o": true,
+    "**/*.ods": true,
+    "**/*.odt": true,
+    "**/*.pdf": true,
+    "**/*.png": true,
+    "**/*.pyc": true,
     "**/*.rst": true,
     "**/*.so": true,
     "**/*.swp": true,
+    "**/*.tar.gz": true,
     "**/*.vscode": true,
     "**/*.zip": true,
-    "**/*.tar.gz": true,
     "**/*airbourne": true,
     "**/*breezy": true,
     "**/*CMakeLists.txt.user": true,
     "**/*docs": true,
     "**/*rosflight_memory": true,
     "**/build": true,
-    "**/devel": true,
-    "**F450.yaml": true,
-    ".env": true,
-    "**/target/": true,
     "**/Cargo.lock": true,
-    "**/*.ods": true,
-    "**/*.odt": true,
-    "**/*.jop": true
+    "**/devel": true,
+    "**/target/": true,
+    "**F450.yaml": true
 },
 "files.associations": {
     "*.*rc": "shellscript",
@@ -119,8 +121,7 @@
     ],
     "panelPositionToggle": [
         "workbench.action.focusActiveEditorGroup",
-        "workbench.action.togglePanelPosition",
-        "workbench.action.focusActiveEditorGroup"
+        "workbench.action.togglePanelPosition"
     ],
     "runAllAndRestartKernel": [
         "python.datascience.restartkernel",
@@ -372,14 +373,6 @@
     { 
         "before": ["Q","Q"],
         "commands": ["workbench.action.closeActiveEditor"]
-    },
-    {
-        "before": ["<tab>","<tab>"],
-        "commands": ["workbench.action.nextEditor"]
-    },
-    {
-        "before": ["<S-tab>","<S-tab>"],
-        "commands": ["workbench.action.previousEditor"]
     }
 ],
 "vim.handleKeys": {
@@ -390,12 +383,16 @@
 "editor.scrollBeyondLastLine": false,
 "editor.smoothScrolling": true,
 "breadcrumbs.filePath": "off",
-"python.linting.ignorePatterns": [
-    ".vscode/*.py",
-    "**/site-packages/**/*.py",
-    "/home/seth/school/optimization/.jop"
-],
 "path-intellisense.autoSlashAfterDirectory": true,
 "python.linting.pylintUseMinimalCheckers": false,
 "zenMode.silentNotifications": false,
+"python.linting.ignorePatterns": [
+    ".vscode/*.py",
+    "**/site-packages/**/*.py",
+    "*.m",
+    "*.png"
+],
+"terminal.integrated.commandsToSkipShell": [
+    "macros.panelPositionToggle"
+],
 }
