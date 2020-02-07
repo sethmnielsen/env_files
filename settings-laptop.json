@@ -184,7 +184,7 @@
 "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 "diffEditor.renderSideBySide": true,
 "editor.suggest.maxVisibleSuggestions": 6,
-"window.zoomLevel": 0,
+"window.zoomLevel": -1,
 "window.menuBarVisibility": "hidden",
 "problems.decorations.enabled": true,
 "markdown.preview.breaks": true,
