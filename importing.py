@@ -1,14 +1,14 @@
 import numpy as np
 import scipy as sp
 import numpy.linalg as npl
-import holodeck
+#import holodeck
 import os
 import sys
 
-try:
-    import cupy as cp
-except ImportError:
-    pass
+#try:
+#    import cupy as cp
+#except ImportError:
+#    pass
 
 np.set_printoptions(precision=4, suppress=True, sign=' ', linewidth=100)
 

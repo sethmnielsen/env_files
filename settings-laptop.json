@@ -1,44 +1,52 @@
 {
     "workbench.startupEditor": "none",
     "files.autoSave": "afterDelay",
+// "editor.fontFamily": "'Droid Sans', 'monospace'",
+// "editor.fontFamily": "'Iosevka TermLig SS12', 'monospace'",
+"editor.fontFamily": "'Iosevka', 'monospace'",
+// "editor.fontFamily": "'Iosevka Aile'",
+// "editor.fontFamily": "'Cascadia Mono PL', 'monospace'",
+// "editor.fontFamily": "'Fira Code', 'monospace'",
+"editor.fontLigatures": false,
+"editor.trimAutoWhitespace": false,
+// "editor.fontWeight": "100",
     "terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
-    "terminal.integrated.fontSize": 15,
-    "editor.fontSize": 16,
+    "terminal.integrated.fontSize": 14,
     "editor.wordWrapColumn": 90,
-    "editor.fontFamily": "'Inconsolata for Powerline', 'monospace', monospace, 'Droid Sans Fallback'",
-    "workbench.colorTheme": "Ayu Dark Custom",
     "files.exclude": {
-        "**/*.~*": true,
+        ".env": true,
         "**/*__pycache__": true,
+        "**/*.~*": true,
         "**/*.catkin_workspace": true,
         "**/*.clang_complete": true,
         "**/*.github/": true,
         "**/*.gitignore": true,
         "**/*.gitmodules": true,
         "**/*.ipynb_checkpoints": true,
+        "**/*.m": true,
+        "**/*.mypy_cache": true,
         "**/*.o": true,
+        "**/*.ods": true,
+        "**/*.odt": true,
         "**/*.pdf": true,
         "**/*.pyc": true,
-        "**/*.mypy_cache": true,
+        "**/*.png": true,
         "**/*.rst": true,
         "**/*.so": true,
         "**/*.swp": true,
+        "**/*.tar.gz": true,
         "**/*.vscode": true,
         "**/*.zip": true,
-        "**/*.tar.gz": true,
         "**/*airbourne": true,
         "**/*breezy": true,
         "**/*CMakeLists.txt.user": true,
         "**/*docs": true,
         "**/*rosflight_memory": true,
+        "**/Cargo.lock": true,
         "**/build": true,
         "**/devel": true,
-        "**F450.yaml": true,
-        ".env": true,
         "**/target/": true,
-        "**/Cargo.lock": true,
-        "**/*.ods": true,
-        "**/*.odt": true
+        "**F450.yaml": true
     },
     "files.associations": {
         "*.*rc": "shellscript",
@@ -48,104 +56,105 @@
         "*.tex": "latex",
         ".vimrc": "vimrc"
     },
-    "explorer.autoReveal": false,
-    "workbench.tree.indent": 20,
-    "explorer.openEditors.visible": 0,
-    "editor.minimap.enabled": false,
-    "atomKeymap.promptV3Features": true,
-    "editor.multiCursorModifier": "alt",
-    "workbench.editor.tabSizing": "shrink",
-    "keyboard.dispatch": "keyCode",
-    "python.pythonPath": "/home/seth/.virtualenvs/default/bin/python3",
-    "python.venvPath": "/home/seth/.virtualenvs",
-    "python.terminal.activateEnvironment": false,
-    "workbench.activityBar.visible": false,
-    "workbench.iconTheme": "ayu",
-    "zenMode.hideLineNumbers": false,
-    "zenMode.hideTabs": false,
-    "editor.cursorSmoothCaretAnimation": true,
-    "activitusbar.activeColour": "#4989b6",
-    "activitusbar.toggleSidebar": false,
-    "clock.dateFormat": "h:MM TT",
-    "breadcrumbs.enabled": true,
-"python.linting.lintOnSave": true,
-"python.linting.mypyEnabled": true,
-    "python.autoComplete.extraPaths": [
-        "/home/seth/dev/boat_landing_sim/devel/lib/python3/dist-packages",
-        "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src",
-        "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python",
-        "/home/seth/dev/boat_landing_sim/src/rf_joy/src/rosflight_joy",
-        "/opt/ros/melodic/lib/python2.7/dist-packages"
+"explorer.autoReveal": false,
+"workbench.tree.indent": 20,
+"explorer.openEditors.visible": 0,
+"editor.minimap.enabled": false,
+"atomKeymap.promptV3Features": true,
+"editor.multiCursorModifier": "alt",
+"workbench.editor.tabSizing": "shrink",
+"keyboard.dispatch": "keyCode",
+"python.pythonPath": "/home/seth/.virtualenvs/default/bin/python3",
+"python.venvPath": "/home/seth/.virtualenvs",
+"python.terminal.activateEnvironment": false,
+"workbench.activityBar.visible": false,
+"zenMode.hideLineNumbers": false,
+"editor.cursorSmoothCaretAnimation": true,
+"editor.acceptSuggestionOnEnter": "off",
+"activitusbar.activeColour": "#4989b6",
+"activitusbar.toggleSidebar": false,
+"clock.dateFormat": "h:MM TT",
+"breadcrumbs.enabled": true,
+"python.autoComplete.extraPaths": [
+    "/home/seth/dev/boat_landing_sim/devel/lib/python3/dist-packages",
+    "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src",
+    "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python",
+    "/home/seth/dev/boat_landing_sim/src/rf_joy/src/rosflight_joy",
+    "/opt/ros/melodic/lib/python2.7/dist-packages"
+],
+"C_Cpp.default.intelliSenseMode": "msvc-x64",
+"editor.rulers": [90],
+"macros": {
+    "down10Lines": [
+        "cursorDown",
+        "cursorDown",
+        "cursorDown",
+        "cursorDown",
+        "cursorDown",
+        "cursorDown",
+        "cursorDown",
+        "cursorDown",
+        "cursorDown",
+        "cursorDown"
     ],
-    "C_Cpp.default.intelliSenseMode": "msvc-x64",
-    "editor.rulers": [90],
-    "macros": {
-        "down10Lines": [
-            "cursorDown",
-            "cursorDown",
-            "cursorDown",
-            "cursorDown",
-            "cursorDown",
-            "cursorDown",
-            "cursorDown",
-            "cursorDown",
-            "cursorDown",
-            "cursorDown"
-        ],
-        "up10Lines": [
-            "cursorUp",
-            "cursorUp",
-            "cursorUp",
-            "cursorUp",
-            "cursorUp",
-            "cursorUp",
-            "cursorUp",
-            "cursorUp",
-            "cursorUp",
-            "cursorUp"
-        ],
-        "closePanelSidebar": [
-            "workbench.action.toggleSidebarVisibility",
-            "workbench.action.closePanel"
-        ],
-        "runAllAndRestartKernel": [
-            "python.datascience.restartkernel",
-            "python.datascience.runallcells",
-        ],
-        "runAboveAndRestartKernel": [
-            "python.datascience.restartkernel",
-            "python.datascience.runallcellsabove.palette",
-        ],
-        "runAboveAndDebugCurrentCell": [
-            "python.datascience.restartkernel",
-            "python.datascience.runallcellsabove.palette",
-            "python.datascience.debugcurrentcell.palette"
-        ],
-        "focusEditorAndVimCtrlW": [
-            "workbench.action.focusActiveEditorGroup",
-            "extension.vim_ctrl+w"
-        ]
-    },
-    "scm.diffDecorationsGutterWidth": 1,
-    "explorer.confirmDragAndDrop": false,
-    "editor.suggestSelection": "first",
-    "explorer.confirmDelete": false,
-    // "bracket-pair-colorizer-2.colors": [
-        // "Gold",
-        // "Olive",
-        // "Teal"
-        // "DarkOrange",
-        // "OliveDrab",
-        // "Crimson",
-        // "BlueViolet",
-    // ],
-    "files.watcherExclude": {
-        "/home/seth/.local/share/**": true,
-        "/home/seth/.virtualenvs/default/lib/python3.6/site-packages/holodeck/**": true,
-        "/home/seth/dev/**": true,
-        "~/school/optimization/.jop/*": true,
-        "/home/seth/Downloads/**": true
-    },
+    "up10Lines": [
+        "cursorUp",
+        "cursorUp",
+        "cursorUp",
+        "cursorUp",
+        "cursorUp",
+        "cursorUp",
+        "cursorUp",
+        "cursorUp",
+        "cursorUp",
+        "cursorUp"
+    ],
+    "closePanelSidebar": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.closePanel"
+    ],
+"panelPositionToggle": [
+    "workbench.action.focusActiveEditorGroup",
+    "workbench.action.togglePanelPosition"
+],
+    "runAllAndRestartKernel": [
+        "python.datascience.restartkernel",
+        "python.datascience.runallcells",
+    ],
+    "runAboveAndRestartKernel": [
+        "python.datascience.restartkernel",
+        "python.datascience.runallcellsabove.palette",
+    ],
+    "runAboveAndDebugCurrentCell": [
+        "python.datascience.restartkernel",
+        "python.datascience.runallcellsabove.palette",
+        "python.datascience.debugcurrentcell.palette"
+    ],
+    "focusEditorAndVimCtrlW": [
+        "workbench.action.focusActiveEditorGroup",
+        "extension.vim_ctrl+w"
+    ]
+},
+"scm.diffDecorationsGutterWidth": 1,
+"explorer.confirmDragAndDrop": false,
+"editor.suggestSelection": "first",
+"explorer.confirmDelete": false,
+// "bracket-pair-colorizer-2.colors": [
+    // "Gold",
+    // "Olive",
+    // "Teal"
+    // "DarkOrange",
+    // "OliveDrab",
+    // "Crimson",
+    // "BlueViolet",
+// ],
+"files.watcherExclude": {
+    "/home/seth/.local/share/**": true,
+    "/home/seth/.virtualenvs/default/lib/python3.6/site-packages/holodeck/**": true,
+    "/home/seth/dev/**": true,
+    "~/school/optimization/.jop/*": true,
+    "/home/seth/Downloads/**": true
+},
 "workbench.sideBar.location": "left",
 "workbench.list.automaticKeyboardNavigation": false,
 "vsicons.dontShowNewVersionMessage": true,
@@ -169,15 +178,15 @@
 "python.analysis.cacheFolderPath": "/home/seth/.local/share/vscode-python-cache",
 "python.analysis.memory.keepLibraryAst": true,
 "python.analysis.memory.keepLibraryLocalVariables": true,
-"python.dataScience.jupyterServerURI": "http://localhost:8888/?token=5a32e8b975888020ff6b5d3d5532851484ad5ad78f3df058",
 "python.dataScience.askForKernelRestart": false,
 "python.dataScience.changeDirOnImportExport": false,
+"python.dataScience.jupyterServerURI": "http://localhost:8888/?token=5a32e8b975888020ff6b5d3d5532851484ad5ad78f3df058",
 "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 "diffEditor.renderSideBySide": true,
 "editor.suggest.maxVisibleSuggestions": 6,
 "window.zoomLevel": 0,
 "window.menuBarVisibility": "hidden",
-"problems.decorations.enabled": false,
+"problems.decorations.enabled": true,
 "markdown.preview.breaks": true,
 "markdown.preview.markEditorSelection": false,
 "todohighlight.keywords": [
@@ -349,6 +358,8 @@
 "vim.searchHighlightColor": "gray",
 "vim.visualstar": true,
 "vim.debug.silent": true,
+// "vim.debug.loggingLevelForAlert": "debug",
+"vim.autoindent": true,
 "vim.normalModeKeyBindingsNonRecursive": [
     {
         "before": ["Z","Z"],
@@ -358,14 +369,6 @@
     { 
         "before": ["Q","Q"],
         "commands": ["workbench.action.closeActiveEditor"]
-    },
-    {
-        "before": ["<tab>","<tab>"],
-        "commands": ["workbench.action.nextEditor"]
-    },
-    {
-        "before": ["<S-tab>","<S-tab>"],
-        "commands": ["workbench.action.previousEditor"]
     }
 ],
 "vim.handleKeys": {
@@ -376,19 +379,17 @@
 "editor.scrollBeyondLastLine": false,
 "editor.smoothScrolling": true,
 "breadcrumbs.filePath": "off",
-"editor.acceptSuggestionOnEnter": "off",
-"editor.trimAutoWhitespace": false,
+"path-intellisense.autoSlashAfterDirectory": true,
 "python.linting.ignorePatterns": [
     ".vscode/*.py",
     "**/site-packages/**/*.py",
-    "/home/seth/school/optimization/.jop"
+    "/home/seth/school/optimization/.jop",
+    "*.m",
+    "*.png"
 ],
-// "editor.fontFamily": "'Droid Sans', 'monospace'",
-// "editor.fontFamily": "'Iosevka Aile'",
-// "editor.fontFamily": "'Cascadia Mono PL'",
-"editor.fontFamily": "'Fira Code', 'monospace'",
-"editor.fontLigatures": false,
-"editor.trimAutoWhitespace": false,
-"path-intellisense.autoSlashAfterDirectory": true,
-"python.linting.pylintUseMinimalCheckers": false,
+"terminal.integrated.commandsToSkipShell": [
+    "macros.panelPositionToggle"
+],
+"editor.fontSize": 16,
+"workbench.colorTheme": "Ayu Dark Custom"
 }
