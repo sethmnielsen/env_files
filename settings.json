@@ -10,12 +10,13 @@
 "editor.fontLigatures": false,
 "editor.trimAutoWhitespace": false,
 // "editor.fontWeight": "100",
-// "editor.font"
 "terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
 "terminal.integrated.fontSize": 14,
+"editor.fontSize": 14,
 "editor.wordWrapColumn": 90,
 "workbench.colorTheme": "Ayu Dark Custom",
 "files.exclude": {
+    "**/*.jop": true,
     ".env": true,
     "**/*__pycache__": true,
     "**/*.~*": true,
@@ -25,15 +26,14 @@
     "**/*.gitignore": true,
     "**/*.gitmodules": true,
     "**/*.ipynb_checkpoints": true,
-    "**/*.jop": true,
     "**/*.m": true,
     "**/*.mypy_cache": true,
     "**/*.o": true,
     "**/*.ods": true,
     "**/*.odt": true,
     "**/*.pdf": true,
-    "**/*.png": true,
     "**/*.pyc": true,
+    "**/*.png": true,
     "**/*.rst": true,
     "**/*.so": true,
     "**/*.swp": true,
@@ -45,8 +45,8 @@
     "**/*CMakeLists.txt.user": true,
     "**/*docs": true,
     "**/*rosflight_memory": true,
-    "**/build": true,
     "**/Cargo.lock": true,
+    "**/build": true,
     "**/devel": true,
     "**/target/": true,
     "**F450.yaml": true
@@ -385,14 +385,14 @@
 "breadcrumbs.filePath": "off",
 "path-intellisense.autoSlashAfterDirectory": true,
 "python.linting.pylintUseMinimalCheckers": false,
-"zenMode.silentNotifications": false,
 "python.linting.ignorePatterns": [
     ".vscode/*.py",
     "**/site-packages/**/*.py",
+    "/home/seth/school/optimization/.jop",
     "*.m",
     "*.png"
 ],
 "terminal.integrated.commandsToSkipShell": [
     "macros.panelPositionToggle"
-],
+]
 }
