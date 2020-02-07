@@ -127,7 +127,7 @@
     { "key": "ctrl+q",                   "command": "-workbench.action.quit" },
     { "key": "ctrl+k ctrl+left",         "command": "-workbench.action.focusLeftGroup" },
     { "key": "ctrl+k ctrl+right",        "command": "-workbench.action.focusRightGroup" },
-    { "key": "ctrl+a",                   "command": "-editor.action.selectAll", "when": "editorFocus" }, 
+    { "key": "ctrl+a",                   "command": "-editor.action.selectAll", "when": "editorFocus" },
     { "key": "ctrl+k ctrl+up",           "command": "-workbench.action.focusAboveGroup" },
     { "key": "ctrl+k ctrl+down",         "command": "-workbench.action.focusBelowGroup" },
     { "key": "ctrl+alt+enter",           "command": "-search.action.replaceAll", "when": "replaceActive && searchViewletVisible && !findWidgetVisible" },
@@ -370,14 +370,14 @@
         "command": "workbench.action.closeActiveEditor",
         "when": "activeEditor != 'workbench.editors.files.textFileEditor'"
     },
-    { 
-        "key": "ctrl+w", 
-        "command": "workbench.action.focusActiveEditorGroup", 
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.focusActiveEditorGroup",
         "when": "terminalFocus"
     },
-    { 
-        "key": "ctrl+w", 
-        "command": "macros.focusEditorAndVimCtrlW", 
+    {
+        "key": "ctrl+w",
+        "command": "macros.focusEditorAndVimCtrlW",
         "when": "explorerViewletFocus && vim.active && vim.use<C-w> && !inDebugRepl"
     },
     {
@@ -439,6 +439,15 @@
     {
         "key": "ctrl+2",
         "command": "-workbench.action.focusSecondEditorGroup"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "-workbench.action.files.openFile"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "-workbench.action.files.openLocalFile",
+        "when": "remoteFileDialogVisible"
     },
 
 ]

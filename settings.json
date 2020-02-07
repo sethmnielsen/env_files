@@ -8,7 +8,6 @@
 // "editor.fontFamily": "'Cascadia Mono PL', 'monospace'",
 // "editor.fontFamily": "'Fira Code', 'monospace'",
 "editor.fontLigatures": false,
-"editor.trimAutoWhitespace": false,
 // "editor.fontWeight": "100",
 // "editor.font"
 "terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
@@ -79,15 +78,13 @@
 "activitusbar.toggleSidebar": false,
 "clock.dateFormat": "h:MM TT",
 "breadcrumbs.enabled": true,
-"python.linting.lintOnSave": true,
-"python.linting.mypyEnabled": true,
-"python.autoComplete.extraPaths": [
-    "/home/seth/dev/boat_landing_sim/devel/lib/python3/dist-packages",
-    "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src",
-    "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python",
-    "/home/seth/dev/boat_landing_sim/src/rf_joy/src/rosflight_joy",
-    "/opt/ros/melodic/lib/python2.7/dist-packages"
-],
+// "python.autoComplete.extraPaths": [
+    // "/home/seth/dev/boat_landing_sim/devel/lib/python3/dist-packages",
+    // "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src",
+    // "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python",
+    // "/home/seth/dev/boat_landing_sim/src/rf_joy/src/rosflight_joy",
+    // "/opt/ros/melodic/lib/python2.7/dist-packages"
+// ],
 "C_Cpp.default.intelliSenseMode": "msvc-x64",
 "editor.rulers": [90],
 "macros": {
@@ -181,9 +178,6 @@
 },
 "gitlens.statusBar.reduceFlicker": true,
 "C_Cpp.default.cppStandard": "c++14",
-"python.analysis.cacheFolderPath": "/home/seth/.local/share/vscode-python-cache",
-"python.analysis.memory.keepLibraryAst": true,
-"python.analysis.memory.keepLibraryLocalVariables": true,
 "python.dataScience.askForKernelRestart": false,
 "python.dataScience.changeDirOnImportExport": false,
 "diffEditor.renderSideBySide": true,
@@ -227,7 +221,6 @@
 ],
 "window.customMenuBarAltFocus": false,
 "window.enableMenuBarMnemonics": false,
-"python.jediEnabled": false,
 "matlab.lintOnSave": false,
 "editor.snippetSuggestions": "bottom",
 "rust-client.enableMultiProjectSetup": true,
@@ -386,13 +379,17 @@
 "path-intellisense.autoSlashAfterDirectory": true,
 "python.linting.pylintUseMinimalCheckers": false,
 "zenMode.silentNotifications": false,
-"python.linting.ignorePatterns": [
-    ".vscode/*.py",
-    "**/site-packages/**/*.py",
-    "*.m",
-    "*.png"
-],
+// "python.linting.ignorePatterns": [
+//     ".vscode/*.py",
+//     "**/site-packages/**/*.py",
+//     "*.m",
+//     "*.png"
+// ],
 "terminal.integrated.commandsToSkipShell": [
     "macros.panelPositionToggle"
 ],
+"python.jediEnabled": false,
+"editor.trimAutoWhitespace": false,
+"files.trimTrailingWhitespace": true,
+"python.linting.prospectorEnabled": true
 }

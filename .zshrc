@@ -37,6 +37,7 @@ export PYTHONPATH=$HOME/dev/pyoptsparse:$PYTHONPATH
 #export PYTHONPATH=$PYTHONPATH:/home/seth/dev/coco_dataset/cocoapi
 #export PYTHONPATH=$PYTHONPATH:~/dev/models/research:~/dev/models/research/slim  # tensorflow
 export RUST_LOG=info
+export RUSTFLAGS="$RUSTFLAGS -A unused_imports"
 
 # virtualenv
 export WORKON_HOME=$HOME/.virtualenvs

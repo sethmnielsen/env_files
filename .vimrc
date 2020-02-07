@@ -66,6 +66,9 @@ vnoremap jk <esc>
 " Replace all highlighted text with new text
 nnoremap <leader>r :%s///g<left><left>
 
+" Y copies to end of line, not entire line like yy
+nnoremap Y y$
+
 " Send to black hole register (actually delete)
 nnoremap <leader>d "_d
 xnoremap <leader>d "_d
@@ -78,9 +81,9 @@ nnoremap <c-y> <c-a>
 " vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>")
 "
 " Highlight search term in file
-nnoremap <C-L> :set invhlsearch<cr> 
+nnoremap <C-L> :set invhlsearch<cr>
 
- 
+
 " Mappings to edit .vimrc and source/save .vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
@@ -103,7 +106,7 @@ nnoremap QQ ZQ
 map <C-n> :NERDTreeToggle<CR>
 
 " Mapping for jumping
-nnoremap <shift-tab> <C-O>
+"nnoremap <shift-tab> <C-O>
 
 " Mappings for Git (vim-fugitive and git-gutter)
 nnoremap <leader>gc :Gcommit <CR>
