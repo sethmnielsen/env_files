@@ -62,10 +62,10 @@ alias sudo_rp="sudo rsync -ah --no-owner"
 alias sudo_rpprog="sudo rsync -ah --no-owner --progress"
 rsync_ssh() {
   if [[ $(uname -n) == "seth-xps-13" ]]; then
-    rsync -ahzP --delete seth@desktop:~/Documents/School-Nonlinear/ ~/Documents/School-Nonlinear
-    rsync -ahzP --delete seth@desktop:~/Documents/School-Optimization/ ~/Documents/School-Optimization
-    rsync -ahzP --delete ~/Documents/School-Nonlinear/ seth@desktop:~/Documents/School-Nonlinear 
     rsync -ahzP --delete ~/Documents/School-Optimization/ seth@desktop:~/Documents/School-Optimization
+    rsync -ahzP --delete ~/Documents/School-Nonlinear/ seth@desktop:~/Documents/School-Nonlinear 
+    rsync -ahzP --delete seth@desktop:~/Documents/School-Optimization/ ~/Documents/School-Optimization
+    rsync -ahzP --delete seth@desktop:~/Documents/School-Nonlinear/ ~/Documents/School-Nonlinear
   elif [[ $(uname -n) == "seth-tower-3620" ]]; then
     rsync -ahzP --delete ~/Documents/School-Nonlinear/ seth@xps:~/Documents/School-Nonlinear 
     rsync -ahzP --delete ~/Documents/School-Optimization/ seth@xps:~/Documents/School-Optimization 
