@@ -11,7 +11,7 @@
 // "editor.fontWeight": "100",
 "terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
 "terminal.integrated.fontSize": 14,
-"editor.fontSize": 14,
+"editor.fontSize": 12,
 "editor.wordWrapColumn": 90,
 "workbench.colorTheme": "Ayu Dark Custom",
 "files.exclude": {
@@ -204,7 +204,6 @@
         "backgroundColor": "none",
         // "border": "1px solid red",
         // "borderRadius": "2px", //NOTE: using borderRadius along with `border` or you will see nothing change
-        //other styling properties goes here ... 
     }
 ],
 "shellformat.effectLanguages": [
@@ -283,7 +282,7 @@
             "%DOC%"
         ],
         "env": {}
-    },    
+    },
     {
         "name": "latexmk",
         "command": "latexmk",
@@ -363,7 +362,7 @@
         "commands": [":wq"]
 
     },
-    { 
+    {
         "before": ["Q","Q"],
         "commands": ["workbench.action.closeActiveEditor"]
     }
@@ -391,5 +390,5 @@
 "python.jediEnabled": false,
 "editor.trimAutoWhitespace": false,
 "files.trimTrailingWhitespace": true,
-"python.linting.prospectorEnabled": true
+"workbench.editor.showTabs": false
 }

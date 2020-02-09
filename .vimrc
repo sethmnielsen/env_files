@@ -63,6 +63,9 @@ set backspace=indent,eol,start
 inoremap jk <esc>
 vnoremap jk <esc>
 
+" Save any changes to current file
+noremap <Leader>s :update<CR>
+
 " Replace all highlighted text with new text
 nnoremap <leader>r :%s///g<left><left>
 

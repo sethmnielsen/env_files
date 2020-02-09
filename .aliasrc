@@ -33,6 +33,7 @@ upload_gdrive() { # upload file to Sync dir on Google Drive
 
 # ls aliases - in order from most to least comfortable
 alias l='ls -1'
+alias lh='l -A'
 alias lk='l --group-directories-first'
 alias ll='ls -lhgG'
 alias llk='ll --group-directories-first'
