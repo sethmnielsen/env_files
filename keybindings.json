@@ -449,5 +449,15 @@
         "command": "-workbench.action.files.openLocalFile",
         "when": "remoteFileDialogVisible"
     },
+    {
+        "key": "ctrl+x",
+        "command": "extension.vim_ctrl+x",
+        "when": "editorTextFocus && vim.active && vim.mode != 'Insert' && vim.use<C-x> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+x",
+        "command": "-extension.vim_ctrl+x",
+        "when": "editorTextFocus && vim.active && vim.use<C-x> && !inDebugRepl"
+    },
 
 ]

@@ -19,6 +19,7 @@ compinit
 ##### Added by me #####
 source ~/.rosrc
 
+export MYVIMRC=~/.vimrc
 export EDITOR=vim
 export DEFAULT_USER=seth  # for shortening prompt
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA

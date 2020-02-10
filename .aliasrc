@@ -81,8 +81,11 @@ cpf() { cp "$@" && goto "$_"; }
 mvf() { mv "$@" && goto "$_"; }
 
 # cd and ls
-cdl() {cd "$@" && ls}
+cdl() {cd "$@" && l}
+cdls() {cd "$@" && ls}
 cdll() {cd "$@" && ll}
+
+#alias cd='cdls'
 
 # zsh / sourcing / environment
 alias vzsh='vim ~/.zshrc'

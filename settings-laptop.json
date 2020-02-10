@@ -74,7 +74,6 @@
 "activitusbar.activeColour": "#4989b6",
 "activitusbar.toggleSidebar": false,
 "clock.dateFormat": "h:MM TT",
-"breadcrumbs.enabled": true,
 "python.autoComplete.extraPaths": [
     "/home/seth/dev/boat_landing_sim/devel/lib/python3/dist-packages",
     "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src",
@@ -184,7 +183,7 @@
 "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 "diffEditor.renderSideBySide": true,
 "editor.suggest.maxVisibleSuggestions": 6,
-"window.zoomLevel": 1,
+"window.zoomLevel": 0,
 "window.menuBarVisibility": "hidden",
 "problems.decorations.enabled": true,
 "markdown.preview.breaks": true,
@@ -390,6 +389,8 @@
 "terminal.integrated.commandsToSkipShell": [
     "macros.panelPositionToggle"
 ],
-"editor.fontSize": 16,
-"workbench.colorTheme": "Ayu Dark Custom"
+"workbench.colorTheme": "Ayu Dark Custom",
+"breadcrumbs.showModules": false,
+"breadcrumbs.showVariables": false,
+"editor.fontSize": 13,
 }

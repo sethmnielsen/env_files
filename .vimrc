@@ -48,9 +48,12 @@ set expandtab
 set t_Co=256
 
 " Colorscheme
-let g:gruvbox_contrast_dark="hard"
+"let g:gruvbox_contrast_dark="hard"
 set background=dark
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme luna-term
+"colorscheme mango
+"colorscheme nord
 
 " ---------------------------- KEY MAPPINGS ------------------------------
 
@@ -72,6 +75,11 @@ nnoremap <leader>r :%s///g<left><left>
 " Y copies to end of line, not entire line like yy
 nnoremap Y y$
 
+" Nerdcommenter adjustment
+"map <leader>cc <plug>NERDCommenterToggle 
+map <leader>cc <leader>ci
+let g:NERDDefaultNesting = 0
+
 " Send to black hole register (actually delete)
 nnoremap <leader>d "_d
 xnoremap <leader>d "_d
@@ -90,6 +98,7 @@ nnoremap <C-L> :set invhlsearch<cr>
 " Mappings to edit .vimrc and source/save .vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>ssv :w <bar> :source $MYVIMRC<cr>
 
 " Mapping to edit ~/.vim/.ycm_extra_conf.py
 nnoremap <leader>ycm :vsplit ~/.vim/.ycm_extra_conf.py<cr>
