@@ -459,5 +459,26 @@
         "command": "-extension.vim_ctrl+x",
         "when": "editorTextFocus && vim.active && vim.use<C-x> && !inDebugRepl"
     },
+    {
+      "key": "up",
+      "command": "cursorUp",
+      "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    },
+    {
+      "key": "down",
+      "command": "cursorDown",
+      "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    },
+    {
+      "key": "k",
+      "command": "cursorUp",
+      "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    },
+    {
+      "key": "j",
+      "command": "cursorDown",
+      "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    }
+    
 
 ]

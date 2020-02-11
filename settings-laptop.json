@@ -368,6 +368,14 @@
     { 
         "before": ["Q","Q"],
         "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+        "before": ["j"],
+        "after": ["g", "j"]
+    },
+    {
+        "before": ["k"],
+        "after": ["g", "k"]
     }
 ],
 "vim.handleKeys": {
@@ -389,8 +397,8 @@
 "terminal.integrated.commandsToSkipShell": [
     "macros.panelPositionToggle"
 ],
-"workbench.colorTheme": "Ayu Dark Custom",
+"workbench.colorTheme": "Solarized Light",
 "breadcrumbs.showModules": false,
 "breadcrumbs.showVariables": false,
-"editor.fontSize": 13,
+"editor.fontSize": 16,
 }
