@@ -32,6 +32,8 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'Jamedjo/setcolors.vim'
 Plugin 'doums/darcula'
 Plugin 'cespare/vim-toml'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

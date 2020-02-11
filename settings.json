@@ -345,7 +345,9 @@
 "latex-workshop.chktex.enabled": true,
 "cmake.configureOnOpen": false,
 "latex-workshop.message.update.show": false,
+
 "vim.vimrc.enable": true,
+"vim.textwidth": 90,
 "vim.smartcase": false,
 "vim.ignorecase": false,
 "vim.foldfix": true,
@@ -356,22 +358,38 @@
 "vim.debug.silent": true,
 // "vim.debug.loggingLevelForAlert": "debug",
 "vim.autoindent": true,
+"vim.insertModeKeyBindings": [
+    {
+        "before": ["j", "j"],
+        "after": ["<Esc>"]
+    }
+],
 "vim.normalModeKeyBindingsNonRecursive": [
     {
         "before": ["Z","Z"],
         "commands": [":wq"]
-
     },
     {
         "before": ["Q","Q"],
         "commands": ["workbench.action.closeActiveEditor"]
-    }
+    },
+    {
+        "before": ["<leader>","c","i"],
+        "after": ["g","c","c"]
+    },
+    {
+        "before": ["<C-]>"],
+        "after": [">",">"]
+    },
+    {
+        "before": ["<C-[>"],
+        "after": ["<","<"]
+    },
 ],
 "vim.handleKeys": {
-    "<C-]>": false,
-    "<C-[>": false,
     "<C-d>": false,
 },
+
 "editor.scrollBeyondLastLine": false,
 "editor.smoothScrolling": true,
 "breadcrumbs.filePath": "off",
@@ -390,5 +408,12 @@
 "python.jediEnabled": false,
 "editor.trimAutoWhitespace": false,
 "files.trimTrailingWhitespace": true,
-"workbench.editor.showTabs": false
+"workbench.editor.showTabs": false,
+"editor.wordWrap": "bounded",
+"[markdown]": {
+    "editor.wordWrap": "bounded",
+    "editor.fontFamily": "'Iosevka Aile'",
+    "editor.quickSuggestions": false
+}
+
 }
