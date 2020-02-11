@@ -397,7 +397,7 @@
 "terminal.integrated.commandsToSkipShell": [
     "macros.panelPositionToggle"
 ],
-"workbench.colorTheme": "Solarized Light",
+"workbench.colorTheme": "Ayu Dark Custom",
 "breadcrumbs.showModules": false,
 "breadcrumbs.showVariables": false,
 "editor.fontSize": 16,

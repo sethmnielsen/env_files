@@ -61,7 +61,6 @@
     { "key": "ctrl+0",                   "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus" },
     // { "key": "ctrl+a a",                 "command": "editor.action.selectAll", "when": "editorFocus" },
     { "key": "ctrl+alt+enter",           "command": "search.action.replaceAll", "when": "searchViewletVisible && !findWidgetVisible" },
-    { "key": "f5",             "command": "workbench.action.debug.start", "when": "!inDebugMode" },
     { "key": "ctrl+shift+alt+y",         "command": "workbench.action.debug.selectandstart", "when": "!inDebugMode" },
     { "key": "alt+left",                 "command": "cursorWordPartLeft", "when": "textInputFocus" },
     { "key": "alt+right",                "command": "cursorWordPartRight", "when": "textInputFocus" },
@@ -278,11 +277,6 @@
     {
         "key": "ctrl+alt+u",
         "command": "macros.runAllAndRestartKernel"
-    },
-    {
-        "key": "f5",
-        "command": "-workbench.action.debug.start",
-        "when": "!inDebugMode"
     },
     {
         "key": "ctrl+shift+alt+,",
