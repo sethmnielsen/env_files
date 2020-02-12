@@ -1,6 +1,6 @@
 {
-    "workbench.startupEditor": "none",
-    "files.autoSave": "afterDelay",
+"workbench.startupEditor": "none",
+"files.autoSave": "afterDelay",
 // "editor.fontFamily": "'Droid Sans', 'monospace'",
 // "editor.fontFamily": "'Iosevka TermLig SS12', 'monospace'",
 "editor.fontFamily": "'Iosevka', 'monospace'",
@@ -10,52 +10,52 @@
 "editor.fontLigatures": false,
 "editor.trimAutoWhitespace": false,
 // "editor.fontWeight": "100",
-    "terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
-    "terminal.integrated.fontSize": 14,
-    "editor.wordWrapColumn": 90,
-    "files.exclude": {
-        ".env": true,
-        "**/*__pycache__": true,
-        "**/*.~*": true,
-        "**/*.catkin_workspace": true,
-        "**/*.clang_complete": true,
-        "**/*.github/": true,
-        "**/*.gitignore": true,
-        "**/*.gitmodules": true,
-        "**/*.ipynb_checkpoints": true,
-        "**/*.m": true,
-        "**/*.mypy_cache": true,
-        "**/*.o": true,
-        "**/*.ods": true,
-        "**/*.odt": true,
-        "**/*.pdf": true,
-        "**/*.pyc": true,
-        "**/*.png": true,
-        "**/*.rst": true,
-        "**/*.so": true,
-        "**/*.swp": true,
-        "**/*.tar.gz": true,
-        "**/*.vscode": true,
-        "**/*.zip": true,
-        "**/*airbourne": true,
-        "**/*breezy": true,
-        "**/*CMakeLists.txt.user": true,
-        "**/*docs": true,
-        "**/*rosflight_memory": true,
-        "**/Cargo.lock": true,
-        "**/build": true,
-        "**/devel": true,
-        "**/target/": true,
-        "**F450.yaml": true
-    },
-    "files.associations": {
-        "*.*rc": "shellscript",
-        "*.launch": "xml",
-        "CMakeLists.txt": "cmake",
-        "<ipython-input*": "python",
-        "*.tex": "latex",
-        ".vimrc": "vimrc"
-    },
+"terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
+"terminal.integrated.fontSize": 14,
+"editor.wordWrapColumn": 90,
+"files.exclude": {
+    ".env": true,
+    "**/*__pycache__": true,
+    "**/*.~*": true,
+    "**/*.catkin_workspace": true,
+    "**/*.clang_complete": true,
+    "**/*.github/": true,
+    "**/*.gitignore": true,
+    "**/*.gitmodules": true,
+    "**/*.ipynb_checkpoints": true,
+    "**/*.m": true,
+    "**/*.mypy_cache": true,
+    "**/*.o": true,
+    "**/*.ods": true,
+    "**/*.odt": true,
+    "**/*.pdf": true,
+    "**/*.pyc": true,
+    "**/*.png": true,
+    "**/*.rst": true,
+    "**/*.so": true,
+    "**/*.swp": true,
+    "**/*.tar.gz": true,
+    "**/*.vscode": true,
+    "**/*.zip": true,
+    "**/*airbourne": true,
+    "**/*breezy": true,
+    "**/*CMakeLists.txt.user": true,
+    "**/*docs": true,
+    "**/*rosflight_memory": true,
+    "**/Cargo.lock": true,
+    "**/build": true,
+    "**/devel": true,
+    "**/target/": true,
+    "**F450.yaml": true
+},
+"files.associations": {
+    "*.*rc": "shellscript",
+    "*.launch": "xml",
+    "CMakeLists.txt": "cmake",
+    "<ipython-input*": "python",
+    "*.tex": "latex",
+    ".vimrc": "vimrc"
+},
 "explorer.autoReveal": false,
 "workbench.tree.indent": 20,
 "explorer.openEditors.visible": 0,
@@ -183,7 +183,7 @@
 "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 "diffEditor.renderSideBySide": true,
 "editor.suggest.maxVisibleSuggestions": 6,
-"window.zoomLevel": 0,
+"window.zoomLevel": 2,
 "window.menuBarVisibility": "hidden",
 "problems.decorations.enabled": true,
 "markdown.preview.breaks": true,
@@ -205,7 +205,7 @@
         "backgroundColor": "none",
         // "border": "1px solid red",
         // "borderRadius": "2px", //NOTE: using borderRadius along with `border` or you will see nothing change
-        //other styling properties goes here ... 
+        //other styling properties goes here ...
     }
 ],
 "shellformat.effectLanguages": [
@@ -348,7 +348,9 @@
 "latex-workshop.chktex.enabled": true,
 "cmake.configureOnOpen": false,
 "latex-workshop.message.update.show": false,
+
 "vim.vimrc.enable": true,
+"vim.textwidth": 90,
 "vim.smartcase": false,
 "vim.ignorecase": false,
 "vim.foldfix": true,
@@ -359,28 +361,44 @@
 "vim.debug.silent": true,
 // "vim.debug.loggingLevelForAlert": "debug",
 "vim.autoindent": true,
+"vim.insertModeKeyBindings": [
+    {
+        "before": ["j", "j"],
+        "after": ["<Esc>"]
+    }
+],
 "vim.normalModeKeyBindingsNonRecursive": [
     {
         "before": ["Z","Z"],
         "commands": [":wq"]
-
     },
-    { 
+    {
         "before": ["Q","Q"],
         "commands": ["workbench.action.closeActiveEditor"]
     },
     {
-        "before": ["j"],
-        "after": ["g", "j"]
+        "before": ["<leader>","c","i"],
+        "after": ["g","c","c"]
     },
     {
-        "before": ["k"],
-        "after": ["g", "k"]
-    }
+        "before": ["<C-]>"],
+        "after": [">",">"]
+    },
+    {
+        "before": ["<C-[>"],
+        "after": ["<","<"]
+    },
+    {
+        "before": ["K"],
+        "after": ["1","0","-"]
+    },
+    {
+        "before": ["J"],
+        "after": ["1","0","+"]
+    },
+
 ],
 "vim.handleKeys": {
-    "<C-]>": false,
-    "<C-[>": false,
     "<C-d>": false,
 },
 "editor.scrollBeyondLastLine": false,
@@ -400,5 +418,12 @@
 "workbench.colorTheme": "Ayu Dark Custom",
 "breadcrumbs.showModules": false,
 "breadcrumbs.showVariables": false,
-"editor.fontSize": 16,
+"files.trimTrailingWhitespace": true,
+"workbench.editor.showTabs": false,
+"editor.wordWrap": "bounded",
+"[markdown]": {
+    "editor.wordWrap": "bounded",
+    "editor.fontFamily": "'Iosevka Aile'",
+    "editor.quickSuggestions": false
+}
 }

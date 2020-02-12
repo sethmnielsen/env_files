@@ -39,7 +39,9 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 call vundle#end()            " required
 set completeopt-=preview
 
-set lazyredraw
+"set lazyredraw
+
+set nostartofline
 
 filetype plugin indent on    " required
 filetype plugin on

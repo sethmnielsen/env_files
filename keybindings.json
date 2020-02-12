@@ -40,8 +40,8 @@
     { "key": "ctrl+p",                   "command": "workbench.action.quickOpen", "when": "!terminalFocus && !inDebugRepl" },
     { "key": "ctrl+p",                   "command": "workbench.action.quickOpenPreviousEditor", "when": "!terminalFocus && !inDebugRepl" },
     { "key": "alt+\\",                   "command": "workbench.action.focusSideBar" },
-    { "key": "ctrl+k",                  "command": "macros.up10Lines", "when": "textInputFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'" },
-    { "key": "ctrl+j",                  "command": "macros.down10Lines", "when": "textInputFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'" },
+    // { "key": "ctrl+k",                  "command": "macros.up10Lines", "when": "textInputFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'" },
+    // { "key": "ctrl+j",                  "command": "macros.down10Lines", "when": "textInputFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'" },
     { "key": "ctrl+shift+alt+j",         "command": "editor.action.joinLines" },
     { "key": "alt+s",                    "command": "workbench.debug.action.focusCallStackView" },
     { "key": "f6",                       "command": "workbench.action.debug.stop", "when": "inDebugMode" },
@@ -453,26 +453,26 @@
         "command": "-extension.vim_ctrl+x",
         "when": "editorTextFocus && vim.active && vim.use<C-x> && !inDebugRepl"
     },
-    {
-      "key": "up",
-      "command": "cursorUp",
-      "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
-    },
-    {
-      "key": "down",
-      "command": "cursorDown",
-      "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
-    },
-    {
-      "key": "k",
-      "command": "cursorUp",
-      "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
-    },
-    {
-      "key": "j",
-      "command": "cursorDown",
-      "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
-    }
-    
+    // {
+    //   "key": "up",
+    //   "command": "cursorUp",
+    //   "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    // },
+    // {
+    //   "key": "down",
+    //   "command": "cursorDown",
+    //   "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    // },
+    // {
+    //   "key": "k",
+    //   "command": "cursorUp",
+    //   "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    // },
+    // {
+    //   "key": "j",
+    //   "command": "cursorDown",
+    //   "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    // }
+
 
 ]
