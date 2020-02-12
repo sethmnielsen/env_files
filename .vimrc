@@ -42,6 +42,7 @@ set completeopt-=preview
 "set lazyredraw
 
 set nostartofline
+set whichwrap=b,s,h,l 
 
 filetype plugin indent on    " required
 filetype plugin on

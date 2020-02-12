@@ -183,7 +183,7 @@
 "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 "diffEditor.renderSideBySide": true,
 "editor.suggest.maxVisibleSuggestions": 6,
-"window.zoomLevel": 2,
+"window.zoomLevel": 1,
 "window.menuBarVisibility": "hidden",
 "problems.decorations.enabled": true,
 "markdown.preview.breaks": true,
@@ -396,6 +396,14 @@
         "before": ["J"],
         "after": ["1","0","+"]
     },
+    {
+        "before": ["k"],
+        "after": ["g", "k"]
+    },
+    {
+        "before": ["j"],
+        "after": ["g", "j"]
+    },
 
 ],
 "vim.handleKeys": {
@@ -415,12 +423,11 @@
 "terminal.integrated.commandsToSkipShell": [
     "macros.panelPositionToggle"
 ],
-"workbench.colorTheme": "Ayu Dark Custom",
+"workbench.colorTheme": "Solarized Light",
 "breadcrumbs.showModules": false,
 "breadcrumbs.showVariables": false,
 "files.trimTrailingWhitespace": true,
 "workbench.editor.showTabs": false,
-"editor.wordWrap": "bounded",
 "[markdown]": {
     "editor.wordWrap": "bounded",
     "editor.fontFamily": "'Iosevka Aile'",
