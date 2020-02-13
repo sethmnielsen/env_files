@@ -182,7 +182,7 @@
 "python.dataScience.changeDirOnImportExport": false,
 "diffEditor.renderSideBySide": true,
 "editor.suggest.maxVisibleSuggestions": 6,
-"window.zoomLevel": 0,
+"window.zoomLevel": 1,
 "window.menuBarVisibility": "hidden",
 "problems.decorations.enabled": false,
 "markdown.preview.breaks": true,
@@ -358,11 +358,20 @@
 "vim.debug.silent": true,
 // "vim.debug.loggingLevelForAlert": "debug",
 "vim.autoindent": true,
-"vim.insertModeKeyBindings": [
+"vim.insertModeKeyBindingsNonRecursive": [
     {
         "before": ["j", "j"],
         "after": ["<Esc>"]
+    },
+    {
+        "before": ["<alt-k>"],
+        "after": ["g", "k"]
+    },
+    {
+        "before": ["<alt-j>"],
+        "after": ["g", "j"]
     }
+
 ],
 "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -384,7 +393,32 @@
     {
         "before": ["<C-[>"],
         "after": ["<","<"]
+        },
+        {
+        "before": ["K"],
+        "after": ["1","0","-"]
     },
+    {
+        "before": ["J"],
+        "after": ["1","0","+"]
+    },
+    {
+        "before": ["k"],
+        "after": ["g", "k"]
+    },
+    {
+        "before": ["j"],
+        "after": ["g", "j"]
+    },
+    {
+        "before": ["<Up>"],
+        "after": ["g", "<Up>"]
+    },
+    {
+        "before": ["<Down>"],
+        "after": ["g", "<Down>"]
+    },
+
 ],
 "vim.handleKeys": {
     "<C-d>": false,
@@ -409,9 +443,8 @@
 "editor.trimAutoWhitespace": false,
 "files.trimTrailingWhitespace": true,
 "workbench.editor.showTabs": false,
-"editor.wordWrap": "bounded",
 "[markdown]": {
-    "editor.wordWrap": "bounded",
+    "editor.wordWrap": "on",
     "editor.fontFamily": "'Iosevka Aile'",
     "editor.quickSuggestions": false
 }
