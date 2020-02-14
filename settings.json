@@ -129,8 +129,8 @@
         "python.datascience.runallcellsabove.palette",
     ],
     "runAboveAndDebugCurrentCell": [
-        "python.datascience.restartkernel",
-        "python.datascience.runallcellsabove.palette",
+        // "python.datascience.restartkernel",
+        // "python.datascience.runallcellsabove.palette",
         "python.datascience.debugcurrentcell.palette"
     ],
     "focusEditorAndVimCtrlW": [
@@ -174,7 +174,7 @@
 "gitlens.codeLens.recentChange.enabled": false,
 "gitlens.currentLine.enabled": false,
 "gitlens.advanced.messages": {
-"suppressGitDisabledWarning": true
+    "suppressGitDisabledWarning": true
 },
 "gitlens.statusBar.reduceFlicker": true,
 "C_Cpp.default.cppStandard": "c++14",
@@ -182,7 +182,7 @@
 "python.dataScience.changeDirOnImportExport": false,
 "diffEditor.renderSideBySide": true,
 "editor.suggest.maxVisibleSuggestions": 6,
-"window.zoomLevel": 1,
+"window.zoomLevel": 0,
 "window.menuBarVisibility": "hidden",
 "problems.decorations.enabled": false,
 "markdown.preview.breaks": true,
@@ -393,8 +393,8 @@
     {
         "before": ["<C-[>"],
         "after": ["<","<"]
-        },
-        {
+    },
+    {
         "before": ["K"],
         "after": ["1","0","-"]
     },
@@ -418,6 +418,10 @@
         "before": ["<Down>"],
         "after": ["g", "<Down>"]
     },
+    {
+        "before": ["<C-a>"],
+        "after": ["<C-a>"]
+    }
 
 ],
 "vim.handleKeys": {

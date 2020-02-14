@@ -34,6 +34,8 @@ Plugin 'doums/darcula'
 Plugin 'cespare/vim-toml'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
+"Plugin 'zef/vim-cycle'
+Plugin 'Konfekt/vim-CtrlXA'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -52,6 +54,13 @@ set shiftwidth=4
 set expandtab
 set t_Co=256
 
+augroup VimAfter
+    autocmd!
+      autocmd VimEnter let g:CtrlXA_Toggles = [
+      \ ['sweet', 'bitter'],
+      \ ] + g:CtrlXA_Toggles
+        augroup END
+
 " Colorscheme
 "let g:gruvbox_contrast_dark="hard"
 set background=dark
@@ -68,8 +77,8 @@ colorscheme luna-term
 set backspace=indent,eol,start
 
 " Escape Mappings for insert and visual modes
-inoremap jk <esc>
-vnoremap jk <esc>
+"inoremap jk <esc>
+"vnoremap jk <esc>
 
 " Save any changes to current file
 noremap <Leader>s :update<CR>
