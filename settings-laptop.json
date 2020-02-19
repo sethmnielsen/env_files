@@ -12,8 +12,11 @@
 // "editor.fontWeight": "100",
 "terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
 "terminal.integrated.fontSize": 14,
+"editor.fontSize": 20,
+"workbench.colorTheme": "Ayu Dark Custom",
 "editor.wordWrapColumn": 90,
 "files.exclude": {
+    "**/*.jop": true,
     ".env": true,
     "**/*__pycache__": true,
     "**/*.~*": true,
@@ -68,19 +71,21 @@
 "python.venvPath": "/home/seth/.virtualenvs",
 "python.terminal.activateEnvironment": false,
 "workbench.activityBar.visible": false,
+"workbench.iconTheme": "ayu",
 "zenMode.hideLineNumbers": false,
 "editor.cursorSmoothCaretAnimation": true,
 "editor.acceptSuggestionOnEnter": "off",
 "activitusbar.activeColour": "#4989b6",
 "activitusbar.toggleSidebar": false,
 "clock.dateFormat": "h:MM TT",
-"python.autoComplete.extraPaths": [
-    "/home/seth/dev/boat_landing_sim/devel/lib/python3/dist-packages",
-    "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src",
-    "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python",
-    "/home/seth/dev/boat_landing_sim/src/rf_joy/src/rosflight_joy",
-    "/opt/ros/melodic/lib/python2.7/dist-packages"
-],
+"breadcrumbs.enabled": true,
+// "python.autoComplete.extraPaths": [
+    // "/home/seth/dev/boat_landing_sim/devel/lib/python3/dist-packages",
+    // "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src",
+    // "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python",
+    // "/home/seth/dev/boat_landing_sim/src/rf_joy/src/rosflight_joy",
+    // "/opt/ros/melodic/lib/python2.7/dist-packages"
+// ],
 "C_Cpp.default.intelliSenseMode": "msvc-x64",
 "editor.rulers": [90],
 "macros": {
@@ -183,7 +188,7 @@
 "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 "diffEditor.renderSideBySide": true,
 "editor.suggest.maxVisibleSuggestions": 6,
-"window.zoomLevel": 1,
+"window.zoomLevel": 2,
 "window.menuBarVisibility": "hidden",
 "problems.decorations.enabled": true,
 "markdown.preview.breaks": true,
@@ -361,10 +366,18 @@
 "vim.debug.silent": true,
 // "vim.debug.loggingLevelForAlert": "debug",
 "vim.autoindent": true,
-"vim.insertModeKeyBindings": [
+"vim.insertModeKeyBindingsNonRecursive": [
     {
         "before": ["j", "j"],
         "after": ["<Esc>"]
+    },
+    {
+        "before": ["<alt-k>"],
+        "after": ["g", "k"]
+    },
+    {
+        "before": ["<alt-j>"],
+        "after": ["g", "j"]
     }
 ],
 "vim.normalModeKeyBindingsNonRecursive": [
@@ -404,7 +417,41 @@
         "before": ["j"],
         "after": ["g", "j"]
     },
+    {
+        "before": ["<Up>"],
+        "after": ["g", "<Up>"]
+    },
+    {
+        "before": ["<Down>"],
+        "after": ["g", "<Down>"]
+    }
+],
+"vim.visualModeKeyBindingsNonRecursive": [
 
+    {
+        "before": ["K"],
+        "after": ["1","0","-"]
+    },
+    {
+        "before": ["J"],
+        "after": ["1","0","+"]
+    },
+    {
+        "before": ["k"],
+        "after": ["g", "k"]
+    },
+    {
+        "before": ["j"],
+        "after": ["g", "j"]
+    },
+    {
+        "before": ["<Up>"],
+        "after": ["g", "<Up>"]
+    },
+    {
+        "before": ["<Down>"],
+        "after": ["g", "<Down>"]
+    }
 ],
 "vim.handleKeys": {
     "<C-d>": false,
@@ -423,13 +470,12 @@
 "terminal.integrated.commandsToSkipShell": [
     "macros.panelPositionToggle"
 ],
-"workbench.colorTheme": "Solarized Light",
 "breadcrumbs.showModules": false,
 "breadcrumbs.showVariables": false,
 "files.trimTrailingWhitespace": true,
 "workbench.editor.showTabs": false,
 "[markdown]": {
-    "editor.wordWrap": "bounded",
+    "editor.wordWrap": "on",
     "editor.fontFamily": "'Iosevka Aile'",
     "editor.quickSuggestions": false
 }

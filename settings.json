@@ -184,7 +184,7 @@
 "editor.suggest.maxVisibleSuggestions": 6,
 "window.zoomLevel": 0,
 "window.menuBarVisibility": "hidden",
-"problems.decorations.enabled": false,
+"problems.decorations.enabled": true,
 "markdown.preview.breaks": true,
 "markdown.preview.markEditorSelection": false,
 "todohighlight.keywords": [
@@ -371,7 +371,6 @@
         "before": ["<alt-j>"],
         "after": ["g", "j"]
     }
-
 ],
 "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -417,17 +416,38 @@
     {
         "before": ["<Down>"],
         "after": ["g", "<Down>"]
+    }
+],
+"vim.visualModeKeyBindingsNonRecursive": [
+
+    {
+        "before": ["K"],
+        "after": ["1","0","-"]
     },
     {
-        "before": ["<C-a>"],
-        "after": ["<C-a>"]
+        "before": ["J"],
+        "after": ["1","0","+"]
+    },
+    {
+        "before": ["k"],
+        "after": ["g", "k"]
+    },
+    {
+        "before": ["j"],
+        "after": ["g", "j"]
+    },
+    {
+        "before": ["<Up>"],
+        "after": ["g", "<Up>"]
+    },
+    {
+        "before": ["<Down>"],
+        "after": ["g", "<Down>"]
     }
-
 ],
 "vim.handleKeys": {
     "<C-d>": false,
 },
-
 "editor.scrollBeyondLastLine": false,
 "editor.smoothScrolling": true,
 "breadcrumbs.filePath": "off",
@@ -445,6 +465,7 @@
 ],
 "python.jediEnabled": false,
 "editor.trimAutoWhitespace": false,
+"breadcrumbs.showModules": false,
 "files.trimTrailingWhitespace": true,
 "[markdown]": {
     "editor.wordWrap": "on",
