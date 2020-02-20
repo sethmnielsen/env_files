@@ -15,7 +15,7 @@
 "workbench.colorTheme": "Ayu Dark Custom",
 "editor.wordWrapColumn": 90,
 "files.exclude": {
-    "**/*.jop": true,
+    "**/*.jop": false,
     ".env": true,
     "**/*__pycache__": true,
     "**/*.~*": true,
