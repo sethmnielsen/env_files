@@ -15,7 +15,7 @@
 "editor.wordWrapColumn": 90,
 "workbench.colorTheme": "Ayu Dark Custom",
 "files.exclude": {
-    "**/*.jop": true,
+    "**/*.jop": false,
     ".env": true,
     "**/*__pycache__": true,
     "**/*.~*": true,
@@ -116,9 +116,13 @@
         "workbench.action.toggleSidebarVisibility",
         "workbench.action.closePanel"
     ],
-    "panelPositionToggle": [
+    "positionPanelRight": [
         "workbench.action.focusActiveEditorGroup",
-        "workbench.action.togglePanelPosition"
+        "workbench.action.positionPanelRight"
+    ],
+    "positionPanelBottom": [
+        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.positionPanelBottom"
     ],
     "runAllAndRestartKernel": [
         "python.datascience.restartkernel",
@@ -461,7 +465,8 @@
 //     "*.png"
 // ],
 "terminal.integrated.commandsToSkipShell": [
-    "macros.panelPositionToggle"
+    "macros.positionPanelRight",
+    "macros.positionPanelBottom"
 ],
 "python.jediEnabled": false,
 "editor.trimAutoWhitespace": false,
