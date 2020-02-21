@@ -13,7 +13,7 @@
 "terminal.integrated.fontSize": 14,
 "editor.fontSize": 12,
 "editor.wordWrapColumn": 90,
-"workbench.colorTheme": "Ayu Dark Custom",
+"workbench.colorTheme": "ayu-custom",
 "files.exclude": {
     "**/*.jop": false,
     ".env": true,
@@ -351,6 +351,7 @@
 "latex-workshop.message.update.show": false,
 
 "vim.vimrc.enable": true,
+"vim.useCtrlKeys": true,
 "vim.textwidth": 90,
 "vim.smartcase": false,
 "vim.ignorecase": false,
@@ -362,6 +363,12 @@
 "vim.debug.silent": true,
 // "vim.debug.loggingLevelForAlert": "debug",
 "vim.autoindent": true,
+"vim.handleKeys": {
+    "<C-d>": false,
+    "<C-/>": true,
+    "<C-z>": false,
+    "<C-Z>": false
+},
 "vim.insertModeKeyBindingsNonRecursive": [
     {
         "before": ["j", "j"],
@@ -374,7 +381,15 @@
     {
         "before": ["<alt-j>"],
         "after": ["g", "j"]
-    }
+    },
+    {
+        "before": ["<leader>","c","i"],
+        "after": ["g","c","c"]
+    },
+    {
+        "before": ["<C-/>"],
+        "after": ["g", "c", "c"]
+    },
 ],
 "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -388,6 +403,10 @@
     {
         "before": ["<leader>","c","i"],
         "after": ["g","c","c"]
+    },
+    {
+        "before": ["<C-/>"],
+        "after": ["g", "c", "c"]
     },
     {
         "before": ["<C-]>"],
@@ -420,6 +439,15 @@
     {
         "before": ["<Down>"],
         "after": ["g", "<Down>"]
+    },
+    {
+
+        "before": ["u"],
+        "commands": ["undo"]
+    },
+    {
+        "before": ["<C-r>"],
+        "commands": ["redo"]
     }
 ],
 "vim.visualModeKeyBindingsNonRecursive": [
@@ -449,9 +477,6 @@
         "after": ["g", "<Down>"]
     }
 ],
-"vim.handleKeys": {
-    "<C-d>": false,
-},
 "editor.scrollBeyondLastLine": false,
 "editor.smoothScrolling": true,
 "breadcrumbs.filePath": "off",
@@ -480,11 +505,13 @@
 "workbench.editor.showTabs": false,
 "editor.suggest.showSnippets": false,
 "breadcrumbs.showFiles": false,
-"breadcrumbs.showModules": false,
 "breadcrumbs.showNamespaces": false,
 "breadcrumbs.showVariables": false,
 "breadcrumbs.showPackages": false,
 "outline.showModules": false,
-"outline.showVariables": false
+"outline.showVariables": false,
+"zenMode.hideStatusBar": false,
+"workbench.colorCustomizations": {
+}
 
 }

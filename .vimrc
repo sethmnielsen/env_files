@@ -80,8 +80,12 @@ set backspace=indent,eol,start
 "inoremap jk <esc>
 "vnoremap jk <esc>
 
+" Quickly insert an empty new line without entering insert mode
+nnoremap <leader>o o<Esc>
+nnoremap <leader>O O<Esc>
+
 " Save any changes to current file
-noremap <Leader>s :update<CR>
+noremap <leader>s :update<CR>
 
 " Replace all highlighted text with new text
 nnoremap <leader>r :%s///g<left><left>

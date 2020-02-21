@@ -81,8 +81,7 @@ cpf() { cp "$@" && goto "$_"; }
 mvf() { mv "$@" && goto "$_"; }
 
 # cd and ls
-cdl() {cd "$@" && l}
-cdls() {cd "$@" && ls}
+cdl() {cd "$@" && ls}
 cdll() {cd "$@" && ll}
 
 #alias cd='cdls'
