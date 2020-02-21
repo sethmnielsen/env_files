@@ -36,6 +36,7 @@ Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 "Plugin 'zef/vim-cycle'
 Plugin 'Konfekt/vim-CtrlXA'
+Plugin 'justinmk/vim-sneak'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -72,31 +73,20 @@ colorscheme luna-term
 " ---------------------------- KEY MAPPINGS ------------------------------
 
 "let mapleader = \\
-"nmap <space> <leader>
-"vmap <space> <leader>
 set backspace=indent,eol,start
-
-" Escape Mappings for insert and visual modes
-"inoremap jk <esc>
-"vnoremap jk <esc>
 
 " Quickly insert an empty new line without entering insert mode
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
 
 " Save any changes to current file
-noremap <leader>s :update<CR>
+noremap <leader>w :update<CR>
 
 " Replace all highlighted text with new text
 nnoremap <leader>r :%s///g<left><left>
 
 " Y copies to end of line, not entire line like yy
 nnoremap Y y$
-
-" Nerdcommenter adjustment
-"map <leader>cc <plug>NERDCommenterToggle 
-map <leader>cc <leader>ci
-let g:NERDDefaultNesting = 0
 
 " Send to black hole register (actually delete)
 nnoremap <leader>d "_d
@@ -107,7 +97,7 @@ xnoremap <leader>p "_dP"
 nnoremap <c-y> <c-a>
 
 " press // to search for highlighted text (visual mode)
-" vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>")
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>")
 "
 " Highlight search term in file
 nnoremap <C-L> :set invhlsearch<cr>
@@ -135,8 +125,11 @@ nnoremap QQ ZQ
 
 map <C-n> :NERDTreeToggle<CR>
 
-" Mapping for jumping
-"nnoremap <shift-tab> <C-O>
+" vim-sneak plugin
+map f <Plug>Sneak_f
+map F <Plug>Sneak_F
+map t <Plug>Sneak_t
+map T <Plug>Sneak_T
 
 " Mappings for Git (vim-fugitive and git-gutter)
 nnoremap <leader>gc :Gcommit <CR>
@@ -179,24 +172,19 @@ nnoremap <leader>lv :!mupdf %:r.pdf &<CR><CR>
 let g:airline_powerline_fonts = 1
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-autocmd FileType make set noexpandtab softtabstop=0
-
+" Filetype specific settings
 augroup cpp
   autocmd!
   set tabstop=2
   set shiftwidth=2
 augroup END
 
-au FileType c,cpp setlocal comments-=:// comments+=f://
-
+autocmd FileType c,cpp setlocal comments-=:// comments+=f://
+autocmd FileType make set noexpandtab softtabstop=0
 "Sets syntax highlighting for files or filetypes
-au BufRead,BufNewFile *.launch set filetype=xml
-au BufRead,BufNewFile .rosrc set filetype=sh
-au BufRead,BufNewFile .aliasrc set filetype=sh
+autocmd BufRead,BufNewFile .launch set filetype=xml
+autocmd BufRead,BufNewFile .rosrc set filetype=sh
+autocmd BufRead,BufNewFile .aliasrc set filetype=sh
 
 "set iskeyword-=_

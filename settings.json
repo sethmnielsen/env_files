@@ -351,12 +351,13 @@
 
 "vim.vimrc.enable": true,
 "vim.useCtrlKeys": true,
+"vim.sneak": true,
+"vim.sneakReplacesF": true,
 "vim.textwidth": 90,
 "vim.smartcase": false,
 "vim.ignorecase": false,
 "vim.foldfix": true,
 "vim.useSystemClipboard": true,
-// "vim.leader": "<space>",
 "vim.searchHighlightColor": "gray",
 "vim.visualstar": true,
 "vim.debug.silent": true,
@@ -474,6 +475,10 @@
     {
         "before": ["<Down>"],
         "after": ["g", "<Down>"]
+    },
+    {
+        "before": [ "p", ],
+        "after": [ "p", "g", "v", "y" ]
     }
 ],
 "editor.scrollBeyondLastLine": false,
@@ -511,6 +516,9 @@
 "zenMode.hideStatusBar": false,
 "zenMode.silentNotifications": false,
 "workbench.colorCustomizations": {
+    "editorGroup.border": "#ffffff91",
+    "editorIndentGuide.background": "#b8883063",
+    "editorIndentGuide.activeBackground": "#b88830f1",
 }
 
 }
