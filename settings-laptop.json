@@ -8,11 +8,10 @@
 // "editor.fontFamily": "'Cascadia Mono PL', 'monospace'",
 // "editor.fontFamily": "'Fira Code', 'monospace'",
 "editor.fontLigatures": false,
-"editor.trimAutoWhitespace": false,
 // "editor.fontWeight": "100",
 "terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
 "terminal.integrated.fontSize": 14,
-"workbench.colorTheme": "Ayu Dark Custom",
+"workbench.colorTheme": "ayu-custom",
 "editor.wordWrapColumn": 90,
 "files.exclude": {
     "**/*.jop": false,
@@ -116,10 +115,14 @@
         "workbench.action.toggleSidebarVisibility",
         "workbench.action.closePanel"
     ],
-"panelPositionToggle": [
-    "workbench.action.focusActiveEditorGroup",
-    "workbench.action.togglePanelPosition"
-],
+    "positionPanelRight": [
+        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.positionPanelRight"
+    ],
+    "positionPanelBottom": [
+        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.positionPanelBottom"
+    ],
     "runAllAndRestartKernel": [
         "python.datascience.restartkernel",
         "python.datascience.runallcells",
@@ -178,13 +181,8 @@
 },
 "gitlens.statusBar.reduceFlicker": true,
 "C_Cpp.default.cppStandard": "c++14",
-"python.analysis.cacheFolderPath": "/home/seth/.local/share/vscode-python-cache",
-"python.analysis.memory.keepLibraryAst": true,
-"python.analysis.memory.keepLibraryLocalVariables": true,
 "python.dataScience.askForKernelRestart": false,
 "python.dataScience.changeDirOnImportExport": false,
-"python.dataScience.jupyterServerURI": "http://localhost:8888/?token=5a32e8b975888020ff6b5d3d5532851484ad5ad78f3df058",
-"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 "diffEditor.renderSideBySide": true,
 "editor.suggest.maxVisibleSuggestions": 6,
 "window.menuBarVisibility": "hidden",
@@ -208,7 +206,6 @@
         "backgroundColor": "none",
         // "border": "1px solid red",
         // "borderRadius": "2px", //NOTE: using borderRadius along with `border` or you will see nothing change
-        //other styling properties goes here ...
     }
 ],
 "shellformat.effectLanguages": [
@@ -225,7 +222,6 @@
 ],
 "window.customMenuBarAltFocus": false,
 "window.enableMenuBarMnemonics": false,
-"python.jediEnabled": false,
 "matlab.lintOnSave": false,
 "editor.snippetSuggestions": "bottom",
 "rust-client.enableMultiProjectSetup": true,
@@ -353,6 +349,7 @@
 "latex-workshop.message.update.show": false,
 
 "vim.vimrc.enable": true,
+"vim.useCtrlKeys": true,
 "vim.textwidth": 90,
 "vim.smartcase": false,
 "vim.ignorecase": false,
@@ -364,6 +361,12 @@
 "vim.debug.silent": true,
 // "vim.debug.loggingLevelForAlert": "debug",
 "vim.autoindent": true,
+"vim.handleKeys": {
+    "<C-d>": false,
+    "<C-/>": true,
+    "<C-z>": false,
+    "<C-Z>": false
+},
 "vim.insertModeKeyBindingsNonRecursive": [
     {
         "before": ["j", "j"],
@@ -376,7 +379,15 @@
     {
         "before": ["<alt-j>"],
         "after": ["g", "j"]
-    }
+    },
+    {
+        "before": ["<leader>","c","i"],
+        "after": ["g","c","c"]
+    },
+    {
+        "before": ["<C-/>"],
+        "after": ["g", "c", "c"]
+    },
 ],
 "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -390,6 +401,10 @@
     {
         "before": ["<leader>","c","i"],
         "after": ["g","c","c"]
+    },
+    {
+        "before": ["<C-/>"],
+        "after": ["g", "c", "c"]
     },
     {
         "before": ["<C-]>"],
@@ -422,6 +437,15 @@
     {
         "before": ["<Down>"],
         "after": ["g", "<Down>"]
+    },
+    {
+
+        "before": ["u"],
+        "commands": ["undo"]
+    },
+    {
+        "before": ["<C-r>"],
+        "commands": ["redo"]
     }
 ],
 "vim.visualModeKeyBindingsNonRecursive": [
@@ -451,31 +475,41 @@
         "after": ["g", "<Down>"]
     }
 ],
-"vim.handleKeys": {
-    "<C-d>": false,
-},
 "editor.scrollBeyondLastLine": false,
 "editor.smoothScrolling": true,
 "breadcrumbs.filePath": "off",
 "path-intellisense.autoSlashAfterDirectory": true,
+"python.linting.pylintUseMinimalCheckers": false,
 "python.linting.ignorePatterns": [
     ".vscode/*.py",
     "**/site-packages/**/*.py",
-    "/home/seth/school/optimization/.jop",
     "*.m",
     "*.png"
 ],
 "terminal.integrated.commandsToSkipShell": [
-    "macros.panelPositionToggle"
+    "macros.positionPanelRight",
+    "macros.positionPanelBottom"
 ],
+"python.jediEnabled": false,
+"editor.trimAutoWhitespace": false,
 "breadcrumbs.showModules": false,
-"breadcrumbs.showVariables": false,
 "files.trimTrailingWhitespace": true,
-"workbench.editor.showTabs": false,
 "[markdown]": {
     "editor.wordWrap": "on",
     "editor.fontFamily": "'Iosevka Aile'",
     "editor.quickSuggestions": false
 },
-"window.zoomLevel": 0
+"workbench.editor.showTabs": false,
+"editor.suggest.showSnippets": false,
+"breadcrumbs.showFiles": false,
+"breadcrumbs.showNamespaces": false,
+"breadcrumbs.showVariables": false,
+"breadcrumbs.showPackages": false,
+"outline.showModules": false,
+"outline.showVariables": false,
+"zenMode.hideStatusBar": false,
+"zenMode.silentNotifications": false,
+"workbench.colorCustomizations": {
+}
+
 }

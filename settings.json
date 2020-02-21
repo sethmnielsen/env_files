@@ -12,8 +12,8 @@
 "terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
 "terminal.integrated.fontSize": 14,
 "editor.fontSize": 12,
-"editor.wordWrapColumn": 90,
 "workbench.colorTheme": "ayu-custom",
+"editor.wordWrapColumn": 90,
 "files.exclude": {
     "**/*.jop": false,
     ".env": true,
@@ -133,8 +133,8 @@
         "python.datascience.runallcellsabove.palette",
     ],
     "runAboveAndDebugCurrentCell": [
-        // "python.datascience.restartkernel",
-        // "python.datascience.runallcellsabove.palette",
+        "python.datascience.restartkernel",
+        "python.datascience.runallcellsabove.palette",
         "python.datascience.debugcurrentcell.palette"
     ],
     "focusEditorAndVimCtrlW": [
@@ -186,7 +186,6 @@
 "python.dataScience.changeDirOnImportExport": false,
 "diffEditor.renderSideBySide": true,
 "editor.suggest.maxVisibleSuggestions": 6,
-"window.zoomLevel": 0,
 "window.menuBarVisibility": "hidden",
 "problems.decorations.enabled": true,
 "markdown.preview.breaks": true,
@@ -482,13 +481,12 @@
 "breadcrumbs.filePath": "off",
 "path-intellisense.autoSlashAfterDirectory": true,
 "python.linting.pylintUseMinimalCheckers": false,
-"zenMode.silentNotifications": false,
-// "python.linting.ignorePatterns": [
-//     ".vscode/*.py",
-//     "**/site-packages/**/*.py",
-//     "*.m",
-//     "*.png"
-// ],
+"python.linting.ignorePatterns": [
+    ".vscode/*.py",
+    "**/site-packages/**/*.py",
+    "*.m",
+    "*.png"
+],
 "terminal.integrated.commandsToSkipShell": [
     "macros.positionPanelRight",
     "macros.positionPanelBottom"
@@ -511,6 +509,7 @@
 "outline.showModules": false,
 "outline.showVariables": false,
 "zenMode.hideStatusBar": false,
+"zenMode.silentNotifications": false,
 "workbench.colorCustomizations": {
 }
 
