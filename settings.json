@@ -425,22 +425,6 @@
         "after": ["1","0","+"]
     },
     {
-        "before": ["k"],
-        "after": ["g", "k"]
-    },
-    {
-        "before": ["j"],
-        "after": ["g", "j"]
-    },
-    {
-        "before": ["<Up>"],
-        "after": ["g", "<Up>"]
-    },
-    {
-        "before": ["<Down>"],
-        "after": ["g", "<Down>"]
-    },
-    {
 
         "before": ["u"],
         "commands": ["undo"]
@@ -459,22 +443,6 @@
     {
         "before": ["J"],
         "after": ["1","0","+"]
-    },
-    {
-        "before": ["k"],
-        "after": ["g", "k"]
-    },
-    {
-        "before": ["j"],
-        "after": ["g", "j"]
-    },
-    {
-        "before": ["<Up>"],
-        "after": ["g", "<Up>"]
-    },
-    {
-        "before": ["<Down>"],
-        "after": ["g", "<Down>"]
     },
     {
         "before": [ "p", ],
@@ -519,6 +487,9 @@
     "editorGroup.border": "#ffffff91",
     "editorIndentGuide.background": "#b8883063",
     "editorIndentGuide.activeBackground": "#b88830f1",
+    "editor.hoverHighlightBackground": "#474747",
+    "editor.selectionHighlightBackground": "#435f8586",
+    "editor.selectionBackground": "#25416886"
 }
 
 }
