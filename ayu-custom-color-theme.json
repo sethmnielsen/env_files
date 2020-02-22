@@ -8,6 +8,9 @@
 		"editorIndentGuide.background": "#b8883063",
 		"editorIndentGuide.activeBackground": "#b88830f1",
 		"sideBar.border": "#6063681c",
+		"editor.hoverHighlightBackground": "#474747",
+		"editor.selectionHighlightBackground": "#435f8586",
+		"editor.selectionBackground": "#25416886",
 
 		"activityBar.background": "#0a0e14",
 		"activityBar.border": "#0a0e14",
@@ -37,8 +40,6 @@
 		"editor.foreground": "#b3b1ad",
 		"editor.inactiveSelectionBackground": "#121922",
 		"editor.rangeHighlightBackground": "#01060e",
-		"editor.selectionBackground": "#161f2a",
-		"editor.selectionHighlightBackground": "#121922",
 		"editor.selectionHighlightBorder": "#1d2936",
 		"editor.wordHighlightBackground": "#121922",
 		"editor.wordHighlightStrongBackground": "#e6b45033",

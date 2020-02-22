@@ -365,7 +365,9 @@
     "<C-d>": false,
     "<C-/>": true,
     "<C-z>": false,
-    "<C-Z>": false
+    "<C-Z>": false,
+    "<C-]>": false,
+    "<C-[>": false,
 },
 "vim.insertModeKeyBindingsNonRecursive": [
     {
@@ -402,18 +404,18 @@
         "before": ["<leader>","c","i"],
         "after": ["g","c","c"]
     },
-    {
-        "before": ["<C-/>"],
-        "after": ["g", "c", "c"]
-    },
-    {
-        "before": ["<C-]>"],
-        "after": [">",">"]
-    },
-    {
-        "before": ["<C-[>"],
-        "after": ["<","<"]
-    },
+    // {
+    //     "before": ["<C-/>"],
+    //     "after": ["g", "c", "c"]
+    // },
+    // {
+    //     "before": ["<C-]>"],
+    //     "after": [">",">"]
+    // },
+    // {
+    //     "before": ["<C-[>"],
+    //     "after": ["<","<"]
+    // },
     {
         "before": ["K"],
         "after": ["1","0","-"]
@@ -434,6 +436,22 @@
 ],
 "vim.visualModeKeyBindingsNonRecursive": [
 
+    {
+        "before": ["<leader>","c","i"],
+        "after": ["g","c"]
+    },
+    {
+        "before": ["<C-/>"],
+        "after": ["g","c"]
+    },
+    // {
+    //     "before": ["<C-]>"],
+    //     "after": [">"]
+    // },
+    // {
+    //     "before": ["<C-[>"],
+    //     "after": ["<"]
+    // },
     {
         "before": ["K"],
         "after": ["1","0","-"]
@@ -467,17 +485,16 @@
     "editor.fontFamily": "'Iosevka Aile'",
     "editor.quickSuggestions": false
 },
-"workbench.editor.showTabs": false,
 "editor.suggest.showSnippets": false,
 "breadcrumbs.showFiles": false,
-"breadcrumbs.showNamespaces": false,
-"breadcrumbs.showVariables": false,
-"breadcrumbs.showPackages": false,
 "outline.showModules": false,
 "outline.showVariables": false,
 "zenMode.hideStatusBar": false,
 "zenMode.silentNotifications": false,
 "workbench.colorCustomizations": {
-}
+},
+"breadcrumbs.showVariables": false,
+"breadcrumbs.showConstants": false,
+"outline.showConstants": false
 
 }
