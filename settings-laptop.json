@@ -423,22 +423,6 @@
         "after": ["1","0","+"]
     },
     {
-        "before": ["k"],
-        "after": ["g", "k"]
-    },
-    {
-        "before": ["j"],
-        "after": ["g", "j"]
-    },
-    {
-        "before": ["<Up>"],
-        "after": ["g", "<Up>"]
-    },
-    {
-        "before": ["<Down>"],
-        "after": ["g", "<Down>"]
-    },
-    {
 
         "before": ["u"],
         "commands": ["undo"]
@@ -458,22 +442,6 @@
         "before": ["J"],
         "after": ["1","0","+"]
     },
-    {
-        "before": ["k"],
-        "after": ["g", "k"]
-    },
-    {
-        "before": ["j"],
-        "after": ["g", "j"]
-    },
-    {
-        "before": ["<Up>"],
-        "after": ["g", "<Up>"]
-    },
-    {
-        "before": ["<Down>"],
-        "after": ["g", "<Down>"]
-    }
 ],
 "editor.scrollBeyondLastLine": false,
 "editor.smoothScrolling": true,

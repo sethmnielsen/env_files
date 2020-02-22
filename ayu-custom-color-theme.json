@@ -4,8 +4,9 @@
 	"colors": {
 		// Interesting customizations
 		"editor.lineHighlightBackground": "#272727e3",
-		"editorGroup.border": "#79cccf8a",
-		"editorIndentGuide.activeBackground": "#6d5d8ab3",
+		"editorGroup.border": "#ffffff91",
+		"editorIndentGuide.background": "#b8883063",
+		"editorIndentGuide.activeBackground": "#b88830f1",
 		"sideBar.border": "#6063681c",
 
 		"activityBar.background": "#0a0e14",
@@ -56,7 +57,6 @@
 		"editorHoverWidget.background": "#0d1016",
 		"editorHoverWidget.border": "#000000",
 		"editorHoverWidget.foreground": "#dfd4bf",
-		"editorIndentGuide.background": "#3d424d66",
 		"editorLineNumber.activeForeground": "#3d424de6",
 		"editorLineNumber.foreground": "#3d424d99",
 		"editorLink.activeForeground": "#e6b450",
