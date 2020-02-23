@@ -46,6 +46,7 @@ set completeopt-=preview
 
 set nostartofline
 set whichwrap=b,s,h,l 
+set clipboard=unnamedplus
 
 filetype plugin indent on    " required
 filetype plugin on
@@ -71,10 +72,12 @@ colorscheme luna-term
 "colorscheme nord
 
 " ---------------------------- KEY MAPPINGS ------------------------------
-set clipboard=unnamedplus
 
-"let mapleader = \\
 set backspace=indent,eol,start
+nnoremap <backspace> <nop>
+
+" The = function seems pretty useless
+noremap = +
 
 " Quickly insert an empty new line without entering insert mode
 nnoremap <leader>o o<Esc>
@@ -94,23 +97,11 @@ nnoremap <leader>d "_d
 xnoremap <leader>d "_d
 xnoremap <leader>p "_dP"
 
-" Increment number
-nnoremap <c-y> <c-a>
-
 " press // to search for highlighted text (visual mode)
 vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>")
 "
 " Highlight search term in file
 nnoremap <C-L> :set invhlsearch<cr>
-
-
-" Mappings to edit .vimrc and source/save .vimrc
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
-nnoremap <leader>ssv :w <bar> :source $MYVIMRC<cr>
-
-" Mapping to edit ~/.vim/.ycm_extra_conf.py
-nnoremap <leader>ycm :vsplit ~/.vim/.ycm_extra_conf.py<cr>
 
 " Mappings to move between panes
 nnoremap <leader>l <C-W><C-L>
@@ -132,15 +123,6 @@ map F <Plug>Sneak_F
 map t <Plug>Sneak_t
 map T <Plug>Sneak_T
 
-" Mappings for Git (vim-fugitive and git-gutter)
-nnoremap <leader>gc :Gcommit <CR>
-nnoremap <leader>gp :Gpush <CR>
-nnoremap <leader>gb :Gbrowse <CR>
-nmap <leader>ga <Plug>GitGutterStageHunk
-nmap <leader>gd <Plug>GitGutterPreviewHunk
-nmap <leader>gj <Plug>GitGutterNextHunk
-nmap <leader>gk <Plug>GitGutterPrevHunk
-
 " Mappings to go to end of line and beginning of line
 nnoremap L $
 vnoremap L $
@@ -153,17 +135,27 @@ nnoremap K 10k
 vnoremap J 10j
 vnoremap K 10k
 
-" Mappings for tree list netrw
-"nnoremap <leader>r  :Rex <cr>
-nnoremap <leader>ex :Vex <cr>
-let g:netrw_banner = 0
-let g:netrw_winsize = 20
+" Mappings to edit .vimrc and source/save .vimrc
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>ssv :w <bar> :source $MYVIMRC<cr>
 
+" Mapping to edit ~/.vim/.ycm_extra_conf.py
+nnoremap <leader>ycm :vsplit ~/.vim/.ycm_extra_conf.py<cr>
 "inoremap {<CR> {<CR>}<Esc>ko
 
 " Remap for latex compiling
 nnoremap <leader>ll :w<CR>:!rubber --pdf --warn all %<CR>
 nnoremap <leader>lv :!mupdf %:r.pdf &<CR><CR>
+
+" Mappings for Git (vim-fugitive and git-gutter)
+nnoremap <leader>gc :Gcommit <CR>
+nnoremap <leader>gp :Gpush <CR>
+nnoremap <leader>gb :Gbrowse <CR>
+nmap <leader>ga <Plug>GitGutterStageHunk
+nmap <leader>gd <Plug>GitGutterPreviewHunk
+nmap <leader>gj <Plug>GitGutterNextHunk
+nmap <leader>gk <Plug>GitGutterPrevHunk
 
 " This is for airline and powerline
 " Note: If symbols don't appear install them with

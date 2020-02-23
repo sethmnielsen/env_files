@@ -300,14 +300,14 @@
         "command": "latex-workshop.actions"
     },
     {
-        "key": "alt+enter",
+        "key": "shift+enter",
         "command": "latex-workshop.build",
-        "when": "config.latex-workshop.bind.altKeymap.enabled && editorLangId == 'latex'"
+        "when": "editorLangId == 'latex'"
     },
     {
-        "key": "ctrl+l alt+b",
-        "command": "-latex-workshop.build",
-        "when": "config.latex-workshop.bind.altKeymap.enabled && editorLangId == 'latex'"
+        "key": "alt+enter",
+        "command": "latex-workshop.build",
+        "when": "editorLangId == 'latex'"
     },
     {
         "key": "ctrl+h",
@@ -409,9 +409,9 @@
         "when": "panelPosition == 'bottom'"
     },
     {
-        "key": "alt+shift+enter",
+        "key": "shift+alt+enter",
         "command": "code-runner.run",
-        "when": "editorFocus && !python.datascience.hascodecells"
+        "when": "editorFocus && !python.datascience.hascodecells && editorLangId != 'latex'"
     },
     {
         "key": "shift+tab",
@@ -480,26 +480,41 @@
         "key": "ctrl+r",
         "command": "-workbench.action.gotoSymbol"
     },
-    // {
-    //   "key": "up",
-    //   "command": "cursorUp",
-    //   "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
-    // },
-    // {
-    //   "key": "down",
-    //   "command": "cursorDown",
-    //   "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
-    // },
-    // {
-    //   "key": "k",
-    //   "command": "cursorUp",
-    //   "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
-    // },
-    // {
-    //   "key": "j",
-    //   "command": "cursorDown",
-    //   "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
-    // }
+    {
+      "key": "up",
+      "command": "cursorUp",
+      "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    },
+    {
+      "key": "down",
+      "command": "cursorDown",
+      "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    },
+    {
+      "key": "k",
+      "command": "cursorUp",
+      "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    },
+    {
+      "key": "j",
+      "command": "cursorDown",
+      "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+alt+v",
+        "command": "latex-workshop.view",
+        "when": "editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+alt+v",
+        "command": "-latex-workshop.view",
+        "when": "!config.latex-workshop.bind.altKeymap.enabled && editorLangId == 'latex'"
+    },
+    {
+        "key": "alt+enter",
+        "command": "-latex-workshop.onAltEnterKey",
+        "when": "editorTextFocus && !editorReadonly && !suggestWidgetVisible && editorLangId == 'latex'"
+    }
 
 
 ]
