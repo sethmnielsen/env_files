@@ -157,11 +157,6 @@
     },
     {
         "key": "alt+enter",
-        "command": "editor.action.changeAll",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+enter",
         "command": "-editor.action.selectAllMatches",
         "when": "editorFocus && findWidgetVisible"
     },
@@ -305,9 +300,9 @@
         "command": "latex-workshop.actions"
     },
     {
-        "key": "ctrl+shift+alt+b",
+        "key": "alt+enter",
         "command": "latex-workshop.build",
-        "when": "config.latex-workshop.bind.altKeymap.enabled"
+        "when": "config.latex-workshop.bind.altKeymap.enabled && editorLangId == 'latex'"
     },
     {
         "key": "ctrl+l alt+b",

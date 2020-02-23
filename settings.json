@@ -11,7 +11,7 @@
 // "editor.fontWeight": "100",
 "terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
 "terminal.integrated.fontSize": 14,
-"editor.fontSize": 12,
+"editor.fontSize": 13,
 "workbench.colorTheme": "ayu-custom",
 "editor.wordWrapColumn": 90,
 "files.exclude": {
@@ -32,7 +32,6 @@
     "**/*.odt": true,
     "**/*.pdf": true,
     "**/*.pyc": true,
-    "**/*.png": true,
     "**/*.rst": true,
     "**/*.so": true,
     "**/*.swp": true,
@@ -237,11 +236,35 @@
     "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
 },
 "code-runner.runInTerminal": true,
+"cmake.configureOnOpen": false,
+
+"[latex]": {
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "editor.wordWrap": "on",
+},
+"latex-workshop.chktex.run": "onType",
+"latex-workshop.hover.preview.newcommand.newcommandFile": "/home/seth/texmf/tex/latex/resume/documentMETADATA.cls",
+"latex-workshop.chktex.delay": 2000,
+"latex-workshop.latex.autoBuild.run": "never",
+"latex-workshop.bind.altKeymap.enabled": true,
+"latex-workshop.chktex.enabled": true,
+"latex-workshop.message.update.show": false,
+"latex-workshop.view.pdf.viewer": "tab",
+"latex-workshop.latex.outDir": "%DIR%/pdf",
+"latex-workshop.latex.recipe.default": "first",
 "latex-workshop.latex.recipes": [
     {
-        "name": "lualatexmk-seth",
+        "name": "optimization-hw",
         "tools": [
-            "lualatexmk-seth"
+            "optimization-hw"
+        ]
+    },
+    {
+        "name": "latexmk-resume",
+        "tools": [
+            "latexmk-resume"
         ]
     },
     {
@@ -274,7 +297,19 @@
 ],
 "latex-workshop.latex.tools": [
     {
-        "name": "lualatexmk-seth",
+        "name": "optimization-hw",
+        "command": "latexmk",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-lualatex",
+            "-outdir=pdf",
+            "%DOC%"
+        ],
+    },
+    {
+        "name": "latexmk-resume",
         "command": "latexmk",
         "args": [
             "-synctex=1",
@@ -284,7 +319,6 @@
             "-outdir=/home/seth/Documents/sethnielsen_resume",
             "%DOC%"
         ],
-        "env": {}
     },
     {
         "name": "latexmk",
@@ -340,14 +374,6 @@
         "env": {}
     },
 ],
-"latex-workshop.chktex.run": "onType",
-"latex-workshop.hover.preview.newcommand.newcommandFile": "/home/seth/texmf/tex/latex/resume/documentMETADATA.cls",
-"latex-workshop.chktex.delay": 2000,
-"latex-workshop.latex.autoBuild.run": "never",
-"latex-workshop.bind.altKeymap.enabled": true,
-"latex-workshop.chktex.enabled": true,
-"cmake.configureOnOpen": false,
-"latex-workshop.message.update.show": false,
 
 "vim.vimrc.enable": true,
 "vim.useCtrlKeys": true,
@@ -365,9 +391,11 @@
 "vim.autoindent": true,
 "vim.handleKeys": {
     "<C-d>": false,
-    "<C-/>": true,
+    "<C-/>": false,
     "<C-z>": false,
-    "<C-Z>": false
+    "<C-Z>": false,
+    "<C-]>": false,
+    "<C-[>": false
 },
 "vim.insertModeKeyBindingsNonRecursive": [
     {
@@ -386,10 +414,10 @@
         "before": ["<leader>","c","i"],
         "after": ["g","c","c"]
     },
-    {
-        "before": ["<C-/>"],
-        "after": ["g", "c", "c"]
-    },
+    // {
+    //     "before": ["<C-/>"],
+    //     "after": ["g", "c", "c"]
+    // },
 ],
 "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -404,18 +432,18 @@
         "before": ["<leader>","c","i"],
         "after": ["g","c","c"]
     },
-    {
-        "before": ["<C-/>"],
-        "after": ["g", "c", "c"]
-    },
-    {
-        "before": ["<C-]>"],
-        "after": [">",">"]
-    },
-    {
-        "before": ["<C-[>"],
-        "after": ["<","<"]
-    },
+    // {
+    //     "before": ["<C-/>"],
+    //     "after": ["g", "c", "c"]
+    // },
+    // {
+    //     "before": ["<C-]>"],
+    //     "after": [">",">"]
+    // },
+    // {
+    //     "before": ["<C-[>"],
+    //     "after": ["<","<"]
+    // },
     {
         "before": ["K"],
         "after": ["1","0","-"]
@@ -484,12 +512,7 @@
 "zenMode.hideStatusBar": false,
 "zenMode.silentNotifications": false,
 "workbench.colorCustomizations": {
-    "editorGroup.border": "#ffffff91",
-    "editorIndentGuide.background": "#b8883063",
-    "editorIndentGuide.activeBackground": "#b88830f1",
-    "editor.hoverHighlightBackground": "#474747",
-    "editor.selectionHighlightBackground": "#435f8586",
-    "editor.selectionBackground": "#25416886"
-}
+},
+
 
 }

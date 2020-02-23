@@ -71,6 +71,7 @@ colorscheme luna-term
 "colorscheme nord
 
 " ---------------------------- KEY MAPPINGS ------------------------------
+set clipboard=unnamedplus
 
 "let mapleader = \\
 set backspace=indent,eol,start
