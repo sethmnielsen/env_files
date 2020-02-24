@@ -92,6 +92,10 @@ nnoremap <leader>r :%s///g<left><left>
 " Y copies to end of line, not entire line like yy
 nnoremap Y y$
 
+" Make word before Cursor Uppercase in normal mode
+nnoremap <C-y> mwlbgUl`w
+map! <C-y> <Esc>mwlbgUl`wa
+
 " Send to black hole register (actually delete)
 nnoremap <leader>d "_d
 xnoremap <leader>d "_d
@@ -118,10 +122,10 @@ nnoremap QQ ZQ
 map <C-n> :NERDTreeToggle<CR>
 
 " vim-sneak plugin
-map f <Plug>Sneak_f
-map F <Plug>Sneak_F
-map t <Plug>Sneak_t
-map T <Plug>Sneak_T
+"noremap f <Plug>Sneak_f
+"noremap F <Plug>Sneak_F
+"noremap t <Plug>Sneak_t
+"noremap T <Plug>Sneak_T
 
 " Mappings to go to end of line and beginning of line
 nnoremap L $

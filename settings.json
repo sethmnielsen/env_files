@@ -423,10 +423,6 @@
         "before": ["<leader>","c","i"],
         "after": ["g","c","c"]
     },
-    // {
-    //     "before": ["<C-/>"],
-    //     "after": ["g", "c", "c"]
-    // },
 ],
 "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -441,18 +437,6 @@
         "before": ["<leader>","c","i"],
         "after": ["g","c","c"]
     },
-    // {
-    //     "before": ["<C-/>"],
-    //     "after": ["g", "c", "c"]
-    // },
-    // {
-    //     "before": ["<C-]>"],
-    //     "after": [">",">"]
-    // },
-    // {
-    //     "before": ["<C-[>"],
-    //     "after": ["<","<"]
-    // },
     {
         "before": ["K"],
         "after": ["1","0","-"]
@@ -472,7 +456,6 @@
     }
 ],
 "vim.visualModeKeyBindingsNonRecursive": [
-
     {
         "before": ["K"],
         "after": ["1","0","-"]
@@ -482,7 +465,7 @@
         "after": ["1","0","+"]
     },
     {
-        "before": [ "p", ],
+        "before": [ "p"],
         "after": [ "p", "g", "v", "y" ]
     }
 ],
@@ -521,6 +504,5 @@
 "zenMode.silentNotifications": false,
 "workbench.colorCustomizations": {
 },
-
 
 }
