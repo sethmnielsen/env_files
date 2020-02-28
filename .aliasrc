@@ -25,6 +25,7 @@ alias nv='nvidia-smi'
 alias ssh_desktop='ssh desktop'
 alias remarkable='reMarkable'
 alias blender='~/.local/share/blender/blender'
+alias bim='vim'
 alias chmod_rm_green_highlight='chmod -R a-x,o-w,+X'
 alias start-m720-config='python3 ~/.virtualenvs/default/bin/m720-config'
 upload_gdrive() { # upload file to Sync dir on Google Drive

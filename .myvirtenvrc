@@ -1,0 +1,11 @@
+source ~/.virtualenvs/v38/bin/activate
+
+
+
+
+
+#export WORKON_HOME=$HOME/.virtualenvs
+#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+#source $HOME/.local/bin/virtualenvwrapper.sh
+#source $HOME/.virtualenvs/rfh-test/bin/activate
+#source $HOME/.virtualenvs/default/bin/activate

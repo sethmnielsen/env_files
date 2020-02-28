@@ -1,16 +1,10 @@
 {
 "workbench.startupEditor": "none",
 "files.autoSave": "afterDelay",
-// "editor.fontFamily": "'Droid Sans', 'monospace'",
-// "editor.fontFamily": "'Iosevka TermLig SS12', 'monospace'",
 "editor.fontFamily": "'Iosevka', 'monospace'",
-// "editor.fontFamily": "'Iosevka Aile'",
-// "editor.fontFamily": "'Cascadia Mono PL', 'monospace'",
-// "editor.fontFamily": "'Fira Code', 'monospace'",
 "editor.fontLigatures": false,
-// "editor.fontWeight": "100",
 "terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
-"terminal.integrated.fontSize": 14,
+"terminal.integrated.fontSize": 12,
 "editor.fontSize": 13,
 "workbench.colorTheme": "ayu-custom",
 "editor.wordWrapColumn": 90,
@@ -77,13 +71,13 @@
 "activitusbar.toggleSidebar": false,
 "clock.dateFormat": "h:MM TT",
 "breadcrumbs.enabled": true,
-// "python.autoComplete.extraPaths": [
-    // "/home/seth/dev/boat_landing_sim/devel/lib/python3/dist-packages",
-    // "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src",
-    // "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python",
+"python.autoComplete.extraPaths": [
+    "/home/seth/dev/boat_landing_sim/devel/lib/python3/dist-packages",
+    "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src",
+    "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python",
     // "/home/seth/dev/boat_landing_sim/src/rf_joy/src/rosflight_joy",
-    // "/opt/ros/melodic/lib/python2.7/dist-packages"
-// ],
+    "/opt/ros/melodic/lib/python2.7/dist-packages"
+],
 "C_Cpp.default.intelliSenseMode": "msvc-x64",
 "editor.rulers": [90],
 "macros": {
@@ -166,7 +160,6 @@
 "vsicons.dontShowNewVersionMessage": true,
 "activitusbar.searchViewInPanel": false,
 "git.enabled": true,
-"git.decorations.enabled": false,
 "git.enableStatusBarSync": false,
 "gitlens.views.repositories.location": "explorer",
 "gitlens.views.fileHistory.location": "gitlens",
@@ -183,7 +176,7 @@
 "C_Cpp.default.cppStandard": "c++14",
 "python.dataScience.askForKernelRestart": false,
 "python.dataScience.changeDirOnImportExport": false,
-"diffEditor.renderSideBySide": true,
+"diffEditor.renderSideBySide": false,
 "editor.suggest.maxVisibleSuggestions": 6,
 "window.menuBarVisibility": "hidden",
 "problems.decorations.enabled": true,
@@ -233,7 +226,7 @@
     "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "python": "python3",
     "shellscript": "bash",
-    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "rust": "cd $dir && cargo run --release"
 },
 "code-runner.runInTerminal": true,
 "cmake.configureOnOpen": false,
@@ -244,14 +237,14 @@
     "editor.suggestSelection": "recentlyUsedByPrefix",
     "editor.wordWrap": "on",
     "editor.wordWrapColumn": 100,
-    "editor.tabSize": 2,
+    "editor.tabSize": 4,
     "editor.suggest.showSnippets": true,
     "editor.snippetSuggestions": "inline"
 },
 "latex-workshop.hover.preview.newcommand.newcommandFile": "/home/seth/texmf/tex/latex/resume/documentMETADATA.cls",
 "latex-workshop.chktex.enabled": true,
 "latex-workshop.chktex.args.root": [ "-wall", "-n22", "-n30", "-n46", "-e16", "-q" ],
-"latex-workshop.chktex.args.active": [ "-wall", "-n22", "-n30", "-n46", "-e16", "-q" ],
+"latex-workshop.chktex.args.active": [ "-wall", "-n9", "-n17", "-n22", "-n30", "-n46", "-e16", "-q" ],
 "latex-workshop.chktex.run": "onType",
 "latex-workshop.chktex.delay": 2000,
 "latex-workshop.latex.autoBuild.run": "never",
@@ -263,6 +256,7 @@
 "latex-workshop.view.pdf.trim": 1,
 "latex-workshop.message.error.show": false,
 "latex-workshop.message.warning.show": false,
+"latex-workshop.view.pdf.backgroundColor": "#e6e6e6",
 "latex-workshop.latex.recipes": [
     {
         "name": "optimization-hw",
@@ -388,14 +382,16 @@
 "vim.useCtrlKeys": true,
 "vim.sneak": true,
 "vim.sneakReplacesF": true,
+"vim.whichwrap": "h,l,<,>,[,]",
 "vim.textwidth": 90,
 "vim.smartcase": false,
 "vim.ignorecase": false,
 "vim.foldfix": true,
 "vim.useSystemClipboard": true,
 "vim.searchHighlightColor": "gray",
+"vim.incsearch": true,
 "vim.visualstar": true,
-"vim.debug.silent": true,
+// "vim.debug.silent": false,
 // "vim.debug.loggingLevelForAlert": "debug",
 "vim.autoindent": true,
 "vim.handleKeys": {
@@ -404,13 +400,10 @@
     "<C-z>": false,
     "<C-Z>": false,
     "<C-]>": false,
-    "<C-[>": false
+    "<C-[>": false,
+    "<C-y>": true,
 },
 "vim.insertModeKeyBindingsNonRecursive": [
-    {
-        "before": ["j", "j"],
-        "after": ["<Esc>"]
-    },
     {
         "before": ["<alt-k>"],
         "after": ["g", "k"]
@@ -421,10 +414,18 @@
     },
     {
         "before": ["<leader>","c","i"],
-        "after": ["g","c","c"]
+        "after": ["editor.action.commentLine"]
     },
 ],
 "vim.normalModeKeyBindingsNonRecursive": [
+    {
+        "before": ["o"],
+        "commands": ["extension.vim_insert","editor.action.insertLineAfter"]
+    },
+    {
+        "before": ["O"],
+        "commands": ["extension.vim_insert","editor.action.insertLineBefore"]
+    },
     {
         "before": ["Z","Z"],
         "commands": [":wq"]
@@ -435,7 +436,7 @@
     },
     {
         "before": ["<leader>","c","i"],
-        "after": ["g","c","c"]
+        "commands": ["editor.action.commentLine"]
     },
     {
         "before": ["K"],
@@ -492,7 +493,6 @@
     "editor.fontFamily": "'Iosevka Aile'",
     "editor.quickSuggestions": false
 },
-"workbench.editor.showTabs": false,
 "editor.suggest.showSnippets": false,
 "breadcrumbs.showFiles": false,
 "breadcrumbs.showNamespaces": false,
@@ -504,5 +504,6 @@
 "zenMode.silentNotifications": false,
 "workbench.colorCustomizations": {
 },
+"gitlens.sortBranchesBy": "date:desc",
 
 }

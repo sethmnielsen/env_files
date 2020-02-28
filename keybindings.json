@@ -37,8 +37,10 @@
     { "key": "alt+l",                    "command": "list.expand", "when": "listFocus && !inputFocus" },
     { "key": "alt+delete",               "command": "deleteWordPartRight" },
     { "key": "shift+alt+backspace",      "command": "deleteRight", "when": "textInputFocus && !editorReadonly" },
-    { "key": "alt+backspace",            "command": "deleteWordPartLeft" },
-    { "key": "ctrl+f11",                 "command": "workbench.action.toggleFullScreen" },
+    {
+        "key": "ctrl+f11",
+        "command": "workbench.action.toggleFullScreen"
+    },
     { "key": "ctrl+shift+f11",           "command": "workbench.action.toggleZenMode" },
     { "key": "alt+.",                    "command": "workbench.action.navigateForward" },
     { "key": "ctrl+p",                   "command": "workbench.action.quickOpen", "when": "!terminalFocus && !inDebugRepl" },
@@ -514,5 +516,23 @@
         "key": "alt+enter",
         "command": "-latex-workshop.onAltEnterKey",
         "when": "editorTextFocus && !editorReadonly && !suggestWidgetVisible && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+shift+g a",
+        "command": "git.stageSelectedRanges"
+    },
+    {
+        "key": "ctrl+shift+g r",
+        "command": "git.revertSelectedRanges"
+    },
+    {
+        "key": "ctrl+backspace",
+        "command": "-deleteWordLeft",
+        "when": "textInputFocus && !editorReadonly && vim.mode == 'Normal'"
+    },
+    {
+        "key": "shift+backspace",
+        "command": "-deleteLeft",
+        "when": "textInputFocus && !editorReadonly"
     }
 ]

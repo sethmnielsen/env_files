@@ -1,14 +1,8 @@
 {
 "workbench.startupEditor": "none",
 "files.autoSave": "afterDelay",
-// "editor.fontFamily": "'Droid Sans', 'monospace'",
-// "editor.fontFamily": "'Iosevka TermLig SS12', 'monospace'",
 "editor.fontFamily": "'Iosevka', 'monospace'",
-// "editor.fontFamily": "'Iosevka Aile'",
-// "editor.fontFamily": "'Cascadia Mono PL', 'monospace'",
-// "editor.fontFamily": "'Fira Code', 'monospace'",
 "editor.fontLigatures": false,
-// "editor.fontWeight": "100",
 "terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
 "terminal.integrated.fontSize": 14,
 "workbench.colorTheme": "ayu-custom",
@@ -262,6 +256,7 @@
 "latex-workshop.view.pdf.trim": 1,
 "latex-workshop.message.error.show": false,
 "latex-workshop.message.warning.show": false,
+"latex-workshop.view.pdf.backgroundColor": "#e6e6e6",
 "latex-workshop.latex.recipes": [
     {
         "name": "optimization-hw",
@@ -450,7 +445,7 @@
     {
         "before": ["<C-r>"],
         "commands": ["redo"]
-    },
+    }
 ],
 "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -501,7 +496,6 @@
 "zenMode.silentNotifications": false,
 "workbench.colorCustomizations": {
 },
-"latex-workshop.view.pdf.backgroundColor": "#e6e6e6",
 "editor.fontSize": 13,
 "window.zoomLevel": 0,
 

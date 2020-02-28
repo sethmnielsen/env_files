@@ -46,7 +46,7 @@ set completeopt-=preview
 
 set nostartofline
 set whichwrap=b,s,h,l 
-set clipboard=unnamedplus
+set clipboard=unnamedplus,autoselectplus
 
 filetype plugin indent on    " required
 filetype plugin on
@@ -183,5 +183,5 @@ autocmd FileType make set noexpandtab softtabstop=0
 autocmd BufRead,BufNewFile .launch set filetype=xml
 autocmd BufRead,BufNewFile .rosrc set filetype=sh
 autocmd BufRead,BufNewFile .aliasrc set filetype=sh
-
+autocmd BufRead,BufNewFile .zsh-theme set syntax=sh
 "set iskeyword-=_
