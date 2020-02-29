@@ -420,11 +420,12 @@
 "vim.normalModeKeyBindingsNonRecursive": [
     {
         "before": ["o"],
-        "commands": ["extension.vim_insert","editor.action.insertLineAfter"]
+        "commands": ["editor.action.insertLineAfter","extension.vim_insert"]
+        
     },
     {
         "before": ["O"],
-        "commands": ["extension.vim_insert","editor.action.insertLineBefore"]
+        "commands": ["editor.action.insertLineBefore","extension.vim_insert"]
     },
     {
         "before": ["Z","Z"],

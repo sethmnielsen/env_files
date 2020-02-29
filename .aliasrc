@@ -97,8 +97,10 @@ alias source_remarkable='unset LD_LIBRARY_PATH && source /usr/local/oecore-x86_6
 # ROS/Catkin
 alias ros_env='env | grep ROS'
 alias catkin_make_cuda='catkin_make -DOpenCV_DIR=/usr/local/share/OpenCV -DVISUAL_MTT_CUDA=ON'
-alias catkin_make_py3='catkin_make -DPYTHON_EXECUTABLE=/home/seth/.virtualenvs/default/bin/python3'
+alias catkin_make_py3='catkin_make -DPYTHON_EXECUTABLE=/home/seth/.virtualenvs/v38/bin/python3'
+alias catkin_make_py36='catkin_make -DPYTHON_EXECUTABLE=/home/seth/.virtualenvs/default/bin/python3'
 alias catkin_make_py3_debug='catkin_make_py3 -DCMAKE_BUILD_TYPE=Debug'
+alias catkin_make_py36_debug='catkin_make_py36 -DCMAKE_BUILD_TYPE=Debug'
 alias catkin_make_py3_release='catkin_make_py3 -DCMAKE_BUILD_TYPE=Release'
 alias explode='rm -rf build devel && catkin_make_py3'
 alias nodeprocess_edit='sudo vim /opt/ros/melodic/lib/python2.7/dist-packages/roslaunch/nodeprocess.py'

@@ -31,7 +31,7 @@ export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/opencv/lib
 
 # HOLODECK 
-#export HOLODECKPATH=~/.local/share/holodeck-0.2.2dev
+export HOLODECKPATH=~/.local/share/holodeck-0.2.2dev
 
 #### SETTING PYTHONPATH ####
 export PYTHONPATH=~$PYTHONPATH:/dev/boat_landing_sim/src/rosflight_holodeck/python
