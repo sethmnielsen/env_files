@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # General
-alias python3='ipython3'
+alias py='ipython3'
 alias python3_6='~/.virtualenvs/default/bin/python3'
 alias python3_6_sudo='sudo ~/.virtualenvs/default/bin/python3'
 alias rust_evcxr='evcxr'
@@ -93,6 +93,9 @@ alias szsh='source ~/.zshrc'
 alias sdevel='source devel/setup.zsh'
 alias path='sed "s/:/\n/g" <<< "$PATH"'
 alias source_remarkable='unset LD_LIBRARY_PATH && source /usr/local/oecore-x86_64/environment-setup-cortexa9hf-neon-oe-linux-gnueabi'
+
+# python venv
+#alias 
 
 # ROS/Catkin
 alias ros_env='env | grep ROS'
@@ -197,10 +200,10 @@ dir2=~/school/nonlinear
 dir3=~/school/optimization
 dir4=~/school
 
-name1=$(echo $(echo "print('$dir1'.upper())"| python3_6) | cut -d'/' -f 4)
+name1=$(echo $(echo "print('$dir1'.upper())"| python) | cut -d'/' -f 4)
 name2=$(echo $dir2 | cut -d'/' -f 5)
 name3=$(echo $dir3 | cut -d'/' -f 5)
-name4=$(echo $(echo "print('$dir4'.upper())"| python3_6) | cut -d'/' -f 4)
+name4=$(echo $(echo "print('$dir4'.upper())"| python) | cut -d'/' -f 4)
 
 alias cd_nonlinear='cd $dir2'
 alias cd_optimization='cd $dir3'

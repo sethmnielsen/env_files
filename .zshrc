@@ -48,9 +48,6 @@ export TF_CPP_MIN_LOG_LEVEL="2"
 # ROS
 source ~/.rosrc
 
-# virtualenv
-source ~/.myvirtenvrc
-
 # For autocomplete-python to work correctly
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -69,7 +66,7 @@ export ZSH="/home/seth/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="pygmalion-virtualenv"
-ZSH_THEME="seth-pygmalion"
+ZSH_THEME="seth-theme"
 #ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random
@@ -155,10 +152,15 @@ source $ZSH/oh-my-zsh.sh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Other custom stuff 
-setopt rmstarsilent
+#setopt rmstarsilent
 
 # Keybindings
 bindkey "^P" up-line-or-beginning-search 
 bindkey "^N" down-line-or-beginning-search 
 
 source ~/.aliasrc
+
+# virtualenv
+source ~/.myvirtenvrc
+
+

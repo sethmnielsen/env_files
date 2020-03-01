@@ -1,8 +1,25 @@
-#source ~/.virtualenvs/v38/bin/activate
+alias stheme='source $HOME/.oh-my-zsh/themes/seth-theme.zsh-theme'
 
+# note: '-n string' evaluates to true if length of 'string' is non-zero
+workon() {
+  if [[ -n $VIRTUAL_ENV ]]; then
+    deactivate
+  fi
+  source $HOME/.virtualenvs/$1/bin/activate
+  stheme
+}
 
+deactiv() {
+  if [[ -n $VIRTUAL_ENV ]]; then
+    deactivate
+  else
+    echo "But you aren't in a virtual environment!"
+  fi
+  stheme
+}
 
-
+source $HOME/.virtualenvs/v38/bin/activate
+stheme
 
 #export WORKON_HOME=$HOME/.virtualenvs
 #export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3

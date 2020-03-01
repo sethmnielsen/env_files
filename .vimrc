@@ -183,5 +183,5 @@ autocmd FileType make set noexpandtab softtabstop=0
 autocmd BufRead,BufNewFile .launch set filetype=xml
 autocmd BufRead,BufNewFile .rosrc set filetype=sh
 autocmd BufRead,BufNewFile .aliasrc set filetype=sh
-autocmd BufRead,BufNewFile .zsh-theme set syntax=sh
+autocmd BufRead,BufNewFile .myvirtenvrc set filetype=sh
 "set iskeyword-=_
