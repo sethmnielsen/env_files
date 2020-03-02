@@ -38,6 +38,7 @@ alias lh='l -A'
 alias lk='l --group-directories-first'
 alias ll='ls -lhgG'
 alias llk='ll --group-directories-first'
+alias lla='ls -l'
 alias la='ls -lAh'
 alias lak='ls -lAh --group-directories-first'
 
