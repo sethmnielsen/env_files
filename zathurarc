@@ -1,12 +1,19 @@
 map = zoom in
 map + zoom default 
 
+map j navigate next
+map k navigate previous
+map J scroll down
+map K scroll up
+
 map <C-0> feedkeys ":blist 0<Return>"
 map <C-1> feedkeys ":blist 1<Return>"
 map <C-2> feedkeys ":blist 2<Return>"
 map <C-3> feedkeys ":blist 3<Return>"
 map <C-4> feedkeys ":blist 4<Return>"
 map <C-5> feedkeys ":blist 5<Return>"
+
+map <C-a> feedkeys ":exec okular %<Return>"
 
 # hide statusbar by default
 set guioptions "" 

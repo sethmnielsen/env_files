@@ -3,7 +3,7 @@
 prompt_setup_pygmalion(){
   DGREEN=$'\e[33;38;5;65m'
   ssh_prompt=""
-  if [[ -n $SSH_CLIENT ]]; then
+  if [[ -n $SSH_CONNECTION ]]; then
     ssh_prompt=" %{$DGREEN%}%m%{$reset_color%}"
   fi
 
@@ -14,14 +14,16 @@ prompt_setup_pygmalion(){
 
   venvinfo="%{$fg[magenta]%}$(virtualenv_prompt_info)%{$reset_color%}"
   base_prompt='%{$fg[yellow]%}%2~%{$reset_color%}'
-  post_prompt='%{$fg[red]%} |%{$reset_color%}%{$fg[cyan]%} ➜%{$reset_color%} '
+  #post_prompt='%{$fg[red]%} |%{$reset_color%}%{$fg[cyan]%} ➜%{$reset_color%} '
+  post_prompt='%{$fg[red]%} |%{$reset_color%}'
+  arrow='%(?:%{$fg_bold[cyan]%}➜ :%{$fg_bold[red]%}➜ )%{$reset_color%}'
 
   precmd_functions+=(prompt_pygmalion_precmd)
 }
 
 prompt_pygmalion_precmd(){
   local gitinfo=$(git_prompt_info)
-  PROMPT="$venvinfo$ssh_prompt $base_prompt$gitinfo$post_prompt"
+  PROMPT="$venvinfo$ssh_prompt $base_prompt$gitinfo$post_prompt $arrow"
 }
 
 prompt_setup_pygmalion
