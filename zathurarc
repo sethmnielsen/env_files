@@ -1,0 +1,21 @@
+map = zoom in
+map + zoom default 
+
+map <C-0> feedkeys ":blist 0<Return>"
+map <C-1> feedkeys ":blist 1<Return>"
+map <C-2> feedkeys ":blist 2<Return>"
+map <C-3> feedkeys ":blist 3<Return>"
+map <C-4> feedkeys ":blist 4<Return>"
+map <C-5> feedkeys ":blist 5<Return>"
+
+# hide statusbar by default
+set guioptions "" 
+
+# background color
+set default-bg "#303030"
+
+# set first page of document as the window icon
+set window-icon-document "true"
+
+set statusbar-basename "true"
+set window-title-basename "true"
