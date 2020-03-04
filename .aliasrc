@@ -94,8 +94,12 @@ cdll() {cd "$@" && ll}
 alias vzsh='vim ~/.zshrc'
 alias szsh='source ~/.zshrc'
 alias sdevel='source devel/setup.zsh'
-alias path='sed "s/:/\n/g" <<< "$PATH"'
 alias source_remarkable='unset LD_LIBRARY_PATH && source /usr/local/oecore-x86_64/environment-setup-cortexa9hf-neon-oe-linux-gnueabi'
+alias path='sed "s/:/\n/g" <<< "$PATH"'
+alias path_python='sed "s/:/\n/g" <<< "$PYTHONPATH"'
+path_python_sys() {
+  echo $(echo "import sys; print(sys.path)") | python | sed "s/', '/\n/g" | cut -d'[' -f 1 | cut -d']' -f 1
+}
 
 # python venv
 #alias 

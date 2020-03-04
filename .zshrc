@@ -34,9 +34,11 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/opencv/lib
 export HOLODECKPATH=~/.local/share/holodeck-0.2.2dev
 
 #### SETTING PYTHONPATH ####
-export PYTHONPATH=~$PYTHONPATH:/dev/boat_landing_sim/src/rosflight_holodeck/python
-export PYTHONPATH=~$PYTHONPATH:/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src/holodeck
-#export PYTHONPATH=$HOME/dev/pyoptsparse:$PYTHONPATH
+export PYTHONPATH=$PYTHONPATH:~/dev/boat_landing_sim/src/rosflight_holodeck/python
+export PYTHONPATH=$PYTHONPATH:~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src/holodeck
+#export PYTHONPATH=$PYTHONPATH:/home/seth/software/SageMath/src/sage
+#export PYTHONPATH=$PYTHONPATH:/home/seth/software/SageMath/local/lib/python3.7/site-packages/sage
+
 #export PYTHONPATH=/home/seth/school/autonomous_systems/turtlebot_sim:$PYTHONPATH  
 #export PYTHONPATH=$PYTHONPATH:/home/seth/dev/coco_dataset/cocoapi
 #export PYTHONPATH=$PYTHONPATH:~/dev/models/research:~/dev/models/research/slim  # tensorflow

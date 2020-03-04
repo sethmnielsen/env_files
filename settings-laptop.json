@@ -50,6 +50,11 @@
     "*.tex": "latex",
     ".vimrc": "vimrc"
 },
+"python.jediEnabled": false,
+"python.pythonPath": "/home/seth/.virtualenvs/v38/bin/python3",
+// "python.pythonPath": "/home/seth/software/SageMath/local/bin/python3",
+"python.venvPath": "/home/seth/.virtualenvs",
+"python.terminal.activateEnvironment": false,
 "explorer.autoReveal": false,
 "workbench.tree.indent": 20,
 "explorer.openEditors.visible": 0,
@@ -58,9 +63,6 @@
 "editor.multiCursorModifier": "alt",
 "workbench.editor.tabSizing": "shrink",
 "keyboard.dispatch": "keyCode",
-"python.pythonPath": "/home/seth/.virtualenvs/default/bin/python3",
-"python.venvPath": "/home/seth/.virtualenvs",
-"python.terminal.activateEnvironment": false,
 "workbench.activityBar.visible": false,
 "workbench.iconTheme": "ayu",
 "zenMode.hideLineNumbers": false,
@@ -224,7 +226,7 @@
 "code-runner.executorMap": {
     "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "python": "python3",
+    "python": "ipython3",
     "shellscript": "bash",
     "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
 },
@@ -476,7 +478,6 @@
     "macros.positionPanelRight",
     "macros.positionPanelBottom"
 ],
-"python.jediEnabled": false,
 "editor.trimAutoWhitespace": false,
 "breadcrumbs.showModules": false,
 "[markdown]": {
@@ -496,7 +497,6 @@
 "zenMode.silentNotifications": false,
 "workbench.colorCustomizations": {
 },
-"editor.fontSize": 13,
 "window.zoomLevel": 0,
 
 }

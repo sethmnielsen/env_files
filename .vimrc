@@ -46,7 +46,7 @@ set completeopt-=preview
 
 set nostartofline
 set whichwrap=b,s,h,l 
-set clipboard=unnamedplus,autoselectplus
+set clipboard=unnamed,autoselect
 
 filetype plugin indent on    " required
 filetype plugin on
@@ -184,4 +184,4 @@ autocmd BufRead,BufNewFile .launch set filetype=xml
 autocmd BufRead,BufNewFile .rosrc set filetype=sh
 autocmd BufRead,BufNewFile .aliasrc set filetype=sh
 autocmd BufRead,BufNewFile .myvirtenvrc set filetype=sh
-"set iskeyword-=_
+autocmd BufRead,BufNewFile zathurarc set filetype=sh
