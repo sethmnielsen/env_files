@@ -486,5 +486,6 @@
     "editorBracketMatch.border": "#58b898"
 },
 "gitlens.sortBranchesBy": "date:desc",
+"editor.parameterHints.enabled": false,
 
 }
