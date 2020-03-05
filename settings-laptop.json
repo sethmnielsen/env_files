@@ -4,7 +4,7 @@
 "editor.fontFamily": "'Iosevka', 'monospace'",
 "editor.fontLigatures": false,
 "terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
-"terminal.integrated.fontSize": 14,
+"terminal.integrated.fontSize": 13,
 "workbench.colorTheme": "ayu-custom",
 "editor.wordWrapColumn": 90,
 "files.exclude": {
@@ -497,6 +497,7 @@
 "zenMode.silentNotifications": false,
 "workbench.colorCustomizations": {
 },
-"window.zoomLevel": 0,
+"window.zoomLevel": 1,
+"python.dataScience.searchForJupyter": false,
 
 }
