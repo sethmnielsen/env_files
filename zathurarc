@@ -30,3 +30,5 @@ set window-icon-document "true"
 set statusbar-basename "true"
 set window-title-basename "true"
 set window-title-page "true"
+
+set zoom-center "true"

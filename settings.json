@@ -24,7 +24,6 @@
     "**/*.o": true,
     "**/*.ods": true,
     "**/*.odt": true,
-    "**/*.pdf": true,
     "**/*.pyc": true,
     "**/*.rst": true,
     "**/*.so": true,
@@ -81,30 +80,6 @@
 "C_Cpp.default.intelliSenseMode": "msvc-x64",
 "editor.rulers": [90],
 "macros": {
-    "down10Lines": [
-        "cursorDown",
-        "cursorDown",
-        "cursorDown",
-        "cursorDown",
-        "cursorDown",
-        "cursorDown",
-        "cursorDown",
-        "cursorDown",
-        "cursorDown",
-        "cursorDown"
-    ],
-    "up10Lines": [
-        "cursorUp",
-        "cursorUp",
-        "cursorUp",
-        "cursorUp",
-        "cursorUp",
-        "cursorUp",
-        "cursorUp",
-        "cursorUp",
-        "cursorUp",
-        "cursorUp"
-    ],
     "closePanelSidebar": [
         "workbench.action.toggleSidebarVisibility",
         "workbench.action.closePanel"
@@ -133,6 +108,10 @@
     "focusEditorAndVimCtrlW": [
         "workbench.action.focusActiveEditorGroup",
         "extension.vim_ctrl+w"
+    ],
+    "saveAndRunCode": [
+        "workbench.action.files.save",
+        "code-runner.run"
     ]
 },
 "scm.diffDecorationsGutterWidth": 1,
@@ -241,7 +220,7 @@
     "editor.suggest.showSnippets": true,
     "editor.snippetSuggestions": "inline"
 },
-"latex-workshop.hover.preview.newcommand.newcommandFile": "/home/seth/texmf/tex/latex/resume/documentMETADATA.cls",
+// "latex-workshop.hover.preview.newcommand.newcommandFile": "/home/seth/texmf/tex/latex/resume/documentMETADATA.cls",
 "latex-workshop.chktex.enabled": true,
 "latex-workshop.chktex.args.root": [ "-wall", "-n22", "-n30", "-n46", "-e16", "-q" ],
 "latex-workshop.chktex.args.active": [ "-wall", "-n9", "-n17", "-n22", "-n30", "-n46", "-e16", "-q" ],
@@ -504,6 +483,7 @@
 "zenMode.hideStatusBar": false,
 "zenMode.silentNotifications": false,
 "workbench.colorCustomizations": {
+    "editorBracketMatch.border": "#58b898"
 },
 "gitlens.sortBranchesBy": "date:desc",
 
