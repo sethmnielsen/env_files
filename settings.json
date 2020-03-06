@@ -58,7 +58,8 @@
 "editor.multiCursorModifier": "alt",
 "workbench.editor.tabSizing": "shrink",
 "keyboard.dispatch": "keyCode",
-"python.pythonPath": "/home/seth/.virtualenvs/default/bin/python3",
+"python.jediEnabled": false,
+"python.pythonPath": "/home/seth/.virtualenvs/v38/bin/python3",
 "python.venvPath": "/home/seth/.virtualenvs",
 "python.terminal.activateEnvironment": false,
 "workbench.activityBar.visible": false,
@@ -155,7 +156,7 @@
 "C_Cpp.default.cppStandard": "c++14",
 "python.dataScience.askForKernelRestart": false,
 "python.dataScience.changeDirOnImportExport": false,
-"diffEditor.renderSideBySide": false,
+"diffEditor.renderSideBySide": true,
 "editor.suggest.maxVisibleSuggestions": 6,
 "window.menuBarVisibility": "hidden",
 "problems.decorations.enabled": true,
@@ -203,7 +204,7 @@
 "code-runner.executorMap": {
     "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "python": "python3",
+    "python": "ipython3",
     "shellscript": "bash",
     "rust": "cd $dir && cargo run --release"
 },
@@ -465,7 +466,6 @@
     "macros.positionPanelRight",
     "macros.positionPanelBottom"
 ],
-"python.jediEnabled": false,
 "editor.trimAutoWhitespace": false,
 "breadcrumbs.showModules": false,
 "[markdown]": {
@@ -473,6 +473,7 @@
     "editor.fontFamily": "'Iosevka Aile'",
     "editor.quickSuggestions": false
 },
+"workbench.editor.showTabs": true,
 "editor.suggest.showSnippets": false,
 "breadcrumbs.showFiles": false,
 "breadcrumbs.showNamespaces": false,
