@@ -534,5 +534,15 @@
         "key": "shift+backspace",
         "command": "-deleteLeft",
         "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "alt+m",
+        "command": "markdown.extension.editing.toggleMath",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "-markdown.extension.editing.toggleMath",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
     }
 ]
