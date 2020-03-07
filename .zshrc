@@ -54,6 +54,8 @@ source ~/.rosrc
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+#eval "$(register-python-argcomplete /path/to/the/to/be/completed/file1)"
+
 ##### oh-my-zsh #####
 
 # If you come from bash you might have to change your $PATH.
@@ -124,8 +126,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  cargo
   git
-  tmux
+  tmux-seth
   pip
   fzf
   virtualenv
