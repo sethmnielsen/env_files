@@ -235,10 +235,6 @@
         "when": "gitlens:key:."
     },
     {
-        "key": "ctrl+alt+y",
-        "command": "python.execInTerminal"
-    },
-    {
         "key": "shift+enter",
         "command": "-python.execSelectionInTerminal",
         "when": "editorTextFocus && !findInputFocussed && !python.datascience.ownsSelection && !replaceInputFocussed && editorLangId == 'python'"
@@ -544,5 +540,14 @@
         "key": "ctrl+m",
         "command": "-markdown.extension.editing.toggleMath",
         "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+    },
+    {
+        "key": "insert",
+        "command": "python.datascience.runFileInteractive"
+    },
+    {
+        "key": "insert",
+        "command": "-extension.vim_insert",
+        "when": "editorTextFocus && vim.active && !inDebugRepl"
     }
 ]
