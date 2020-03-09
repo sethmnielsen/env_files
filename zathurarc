@@ -1,10 +1,10 @@
 map = zoom in
 map + zoom default 
 
-map j navigate next
-map k navigate previous
-map J scroll down
-map K scroll up
+map l navigate next
+map h navigate previous
+#map J scroll down
+#map K scroll up
 
 map \`0 feedkeys ":blist 0<Return>"
 map \`1 feedkeys ":blist 1<Return>"

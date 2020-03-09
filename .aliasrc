@@ -38,11 +38,15 @@ upload_gdrive() { # upload file to Sync dir on Google Drive
 alias l='ls -1'
 alias lh='l -A'
 alias lk='l --group-directories-first'
+alias lsk='ls --group-directories-first'
 alias ll='ls -lhgG'
 alias llk='ll --group-directories-first'
 alias lla='ls -l'
 alias la='ls -lAh'
 alias lak='ls -lAh --group-directories-first'
+
+alias count_files='find . ! -name . -prune -type f -print | grep -c /'
+alias count_files_recurse='find .//. ! -name . -print -type f | grep -c /'
 
 lg() {
   la | grep $1

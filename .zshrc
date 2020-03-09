@@ -30,6 +30,8 @@ export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
 #export PATH=/usr/local/opencv/bin:$PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/opencv/lib
 
+export QT_QPA_PLATFORMTHEME=qt5ct
+
 # HOLODECK 
 export HOLODECKPATH=~/.local/share/holodeck-0.2.2dev
 
