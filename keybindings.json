@@ -363,7 +363,7 @@
         "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
     },
     {
-        "key": "ctrl+w",
+        "key": "ctrl+q",
         "command": "workbench.action.closeActiveEditor",
         "when": "activeEditor != 'workbench.editors.files.textFileEditor'"
     },
@@ -481,12 +481,12 @@
     {
       "key": "up",
       "command": "cursorUp",
-      "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+      "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
     },
     {
       "key": "down",
       "command": "cursorDown",
-      "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+      "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
     },
     {
       "key": "k",
@@ -549,5 +549,10 @@
         "key": "insert",
         "command": "-extension.vim_insert",
         "when": "editorTextFocus && vim.active && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "-extension.vim_winCtrlQ",
+        "when": "editorTextFocus && vim.active && vim.use<C-q> && !inDebugRepl"
     }
 ]

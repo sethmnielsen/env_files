@@ -382,6 +382,10 @@
     "<C-]>": false,
     "<C-[>": false,
     "<C-y>": true,
+    "Up": true,
+    "Down": true,
+    "Left": true,
+    "Right": true
 },
 "vim.insertModeKeyBindingsNonRecursive": [
     {

@@ -115,6 +115,7 @@ nnoremap <leader>k <C-W><C-K>
 " Split panes vertically, horizontally
 nnoremap <c-w>\ <c-w>v
 nnoremap <c-w>- <c-w>s
+" Closing out of panes
 nnoremap <leader>q <c-w>q
 nnoremap qq <c-w>q
 nnoremap QQ ZQ
