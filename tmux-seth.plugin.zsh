@@ -44,7 +44,7 @@ else
 fi
 
 # Set the correct local config file to use.
-if [[ "$ZSH_TMUX_ITERM2" == "false" && -e "$HOME/.tmux.conf" ]]; then
+if [[ "$ZSH_TMUX_ITERM2" == "false" && -e "/home/seth/.tmux.conf" ]]; then
   export _ZSH_TMUX_FIXED_CONFIG="${0:h:a}/tmux.extra.conf"
 else
   export _ZSH_TMUX_FIXED_CONFIG="${0:h:a}/tmux.only.conf"

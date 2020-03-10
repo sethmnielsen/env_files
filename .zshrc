@@ -1,5 +1,5 @@
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+HISTFILE=/home/seth/.histfile
 HISTSIZE=8000
 SAVEHIST=8000
 setopt appendhistory autocd extendedglob nomatch
@@ -18,14 +18,14 @@ compinit
 
 ##### Added by me #####
 
-export MYVIMRC=~/.vimrc
+export MYVIMRC=/home/seth/.vimrc
 export EDITOR=vim
 export DEFAULT_USER=seth  # for shortening prompt
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-export PATH=$PATH:~/.local/share/fonts
-export PATH=$PATH:~/dev/UnrealEngine:~/dev/UnrealEngine/Engine/Binaries/Linux
-export PATH=~/.npm-global/bin:$PATH
+export PATH=$PATH:/home/seth/.local/share/fonts
+export PATH=$PATH:/home/seth/dev/UnrealEngine:/home/seth/dev/UnrealEngine/Engine/Binaries/Linux
+export PATH=/home/seth/.npm-global/bin:$PATH
 export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
 #export PATH=/usr/local/opencv/bin:$PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/opencv/lib
@@ -33,24 +33,24 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/opencv/lib
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 # HOLODECK 
-export HOLODECKPATH=~/.local/share/holodeck-0.2.2dev
+export HOLODECKPATH=/home/seth/.local/share/holodeck-0.2.2dev
 
 #### SETTING PYTHONPATH ####
-export PYTHONPATH=$PYTHONPATH:~/dev/boat_landing_sim/src/rosflight_holodeck/python
-export PYTHONPATH=$PYTHONPATH:~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src/holodeck
+export PYTHONPATH=$PYTHONPATH:/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python
+export PYTHONPATH=$PYTHONPATH:/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src/holodeck
 #export PYTHONPATH=$PYTHONPATH:/home/seth/software/SageMath/src/sage
 #export PYTHONPATH=$PYTHONPATH:/home/seth/software/SageMath/local/lib/python3.7/site-packages/sage
 
 #export PYTHONPATH=/home/seth/school/autonomous_systems/turtlebot_sim:$PYTHONPATH  
 #export PYTHONPATH=$PYTHONPATH:/home/seth/dev/coco_dataset/cocoapi
-#export PYTHONPATH=$PYTHONPATH:~/dev/models/research:~/dev/models/research/slim  # tensorflow
+#export PYTHONPATH=$PYTHONPATH:/home/seth/dev/models/research:/home/seth/dev/models/research/slim  # tensorflow
 export RUST_LOG=info
 export RUSTFLAGS="$RUSTFLAGS -A unused_imports"
 export JAX_ENABLE_X64="true"
 export TF_CPP_MIN_LOG_LEVEL="2"
 
 # ROS
-source ~/.rosrc
+source /home/seth/.rosrc
 
 # For autocomplete-python to work correctly
 export LC_ALL=en_US.UTF-8
@@ -156,7 +156,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="/home/seth/.ssh/rsa_id"
 
 # Other custom stuff 
 #setopt rmstarsilent
@@ -165,9 +165,9 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 bindkey "^P" up-line-or-beginning-search 
 bindkey "^N" down-line-or-beginning-search 
 
-source ~/.aliasrc
+source /home/seth/.aliasrc
 
 # virtualenv
-source ~/.myvirtenvrc
+source /home/seth/.myvirtenvrc
 
 
