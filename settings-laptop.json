@@ -382,6 +382,10 @@
     "<C-]>": false,
     "<C-[>": false,
     "<C-y>": true,
+    "Up": true,
+    "Down": true,
+    "Left": true,
+    "Right": true
 },
 "vim.insertModeKeyBindingsNonRecursive": [
     {
@@ -488,5 +492,8 @@
 },
 "window.zoomLevel": 1,
 "markdown.extension.print.onFileSave": true,
+"python.dataScience.runStartupCommands": "%load_ext autoreload\\n%autoreload 2",
+"python.dataScience.themeMatplotlibPlots": true,
+"python.dataScience.useDefaultConfigForJupyter": false,
 
 }
