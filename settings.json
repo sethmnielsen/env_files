@@ -492,7 +492,8 @@
 },
 "gitlens.sortBranchesBy": "date:desc",
 "editor.parameterHints.enabled": false,
-"python.dataScience.runStartupCommands": "%load_ext autoreload\\n%autoreload 2",
+"python.dataScience.runStartupCommands": 
+    "%load_ext autoreload \n%autoreload 2 \n %matplotlib notebook",
 "python.dataScience.themeMatplotlibPlots": true,
 "python.dataScience.useDefaultConfigForJupyter": false,
 

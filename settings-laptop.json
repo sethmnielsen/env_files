@@ -490,9 +490,10 @@
 "workbench.colorCustomizations": {
     "editorBracketMatch.border": "#58b898"
 },
-"window.zoomLevel": 1,
+"window.zoomLevel": 0,
 "markdown.extension.print.onFileSave": true,
-"python.dataScience.runStartupCommands": "%load_ext autoreload\\n%autoreload 2",
+"python.dataScience.runStartupCommands": 
+    "%load_ext autoreload \n%autoreload 2 \n %matplotlib notebook",
 "python.dataScience.themeMatplotlibPlots": true,
 "python.dataScience.useDefaultConfigForJupyter": false,
 
