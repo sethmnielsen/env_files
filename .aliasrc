@@ -5,6 +5,7 @@ alias py='ipython3'
 alias python3_6='~/.virtualenvs/default/bin/python3'
 alias python3_6_sudo='sudo ~/.virtualenvs/default/bin/python3'
 alias rust_evcxr='evcxr'
+alias ra='ranger'
 alias htop_='htop -u seth'
 alias unzip='unzip -q'
 alias open='open_command'
@@ -145,6 +146,7 @@ alias rf_holodeck_debug='roslaunch rosflight_holodeck debug.launch'
 alias serv_call='rosservice call /param_set MIXER 2 && rosservice call /calibrate_imu'
 alias cdb='code ~/dev/boat_landing_sim'
 alias cdm='code ~/dev/models/research/deeplab'
+alias cdh='code ~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck'
 
 code2pdf() { for var in "$@"; do vim "$var" -c ":hardcopy > temp.ps" -c ":q";
     ps2pdf temp.ps "${var%.*}".pdf; rm temp.ps; done; }

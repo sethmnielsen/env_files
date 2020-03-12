@@ -25,7 +25,7 @@ export RANGER_LOAD_DEFAULT_RC="false"
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 export PATH=$PATH:/home/seth/.local/share/fonts
-export PATH=$PATH:/home/seth/dev/UnrealEngine:/home/seth/dev/UnrealEngine/Engine/Binaries/Linux
+export PATH=$PATH:/home/seth/dev/UnrealEngine/Engine/Binaries/Linux
 export PATH=/home/seth/.npm-global/bin:$PATH
 export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
 #export PATH=/usr/local/opencv/bin:$PATH
@@ -34,11 +34,10 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/opencv/lib
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 # HOLODECK 
-export HOLODECKPATH=/home/seth/.local/share/holodeck-0.2.2dev
+#export HOLODECKPATH=/home/seth/.local/share/holodeck-0.2.2dev
 
 #### SETTING PYTHONPATH ####
-export PYTHONPATH=$PYTHONPATH:/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python
-export PYTHONPATH=$PYTHONPATH:/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src/holodeck
+export PYTHONPATH=/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src
 #export PYTHONPATH=$PYTHONPATH:/home/seth/software/SageMath/src/sage
 #export PYTHONPATH=$PYTHONPATH:/home/seth/software/SageMath/local/lib/python3.7/site-packages/sage
 

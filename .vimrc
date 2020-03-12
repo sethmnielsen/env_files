@@ -183,4 +183,4 @@ autocmd FileType make set noexpandtab softtabstop=0
 "Sets syntax highlighting for files or filetypes
 autocmd BufRead,BufNewFile .launch set filetype=xml
 autocmd BufRead,BufNewFile .rosrc,.aliasrc,.myvirtualenvrc set filetype=sh
-autocmd BufRead,BufNewFile zathurarc,rc.conf set filetype=sh
+autocmd BufRead,BufNewFile zathurarc set filetype=sh
