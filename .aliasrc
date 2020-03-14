@@ -2,8 +2,8 @@
 
 # General
 alias py='ipython3'
-alias python3_6='~/.virtualenvs/default/bin/python3'
-alias python3_6_sudo='sudo ~/.virtualenvs/default/bin/python3'
+alias python36='~/.virtualenvs/v3.6/bin/python3'
+alias python36_sudo='sudo ~/.virtualenvs/v3.6/bin/python3'
 alias rust_evcxr='evcxr'
 alias ra='ranger'
 alias htop_='htop -u seth'
@@ -130,12 +130,10 @@ path_python_sys() {
 # ROS/Catkin
 alias ros_env='env | grep ROS'
 alias catkin_make_cuda='catkin_make -DOpenCV_DIR=/usr/local/share/OpenCV -DVISUAL_MTT_CUDA=ON'
-alias catkin_make_py3='catkin_make -DPYTHON_EXECUTABLE=/home/seth/.virtualenvs/v38/bin/python3'
-alias catkin_make_py36='catkin_make -DPYTHON_EXECUTABLE=/home/seth/.virtualenvs/default/bin/python3'
-alias catkin_make_py3_debug='catkin_make_py3 -DCMAKE_BUILD_TYPE=Debug'
+alias catkin_make_py36='catkin_make -DPYTHON_EXECUTABLE=/home/seth/.virtualenvs/v3.6/bin/python3'
 alias catkin_make_py36_debug='catkin_make_py36 -DCMAKE_BUILD_TYPE=Debug'
-alias catkin_make_py3_release='catkin_make_py3 -DCMAKE_BUILD_TYPE=Release'
-alias explode='rm -rf build devel && catkin_make_py3'
+alias catkin_make_py36_release='catkin_make_py36 -DCMAKE_BUILD_TYPE=Release'
+alias explode='rm -rf build devel && catkin_make_py36 && source devel/setup.zsh'
 alias nodeprocess_edit='sudo vim /opt/ros/melodic/lib/python2.7/dist-packages/roslaunch/nodeprocess.py'
 
 # Handy code-related aliases

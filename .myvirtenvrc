@@ -1,3 +1,8 @@
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source $HOME/.local/bin/virtualenvwrapper.sh
+
+
 alias stheme='source $HOME/.oh-my-zsh/themes/seth-theme.zsh-theme'
 
 # note: '-n string' evaluates to true if length of 'string' is non-zero
@@ -18,11 +23,11 @@ deactiv() {
   stheme
 }
 
-source $HOME/.virtualenvs/v38/bin/activate
+
+if [[ $(basename "$VIRTUAL_ENV") != "v3.6"  ]]; then
+  source $HOME/.virtualenvs/v3.8/bin/activate
+fi
 stheme
 
-#export WORKON_HOME=$HOME/.virtualenvs
-#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-#source $HOME/.local/bin/virtualenvwrapper.sh
 #source $HOME/.virtualenvs/rfh-test/bin/activate
 #source $HOME/.virtualenvs/default/bin/activate
