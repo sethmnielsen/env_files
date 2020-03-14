@@ -70,7 +70,7 @@ alias rpprog="rsync -ah --no-owner --progress"
 
 alias sudo_rp="sudo rsync -ah --no-owner"
 alias sudo_rpprog="sudo rsync -ah --no-owner --progress"
-rsync_ssh_xps() {
+rsync_ssh() {
   if [[ $1 == "--delete" || $1 == "-d" ]]; then
     dir=$2
     ops="--delete"
@@ -81,6 +81,9 @@ rsync_ssh_xps() {
     echo "oops, that didn't work"
     return 1
   fi
+}
+rsync_to_remote() {
+  rsync_ssh "$@"
 
   if [[ $(uname -n) == "seth-xps-13" ]]; then
     rsync -ahzP $ops  "$(readlink -f $dir)/" desktop:$(readlink -f $dir) 
@@ -88,6 +91,16 @@ rsync_ssh_xps() {
     rsync -ahzP $ops "$(readlink -f $dir)/" xps-edu:$(readlink -f $dir) 
   fi
 }
+rsync_from_remote() {
+  rsync_ssh "$@"
+
+  if [[ $(uname -n) == "seth-xps-13" ]]; then
+    rsync -ahzP $ops  desktop:$(readlink -f $dir) "$(readlink -f $dir)/" 
+  elif [[ $(uname -n) == "seth-tower-3620" ]]; then
+    rsync -ahzP $ops  xps-edu:$(readlink -f $dir) "$(readlink -f $dir)/" 
+  fi
+}
+
 rsync_ssh_school() {
   if [[ $(uname -n) == "seth-xps-13" ]]; then
     rsync -ahzP ~/Documents/School-Optimization/ desktop:~/Documents/School-Optimization
