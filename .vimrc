@@ -36,7 +36,8 @@ Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 "Plugin 'zef/vim-cycle'
 Plugin 'Konfekt/vim-CtrlXA'
-Plugin 'justinmk/vim-sneak'
+"Plugin 'justinmk/vim-sneak'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -105,13 +106,19 @@ xnoremap <leader>p "_dP"
 vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>")
 "
 " Highlight search term in file
-nnoremap <C-L> :set invhlsearch<cr>
+nnoremap <leader>l :set invhlsearch<cr>
 
 " Mappings to move between panes
-nnoremap <leader>l <C-W><C-L>
-nnoremap <leader>h <C-W><C-H>
-nnoremap <leader>j <C-W><C-J>
-nnoremap <leader>k <C-W><C-K>
+"nnoremap <C-l> <C-w><C-l>
+"nnoremap <C-h> <C-w><C-h>
+"nnoremap <C-j> <C-w><C-j>
+"nnoremap <C-k> <C-w><C-k>
+
+"inoremap <C-l> <Esc><C-w><C-l>
+"inoremap <C-h> <Esc><C-w><C-h>
+"inoremap <C-j> <Esc><C-w><C-j>
+"inoremap <C-k> <Esc><C-w><C-k>
+
 " Split panes vertically, horizontally
 nnoremap <c-w>\ <c-w>v
 nnoremap <c-w>- <c-w>s
@@ -139,6 +146,12 @@ nnoremap J 10j
 nnoremap K 10k
 vnoremap J 10j
 vnoremap K 10k
+
+" Move and stay in Insert mode using alt-hjkl 
+"inoremap h <Left>
+"inoremap j <Down>
+"inoremap k <Up>
+"inoremap l <Right>
 
 " Mappings to edit .vimrc and source/save .vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -182,5 +195,5 @@ autocmd FileType c,cpp setlocal comments-=:// comments+=f://
 autocmd FileType make set noexpandtab softtabstop=0
 "Sets syntax highlighting for files or filetypes
 autocmd BufRead,BufNewFile .launch set filetype=xml
-autocmd BufRead,BufNewFile .rosrc,.aliasrc,.myvirtualenvrc set filetype=sh
+autocmd BufRead,BufNewFile .rosrc,.aliasrc,.myvirtenvrc set filetype=sh
 autocmd BufRead,BufNewFile zathurarc set filetype=sh

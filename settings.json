@@ -5,7 +5,7 @@
 "editor.fontLigatures": false,
 "terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
 "terminal.integrated.fontSize": 12,
-"editor.fontSize": 13,
+"editor.fontSize": 10,
 "workbench.colorTheme": "ayu-custom",
 "editor.wordWrapColumn": 90,
 "files.exclude": {
@@ -59,7 +59,7 @@
 "workbench.editor.tabSizing": "shrink",
 "keyboard.dispatch": "keyCode",
 "python.jediEnabled": false,
-"python.pythonPath": "/home/seth/.virtualenvs/v38/bin/python3",
+"python.pythonPath": "/home/seth/.virtualenvs/v3.8/bin/python3",
 "python.venvPath": "/home/seth/.virtualenvs",
 "python.terminal.activateEnvironment": false,
 "workbench.activityBar.visible": false,
@@ -496,5 +496,6 @@
     "%load_ext autoreload \n%autoreload 2 \n %matplotlib notebook",
 "python.dataScience.themeMatplotlibPlots": true,
 "python.dataScience.useDefaultConfigForJupyter": false,
+"window.zoomLevel": 0,
 
 }

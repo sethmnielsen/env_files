@@ -13,3 +13,6 @@ find .loc
 find holo
 find hol
 delete
+rename env
+hidden
+show hidden

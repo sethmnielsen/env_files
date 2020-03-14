@@ -15,12 +15,12 @@
     { "key": "ctrl+alt+j",               "command": "editor.action.moveLinesDownAction", "when": "editorTextFocus" },
     { "key": "alt+,",                    "command": "workbench.action.navigateBack" },
     { "key": "alt+e",                    "command": "workbench.action.focusActiveEditorGroup" },
+    { "key": "ctrl+h",                   "command": "workbench.action.focusPreviousGroup", "when": "textInputFocus" },
+    { "key": "ctrl+l",                   "command": "workbench.action.focusNextGroup", "when": "textInputFocus" },
     { "key": "shift+alt+k",              "command": "editor.action.insertCursorAbove", "when": "editorTextFocus" },
     { "key": "shift+alt+j",              "command": "editor.action.insertCursorBelow", "when": "editorTextFocus" },
     { "key": "ctrl+shift+h",             "command": "cursorHomeSelect", "when": "textInputFocus" },
     { "key": "ctrl+shift+l",             "command": "cursorEndSelect", "when": "textInputFocus" },
-    { "key": "ctrl+h",                   "command": "cursorHome", "when": "textInputFocus" },
-    { "key": "ctrl+l",                   "command": "cursorEnd", "when": "textInputFocus" },
     { "key": "ctrl+alt+l",               "command": "expandLineSelection", "when": "textInputFocus" },
     { "key": "shift+alt+l",              "command": "cursorRightSelect", "when": "textInputFocus" },
     { "key": "shift+alt+h",              "command": "cursorLeftSelect", "when": "textInputFocus" },
@@ -49,7 +49,6 @@
     // { "key": "ctrl+k",                  "command": "macros.up10Lines", "when": "textInputFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'" },
     // { "key": "ctrl+j",                  "command": "macros.down10Lines", "when": "textInputFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'" },
     { "key": "ctrl+shift+alt+j",         "command": "editor.action.joinLines" },
-    { "key": "alt+s",                    "command": "workbench.debug.action.focusCallStackView" },
     { "key": "f6",                       "command": "workbench.action.debug.stop", "when": "inDebugMode" },
     { "key": "shift+f5",                 "command": "workbench.action.debug.pause", "when": "inDebugMode" },
     { "key": "ctrl+shift+alt+backspace", "command": "deleteWordRight", "when": "textInputFocus && !editorReadonly" },
@@ -312,16 +311,6 @@
         "command": "-editor.action.startFindReplaceAction"
     },
     {
-        "key": "ctrl+j",
-        "command": "-extension.vim_ctrl+j",
-        "when": "editorTextFocus && vim.active && vim.use<C-j> && !inDebugRepl"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "-extension.vim_ctrl+k",
-        "when": "editorTextFocus && vim.active && vim.use<C-k> && !inDebugRepl"
-    },
-    {
         "key": "ctrl+shift+alt+'",
         "command": "bracketeer.swapQuotes"
     },
@@ -356,11 +345,6 @@
         "key": "ctrl+a",
         "command": "extension.vim_ctrl+a",
         "when": "editorTextFocus && vim.active && vim.use<C-a> && vim.mode != 'Insert'  && !inDebugRepl"
-    },
-    {
-        "key": "ctrl+a",
-        "command": "-extension.vim_ctrl+a",
-        "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
     },
     {
         "key": "ctrl+q",

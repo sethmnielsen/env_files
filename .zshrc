@@ -49,9 +49,6 @@ export RUSTFLAGS="$RUSTFLAGS -A unused_imports"
 export JAX_ENABLE_X64="true"
 export TF_CPP_MIN_LOG_LEVEL="2"
 
-# ROS
-source /home/seth/.rosrc
-
 # For autocomplete-python to work correctly
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -167,7 +164,9 @@ bindkey "^N" down-line-or-beginning-search
 
 source /home/seth/.aliasrc
 
-# virtualenv
+# virtualenv -- this needs to be done after sourcing oh-my-zsh.sh
 source /home/seth/.myvirtenvrc
 
+# ROS - sourcing this will override virtualenv to be 'default' (python 3.6)
+source /home/seth/.rosrc
 
