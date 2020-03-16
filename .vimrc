@@ -47,7 +47,7 @@ set completeopt-=preview
 
 set nostartofline
 set whichwrap=b,s,h,l 
-set clipboard=unnamed,autoselect
+set clipboard=unnamedplus,autoselectplus
 
 filetype plugin indent on    " required
 filetype plugin on

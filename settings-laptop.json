@@ -473,7 +473,7 @@
 "editor.trimAutoWhitespace": false,
 "breadcrumbs.showModules": false,
 "[markdown]": {
-    "editor.wordWrap": "on",
+    "editor.wordWrap": "bounded",
     "editor.fontFamily": "'Iosevka Aile'",
     "editor.quickSuggestions": false
 },
@@ -491,10 +491,10 @@
     "editorBracketMatch.border": "#58b898"
 },
 "window.zoomLevel": 0,
-"markdown.extension.print.onFileSave": true,
 "python.dataScience.runStartupCommands": 
     "%load_ext autoreload \n%autoreload 2 \n %matplotlib notebook",
 "python.dataScience.themeMatplotlibPlots": true,
 "python.dataScience.useDefaultConfigForJupyter": false,
+"editor.accessibilitySupport": "off",
 
 }
