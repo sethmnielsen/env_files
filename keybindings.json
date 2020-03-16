@@ -29,6 +29,8 @@
     { "key": "ctrl+shift+k",             "command": "workbench.action.quickOpenSelectPrevious", "when": "inQuickOpen" },
     { "key": "ctrl+shift+j",             "command": "list.focusDown", "when": "listFocus && !inputFocus" },
     { "key": "ctrl+shift+k",             "command": "list.focusUp", "when": "listFocus && !inputFocus" },
+    { "key": "ctrl+shift+j",             "command": "scrollLineDown", "when": "textInputFocus && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible" },
+    { "key": "ctrl+shift+k",             "command": "scrollLineUp", "when": "textInputFocus && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible" },
 
     { "key": "alt+j",                    "command": "list.focusDown", "when": "explorerViewletFocus" },
     { "key": "alt+k",                    "command": "list.focusUp",   "when": "explorerViewletFocus" },
@@ -45,26 +47,19 @@
     { "key": "alt+.",                    "command": "workbench.action.navigateForward" },
     { "key": "ctrl+p",                   "command": "workbench.action.quickOpen", "when": "!terminalFocus && !inDebugRepl" },
     { "key": "ctrl+p",                   "command": "workbench.action.quickOpenPreviousEditor", "when": "!terminalFocus && !inDebugRepl" },
-    { "key": "alt+\\",                   "command": "workbench.action.focusSideBar" },
-    // { "key": "ctrl+k",                  "command": "macros.up10Lines", "when": "textInputFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'" },
-    // { "key": "ctrl+j",                  "command": "macros.down10Lines", "when": "textInputFocus && vim.active && !inDebugRepl && vim.mode == 'Insert'" },
     { "key": "ctrl+shift+alt+j",         "command": "editor.action.joinLines" },
     { "key": "f6",                       "command": "workbench.action.debug.stop", "when": "inDebugMode" },
     { "key": "shift+f5",                 "command": "workbench.action.debug.pause", "when": "inDebugMode" },
     { "key": "ctrl+shift+alt+backspace", "command": "deleteWordRight", "when": "textInputFocus && !editorReadonly" },
     { "key": "ctrl+f5",                  "command": "workbench.action.debug.selectandstart" },
     { "key": "ctrl+shift+w",             "command": "activitusbar.showDebugView" },
-    { "key": "ctrl+shift+k",             "command": "scrollLineUp", "when": "textInputFocus && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible" },
-    { "key": "ctrl+shift+j",             "command": "scrollLineDown", "when": "textInputFocus && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible" },
-    // { "key": "ctrl+shift+k",             "command": "scrollLineUp", "when": "parameterHintsVisible && listSupportsKeyboardNavigation" },
-    // { "key": "ctrl+shift+j",             "command": "scrollLineDown", "when": "parameterHintsVisible && listSupportsKeyboardNavigation" },
+    { "key": "alt+\\",                   "command": "workbench.action.focusSideBar" },
     { "key": "alt+\\",                   "command": "workbench.debug.action.focusVariablesView", "when": "inDebugMode" },
     { "key": "ctrl+shift+'",             "command": "workbench.action.toggleMaximizedPanel" },
     { "key": "ctrl+shift+q",             "command": "clock.insertDateTime" },
     { "key": "ctrl+alt+backspace",       "command": "bracketeer.removeBrackets" },
     { "key": "ctrl+0",                   "command": "workbench.action.terminal.toggleTerminal", "when": "!terminalFocus" },
     { "key": "ctrl+0",                   "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus" },
-    // { "key": "ctrl+a a",                 "command": "editor.action.selectAll", "when": "editorFocus" },
     { "key": "ctrl+alt+enter",           "command": "search.action.replaceAll", "when": "searchViewletVisible && !findWidgetVisible" },
     { "key": "ctrl+shift+alt+y",         "command": "workbench.action.debug.selectandstart", "when": "!inDebugMode" },
     { "key": "alt+left",                 "command": "cursorWordPartLeft", "when": "textInputFocus" },
@@ -77,7 +72,6 @@
     { "key": "ctrl+shift+]",             "command": "editor.action.revealDefinition", "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor" },
     { "key": "ctrl+alt+b",               "command": "bracketeer.selectBracketContent" },
     { "key": "shift+alt+o",              "command": "editor.action.showHover", "when": "editorTextFocus" },
-    // { "key": "ctrl+a g",                 "command": "cursorTop", "when": "editorFocus" },
     { "key": "ctrl+`", "command": "workbench.action.togglePanel" },
     { "key": "ctrl+shift+g l",           "command": "gitlens.toggleLineBlame" },
     { "key": "ctrl+shift+j",             "command": "selectNextSuggestion", "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus" },
@@ -257,7 +251,6 @@
         "command": "python.datascience.runcurrentcell",
         "when": "editorTextFocus && python.datascience.featureenabled && python.datascience.hascodecells && !editorHasSelection"
     },
-    // { "key": "ctrl+a shift+enter", "command": "python.datascience.debugcurrentcell.palette" },
     {
         "key": "alt+c p",
         "command": "-extension.colorHelper.pick",
@@ -396,16 +389,6 @@
         "when": "editorFocus && !python.datascience.hascodecells && editorLangId != 'latex'"
     },
     {
-        "key": "shift+tab",
-        "command": "extension.vim_shift+tab",
-        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Normal'"
-    },
-    {
-        "key": "shift+tab",
-        "command": "-extension.vim_shift+tab",
-        "when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
-    },
-    {
         "key": "ctrl+1",
         "command": "workbench.action.focusPreviousGroup"
     },
@@ -465,22 +448,22 @@
     {
       "key": "up",
       "command": "cursorUp",
-      "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+      "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
     },
     {
       "key": "down",
       "command": "cursorDown",
-      "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+      "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
     },
     {
       "key": "k",
       "command": "cursorUp",
-      "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible && editorLangId == 'latex'"
+      "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible && (editorLangId == 'latex' || editorLangId == 'markdown')"
     },
     {
       "key": "j",
       "command": "cursorDown",
-      "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisibl && editorLangId == 'latex'"
+      "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisibl && (editorLangId == 'latex' || editorLangId == 'markdown')"
     },
     {
         "key": "ctrl+alt+v",

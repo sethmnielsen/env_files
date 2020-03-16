@@ -22,6 +22,7 @@ export DEFAULT_USER=seth  # for shortening prompt
 export MYVIMRC=/home/seth/.vimrc
 export EDITOR=vim
 export RANGER_LOAD_DEFAULT_RC="false"
+export RANGER_COLORSCHEME="unixontherocks"
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 export PATH=$PATH:/home/seth/.local/share/fonts

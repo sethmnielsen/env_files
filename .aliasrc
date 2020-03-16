@@ -168,6 +168,16 @@ alias cd_boat='cd ~/dev/boat_landing_sim'
 alias cd_holodeck='cd ~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck'
 alias cd_models='cd ~/dev/models/research/deeplab'
 
+# Print the 256 color test pattern
+print256colors() {
+  for i in {0..255} ; do
+    printf "\x1b[48;5;%sm%3d\e[0m " "$i" "$i"
+    if (( i == 15 )) || (( i > 15 )) && (( (i-15) % 6 == 0 )); then
+        printf "\n";
+    fi
+  done  
+}
+
 # FFMPEG converting MP4 or MOV to MOV for Resolve video editor
 ffmpeg_mp4_to_mov_resolve() {
   if [[ "$#" -ne 1 ]]; then

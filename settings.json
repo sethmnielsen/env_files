@@ -5,9 +5,8 @@
 "editor.fontLigatures": false,
 "terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
 "terminal.integrated.fontSize": 12,
-"editor.fontSize": 10,
+"editor.fontSize": 12,
 "workbench.colorTheme": "ayu-custom",
-"editor.wordWrapColumn": 90,
 "files.exclude": {
     "**/*.jop": false,
     ".env": true,
@@ -403,6 +402,14 @@
 ],
 "vim.normalModeKeyBindingsNonRecursive": [
     {
+        "before": ["k"],
+        "after": ["g", "k"]
+    },
+    {
+        "before": ["j"],
+        "after": ["g", "j"]
+    },
+    {
         "before": ["o"],
         "commands": ["editor.action.insertLineAfter","extension.vim_insert"]
         
@@ -439,9 +446,17 @@
     {
         "before": ["<C-r>"],
         "commands": ["redo"]
-    }
+    },
 ],
 "vim.visualModeKeyBindingsNonRecursive": [
+    {
+        "before": ["k"],
+        "after": ["g", "k"]
+    },
+    {
+        "before": ["j"],
+        "after": ["g", "j"]
+    },
     {
         "before": ["K"],
         "after": ["1","0","-"]
@@ -473,9 +488,9 @@
 "editor.trimAutoWhitespace": false,
 "breadcrumbs.showModules": false,
 "[markdown]": {
-    "editor.wordWrap": "on",
+    "editor.wordWrap": "bounded",
     "editor.fontFamily": "'Iosevka Aile'",
-    "editor.quickSuggestions": false
+    "editor.quickSuggestions": false,
 },
 "workbench.editor.showTabs": true,
 "editor.suggest.showSnippets": false,
@@ -496,6 +511,7 @@
     "%load_ext autoreload \n%autoreload 2 \n %matplotlib notebook",
 "python.dataScience.themeMatplotlibPlots": true,
 "python.dataScience.useDefaultConfigForJupyter": false,
-"window.zoomLevel": 0,
+"editor.wordWrapColumn": 90,
+"editor.accessibilitySupport": "off",
 
 }
