@@ -157,6 +157,10 @@ source $ZSH/oh-my-zsh.sh
 export SSH_KEY_PATH="/home/seth/.ssh/rsa_id"
 
 # Other custom stuff 
+
+# ranger prompt
+if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
+
 #setopt rmstarsilent
 
 # Keybindings
