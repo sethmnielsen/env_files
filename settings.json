@@ -495,7 +495,6 @@
 "workbench.editor.showTabs": true,
 "editor.suggest.showSnippets": false,
 "breadcrumbs.showFiles": false,
-"breadcrumbs.showNamespaces": false,
 "breadcrumbs.showVariables": false,
 "breadcrumbs.showPackages": false,
 "outline.showModules": false,
