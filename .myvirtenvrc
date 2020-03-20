@@ -1,6 +1,6 @@
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source $HOME/.local/bin/virtualenvwrapper.sh
+#export WORKON_HOME=$HOME/.virtualenvs
+#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+#source $HOME/.local/bin/virtualenvwrapper.sh
 
 
 alias stheme='source $HOME/.oh-my-zsh/themes/seth-theme.zsh-theme'

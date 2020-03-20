@@ -71,11 +71,11 @@
 "clock.dateFormat": "h:MM TT",
 "breadcrumbs.enabled": true,
 "python.autoComplete.extraPaths": [
-    "/home/seth/dev/boat_landing_sim/devel/lib/python3/dist-packages",
+    // "/home/seth/dev/boat_landing_sim/devel/lib/python3/dist-packages",
     "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src",
     "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python",
     // "/home/seth/dev/boat_landing_sim/src/rf_joy/src/rosflight_joy",
-    "/opt/ros/melodic/lib/python2.7/dist-packages"
+    // "/opt/ros/melodic/lib/python2.7/dist-packages"
 ],
 "C_Cpp.default.intelliSenseMode": "msvc-x64",
 "editor.rulers": [90],
@@ -512,5 +512,7 @@
 "python.dataScience.useDefaultConfigForJupyter": false,
 "editor.wordWrapColumn": 90,
 "editor.accessibilitySupport": "off",
+"window.zoomLevel": 0,
+"python.linting.mypyEnabled": true,
 
 }
