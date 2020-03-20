@@ -1,4 +1,5 @@
 b:/home/seth/dev/boat_landing_sim
+':/home/seth/.virtualenvs/v3.8/lib/python3.8/site-packages/PyGObject-3.36.0-py3.8-linux-x86_64.egg
 k:/home/seth/.ksp173/KSP_linux
 o:/home/seth/school/optimization
 n:/home/seth/school/nonlinear
@@ -6,3 +7,4 @@ r:/home/seth/dev/boat_landing_sim/src/rosflight_holodeck
 u:/home/seth/Documents/Unreal Projects/ocean-world
 O:/home/seth/Documents/School-Optimization
 w:/home/seth/Downloads
+v:/home/seth/.virtualenvs

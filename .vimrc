@@ -20,7 +20,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'tpope/vim-surround'
-Plugin 'flazz/vim-colorschemes'
 Plugin 'lervag/vimtex'
 Plugin 'preservim/nerdcommenter'
 Plugin 'preservim/nerdtree'
@@ -28,23 +27,37 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'Valloric/YouCompleteMe'
 "Plugin 'airblade/vim-gitgutter'
 Plugin 'Raimondi/delimitMate'
-"Plugin 'morhetz/gruvbox'
-Plugin 'Jamedjo/setcolors.vim'
-Plugin 'doums/darcula'
 Plugin 'cespare/vim-toml'
 Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'vim-pandoc/vim-pandoc-syntax'
-"Plugin 'zef/vim-cycle'
 Plugin 'Konfekt/vim-CtrlXA'
 "Plugin 'justinmk/vim-sneak'
 Plugin 'christoomey/vim-tmux-navigator'
+
+" Colorscheme related
+"Plugin 'morhetz/gruvbox'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'Jamedjo/setcolors.vim'
+Plugin 'doums/darcula'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'junegunn/seoul256.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 set completeopt-=preview
 
-"set lazyredraw
+" Colorscheme
+"colorscheme luna-term
+"colorscheme mango
+"colorscheme nord
+"let g:gruvbox_contrast_dark="hard"
+"colorscheme gruvbox
 
+let g:seoul256_background = 233
+let g:seoul256_srgb = 1
+colorscheme seoul256
+set background=dark
+
+"set lazyredraw
 set nostartofline
 set whichwrap=b,s,h,l 
 set clipboard=unnamedplus,autoselectplus
@@ -64,14 +77,6 @@ augroup VimAfter
       \ ['sweet', 'bitter'],
       \ ] + g:CtrlXA_Toggles
         augroup END
-
-" Colorscheme
-"let g:gruvbox_contrast_dark="hard"
-set background=dark
-"colorscheme gruvbox
-colorscheme luna-term
-"colorscheme mango
-"colorscheme nord
 
 " ---------------------------- KEY MAPPINGS ------------------------------
 

@@ -34,9 +34,20 @@ URxvt*foreground: #FFFFFF
 
 URxvt.scrollBar: False
 
-URxvt*font: xft:FantasqueSansMono-Regular:pixelsize=17:antialias=true
-URxvt*boldFont: xft:FantasqueSansMono-Bold:pixelsize=17:antialias=true
-URxvt*italicFont: xft:FantasqueSansMono-Italic:pixelsize=17:antialias=true
+URxvt*font: xft:FantasqueSansMono-Regular:size=13:antialias=true
+URxvt*boldFont: xft:FantasqueSansMono-Bold:size=13:antialias=true
+URxvt*italicFont: xft:FantasqueSansMono-Italic:size=13:antialias=true
 URxvt*letterSpace: -1
 
+URxvt.perl-ext-common: font-size
+URxvt.keysym.C-equal:   font-size:increase
+URxvt.keysym.C-minus:   font-size:decrease
 
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+URxvt.keysym.Control-Meta-c: builtin-string:
+URxvt.keysym.Control-Meta-v: builtin-string:
