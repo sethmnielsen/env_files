@@ -1,0 +1,16 @@
+*.log
+logs/
+Trash/
+conv_holo_ws/
+.ros/
+rM_dev/
+Backup/
+.config/Code/logs/
+.config/Code/User/workspaceStorage/
+.cache/
+.thumbnails/
+.thunderbird/
+.dbus/
+.gvfs/
+rhythmbox/
+LinuxNoEditor/

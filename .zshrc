@@ -34,7 +34,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/opencv/lib
 
 export QT_QPA_PLATFORMTHEME=qt5ct
 
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
+export FZF_DEFAULT_COMMAND='rg --hidden --files --no-ignore-vcs'
 
 # HOLODECK 
 #export HOLODECKPATH=/home/seth/.local/share/holodeck-0.2.2dev
@@ -134,6 +134,7 @@ plugins=(
   pip
   fzf
   virtualenv
+  zsh-interactive-cd
 )
 
 source $ZSH/oh-my-zsh.sh
