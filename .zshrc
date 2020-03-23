@@ -34,8 +34,6 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/opencv/lib
 
 export QT_QPA_PLATFORMTHEME=qt5ct
 
-export FZF_DEFAULT_COMMAND='rg --hidden --files --no-ignore-vcs'
-
 # HOLODECK 
 #export HOLODECKPATH=/home/seth/.local/share/holodeck-0.2.2dev
 
@@ -132,9 +130,8 @@ plugins=(
   git
   tmux-seth
   pip
-  fzf
   virtualenv
-  zsh-interactive-cd
+#  zsh-interactive-cd
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -171,6 +168,7 @@ bindkey "^P" up-line-or-beginning-search
 bindkey "^N" down-line-or-beginning-search 
 
 source /home/seth/.aliasrc
+source /home/seth/.fzf.zsh
 
 # virtualenv -- this needs to be done after sourcing oh-my-zsh.sh
 source /home/seth/.myvirtenvrc

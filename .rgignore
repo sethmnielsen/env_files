@@ -1,4 +1,6 @@
 *.log
+.histfile
+
 logs/
 Trash/
 conv_holo_ws/
@@ -14,3 +16,8 @@ Backup/
 .gvfs/
 rhythmbox/
 LinuxNoEditor/
+.local/share/gwenview/recentfolders/
+Documents/.list
+.cups/list
+.cups/parser.py
+.local/share/gvfs-metadata/home

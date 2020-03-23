@@ -61,7 +61,7 @@
 "python.pythonPath": "/home/seth/.virtualenvs/v38/bin/python3",
 "python.venvPath": "/home/seth/.virtualenvs",
 "python.terminal.activateEnvironment": false,
-"workbench.activityBar.visible": false,
+"workbench.activityBar.visible": true,
 "workbench.iconTheme": "ayu",
 "zenMode.hideLineNumbers": false,
 "editor.cursorSmoothCaretAnimation": true,
@@ -477,7 +477,6 @@
     "editor.fontFamily": "'Iosevka Aile'",
     "editor.quickSuggestions": false
 },
-"workbench.editor.showTabs": false,
 "editor.suggest.showSnippets": false,
 "breadcrumbs.showFiles": false,
 "breadcrumbs.showNamespaces": false,
@@ -496,5 +495,8 @@
 "python.dataScience.themeMatplotlibPlots": true,
 "python.dataScience.useDefaultConfigForJupyter": false,
 "editor.accessibilitySupport": "off",
+"editor.fontSize": 12,
+"python.linting.mypyEnabled": true,
+"python.testing.autoTestDiscoverOnSaveEnabled": false,
 
 }
