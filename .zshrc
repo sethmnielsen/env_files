@@ -81,6 +81,8 @@ ZSH_THEME="seth-theme"
 
 # Uncomment the following line to use case-sensitive completion.
 #CASE_SENSITIVE="true"
+zstyle ':completion:*'  matcher-list 'm:{a-z}={A-Z}'
+autoload -U compinit && compinit
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -168,7 +170,12 @@ bindkey "^P" up-line-or-beginning-search
 bindkey "^N" down-line-or-beginning-search 
 
 source /home/seth/.aliasrc
+
+# fzf
 source /home/seth/.fzf.zsh
+export FZF_COMPLETION_TRIGGER=''
+bindkey '^T' fzf-completion
+bindkey '^I' $fzf_default_completion
 
 # virtualenv -- this needs to be done after sourcing oh-my-zsh.sh
 source /home/seth/.myvirtenvrc

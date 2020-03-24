@@ -147,6 +147,9 @@ vnoremap L $
 nnoremap H ^
 vnoremap H ^
 
+nnoremap <C-S-j> J
+vnoremap <C-S-j> J
+
 " Mappings to move up and down faster
 nnoremap J 10j
 nnoremap K 10k
@@ -203,3 +206,4 @@ autocmd FileType make set noexpandtab softtabstop=0
 autocmd BufRead,BufNewFile .launch set filetype=xml
 autocmd BufRead,BufNewFile .rosrc,.aliasrc,.myvirtenvrc set filetype=sh
 autocmd BufRead,BufNewFile zathurarc set filetype=sh
+autocmd BufRead,BufNewFile .conf set filetype=dosini

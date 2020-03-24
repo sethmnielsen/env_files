@@ -15,7 +15,3 @@ source "/home/seth/.fzf/shell/key-bindings.zsh"
 export FZF_DEFAULT_COMMAND='rg --hidden --files --no-ignore-vcs'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-export FZF_COMPLETION_TRIGGER=''
-bindkey '^T' fzf-completion
-bindkey '^I' $fzf_default_completion
-
