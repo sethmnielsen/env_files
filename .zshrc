@@ -166,8 +166,9 @@ export SSH_KEY_PATH="/home/seth/.ssh/rsa_id"
 #setopt rmstarsilent
 
 # Keybindings
-bindkey "^P" up-line-or-beginning-search 
-bindkey "^N" down-line-or-beginning-search 
+bindkey '^P' up-line-or-beginning-search 
+bindkey '^N' down-line-or-beginning-search 
+bindkey '^D' delete-char
 
 source /home/seth/.aliasrc
 
