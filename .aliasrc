@@ -130,6 +130,7 @@ cdll() {cd "$@" && ll}
 # zsh / sourcing / environment
 alias vz='vim ~/.zshrc'
 alias va='vim ~/.aliasrc'
+alias vv='vim ~/.vimrc'
 alias szsh='source ~/.zshrc'
 alias sdevel='source devel/setup.zsh'
 alias source_remarkable='unset LD_LIBRARY_PATH && source /usr/local/oecore-x86_64/environment-setup-cortexa9hf-neon-oe-linux-gnueabi'

@@ -133,7 +133,7 @@ plugins=(
   tmux-seth
   pip
   virtualenv
-#  zsh-interactive-cd
+  zsh-interactive-cd
 )
 
 source $ZSH/oh-my-zsh.sh

@@ -61,7 +61,7 @@
 "python.pythonPath": "/home/seth/.virtualenvs/v38/bin/python3",
 "python.venvPath": "/home/seth/.virtualenvs",
 "python.terminal.activateEnvironment": false,
-"workbench.activityBar.visible": true,
+"workbench.activityBar.visible": false,
 "workbench.iconTheme": "ayu",
 "zenMode.hideLineNumbers": false,
 "editor.cursorSmoothCaretAnimation": true,
@@ -79,18 +79,48 @@
 ],
 "C_Cpp.default.intelliSenseMode": "msvc-x64",
 "editor.rulers": [90],
-"macros": {
+"macros.list": {
     "closePanelSidebar": [
         "workbench.action.toggleSidebarVisibility",
         "workbench.action.closePanel"
     ],
-    "positionPanelRight": [
-        "workbench.action.focusActiveEditorGroup",
-        "workbench.action.positionPanelRight"
+    "resizePaneRight": [
+        "workbench.action.terminal.resizePaneRight"
     ],
-    "positionPanelBottom": [
+    "resizePaneLeft": [
+        "workbench.action.terminal.resizePaneLeft"
+    ],
+    "openTerminalToSide": [
+        "workbench.action.positionPanelRight",
+        {
+            "command": "resizePaneRight",
+            "args": {
+                "times":4
+            }
+        },
+        {
+            "command": "resizePaneLeft",
+            "args": {
+                "times":4
+            }
+        }
+    ],
+    "positionPanelRightTerminalFocus": [
+        "workbench.action.positionPanelRight",
         "workbench.action.focusActiveEditorGroup",
-        "workbench.action.positionPanelBottom"
+        "workbench.panel.terminal.focus"
+    ],
+    "positionPanelBottomTerminalFocus": [
+        "workbench.action.positionPanelBottom",
+        "workbench.panel.terminal.focus"
+    ],
+    "positionPanelRightEditorFocus": [
+        "workbench.action.positionPanelRight",
+        "workbench.action.focusActiveEditorGroup"
+    ],
+    "positionPanelBottomEditorFocus": [
+        "workbench.action.positionPanelBottom",
+        "workbench.action.focusActiveEditorGroup"
     ],
     "runAllAndRestartKernel": [
         "python.datascience.restartkernel",
@@ -489,7 +519,7 @@
 "workbench.colorCustomizations": {
     "editorBracketMatch.border": "#58b898"
 },
-"window.zoomLevel": 0,
+"window.zoomLevel": 1,
 "python.dataScience.runStartupCommands": 
     "%load_ext autoreload \n%autoreload 2 \n %matplotlib notebook",
 "python.dataScience.themeMatplotlibPlots": true,
@@ -498,5 +528,7 @@
 "editor.fontSize": 12,
 "python.linting.mypyEnabled": true,
 "python.testing.autoTestDiscoverOnSaveEnabled": false,
+"python.testing.promptToConfigure": false,
+"terminal.integrated.shell.linux": "/usr/bin/zsh",
 
 }

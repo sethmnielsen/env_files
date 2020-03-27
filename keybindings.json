@@ -15,8 +15,8 @@
     { "key": "ctrl+alt+j",               "command": "editor.action.moveLinesDownAction", "when": "editorTextFocus" },
     { "key": "alt+,",                    "command": "workbench.action.navigateBack" },
     { "key": "alt+e",                    "command": "workbench.action.focusActiveEditorGroup" },
-    { "key": "ctrl+h",                   "command": "workbench.action.focusPreviousGroup", "when": "textInputFocus" },
-    { "key": "ctrl+l",                   "command": "workbench.action.focusNextGroup", "when": "textInputFocus" },
+    { "key": "ctrl+h",                   "command": "workbench.action.focusPreviousGroup", "when": "textInputFocus && vim.mode != 'Insert'" },
+    { "key": "ctrl+l",                   "command": "workbench.action.focusNextGroup", "when": "textInputFocus && vim.mode != 'Insert'"},
     { "key": "shift+alt+k",              "command": "editor.action.insertCursorAbove", "when": "editorTextFocus" },
     { "key": "shift+alt+j",              "command": "editor.action.insertCursorBelow", "when": "editorTextFocus" },
     { "key": "ctrl+shift+h",             "command": "cursorHomeSelect", "when": "textInputFocus" },
@@ -243,10 +243,6 @@
         "when": "editorTextFocus && python.datascience.featureenabled && python.datascience.hascodecells && !editorHasSelection"
     },
     {
-        "key": "ctrl+\\",
-        "command": "workbench.action.toggleSidebarVisibility"
-    },
-    {
         "key": "shift+alt+enter",
         "command": "python.datascience.runcurrentcell",
         "when": "editorTextFocus && python.datascience.featureenabled && python.datascience.hascodecells && !editorHasSelection"
@@ -319,25 +315,64 @@
         "key": "ctrl+shift+alt+'",
         "command": "-bracketeer.removeQuotes"
     },
-    // {
-    //     "key": "ctrl+shift+alt+;",
-    //     "command": "workbench.action.togglePanelPosition",
-    //     "when": "editorFocus || terminalFocus || panelFocus"
-    // },
     {
-        "key": "ctrl+shift+alt+;",
-        "command": "macros.positionPanelRight",
+        "key": "ctrl+shift+;",
+        "command": "macros.openTerminalToSide",
+    },
+    {
+        "key": "ctrl+;",
+        "command": "macros.positionPanelRightTerminalFocus",
         "when": "panelPosition == 'bottom'"
     },
     {
-        "key": "ctrl+shift+alt+;",
-        "command": "macros.positionPanelBottom",
+        "key": "ctrl+;",
+        "command": "macros.positionPanelBottomTerminalFocus",
         "when": "panelPosition == 'right'"
+    },
+    {
+        "key": "ctrl+;",
+        "command": "macros.positionPanelRightEditorFocus",
+        "when": "editorTextFocus && panelPosition == 'bottom'"
+    },
+    {
+        "key": "ctrl+;",
+        "command": "macros.positionPanelBottomEditorFocus",
+        "when": "editorTextFocus && panelPosition == 'right'"
     },
     {
         "key": "ctrl+a",
         "command": "extension.vim_ctrl+a",
         "when": "editorTextFocus && vim.active && vim.use<C-a> && vim.mode != 'Insert'  && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "cursorLineEnd",
+        "when": "editorTextFocus && vim.active && vim.mode == 'Insert' && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "cursorLineEnd",
+        "when": "editorTextFocus && vim.active && vim.mode == 'Insert' && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus && panelPosition == 'bottom'"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.panel.terminal.focus",
+        "when": "editorTextFocus && workbench.panel.terminal.visible && panelPosition == 'bottom'"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus && panelPosition == 'right'"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.panel.terminal.focus",
+        "when": "editorTextFocus && activeEditorGroupLast && workbench.panel.terminal.visible && panelPosition == 'right' && vim.mode != 'Insert'"
     },
     {
         "key": "ctrl+q",
@@ -525,5 +560,17 @@
         "key": "ctrl+shift+7",
         "command": "python.runtests",
         "when": "editorLangId == 'python'"
+    },
+    {
+        "key": "ctrl+k x",
+        "command": "workbench.action.inspectContextKeys"
+    },
+    {
+        "key": "ctrl+k shift+x",
+        "command": "setContext"
+    },
+    {
+        "key": "shift+alt+c",
+        "command": "workbench.action.toggleCenteredLayout"
     }
 ]

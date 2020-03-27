@@ -105,8 +105,8 @@ map! <C-y> <Esc>mwlbgUl`wa
 
 " Send to black hole register (actually delete)
 nnoremap <leader>d "_d
-xnoremap <leader>d "_d
-xnoremap <leader>p "_dP"
+vnoremap <leader>d "_d
+"vnoremap <leader>p "_dP"
 
 " press // to search for highlighted text (visual mode)
 vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>")
