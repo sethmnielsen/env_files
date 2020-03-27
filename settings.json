@@ -3,10 +3,11 @@
 "files.autoSave": "afterDelay",
 "editor.fontFamily": "'Iosevka', 'monospace'",
 "editor.fontLigatures": false,
+"editor.fontSize": 12,
 "terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
 "terminal.integrated.fontSize": 12,
-"editor.fontSize": 12,
 "workbench.colorTheme": "ayu-custom",
+"editor.wordWrapColumn": 90,
 "files.exclude": {
     "**/*.jop": false,
     ".env": true,
@@ -79,18 +80,48 @@
 ],
 "C_Cpp.default.intelliSenseMode": "msvc-x64",
 "editor.rulers": [90],
-"macros": {
+"macros.list": {
     "closePanelSidebar": [
         "workbench.action.toggleSidebarVisibility",
         "workbench.action.closePanel"
     ],
-    "positionPanelRight": [
-        "workbench.action.focusActiveEditorGroup",
-        "workbench.action.positionPanelRight"
+    "resizePaneRight": [
+        "workbench.action.terminal.resizePaneRight"
     ],
-    "positionPanelBottom": [
+    "resizePaneLeft": [
+        "workbench.action.terminal.resizePaneLeft"
+    ],
+    "openTerminalToSide": [
+        "workbench.action.positionPanelRight",
+        {
+            "command": "resizePaneRight",
+            "args": {
+                "times":4
+            }
+        },
+        {
+            "command": "resizePaneLeft",
+            "args": {
+                "times":4
+            }
+        }
+    ],
+    "positionPanelRightTerminalFocus": [
+        "workbench.action.positionPanelRight",
         "workbench.action.focusActiveEditorGroup",
-        "workbench.action.positionPanelBottom"
+        "workbench.panel.terminal.focus"
+    ],
+    "positionPanelBottomTerminalFocus": [
+        "workbench.action.positionPanelBottom",
+        "workbench.panel.terminal.focus"
+    ],
+    "positionPanelRightEditorFocus": [
+        "workbench.action.positionPanelRight",
+        "workbench.action.focusActiveEditorGroup"
+    ],
+    "positionPanelBottomEditorFocus": [
+        "workbench.action.positionPanelBottom",
+        "workbench.action.focusActiveEditorGroup"
     ],
     "runAllAndRestartKernel": [
         "python.datascience.restartkernel",
@@ -446,7 +477,7 @@
     {
         "before": ["<C-r>"],
         "commands": ["redo"]
-    },
+    }
 ],
 "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -490,9 +521,8 @@
 "[markdown]": {
     "editor.wordWrap": "bounded",
     "editor.fontFamily": "'Iosevka Aile'",
-    "editor.quickSuggestions": false,
+    "editor.quickSuggestions": false
 },
-"workbench.editor.showTabs": true,
 "editor.suggest.showSnippets": false,
 "breadcrumbs.showFiles": false,
 "breadcrumbs.showVariables": false,
@@ -504,15 +534,17 @@
 "workbench.colorCustomizations": {
     "editorBracketMatch.border": "#58b898"
 },
+"window.zoomLevel": 0,
 "gitlens.sortBranchesBy": "date:desc",
 "editor.parameterHints.enabled": false,
 "python.dataScience.runStartupCommands": 
     "%load_ext autoreload \n%autoreload 2 \n %matplotlib notebook",
 "python.dataScience.themeMatplotlibPlots": true,
 "python.dataScience.useDefaultConfigForJupyter": false,
-"editor.wordWrapColumn": 90,
 "editor.accessibilitySupport": "off",
-"window.zoomLevel": 0,
 "python.linting.mypyEnabled": true,
+"python.testing.autoTestDiscoverOnSaveEnabled": false,
+"python.testing.promptToConfigure": false,
+"editor.renderWhitespace": "none",
 
 }

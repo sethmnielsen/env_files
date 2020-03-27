@@ -3,6 +3,7 @@
 "files.autoSave": "afterDelay",
 "editor.fontFamily": "'Iosevka', 'monospace'",
 "editor.fontLigatures": false,
+"editor.fontSize": 12,
 "terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
 "terminal.integrated.fontSize": 13,
 "workbench.colorTheme": "ayu-custom",
@@ -58,7 +59,7 @@
 "workbench.editor.tabSizing": "shrink",
 "keyboard.dispatch": "keyCode",
 "python.jediEnabled": false,
-"python.pythonPath": "/home/seth/.virtualenvs/v38/bin/python3",
+"python.pythonPath": "/home/seth/.virtualenvs/v3.8/bin/python3",
 "python.venvPath": "/home/seth/.virtualenvs",
 "python.terminal.activateEnvironment": false,
 "workbench.activityBar.visible": false,
@@ -433,6 +434,14 @@
 ],
 "vim.normalModeKeyBindingsNonRecursive": [
     {
+        "before": ["k"],
+        "after": ["g", "k"]
+    },
+    {
+        "before": ["j"],
+        "after": ["g", "j"]
+    },
+    {
         "before": ["o"],
         "commands": ["editor.action.insertLineAfter","extension.vim_insert"]
         
@@ -473,6 +482,14 @@
 ],
 "vim.visualModeKeyBindingsNonRecursive": [
     {
+        "before": ["k"],
+        "after": ["g", "k"]
+    },
+    {
+        "before": ["j"],
+        "after": ["g", "j"]
+    },
+    {
         "before": ["K"],
         "after": ["1","0","-"]
     },
@@ -509,7 +526,6 @@
 },
 "editor.suggest.showSnippets": false,
 "breadcrumbs.showFiles": false,
-"breadcrumbs.showNamespaces": false,
 "breadcrumbs.showVariables": false,
 "breadcrumbs.showPackages": false,
 "outline.showModules": false,
@@ -525,7 +541,6 @@
 "python.dataScience.themeMatplotlibPlots": true,
 "python.dataScience.useDefaultConfigForJupyter": false,
 "editor.accessibilitySupport": "off",
-"editor.fontSize": 12,
 "python.linting.mypyEnabled": true,
 "python.testing.autoTestDiscoverOnSaveEnabled": false,
 "python.testing.promptToConfigure": false,
