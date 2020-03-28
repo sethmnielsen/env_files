@@ -18,11 +18,15 @@ compinit
 
 ##### Added by me #####
 
+# ranger prompt
+if [[ -n "$RANGER_LEVEL" ]]; then 
+  export PS1="[ranger]":$PS1
+fi
+
 export DEFAULT_USER=seth  # for shortening prompt
 export MYVIMRC=/home/seth/.vimrc
 export EDITOR=vim
 export RANGER_LOAD_DEFAULT_RC="false"
-export RANGER_COLORSCHEME="unixontherocks"
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 export PATH=$PATH:/home/seth/.local/share/fonts
@@ -159,9 +163,6 @@ source $ZSH/oh-my-zsh.sh
 export SSH_KEY_PATH="/home/seth/.ssh/rsa_id"
 
 # Other custom stuff 
-
-# ranger prompt
-#if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
 
 #setopt rmstarsilent
 
