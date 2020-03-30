@@ -40,7 +40,8 @@
     "**/build": true,
     "**/devel": true,
     "**/target/": true,
-    "**F450.yaml": true
+    "**F450.yaml": true,
+    "**/*.pytest_cache/": true
 },
 "files.associations": {
     "*.*rc": "shellscript",
@@ -506,6 +507,7 @@
 "editor.smoothScrolling": true,
 "breadcrumbs.filePath": "off",
 "path-intellisense.autoSlashAfterDirectory": true,
+"python.linting.pylintPath": "/home/seth/.virtualenvs/v3.8/bin/pylint_with_timeout.sh",
 "python.linting.pylintUseMinimalCheckers": false,
 "python.linting.ignorePatterns": [
     ".vscode/*.py",

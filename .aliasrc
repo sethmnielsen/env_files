@@ -5,9 +5,6 @@ alias py='ipython3'
 alias python36='~/.virtualenvs/v3.6/bin/python3'
 alias python36_sudo='sudo ~/.virtualenvs/v3.6/bin/python3'
 alias rust_evcxr='evcxr'
-alias ra='ranger'
-alias htop_='htop'
-alias htop='htop -u seth'
 alias unzip='unzip -q'
 #alias open='open_command'
 alias upgrades='sudo apt update && sudo apt upgrade -y'
@@ -18,6 +15,9 @@ alias umntjet='fusermount -u /home/seth/kbcar_home'
 alias unreal='~/dev/UnrealEngine/Engine/Binaries/Linux/UE4Editor'
 alias scaedm='ssh smn45@ssh.et.byu.edu'
 alias nuke='pkill -SIGKILL -fe '
+alias diff='diff --color'
+alias htop_='htop'
+alias htop='htop -u seth'
 alias lsblk_='lsblk -o NAME,FSTYPE,SIZE,STATE,TYPE,MOUNTPOINT |grep -v loop'
 alias df_='df -h |grep -v loop'
 alias kill_holodeck='killall Holodeck && killall Holodeck'
@@ -64,6 +64,20 @@ power_draw() {
       $(($(cat /sys/class/power_supply/BAT0/current_now) * $(cat /sys/class/power_supply/BAT0/voltage_now))) / 1000000000000 }"
   echo " W "
 }
+
+# ranger file manager
+ranger-cd() {
+    tempfile="$(mktemp -t tmp.XXXXXX)"
+    /usr/local/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
+    test -f "$tempfile" &&
+    if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
+        cd -- "$(cat "$tempfile")"
+    fi  
+    rm -f -- "$tempfile"
+}
+
+alias ra='ranger-cd'
+bindkey -s '^O' 'ranger-cd\n'
 
 # Copying with progress/speed info
 alias rp="rsync -ah --no-owner"
