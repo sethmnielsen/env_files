@@ -45,6 +45,48 @@ class fzf_select(Command):
             else:
                 self.fm.select_file(fzf_file)
 
+ 
+class up(Command):
+    """
+    :up
+
+    scp / upload to remote
+    """
+    def execute(self):
+        if self.arg(1):
+            scpcmd = ["scp", "-r"]
+            scpcmd.extend([f.realpath for f in self.fm.thistab.get_selection()])
+            scpcmd.append(self.arg(1))
+            self.fm.execute_command(scpcmd)
+            self.fm.notify("Uploaded!")
+
+
+    def tab(self, tabnum: int):
+        import os.path
+        try:
+            import paramiko
+        except ImportError:
+            """paramiko not installed"""
+            return
+
+        try:
+            with open(os.path.expanduser("~/.ssh/config")) as file:
+                paraconf = paramiko.SSHConfig()
+                paraconf.parse(file)
+        except IOError:
+            """cant open ssh config"""
+            return
+
+        hosts = sorted(list(paraconf.get_hostnames()))
+        # remove any wildcard host settings since they're not real servers
+        hosts.remove("*")
+        query = self.arg(1) or ''
+        matching_hosts = []
+        for host in hosts:
+            if host.startswith(query):
+                matching_hosts.append(host)
+        return (self.start(1) + host + ":" for host in matching_hosts)
+
 # Any class that is a subclass of "Command" will be integrated into ranger as a
 # command.  Try typing ":my_edit<ENTER>" in ranger!
 class my_edit(Command):
