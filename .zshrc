@@ -182,7 +182,5 @@ bindkey '^I' $fzf_default_completion
 source /home/seth/.myvirtenvrc
 
 # ROS  
-source /opt/ros/melodic/setup.zsh
-
 # sourcing this will override virtualenv to be 'v3.6' (python 3.6)
 #source /home/seth/.rosrc  
