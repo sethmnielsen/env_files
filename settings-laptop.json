@@ -417,7 +417,8 @@
     "Up": true,
     "Down": true,
     "Left": true,
-    "Right": true
+    "Right": true,
+    "<C-k>": false
 },
 "vim.insertModeKeyBindingsNonRecursive": [
     {
@@ -537,7 +538,7 @@
 "workbench.colorCustomizations": {
     "editorBracketMatch.border": "#58b898"
 },
-"window.zoomLevel": 2,
+"window.zoomLevel": 1,
 "python.dataScience.runStartupCommands": 
     "%load_ext autoreload \n%autoreload 2 \n %matplotlib notebook",
 "python.dataScience.themeMatplotlibPlots": true,

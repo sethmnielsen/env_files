@@ -572,5 +572,25 @@
     {
         "key": "shift+alt+c",
         "command": "workbench.action.toggleCenteredLayout"
+    },
+    {
+        "key": "ctrl+shift+a",
+        "command": "-toggleexcludedfiles.toggle",
+        "when": "filesExplorerFocus"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "rls.restart",
+        "when": "editorLangId == 'rust'"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "editor.action.refactor",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly && editorLangId != 'rust'"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "-editor.action.refactor",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
     }
 ]
