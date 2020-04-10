@@ -548,5 +548,6 @@
 "editor.renderWhitespace": "none",
 "markdown.preview.scrollEditorWithPreview": false,
 "markdown.preview.scrollPreviewWithEditor": false,
+"files.eol": "\r\n",
 
 }
