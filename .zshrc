@@ -27,6 +27,9 @@ export DEFAULT_USER=seth  # for shortening prompt
 export MYVIMRC=/home/seth/.vimrc
 export EDITOR=vim
 export RANGER_LOAD_DEFAULT_RC="false"
+export rfh=~/dev/boat_landing_sim/src/rosflight_holodeck
+
+# PATH
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 export PATH=$PATH:/home/seth/.local/share/fonts
@@ -43,8 +46,6 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 
 #### SETTING PYTHONPATH ####
 export PYTHONPATH=/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src
-#export PYTHONPATH=$PYTHONPATH:/home/seth/software/SageMath/src/sage
-#export PYTHONPATH=$PYTHONPATH:/home/seth/software/SageMath/local/lib/python3.7/site-packages/sage
 
 #export PYTHONPATH=/home/seth/school/autonomous_systems/turtlebot_sim:$PYTHONPATH  
 #export PYTHONPATH=$PYTHONPATH:/home/seth/dev/coco_dataset/cocoapi
@@ -84,13 +85,13 @@ ZSH_THEME="seth-theme"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-#CASE_SENSITIVE="true"
-zstyle ':completion:*'  matcher-list 'm:{a-z}={A-Z}'
-autoload -U compinit && compinit
+CASE_SENSITIVE="true"
+#zstyle ':completion:*'  matcher-list 'm:{a-z}={A-Z}'
+#autoload -U compinit && compinit
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-HYPHEN_INSENSITIVE="true"
+# HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
@@ -135,7 +136,6 @@ plugins=(
   cargo
   git
   tmux-seth
-  pip
   virtualenv
 )
 
