@@ -99,6 +99,9 @@ nnoremap <leader>r :%s///g<left><left>
 " Y copies to end of line, not entire line like yy
 nnoremap Y y$
 
+" Toggle case of letter under cursor
+nnoremap U vU
+
 " Make word before Cursor Uppercase in normal mode
 nnoremap <C-y> mwlbgUl`w
 map! <C-y> <Esc>mwlbgUl`wa
