@@ -533,12 +533,11 @@
 "breadcrumbs.showPackages": false,
 "outline.showModules": false,
 "outline.showVariables": false,
-"zenMode.hideStatusBar": false,
 "zenMode.silentNotifications": false,
 "workbench.colorCustomizations": {
     "editorBracketMatch.border": "#58b898"
 },
-"window.zoomLevel": 0,
+"window.zoomLevel": 1,
 "python.dataScience.runStartupCommands": 
     "%load_ext autoreload \n%autoreload 2 \n %matplotlib notebook",
 "python.dataScience.themeMatplotlibPlots": true,
