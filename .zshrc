@@ -187,4 +187,4 @@ source /home/seth/.myvirtenvrc
 
 # ROS  
 # sourcing this will override virtualenv to be 'v3.6' (python 3.6)
-#source /home/seth/.rosrc  
+source /home/seth/.rosrc  

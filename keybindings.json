@@ -193,18 +193,8 @@
         "when": "editorTextFocus && hasWordHighlights"
     },
     {
-        "key": "f7",
-        "command": "editor.action.nextSelectionMatchFindAction",
-        "when": "editorFocus"
-    },
-    {
         "key": "ctrl+f3",
         "command": "-editor.action.nextSelectionMatchFindAction",
-        "when": "editorFocus"
-    },
-    {
-        "key": "shift+f7",
-        "command": "editor.action.previousSelectionMatchFindAction",
         "when": "editorFocus"
     },
     {
