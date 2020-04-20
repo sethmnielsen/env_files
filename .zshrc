@@ -9,8 +9,8 @@ bindkey -v
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/seth/.zshrc'
 
-autoload -Uz compinit
-compinit
+#autoload -Uz compinit
+#compinit
 # End of lines added by compinstall
 
 
@@ -46,6 +46,7 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 
 #### SETTING PYTHONPATH ####
 export PYTHONPATH=/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src
+export PYTHONPATH=/home/seth/school/nonlinear/project/python
 
 #export PYTHONPATH=/home/seth/school/autonomous_systems/turtlebot_sim:$PYTHONPATH  
 #export PYTHONPATH=$PYTHONPATH:/home/seth/dev/coco_dataset/cocoapi
@@ -67,7 +68,7 @@ export LANG=en_US.UTF-8
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/seth/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -140,6 +141,9 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+autoload -Uz compinit
+compinit
 
 # User configuration
 

@@ -36,6 +36,9 @@ upload_gdrive() { # upload file to Sync dir on Google Drive
   gdrive upload -p 0B0rj1VEWGIltcmJ1UGNIQTVfTmc $1
 }
 
+# exa
+alias x='exa'
+
 # ls aliases - in order from most to least comfortable
 alias l='ls -1'
 alias lh='l -A'
