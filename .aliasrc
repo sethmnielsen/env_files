@@ -177,6 +177,7 @@ alias serv_call='rosservice call /param_set MIXER 2 && rosservice call /calibrat
 alias cdb='code ~/dev/boat_landing_sim'
 alias cdm='code ~/dev/models/research/deeplab'
 alias cdh='code ~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck'
+alias cdq='code ~/dev/quadsim_ws/'
 
 code2pdf() { for var in "$@"; do vim "$var" -c ":hardcopy > temp.ps" -c ":q";
     ps2pdf temp.ps "${var%.*}".pdf; rm temp.ps; done; }
