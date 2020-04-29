@@ -185,6 +185,8 @@ code2pdf() { for var in "$@"; do vim "$var" -c ":hardcopy > temp.ps" -c ":q";
 # Common directories
 alias cd_rfh='cd ~/dev/boat_landing_sim/src/rosflight_holodeck'
 alias cd_boat='cd ~/dev/boat_landing_sim'
+alias cd_quad='cd ~/dev/quadsim_ws/src/quadsim'
+alias cd_quadw='cd ~/dev/quadsim_ws'
 alias cd_holodeck='cd ~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck'
 alias cd_models='cd ~/dev/models/research/deeplab'
 alias cd_holodeck_worlds='cd ~/.local/share/holodeck/0.3.0/worlds'
