@@ -27,7 +27,6 @@
     "**/*.so": true,
     "**/*.swp": true,
     "**/*.tar.gz": true,
-    "**/*.vscode": true,
     "**/*.zip": true,
     "**/*airbourne": true,
     "**/*breezy": true,
@@ -547,5 +546,6 @@
 "markdown.preview.scrollPreviewWithEditor": false,
 "files.eol": "\r\n",
 "extensions.ignoreRecommendations": true,
+"C_Cpp."
 
 }

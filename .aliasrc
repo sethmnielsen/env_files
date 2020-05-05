@@ -172,6 +172,7 @@ path_python_sys() {
 
 # ROS/Catkin
 alias ros_env='env | grep ROS'
+alias rosp='rospack profile'
 alias catkin_make_cuda='catkin_make -DOpenCV_DIR=/usr/local/share/OpenCV -DVISUAL_MTT_CUDA=ON'
 alias catkin_make_py36='catkin_make -DPYTHON_EXECUTABLE=~/.virtualenvs/v3.6/bin/python3'
 alias catkin_make_py36_debug='catkin_make_py36 -DCMAKE_BUILD_TYPE=Debug'
@@ -201,14 +202,16 @@ code2pdf() { for var in "$@"; do vim "$var" -c ":hardcopy > temp.ps" -c ":q";
     ps2pdf temp.ps "${var%.*}".pdf; rm temp.ps; done; }
 
 # Common directories
-alias cd_rfh='cd ~/dev/boat_landing_sim/src/rosflight_holodeck'
+rfh="$(rospack find rosflight_holodeck)"
+alias cd_rfh='cd $rfh && echo $(pwd)'
+alias cd_rfhb='cd ~/dev/boat_landing_sim/src/rosflight_holodeck'
 alias cd_rfhq='cd ~/dev/quadsim_ws/src/rosflight_holodeck'
 alias cd_boat='cd ~/dev/boat_landing_sim'
-alias cd_quad='cd ~/dev/quadsim_ws/src/quadsim'
-alias cd_quadw='cd ~/dev/quadsim_ws'
-alias cd_holodeck='cd ~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck'
+alias cd_quad='cd ~/dev/quadsim_ws'
+alias cd_quadsim='cd ~/dev/quadsim_ws/src/quadsim'
+alias cd_holodeck='cd $rfh/python/holodeck && echo $(pwd)'
 alias cd_models='cd ~/dev/models/research/deeplab'
-alias cd_holodeck_worlds='cd ~/.local/share/holodeck/0.3.0/worlds'
+alias cd_holodeck_worlds='cd ~/.local/share/holodeck/0.3.1/worlds'
 alias cd_holodeck_worlds-0.2.2='cd ~/.local/share/holodeck-0.2.2dev/0.2.2dev/worlds'
 
 # Print the 256 color test pattern
