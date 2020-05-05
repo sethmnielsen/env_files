@@ -9,7 +9,6 @@
 "workbench.colorTheme": "ayu-custom",
 "editor.wordWrapColumn": 90,
 "files.exclude": {
-    "**/*.jop": false,
     ".env": true,
     "**/*__pycache__": true,
     "**/*.~*": true,
@@ -19,7 +18,6 @@
     "**/*.gitignore": true,
     "**/*.gitmodules": true,
     "**/*.ipynb_checkpoints": true,
-    "**/*.m": true,
     "**/*.mypy_cache": true,
     "**/*.o": true,
     "**/*.ods": true,
@@ -162,7 +160,6 @@
     "/home/seth/.local/share/**": true,
     "/home/seth/.virtualenvs/default/lib/python3.6/site-packages/holodeck/**": true,
     "/home/seth/dev/**": true,
-    "~/school/optimization/.jop/*": true,
     "/home/seth/Downloads/**": true
 },
 "workbench.sideBar.location": "left",

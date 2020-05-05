@@ -32,12 +32,12 @@ export rfh=~/dev/boat_landing_sim/src/rosflight_holodeck
 # PATH
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-export PATH=$PATH:/home/seth/.local/share/fonts
-export PATH=$PATH:/home/seth/dev/UnrealEngine/Engine/Binaries/Linux
-export PATH=/home/seth/.npm-global/bin:$PATH
-export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
-#export PATH=/usr/local/opencv/bin:$PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/opencv/lib
+#export PATH=$PATH:/home/seth/.local/share/fonts
+#export PATH=$PATH:/home/seth/dev/UnrealEngine/Engine/Binaries/Linux
+export PATH=/home/seth/.npm-global/bin:$PATH
+#export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
+#export PATH=/usr/local/opencv/bin:$PATH
 
 export QT_QPA_PLATFORMTHEME=qt5ct
 
@@ -45,12 +45,9 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 #export HOLODECKPATH=/home/seth/.local/share/holodeck-0.2.2dev
 
 #### SETTING PYTHONPATH ####
-export PYTHONPATH=/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src
-export PYTHONPATH=/home/seth/school/nonlinear/project/python
+#export PYTHONPATH=/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src
 
-#export PYTHONPATH=/home/seth/school/autonomous_systems/turtlebot_sim:$PYTHONPATH  
-#export PYTHONPATH=$PYTHONPATH:/home/seth/dev/coco_dataset/cocoapi
-#export PYTHONPATH=$PYTHONPATH:/home/seth/dev/models/research:/home/seth/dev/models/research/slim  # tensorflow
+# Rust
 export RUST_LOG=info
 export RUSTFLAGS="$RUSTFLAGS -A unused_imports"
 export JAX_ENABLE_X64="true"

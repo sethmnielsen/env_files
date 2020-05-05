@@ -162,7 +162,7 @@ alias va='vim ~/.aliasrc'
 alias vv='vim ~/.vimrc'
 alias szsh='source ~/.zshrc'
 alias sdev='source devel/setup.zsh'
-alias sros='source /opt/ros/melodic/setup.zsh'
+alias sros='source ~/.base_rosrc'
 alias source_remarkable='unset LD_LIBRARY_PATH && source /usr/local/oecore-x86_64/environment-setup-cortexa9hf-neon-oe-linux-gnueabi'
 alias path='sed "s/:/\n/g" <<< "$PATH"'
 alias path_python='sed "s/:/\n/g" <<< "$PYTHONPATH"'
@@ -178,6 +178,13 @@ alias catkin_make_py36_debug='catkin_make_py36 -DCMAKE_BUILD_TYPE=Debug'
 alias catkin_make_py36_release='catkin_make_py36 -DCMAKE_BUILD_TYPE=Release'
 alias explode='rm -rf build devel && catkin_make_py36 && source devel/setup.zsh'
 alias nodeprocess_edit='sudo vim /opt/ros/melodic/lib/python2.7/dist-packages/roslaunch/nodeprocess.py'
+catkin_make_opencv4() {
+  catkin_make \
+	-DPYTHON_EXECUTABLE=~/.virtualenvs/v3.6/bin/python3 \
+	-DPYTHON_INCLUDE_DIR=~/.virtualenvs/v3.6/include/python3.6m \
+	-DPYTHON_LIBRARY=/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu/libpython3.6m.so \
+	-DOpenCV_DIR=/usr/local/opencv
+}
 
 # Handy code-related aliases
 alias OptView='python3 ~/dev/pyoptsparse/postprocessing/OptView.py'
@@ -195,6 +202,7 @@ code2pdf() { for var in "$@"; do vim "$var" -c ":hardcopy > temp.ps" -c ":q";
 
 # Common directories
 alias cd_rfh='cd ~/dev/boat_landing_sim/src/rosflight_holodeck'
+alias cd_rfhq='cd ~/dev/quadsim_ws/src/rosflight_holodeck'
 alias cd_boat='cd ~/dev/boat_landing_sim'
 alias cd_quad='cd ~/dev/quadsim_ws/src/quadsim'
 alias cd_quadw='cd ~/dev/quadsim_ws'
