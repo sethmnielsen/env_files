@@ -38,17 +38,28 @@ upload_gdrive() { # upload file to Sync dir on Google Drive
 
 # exa
 alias x='exa'
+alias ls='exa'
+
+# exa to replace ls -- EXPERIMENTAL
+alias l='exa -1'
+alias lh='exa -1a'
+alias lk='exa -1a --group-directories-first'
+alias lsk='exa --group-directories-first'
+alias ll='exa -l'
+alias llk='exa -l --group-directories-first'
+alias la='exa -la'
+alias lak='exa -la --group-directories-first'
 
 # ls aliases - in order from most to least comfortable
-alias l='ls -1'
-alias lh='l -A'
-alias lk='l --group-directories-first'
-alias lsk='ls --group-directories-first'
-alias ll='ls -lhgG'
-alias llk='ll --group-directories-first'
-alias lla='ls -l'
-alias la='ls -lAh'
-alias lak='ls -lAh --group-directories-first'
+#alias l='ls -1'
+#alias lh='l -A'
+#alias lk='l --group-directories-first'
+#alias lsk='ls --group-directories-first'
+#alias ll='ls -lhgG'
+#alias llk='ll --group-directories-first'
+#alias lla='ls -l'
+#alias la='ls -lAh'
+#alias lak='ls -lAh --group-directories-first'
 
 alias count_files='find . ! -name . -prune -type f -print | grep -c /'
 alias count_files_recurse='find .//. ! -name . -print -type f | grep -c /'
