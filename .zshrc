@@ -27,7 +27,6 @@ export DEFAULT_USER=seth  # for shortening prompt
 export MYVIMRC=/home/seth/.vimrc
 export EDITOR=vim
 export RANGER_LOAD_DEFAULT_RC="false"
-export rfh=~/dev/boat_landing_sim/src/rosflight_holodeck
 
 # PATH
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
@@ -35,17 +34,21 @@ export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PAT
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/opencv/lib
 #export PATH=$PATH:/home/seth/.local/share/fonts
 #export PATH=$PATH:/home/seth/dev/UnrealEngine/Engine/Binaries/Linux
-export PATH=/home/seth/.npm-global/bin:$PATH
+#export PATH=/home/seth/.npm-global/bin:$PATH
 #export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
 #export PATH=/usr/local/opencv/bin:$PATH
+export PATH=$PATH:/usr/local/opencv/bin
 
-export QT_QPA_PLATFORMTHEME=qt5ct
+############################################################################################
+#export QT_QPA_PLATFORMTHEME=qt5ct   # HEEEYYYY LOOK AT THISSSSSSS
+############################################################################################
 
 # HOLODECK 
 #export HOLODECKPATH=/home/seth/.local/share/holodeck-0.2.2dev
 
 #### SETTING PYTHONPATH ####
 #export PYTHONPATH=/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src
+export PYTHONPATH=/usr/local/opencv/lib/python3.6/site-packages:$PYTHONPATH
 
 # Rust
 export RUST_LOG=info

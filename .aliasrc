@@ -193,10 +193,10 @@ alias opencv-docs='google-chrome ~/Documents/opencv-docs-4.0.1/pages.html'
 alias rf_holodeck='roslaunch rosflight_holodeck roscopter.launch'
 alias rf_holodeck_debug='roslaunch rosflight_holodeck debug.launch'
 alias serv_call='rosservice call /param_set MIXER 2 && rosservice call /calibrate_imu'
-alias cdb='code ~/dev/boat_landing_sim'
 alias cdm='code ~/dev/models/research/deeplab'
+alias cdb='code ~/dev/boat_landing_sim'
 alias cdh='code ~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck'
-alias cdq='code ~/dev/quadsim_ws/'
+alias cdq='code ~/dev/quadsim_ws'
 
 code2pdf() { for var in "$@"; do vim "$var" -c ":hardcopy > temp.ps" -c ":q";
     ps2pdf temp.ps "${var%.*}".pdf; rm temp.ps; done; }
