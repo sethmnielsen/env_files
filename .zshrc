@@ -1,5 +1,5 @@
 # Lines configured by zsh-newuser-install
-HISTFILE=/home/seth/.histfile
+HISTFILE=~/.histfile
 HISTSIZE=8000
 SAVEHIST=8000
 setopt appendhistory autocd extendedglob nomatch
@@ -7,7 +7,7 @@ unsetopt beep notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/seth/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 #autoload -Uz compinit
 #compinit
@@ -24,7 +24,7 @@ if [[ -n "$RANGER_LEVEL" ]]; then
 fi
 
 export DEFAULT_USER=seth  # for shortening prompt
-export MYVIMRC=/home/seth/.vimrc
+export MYVIMRC=~/.vimrc
 export EDITOR=vim
 export RANGER_LOAD_DEFAULT_RC="false"
 
@@ -32,9 +32,9 @@ export RANGER_LOAD_DEFAULT_RC="false"
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/opencv/lib
-#export PATH=$PATH:/home/seth/.local/share/fonts
-#export PATH=$PATH:/home/seth/dev/UnrealEngine/Engine/Binaries/Linux
-#export PATH=/home/seth/.npm-global/bin:$PATH
+#export PATH=$PATH:~/.local/share/fonts
+#export PATH=$PATH:~/dev/UnrealEngine/Engine/Binaries/Linux
+#export PATH=~/.npm-global/bin:$PATH
 #export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
 #export PATH=/usr/local/opencv/bin:$PATH
 export PATH=$PATH:/usr/local/opencv/bin
@@ -44,11 +44,11 @@ export PATH=$PATH:/usr/local/opencv/bin
 ############################################################################################
 
 # HOLODECK 
-#export HOLODECKPATH=/home/seth/.local/share/holodeck-0.2.2dev
+#export HOLODECKPATH=~/.local/share/holodeck-0.2.2dev
 
 #### SETTING PYTHONPATH ####
-#export PYTHONPATH=/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src
-export PYTHONPATH=/usr/local/opencv/lib/python3.6/site-packages:$PYTHONPATH
+#export PYTHONPATH=~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src
+#export PYTHONPATH=/usr/local/opencv/lib/python3.6/dist-packages:$PYTHONPATH
 
 # Rust
 export RUST_LOG=info
@@ -137,7 +137,7 @@ plugins=(
   cargo
   git
   tmux-seth
-  virtualenv
+  virtualenv-seth
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -163,26 +163,26 @@ compinit
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-export SSH_KEY_PATH="/home/seth/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Other custom stuff 
 
 # virtualenv -- this needs to be done after sourcing oh-my-zsh.sh
-source /home/seth/.myvirtenvrc
+source ~/.myvirtenvrc.zsh
 
 # ROS  
 # sourcing this will override virtualenv to be 'v3.6' (python 3.6)
-source /home/seth/.rosrc  
+source ~/.rosrc  
 
 # Keybindings
 bindkey '^P' up-line-or-beginning-search 
 bindkey '^N' down-line-or-beginning-search 
 bindkey '^D' delete-char
+bindkey '^Y' menu-expand-or-complete
 
-source /home/seth/.aliasrc
+source ~/.aliasrc
 
 # fzf
-source /home/seth/.fzf.zsh
-export FZF_COMPLETION_TRIGGER=''
+export FZF_COMPLETION_TRIGGER='@@'
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 bindkey '^T' fzf-completion
-bindkey '^I' $fzf_default_completion

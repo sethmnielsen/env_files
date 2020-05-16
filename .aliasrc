@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # General
 alias py='ipython3'
 alias python36='~/.virtualenvs/v3.6/bin/python3'
@@ -94,12 +92,12 @@ alias ra='ranger-cd'
 bindkey -s '^O' 'ranger-cd\n'
 
 # Copying with progress/speed info
-alias rp='rsync -ah --no-owner'
-alias rpprog='rsync -ah --no-owner --progress'
+alias rp='rsync -ahv'
+alias rpprog='rsync -ahv --progress'
 
-alias sudo_rp='sudo rsync -ah --no-owner'
-alias sudo_rpprog='sudo rsync -ah --no-owner --progress'
-alias rsync_ssh='rsync -ahzP "$@"'
+alias sudo_rp='sudo rsync -ahv --no-owner'
+alias sudo_rpprog='sudo rsync -ahv --no-owner --progress'
+alias rsync_ssh='rsync -ahzPv "$@"'
 #rsync_ssh() {
   #if [[ $1 == "--delete" || $1 == "-d" ]]; then
     #dir=$2
@@ -208,7 +206,7 @@ alias cd_rfhb='cd ~/dev/boat_landing_sim/src/rosflight_holodeck'
 alias cd_rfhq='cd ~/dev/quadsim_ws/src/rosflight_holodeck'
 alias cd_boat='cd ~/dev/boat_landing_sim'
 alias cd_quad='cd ~/dev/quadsim_ws'
-alias cd_quadsim='cd ~/dev/quadsim_ws/src/quadsim'
+alias cd_q='cd ~/dev/quadsim_ws/src/quadsim'
 alias cd_holodeck='cd $rfh/python/holodeck && echo $(pwd)'
 alias cd_models='cd ~/dev/models/research/deeplab'
 alias cd_holodeck_worlds='cd ~/.local/share/holodeck/0.3.1/worlds'

@@ -46,15 +46,17 @@ call vundle#end()            " required
 set completeopt-=preview
 
 " Colorscheme
-"colorscheme luna-term
+colorscheme luna-term
 "colorscheme mango
 "colorscheme nord
+"
 "let g:gruvbox_contrast_dark="hard"
 "colorscheme gruvbox
 
-let g:seoul256_background = 233
-let g:seoul256_srgb = 1
-colorscheme seoul256
+"let g:seoul256_background = 233
+"let g:seoul256_srgb = 1
+"colorscheme seoul256
+"
 set background=dark
 
 "set lazyredraw
@@ -207,6 +209,6 @@ autocmd FileType c,cpp setlocal comments-=:// comments+=f://
 autocmd FileType make set noexpandtab softtabstop=0
 "Sets syntax highlighting for files or filetypes
 autocmd BufRead,BufNewFile .launch set filetype=xml
-autocmd BufRead,BufNewFile .rosrc,.aliasrc,.myvirtenvrc set filetype=sh
+autocmd BufRead,BufNewFile .rosrc,.aliasrc set filetype=zsh
 autocmd BufRead,BufNewFile zathurarc set filetype=sh
 autocmd BufRead,BufNewFile .conf set filetype=dosini

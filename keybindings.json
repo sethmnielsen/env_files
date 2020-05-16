@@ -335,7 +335,7 @@
     },
     {
         "key": "ctrl+h",
-        "command": "cursorLineEnd",
+        "command": "cursorLineStart",
         "when": "editorTextFocus && vim.active && vim.mode == 'Insert' && !inDebugRepl"
     },
     {

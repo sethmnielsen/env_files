@@ -73,9 +73,10 @@
     // "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src",
     // "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python",
     // "/home/seth/dev/boat_landing_sim/src/rf_joy/src/rosflight_joy",
-    // "/opt/ros/melodic/lib/python2.7/dist-packages"
+    "/home/seth/dev/quadsim_ws/devel/lib/python3/dist-packages",
     "/home/seth/dev/quadsim_ws/src/rosflight_holodeck/python",
     "/home/seth/dev/quadsim_ws/src/quadsim/scripts",
+    "/opt/ros/melodic/lib/python2.7/dist-packages"
 ],
 "C_Cpp.default.intelliSenseMode": "msvc-x64",
 "editor.rulers": [90],
@@ -515,7 +516,6 @@
     "macros.positionPanelRight",
     "macros.positionPanelBottom"
 ],
-"editor.trimAutoWhitespace": false,
 "breadcrumbs.showModules": false,
 "[markdown]": {
     "editor.wordWrap": "bounded",
