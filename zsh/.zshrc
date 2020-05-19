@@ -168,7 +168,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 # Other custom stuff 
 
 # virtualenv -- this needs to be done after sourcing oh-my-zsh.sh
-source ~/.myvirtenvrc.zsh
+source ~/env/zsh/.myvirtenvrc.zsh
 
 # ROS  
 # sourcing this will override virtualenv to be 'v3.6' (python 3.6)
@@ -180,9 +180,12 @@ bindkey '^N' down-line-or-beginning-search
 bindkey '^D' delete-char
 bindkey '^Y' menu-expand-or-complete
 
-source ~/.aliasrc
+source ~/env/zsh/.aliasrc
 
 # fzf
-export FZF_COMPLETION_TRIGGER='@@'
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-bindkey '^T' fzf-completion
+[ -f ~/env/fzf.zsh ] && source ~/env/fzf.zsh
+
+# pip
+eval "`pip completion --zsh`"
+compctl -K _pip_completion pip3
+

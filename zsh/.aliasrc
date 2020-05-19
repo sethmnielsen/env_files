@@ -156,7 +156,7 @@ cdll() {cd "$@" && ll}
 
 # zsh / sourcing / environment
 alias vz='vim ~/.zshrc'
-alias va='vim ~/.aliasrc'
+alias va='vim ~/env/zsh/.aliasrc'
 alias vv='vim ~/.vimrc'
 alias szsh='source ~/.zshrc'
 alias sdev='source devel/setup.zsh'

@@ -46,8 +46,8 @@ call vundle#end()            " required
 set completeopt-=preview
 
 " Colorscheme
-colorscheme luna-term
-"colorscheme mango
+"colorscheme luna-term
+colorscheme mango
 "colorscheme nord
 "
 "let g:gruvbox_contrast_dark="hard"
@@ -56,7 +56,7 @@ colorscheme luna-term
 "let g:seoul256_background = 233
 "let g:seoul256_srgb = 1
 "colorscheme seoul256
-"
+
 set background=dark
 
 "set lazyredraw
