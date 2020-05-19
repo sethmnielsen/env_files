@@ -361,45 +361,5 @@ gstats() {
   echo ""
   cd $A
 }
-boat_pull() {
-  A=$(pwd)
-  echo "\n--rosflight_holodeck--"
-  cd ~/dev/boat_landing_sim/src/rosflight_holodeck
-  git pull
-  echo "\n--rosflight--"
-  cd ../ROSFLIGHT_fork
-  git pull
-  echo "\n--rosflight_joy--"
-  cd ../rf_joy
-  git pull
-  echo "\n--roscopter--"
-  cd ../roscopter
-  git pull
-  echo "\n--boat_landing_sim--"
-  cd ../..
-  git pull
-  cd $A
-  echo "\nboat_landing_sim repo has been updated on this machine.\n"
-}
-bstats() {
-  A=$(pwd)
-  echo "\n--rosflight_holodeck--"
-  cd ~/dev/boat_landing_sim/src/rosflight_holodeck
-  git status -s
-  echo "\n--rosflight--"
-  cd ~/dev/boat_landing_sim/src/ROSFLIGHT_fork
-  git status -s
-  echo "    --firmware--"
-  cd ~/dev/boat_landing_sim/src/ROSFLIGHT_fork/rosflight_firmware/firmware
-  git status -s
-  echo "\n--rosflight_joy--"
-  cd ~/dev/boat_landing_sim/src/rf_joy
-  git status -s
-  echo "\n--roscopter--"
-  cd ~/dev/boat_landing_sim/src/roscopter
-  git status -s
-  cd $A
-  echo "\n"
-}
 
 source ~/.other
