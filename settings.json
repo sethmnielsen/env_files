@@ -226,7 +226,6 @@
 "window.enableMenuBarMnemonics": false,
 "matlab.lintOnSave": false,
 "editor.snippetSuggestions": "bottom",
-"rust-client.enableMultiProjectSetup": true,
 "rust.show_warnings": false,
 "extensions.autoUpdate": true,
 "editor.links": false,
@@ -549,4 +548,10 @@
 "markdown.preview.scrollPreviewWithEditor": false,
 "extensions.ignoreRecommendations": true,
 "git.autofetch": true,
+"code-eol.highlightExtraWhitespace": true,
+"code-eol.highlightNonDefault": true,
+"editor.glyphMargin": false,
+"diffEditor.ignoreTrimWhitespace": false,
+"files.eol": "\n",
+"files.trimTrailingWhitespace": true,
 }

@@ -549,5 +549,7 @@
 "terminal.integrated.shell.linux": "/usr/bin/zsh",
 "markdown.preview.scrollPreviewWithEditor": false,
 "markdown.preview.scrollEditorWithPreview": false,
-
+"files.trimTrailingWhitespace": true
+"diffEditor.ignoreTrimWhitespace": false,
+"files.eol": "\n",
 }

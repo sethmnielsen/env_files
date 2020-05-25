@@ -211,6 +211,7 @@ alias cd_holodeck='cd $rfh/python/holodeck && echo $(pwd)'
 alias cd_models='cd ~/dev/models/research/deeplab'
 alias cd_holodeck_worlds='cd ~/.local/share/holodeck/0.3.1/worlds'
 alias cd_holodeck_worlds-0.2.2='cd ~/.local/share/holodeck-0.2.2dev/0.2.2dev/worlds'
+alias cd_exer='cd ~/snap/exercism/5/exercism/rust'
 
 # Print the 256 color test pattern
 print256colors() {
