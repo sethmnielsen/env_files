@@ -59,7 +59,7 @@
 "python.pythonPath": "/home/seth/.virtualenvs/v3.8/bin/python3",
 "python.venvPath": "/home/seth/.virtualenvs",
 "python.terminal.activateEnvironment": false,
-"workbench.activityBar.visible": false,
+"workbench.activityBar.visible": true,
 "workbench.iconTheme": "ayu",
 "zenMode.hideLineNumbers": false,
 "editor.cursorSmoothCaretAnimation": true,
@@ -79,7 +79,7 @@
     "/opt/ros/melodic/lib/python2.7/dist-packages"
 ],
 "C_Cpp.default.intelliSenseMode": "msvc-x64",
-"editor.rulers": [90],
+"editor.rulers": [80],
 "macros.list": {
     "closePanelSidebar": [
         "workbench.action.toggleSidebarVisibility",
@@ -442,7 +442,7 @@
     {
         "before": ["o"],
         "commands": ["editor.action.insertLineAfter","extension.vim_insert"]
-        
+
     },
     {
         "before": ["O"],
@@ -535,7 +535,7 @@
 "window.zoomLevel": 0,
 "gitlens.sortBranchesBy": "date:desc",
 "editor.parameterHints.enabled": false,
-"python.dataScience.runStartupCommands": 
+"python.dataScience.runStartupCommands":
     "%load_ext autoreload \n%autoreload 2 \n %matplotlib notebook",
 "python.dataScience.themeMatplotlibPlots": true,
 "python.dataScience.useDefaultConfigForJupyter": false,
@@ -550,8 +550,8 @@
 "git.autofetch": true,
 "code-eol.highlightExtraWhitespace": true,
 "code-eol.highlightNonDefault": true,
-"editor.glyphMargin": false,
 "diffEditor.ignoreTrimWhitespace": false,
 "files.eol": "\n",
+"editor.trimAutoWhitespace": false,
 "files.trimTrailingWhitespace": true,
 }
