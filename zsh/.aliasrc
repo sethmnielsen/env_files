@@ -79,7 +79,7 @@ ranger-cd() {
     test -f "$tempfile" &&
     if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
         cd -- "$(cat "$tempfile")"
-    fi  
+    fi
     rm -f -- "$tempfile"
 }
 
@@ -100,7 +100,7 @@ alias rsync_ssh='rsync -ahzPv "$@"'
   #elif [[ -d $1 ]]; then
     #dir=$1
     #ops=""
-  #else 
+  #else
     #echo "oops, that didn't work"
     #return 1
   #fi
@@ -109,7 +109,7 @@ alias rsync_ssh='rsync -ahzPv "$@"'
   #rsync_ssh "$@"
 
   #if [[ $(uname -n) == "seth-xps-13" ]]; then
-    #rsync -ahzP $ops  "$(readlink -f $dir)/" desktop:$(readlink -f $dir) 
+    #rsync -ahzP $ops  "$(readlink -f $dir)/" desktop:$(readlink -f $dir)
   #elif [[ $(uname -n) == "seth-tower-3620" ]]; then
     #rsync -ahzP $ops "$(readlink -f $dir)/" xps-edu:$(readlink -f $dir) 
   #fi
@@ -180,33 +180,31 @@ catkin_make_opencv4() {
 	-DOpenCV_DIR=/usr/local/opencv
 }
 
-# Handy code-related aliases
-alias OptView='python3 ~/dev/pyoptsparse/postprocessing/OptView.py'
-alias opencv-docs='google-chrome ~/Documents/opencv-docs-4.0.1/pages.html'
-alias rf_holodeck='roslaunch rosflight_holodeck roscopter.launch'
-alias rf_holodeck_debug='roslaunch rosflight_holodeck debug.launch'
-alias serv_call='rosservice call /param_set MIXER 2 && rosservice call /calibrate_imu'
-alias cdm='code ~/dev/models/research/deeplab'
-alias cdb='code ~/dev/boat_landing_sim'
-alias cdh='code ~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck'
-alias cdq='code ~/dev/quadsim_ws'
-
-code2pdf() { for var in "$@"; do vim "$var" -c ":hardcopy > temp.ps" -c ":q";
-    ps2pdf temp.ps "${var%.*}".pdf; rm temp.ps; done; }
-
 # Common directories
-rfh="$(rospack find rosflight_holodeck)"
-alias cd_rfh='cd $rfh && echo $(pwd)'
+rfh="$(rospack find rosflight_holodeck)" > /dev/null 2>&1
 alias cd_rfhb='cd ~/dev/boat_landing_sim/src/rosflight_holodeck'
 alias cd_rfhq='cd ~/dev/quadsim_ws/src/rosflight_holodeck'
 alias cd_boat='cd ~/dev/boat_landing_sim'
 alias cd_quad='cd ~/dev/quadsim_ws'
 alias cd_q='cd ~/dev/quadsim_ws/src/quadsim'
-alias cd_holodeck='cd $rfh/python/holodeck && echo $(pwd)'
 alias cd_models='cd ~/dev/models/research/deeplab'
 alias cd_holodeck_worlds='cd ~/.local/share/holodeck/0.3.1/worlds'
 alias cd_holodeck_worlds-0.2.2='cd ~/.local/share/holodeck-0.2.2dev/0.2.2dev/worlds'
 alias cd_exer='cd ~/snap/exercism/5/exercism/rust'
+
+if [[ -n "$rfh" ]]; then
+  alias cd_holodeck='cd $rfh/python/holodeck && echo $(pwd)'
+  alias cd_rfh='cd $rfh && echo $(pwd)'
+  alias cdh='code $rfh/python/holodeck'
+fi
+
+# Handy code-related aliases
+alias OptView='python3 ~/dev/pyoptsparse/postprocessing/OptView.py'
+alias serv_call='rosservice call /param_set MIXER 2 && rosservice call /calibrate_imu'
+alias cdm='code ~/dev/models/research/deeplab'
+alias cdb='code ~/dev/boat_landing_sim'
+alias cdq='code ~/dev/quadsim_ws'
+alias cde='code ~/snap/exercism/5/exercism/rust'
 
 # Print the 256 color test pattern
 print256colors() {
@@ -215,7 +213,7 @@ print256colors() {
     if (( i == 15 )) || (( i > 15 )) && (( (i-15) % 6 == 0 )); then
         printf "\n";
     fi
-  done  
+  done
 }
 
 # FFMPEG converting MP4 or MOV to MOV for Resolve video editor
