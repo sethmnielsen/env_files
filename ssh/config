@@ -1,0 +1,26 @@
+Host caedm 
+  Hostname ssh.et.byu.edu
+  User smn45
+  IdentityFile ~/.ssh/id_rsa
+
+Host desktop
+  Hostname tmplab-32-114-121
+  IdentityFile ~/.ssh/id_rsa
+  ProxyJump caedm
+  User seth
+
+Host desktop-home
+  Hostname 192.168.1.141
+  User seth
+
+Host remarkable-home
+  Hostname 192.168.1.226
+  User root
+
+Host remarkable-usb
+  Hostname 10.11.99.1
+  User root 
+
+Host remarkable-magicc
+  Hostname 192.168.1.128
+  User root
