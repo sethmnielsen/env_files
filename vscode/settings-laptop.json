@@ -29,7 +29,6 @@
     "**/*.so": true,
     "**/*.swp": true,
     "**/*.tar.gz": true,
-    "**/*.vscode": true,
     "**/*.zip": true,
     "**/*airbourne": true,
     "**/*breezy": true,
@@ -229,7 +228,6 @@
 "window.enableMenuBarMnemonics": false,
 "matlab.lintOnSave": false,
 "editor.snippetSuggestions": "bottom",
-"rust-client.enableMultiProjectSetup": true,
 "rust.show_warnings": false,
 "extensions.autoUpdate": true,
 "editor.links": false,
@@ -446,7 +444,7 @@
     {
         "before": ["o"],
         "commands": ["editor.action.insertLineAfter","extension.vim_insert"]
-        
+
     },
     {
         "before": ["O"],
@@ -537,8 +535,8 @@
 "workbench.colorCustomizations": {
     "editorBracketMatch.border": "#58b898"
 },
-"window.zoomLevel": 1,
-"python.dataScience.runStartupCommands": 
+"window.zoomLevel": 2,
+"python.dataScience.runStartupCommands":
     "%load_ext autoreload \n%autoreload 2 \n %matplotlib notebook",
 "python.dataScience.themeMatplotlibPlots": true,
 "python.dataScience.useDefaultConfigForJupyter": false,
@@ -549,7 +547,7 @@
 "terminal.integrated.shell.linux": "/usr/bin/zsh",
 "markdown.preview.scrollPreviewWithEditor": false,
 "markdown.preview.scrollEditorWithPreview": false,
-"files.trimTrailingWhitespace": true
+"files.trimTrailingWhitespace": true,
 "diffEditor.ignoreTrimWhitespace": false,
 "files.eol": "\n",
 }
