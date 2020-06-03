@@ -59,7 +59,7 @@
 "python.pythonPath": "/home/seth/.virtualenvs/v3.8/bin/python3",
 "python.venvPath": "/home/seth/.virtualenvs",
 "python.terminal.activateEnvironment": false,
-"workbench.activityBar.visible": true,
+"workbench.activityBar.visible": false,
 "workbench.iconTheme": "ayu",
 "zenMode.hideLineNumbers": false,
 "editor.cursorSmoothCaretAnimation": true,

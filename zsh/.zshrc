@@ -19,7 +19,7 @@ zstyle :compinstall filename '~/.zshrc'
 ##### Added by me #####
 
 # ranger prompt
-if [[ -n "$RANGER_LEVEL" ]]; then 
+if [[ -n "$RANGER_LEVEL" ]]; then
   export PS1="[ranger]":$PS1
 fi
 
@@ -43,7 +43,7 @@ export PATH=$PATH:/usr/local/opencv/bin
 #export QT_QPA_PLATFORMTHEME=qt5ct   # HEEEYYYY LOOK AT THISSSSSSS
 ############################################################################################
 
-# HOLODECK 
+# HOLODECK
 #export HOLODECKPATH=~/.local/share/holodeck-0.2.2dev
 
 #### SETTING PYTHONPATH ####
@@ -76,7 +76,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="pygmalion-virtualenv"
-ZSH_THEME="seth-theme"
+ZSH_THEME="seth-pygmalion"
 #ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random
@@ -136,7 +136,7 @@ HIST_STAMPS="dd.mm.yyyy"
 plugins=(
   cargo
   git
-  tmux-seth
+  #tmux-seth
   virtualenv-seth
 )
 
@@ -165,25 +165,25 @@ compinit
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Other custom stuff 
-
-# virtualenv -- this needs to be done after sourcing oh-my-zsh.sh
-source ~/env/zsh/.myvirtenvrc.zsh
-
-# ROS  
-# sourcing this will override virtualenv to be 'v3.6' (python 3.6)
-source ~/.rosrc  
+# Other custom stuff
 
 # Keybindings
-bindkey '^P' up-line-or-beginning-search 
-bindkey '^N' down-line-or-beginning-search 
+bindkey '^P' up-line-or-beginning-search
+bindkey '^N' down-line-or-beginning-search
 bindkey '^D' delete-char
 bindkey '^Y' menu-expand-or-complete
+
+# ROS
+# sourcing this will override virtualenv to be 'v3.6' (python 3.6)
+source ~/.rosrc
 
 source ~/env/zsh/.aliasrc
 
 # fzf
 [ -f ~/env/fzf.zsh ] && source ~/env/fzf.zsh
+
+# virtualenv -- this needs to be done after sourcing oh-my-zsh.sh
+source ~/env/zsh/.myvirtenvrc.zsh
 
 # pip
 eval "`pip completion --zsh`"

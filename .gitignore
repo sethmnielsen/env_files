@@ -4,3 +4,5 @@
 ranger/history
 ranger/bookmarks
 *.pyo
+
+.vscode/

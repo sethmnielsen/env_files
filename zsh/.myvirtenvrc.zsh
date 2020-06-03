@@ -3,7 +3,7 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source $HOME/.local/bin/virtualenvwrapper.sh
 
 
-stheme="source $HOME/.oh-my-zsh/custom/themes/seth-theme.zsh-theme"
+stheme="source $HOME/.oh-my-zsh/custom/themes/$ZSH_THEME.zsh-theme"
 
 # note: '-n string' evaluates to true if length of 'string' is non-zero
 workon() {
@@ -25,6 +25,8 @@ workoff() {
 
 alias deactiv='workoff'
 
+source $HOME/.virtualenvs/v3.6/bin/activate
+# Activate v3.8 virtual env, unless already set to v3.6
 if [[ $(basename "$VIRTUAL_ENV") != "v3.6"  ]]; then
   source $HOME/.virtualenvs/v3.8/bin/activate
 fi
