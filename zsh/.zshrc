@@ -136,7 +136,7 @@ HIST_STAMPS="dd.mm.yyyy"
 plugins=(
   cargo
   git
-  #tmux-seth
+  tmux-seth
   virtualenv-seth
 )
 

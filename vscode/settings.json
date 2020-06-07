@@ -79,7 +79,7 @@
     "/opt/ros/melodic/lib/python2.7/dist-packages"
 ],
 "C_Cpp.default.intelliSenseMode": "msvc-x64",
-"editor.rulers": [80],
+"editor.rulers": [79],
 "macros.list": {
     "closePanelSidebar": [
         "workbench.action.toggleSidebarVisibility",
@@ -552,6 +552,4 @@
 "code-eol.highlightNonDefault": true,
 "diffEditor.ignoreTrimWhitespace": false,
 "files.eol": "\n",
-"editor.trimAutoWhitespace": false,
-"files.trimTrailingWhitespace": true,
 }
