@@ -82,14 +82,15 @@ alias lak='exa -la --group-directories-first'
 alias count_files='find . ! -name . -prune -type f -print | grep -c /'
 alias count_files_recurse='find .//. ! -name . -print -type f | grep -c /'
 
-<<<<<<< Updated upstream
 # bat
 alias man='batman'
 alias bgrep='batgrep'
 alias brg='batgrep'
 
+# ripgrep
 alias rgf='rg --no-ignore-vcs --hidden --files | rg'
 alias rgf_sudo='sudo rg --no-ignore-vcs --hidden --files | rg'
+
 sizes() {
   sudo find . -mindepth 1 -maxdepth 1 -print0 | xargs -0 du -hsc | sort -hr
 }
