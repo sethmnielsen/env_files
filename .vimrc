@@ -6,6 +6,8 @@ set number
 
 set tags=tags
 
+" ----------------------------- PLUGINS --------------------------------
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -43,27 +45,55 @@ Plugin 'junegunn/seoul256.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-set completeopt-=preview
+
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+
+augroup VimAfter
+    autocmd!
+      autocmd VimEnter let g:CtrlXA_Toggles = [
+      \ ['sweet', 'bitter'],
+      \ ] + g:CtrlXA_Toggles
+        augroup END
+
+" ------------------------- COLORS 'N STUFF ----------------------------
 
 " Colorscheme
 "colorscheme luna-term
-colorscheme mango
+"colorscheme mango
 "colorscheme nord
 "
 "let g:gruvbox_contrast_dark="hard"
 "colorscheme gruvbox
 
-"let g:seoul256_background = 233
-"let g:seoul256_srgb = 1
-"colorscheme seoul256
+let g:seoul256_background = 233
+let g:seoul256_srgb = 1
+colorscheme seoul256
 
 set background=dark
 
 "set lazyredraw
 set nostartofline
 set whichwrap=b,s,h,l 
-set clipboard=unnamedplus,autoselectplus
 set shortmess-=S
+set completeopt-=preview
+
+let g:airline_powerline_fonts = 1
+
+" Filetype specific settings
+augroup cpp
+  autocmd!
+  set tabstop=2
+  set shiftwidth=2
+augroup END
+
+autocmd FileType c,cpp setlocal comments-=:// comments+=f://
+autocmd FileType make set noexpandtab softtabstop=0
+
+"Sets syntax highlighting for files or filetypes
+autocmd BufRead,BufNewFile .launch set filetype=xml
+autocmd BufRead,BufNewFile .rosrc,.aliasrc set filetype=zsh
+autocmd BufRead,BufNewFile zathurarc set filetype=sh
+autocmd BufRead,BufNewFile .conf set filetype=dosini
 
 filetype plugin indent on    " required
 filetype plugin on
@@ -73,12 +103,24 @@ set shiftwidth=4
 set expandtab
 set t_Co=256
 
-augroup VimAfter
-    autocmd!
-      autocmd VimEnter let g:CtrlXA_Toggles = [
-      \ ['sweet', 'bitter'],
-      \ ] + g:CtrlXA_Toggles
-        augroup END
+" ----------------------------- CLIPBOARD --------------------------------
+
+set clipboard=unnamedplus,autoselectplus
+
+"Use xclip for clipboard
+let g:clipboard = {
+  \   'name': 'xclip-xfce4-clipman',
+  \   'copy': {
+  \      '+': 'xclip -selection clipboard',
+  \      '*': 'xclip -selection clipboard',
+  \    },
+  \   'paste': {
+  \      '+': 'xclip -selection clipboard -o',
+  \      '*': 'xclip -selection clipboard -o',
+  \   },
+  \   'cache_enabled': 1,
+  \ }
+
 
 " ---------------------------- KEY MAPPINGS ------------------------------
 
@@ -188,27 +230,3 @@ nmap <leader>ga <Plug>GitGutterStageHunk
 nmap <leader>gd <Plug>GitGutterPreviewHunk
 nmap <leader>gj <Plug>GitGutterNextHunk
 nmap <leader>gk <Plug>GitGutterPrevHunk
-
-" This is for airline and powerline
-" Note: If symbols don't appear install them with
-" `sudo apt install fonts-powerline` Ubuntu
-" or from https://github.com/powerline/fonts for macOS
-" Note: there is a fix for iTerm2 mentioned in their README
-let g:airline_powerline_fonts = 1
-
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-
-" Filetype specific settings
-augroup cpp
-  autocmd!
-  set tabstop=2
-  set shiftwidth=2
-augroup END
-
-autocmd FileType c,cpp setlocal comments-=:// comments+=f://
-autocmd FileType make set noexpandtab softtabstop=0
-"Sets syntax highlighting for files or filetypes
-autocmd BufRead,BufNewFile .launch set filetype=xml
-autocmd BufRead,BufNewFile .rosrc,.aliasrc set filetype=zsh
-autocmd BufRead,BufNewFile zathurarc set filetype=sh
-autocmd BufRead,BufNewFile .conf set filetype=dosini

@@ -184,10 +184,11 @@ source ~/env/zsh/.aliasrc
 # fzf
 [ -f ~/env/fzf.zsh ] && source ~/env/fzf.zsh
 
-# virtualenv -- this needs to be done after sourcing oh-my-zsh.sh
-source ~/env/zsh/.myvirtenvrc.zsh
+if [[ "$(hostname)" != "zepharch" ]]; then
+    # virtualenv -- this needs to be done after sourcing oh-my-zsh.sh
+    source ~/env/zsh/.myvirtenvrc.zsh
 
-# pip
-eval "`pip completion --zsh`"
-compctl -K _pip_completion pip3
-
+    # pip
+    eval "`pip completion --zsh`"
+    compctl -K _pip_completion pip3
+fi

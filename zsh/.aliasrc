@@ -2,6 +2,10 @@
 alias py='ipython3'
 alias python36='~/.virtualenvs/v3.6/bin/python3'
 alias python36_sudo='sudo ~/.virtualenvs/v3.6/bin/python3'
+alias pcs='sudo pacman -S'
+alias sctl='systemctl'
+alias ssctl='sudo systemctl'
+alias refind_edit='sudo vim /boot/EFI/refind/refind.conf'
 alias rust_evcxr='evcxr'
 alias unzip='unzip -q'
 #alias open='open_command'
@@ -15,8 +19,10 @@ alias scaedm='ssh smn45@ssh.et.byu.edu'
 alias nuke='pkill -SIGKILL -fe '
 alias htop_='htop'
 alias htop='htop -u seth'
-alias lsblk_='lsblk -o NAME,FSTYPE,SIZE,STATE,TYPE,MOUNTPOINT |grep -v loop'
-alias df_='df -h |grep -v loop'
+alias lsblk_='/usr/bin/lsblk'
+alias lsblk='lsblk -o NAME,FSTYPE,SIZE,STATE,TYPE,MOUNTPOINT |grep -v loop'
+alias df_='/usr/bin/df'
+alias df='df -h -x tmpfs -x devtmpfs |grep -v loop'
 alias kill_holodeck='killall Holodeck && killall Holodeck'
 alias msger='fb-messenger-cli'
 alias watch_='watch -n 0.2 '
@@ -25,6 +31,21 @@ alias ssh_desktop='ssh desktop'
 alias remarkable='reMarkable'
 alias blender='~/.local/share/blender/blender'
 alias bim='vim'
+
+mount_ubuntu() {
+    sudo mkdir -p /mnt/ubuntu
+    sudo mount /dev/nvme0n1p6 /mnt/ubuntu
+    echo "Mounted ubuntu partition (nvme0n1p6) to /mnt/ubuntu"
+    echo ""
+}
+umount_ubuntu() {
+    sudo umount /mnt/ubuntu
+    sudo rm -rf /mnt/ubuntu
+    echo "Unmounted ubuntu parition"
+    echo "Deleted '/mnt/ubuntu' mount point"
+    echo ""
+}
+
 alias chmod_rm_green_highlight='chmod -R a-x,o-w,+X'
 zath() {
   tabbed -cd zathura $1 -e
@@ -61,19 +82,20 @@ alias lak='exa -la --group-directories-first'
 alias count_files='find . ! -name . -prune -type f -print | grep -c /'
 alias count_files_recurse='find .//. ! -name . -print -type f | grep -c /'
 
+<<<<<<< Updated upstream
 # bat
 alias man='batman'
 alias bgrep='batgrep'
 alias brg='batgrep'
 
 alias rgf='rg --no-ignore-vcs --hidden --files | rg'
-
+alias rgf_sudo='sudo rg --no-ignore-vcs --hidden --files | rg'
 sizes() {
   sudo find . -mindepth 1 -maxdepth 1 -print0 | xargs -0 du -hsc | sort -hr
 }
 power_draw() {
   echo - | awk "{printf \"%.1f\", \
-      $(($(cat /sys/class/power_supply/BAT0/current_now) * $(cat /sys/class/power_supply/BAT0/voltage_now))) / 1000000000000 }"
+      $(cat /sys/class/power_supply/BAT0/power_now) / 1000000 }"
   echo " W "
 }
 
@@ -116,16 +138,16 @@ alias rsync_ssh='rsync -ahzPv "$@"'
   #if [[ $(uname -n) == "seth-xps-13" ]]; then
     #rsync -ahzP $ops  "$(readlink -f $dir)/" desktop:$(readlink -f $dir)
   #elif [[ $(uname -n) == "seth-tower-3620" ]]; then
-    #rsync -ahzP $ops "$(readlink -f $dir)/" xps-edu:$(readlink -f $dir) 
+    #rsync -ahzP $ops "$(readlink -f $dir)/" xps-edu:$(readlink -f $dir)
   #fi
 #}
 #rsync_from_remote() {
   #rsync_ssh "$@"
 
   #if [[ $(uname -n) == "seth-xps-13" ]]; then
-    #rsync -ahzP $ops  desktop:$(readlink -f $dir) "$(readlink -f $dir)/" 
+    #rsync -ahzP $ops  desktop:$(readlink -f $dir) "$(readlink -f $dir)/"
   #elif [[ $(uname -n) == "seth-tower-3620" ]]; then
-    #rsync -ahzP $ops  xps-edu:$(readlink -f $dir) "$(readlink -f $dir)/" 
+    #rsync -ahzP $ops  xps-edu:$(readlink -f $dir) "$(readlink -f $dir)/"
   #fi
 #}
 
@@ -154,11 +176,17 @@ cdll() {cd "$@" && ll}
 
 #alias cd='cdls'
 
-# zsh / sourcing / environment
+# edit common files with vim
 alias vz='vim ~/.zshrc'
 alias va='vim ~/env/zsh/.aliasrc'
 alias vv='vim ~/.vimrc'
 alias vala='vim ~/.config/alacritty/alacritty.yml'
+alias vi3='vim ~/.config/i3/config'
+alias vi3status='vim ~/.config/i3status/config'
+alias vi3blocks='vim ~/.config/i3blocks/config'
+alias vthp='sudo vim /sys/devices/platform/asus-nb-wmi/throttle_thermal_policy'
+
+# zsh / sourcing / environment
 alias szsh='source ~/.zshrc'
 alias sdev='source devel/setup.zsh'
 alias sros='source ~/.base_rosrc'
@@ -173,6 +201,7 @@ path_python_sys() {
 alias ros_env='env | grep ROS'
 alias rosp='rospack profile'
 alias catkin_make_cuda='catkin_make -DOpenCV_DIR=/usr/local/share/OpenCV -DVISUAL_MTT_CUDA=ON'
+alias catkin_make_debug='catkin_make -DCMAKE_BUILD_TYPE=Debug'
 alias catkin_make_py36='catkin_make -DPYTHON_EXECUTABLE=~/.virtualenvs/v3.6/bin/python3'
 alias catkin_make_py36_debug='catkin_make_py36 -DCMAKE_BUILD_TYPE=Debug'
 alias catkin_make_py36_release='catkin_make_py36 -DCMAKE_BUILD_TYPE=Release'
@@ -196,7 +225,6 @@ alias cd_quadws='cd ~/dev/quadsim_ws'
 alias cd_q='cd ~/dev/quadsim_ws/src/quadsim'
 alias cd_models='cd ~/dev/models/research/deeplab'
 alias cd_holodeck_worlds='cd ~/.local/share/holodeck/0.3.1/worlds'
-alias cd_holodeck_worlds-0.2.2='cd ~/.local/share/holodeck-0.2.2dev/0.2.2dev/worlds'
 alias cd_exer='cd ~/snap/exercism/5/exercism/rust'
 
 if [[ -n "$rfh" ]]; then
@@ -288,6 +316,7 @@ ffmpeg_mov_to_mp4_resolve() {
 
 # git
 alias gs='git status'
+alias gsu='git status -uno'
 alias gch='git checkout'
 alias gcm='git commit -m'
 alias subup='git submodule update --init --recursive'
