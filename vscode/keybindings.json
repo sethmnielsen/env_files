@@ -581,5 +581,25 @@
         "key": "ctrl+shift+r",
         "command": "-editor.action.refactor",
         "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+left",
+        "command": "-workbench.action.terminal.resizePaneLeft",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+left",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "-workbench.action.terminal.resizePaneRight",
+        "when": "terminalFocus"
     }
 ]

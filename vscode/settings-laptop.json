@@ -3,8 +3,8 @@
 "files.autoSave": "afterDelay",
 "editor.fontFamily": "'Iosevka', 'monospace'",
 "editor.fontLigatures": false,
-"editor.fontSize": 12,
-"terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
+"editor.fontSize": 14,
+"terminal.integrated.fontFamily": "'FantasqueSansMono Nerd Font Mono', 'DejaVuSansMono Nerd Font Mono'",
 "terminal.integrated.fontSize": 13,
 "workbench.colorTheme": "ayu-custom",
 "editor.wordWrapColumn": 90,
@@ -169,8 +169,6 @@
 "workbench.list.automaticKeyboardNavigation": false,
 "vsicons.dontShowNewVersionMessage": true,
 "activitusbar.searchViewInPanel": false,
-"git.enabled": false,
-"git.decorations.enabled": false,
 "git.enableStatusBarSync": false,
 "gitlens.views.repositories.location": "explorer",
 "gitlens.views.fileHistory.location": "gitlens",
@@ -535,7 +533,7 @@
 "workbench.colorCustomizations": {
     "editorBracketMatch.border": "#58b898"
 },
-"window.zoomLevel": 2,
+"window.zoomLevel": 0,
 "python.dataScience.runStartupCommands":
     "%load_ext autoreload \n%autoreload 2 \n %matplotlib notebook",
 "python.dataScience.themeMatplotlibPlots": true,

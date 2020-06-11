@@ -1,5 +1,9 @@
 from ranger.gui.colorscheme import ColorScheme
-from ranger.gui.color import *
+from ranger.gui.color import (
+    black, blue, cyan, green, magenta, red, white, yellow, default,
+    normal, bold, reverse, dim, BRIGHT,
+    default_colors,
+)
 
 class base(ColorScheme):
     progress_bar_color = 1
@@ -32,8 +36,8 @@ class base(ColorScheme):
                 attr |= bold
                 fg = 1
             if context.directory:
-                attr |= bold
-                fg = 8
+                attr |= bold 
+                fg = 245 
             elif context.executable and not \
                     any((context.media, context.container,
                        context.fifo, context.socket)):

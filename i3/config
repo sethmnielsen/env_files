@@ -23,7 +23,6 @@ set $refresh_i3status killall -SIGUSR1 i3status
 
 # terminal
 set $term urxvt
-set $named_term --no-startup-id termite --name
 
 # audio
 set $volume --no-startup-id pactl set-sink-volume @DEFAULT_SINK@
@@ -50,12 +49,12 @@ set $ws10 "10"
 # ---------------------------------------------------------------------------- #
 
 # font pango:DejaVu Sans Mono 8
-font xft:URWGothic-Book 11
+font xft:URWGothic-Book 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 # Open specific applications in floating mode
-# for_window [title="alsamixer"] floating enable border pixel 1
+for_window [class="Holodeck" instance="Holodeck"] floating enable border pixel 1
 
 # start a terminal
 bindsym $mod+Return exec $term
@@ -93,7 +92,7 @@ exec --no-startup-id dunst
 #exec --no-startup-id caprine  
 
 exec_always --no-startup-id fix_xcursor
-exec_always --no-startup-id $HOME/.config/polybar/i3wmthemer_bar_launch.sh
+#exec_always --no-startup-id $HOME/.config/polybar/i3wmthemer_bar_launch.sh
 
 # ======================================
 
@@ -215,33 +214,50 @@ exec --no-startup-id xmodmap -e 'keycode 0x09=Caps_Lock'
 # ======================================
 # BAR
 # ======================================
+#bar {
+        #status_command i3status
+
+        ## output                LVDS1
+        ## status_command        i3status
+        ## position              bottom
+        ## mode                  dock
+        ## workspace_buttons     yes
+        ## tray_output           none
+
+    ## font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+
+         #separator_symbol "|"
+        ##separator_symbol "■"
+        ## separator_block_width = 5
+
+
+        #colors {
+                #background      #000000
+                #statusline      #ffffff
+
+                #focused_workspace       #ffffff #285577
+                #active_workspace        #ffffff #333333
+                #inactive_workspace      #888888 #222222
+                #urgent_workspace        #ffffff #900000
+        #}
+#}
 bar {
-        status_command i3status
+    font pango:Source Sans Pro-10 10
+    status_command i3blocks -c ~/.config/i3blocks/config
+    colors {
+        separator #268bd2
+        background #002b36
+        statusline #839496
+        focused_workspace #fdf6e3 #6c71c4 #fdf6e3
+        active_workspace #fdf6e3 #6c71c4 #fdf6e3
+        inactive_workspace #002b36 #586e75 #002b36
+        urgent_workspace #d33682 #d33682 #fdf6e3
+    }
+} 
 
-        # output                LVDS1
-        # status_command        i3status
-        # position              bottom
-        # mode                  dock
-        # workspace_buttons     yes
-        # tray_output           none
-
-	# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-
-        # separator_symbol "|"
-        separator_symbol "■"
-        # separator_block_width = 5
-
-
-        colors {
-                background      #000000
-                statusline      #ffffff
-
-                focused_workspace       #ffffff #285577
-                active_workspace        #ffffff #333333
-                inactive_workspace      #888888 #222222
-                urgent_workspace        #ffffff #900000
-        }
-}
+#bar {
+  #status_command i3blocks
+#}
 
 # ======================================
 # ======================================
@@ -317,23 +333,6 @@ bindsym $mod+F3 exec --no-startup-id xrandr --auto
 # bindsym $mod+Ctrl+Shift+Left exec --no-startup-id i3-msg move workspace to output left
 # bindsym $mod+Ctrl+Shift+Right exec --no-startup-id i3-msg move workspace to output right
 
-# https://faq.i3wm.org/question/3747/enabling-multimedia-keys.1.html
-# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
-# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
-# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%- && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle     && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle
-
-# others use `backlight` but my soln does not require another program installed
-# only a small, executable bash script. Can use a value instead of $p20_bness.
-bindsym XF86MonBrightnessUp   exec --no-startup-id bness $p20_bness  1
-bindsym XF86MonBrightnessDown exec --no-startup-id bness $p20_bness -1
-
-bindsym XF86KbdBrightnessUp   exec --no-startup-id kbness $kp20_bness  1
-bindsym XF86KbdBrightnessDown exec --no-startup-id kbness $kp20_bness -1
-
 # bindsym $mod+c exec deepin-calculator
 # bindsym $mod+Shift+s exec gnome-screenshot -i
 
@@ -354,8 +353,8 @@ client.placeholder      #272827 #272827 #657b83 #272827 #272827
 client.background       #272827
 
 # Gaps
-gaps inner 10
-gaps outer -4
+gaps inner 0
+gaps outer 0
 
 smart_gaps on
 
@@ -398,6 +397,27 @@ mode "$mode_gaps_outer" {
 
 # set power-manager and volume control
 exec --no-startup-id mate-power-manager
+
+
+
+# https://faq.i3wm.org/question/3747/enabling-multimedia-keys.1.html
+# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# I had these but they weren't working:
+#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ && $refresh_i3status
+#bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%- && $refresh_i3status
+#bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle     && $refresh_i3status
+#bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle
+
+# others use `backlight` but my soln does not require another program installed
+# only a small, executable bash script. Can use a value instead of $p20_bness.
+bindsym XF86MonBrightnessUp   exec --no-startup-id bness $p20_bness  1
+bindsym XF86MonBrightnessDown exec --no-startup-id bness $p20_bness -1
+
+#bindsym XF86KbdBrightnessUp   exec --no-startup-id kbness $kp20_bness  1
+#bindsym XF86KbdBrightnessDown exec --no-startup-id kbness $kp20_bness -1
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -c 0 -q set Master 2dB+ unmute
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -c 0 -q set Master 2db- unmute
