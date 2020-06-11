@@ -6,7 +6,6 @@
 "editor.fontSize": 12,
 "terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
 "terminal.integrated.fontSize": 12,
-"workbench.colorTheme": "ayu-custom",
 "editor.wordWrapColumn": 90,
 "files.exclude": {
     ".env": true,
@@ -552,4 +551,27 @@
 "code-eol.highlightNonDefault": true,
 "diffEditor.ignoreTrimWhitespace": false,
 "files.eol": "\n",
+"workbench.colorTheme": "Gruvbox Dark Hard",
+"activitusbar.views": [
+    {
+        "name": "explorer",
+        "codicon": "files"
+    },
+    {
+        "name": "search",
+        "codicon": "search"
+    },
+    {
+        "name": "scm",
+        "codicon": "source-control"
+    },
+    {
+        "name": "debug",
+        "codicon": "debug-alt"
+    },
+    {
+        "name": "extensions",
+        "codicon": "extensions"
+    }
+]
 }

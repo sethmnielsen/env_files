@@ -26,7 +26,7 @@ fif() {
 }
 
 
-export FZF_DEFAULT_OPTS="--preview 'bat --style=numbers --color=always {} | head -500'"
+export FZF_DEFAULT_OPTS="--preview 'bat --style=numbers --color=always {} 2> /dev/null | head -500'"
 export FZF_DEFAULT_COMMAND='rg --hidden --files --no-ignore-vcs'
 export FZF_COMPLETION_TRIGGER=''
 

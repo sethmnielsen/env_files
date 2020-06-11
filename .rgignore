@@ -22,3 +22,6 @@ Documents/.list
 .cups/list
 .cups/parser.py
 .local/share/gvfs-metadata/home
+.mypy_cache/
+.vscode-server/
+UnrealEngine/

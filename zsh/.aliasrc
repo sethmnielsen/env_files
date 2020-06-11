@@ -61,7 +61,13 @@ alias lak='exa -la --group-directories-first'
 alias count_files='find . ! -name . -prune -type f -print | grep -c /'
 alias count_files_recurse='find .//. ! -name . -print -type f | grep -c /'
 
-alias rgf='rg --no-ignore --hidden --files | rg'
+# bat
+alias man='batman'
+alias bgrep='batgrep'
+alias brg='batgrep'
+
+alias rgf='rg --no-ignore-vcs --hidden --files | rg'
+
 sizes() {
   sudo find . -mindepth 1 -maxdepth 1 -print0 | xargs -0 du -hsc | sort -hr
 }
@@ -152,6 +158,7 @@ cdll() {cd "$@" && ll}
 alias vz='vim ~/.zshrc'
 alias va='vim ~/env/zsh/.aliasrc'
 alias vv='vim ~/.vimrc'
+alias vala='vim ~/.config/alacritty/alacritty.yml'
 alias szsh='source ~/.zshrc'
 alias sdev='source devel/setup.zsh'
 alias sros='source ~/.base_rosrc'
@@ -174,6 +181,7 @@ alias nodeprocess_edit='sudo vim /opt/ros/melodic/lib/python2.7/dist-packages/ro
 catkin_make_opencv4() {
   catkin_make \
 	-DPYTHON_EXECUTABLE=~/.virtualenvs/v3.6/bin/python3 \
+  -DCMAKE_BUILD_TYPE=Debug \
 	-DPYTHON_INCLUDE_DIR=~/.virtualenvs/v3.6/include/python3.6m \
 	-DPYTHON_LIBRARY=/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu/libpython3.6m.so \
 	-DOpenCV_DIR=/usr/local/opencv

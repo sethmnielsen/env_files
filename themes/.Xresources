@@ -74,7 +74,6 @@ rofi.padding: 5
 rofi.fixed-num-lines: true
 rofi.hide-scrollbar: true
 
-
 ! Normal copy-paste keybindings without perls
 URxvt.iso14755:                   false
 URxvt.keysym.Shift-Control-V:     eval:paste_clipboard

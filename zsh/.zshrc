@@ -24,6 +24,7 @@ if [[ -n "$RANGER_LEVEL" ]]; then
 fi
 
 export DEFAULT_USER=seth  # for shortening prompt
+export TERM=alacritty
 export MYVIMRC=~/.vimrc
 export EDITOR=vim
 export RANGER_LOAD_DEFAULT_RC="false"
@@ -138,6 +139,7 @@ plugins=(
   git
   tmux-seth
   virtualenv-seth
+  forgit
 )
 
 source $ZSH/oh-my-zsh.sh
