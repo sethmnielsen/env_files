@@ -56,9 +56,8 @@ upload_gdrive() { # upload file to Sync dir on Google Drive
 
 # exa
 alias x='exa'
-alias ls='exa'
-
 # exa to replace ls -- EXPERIMENTAL
+alias ls='exa'
 alias l='exa -1'
 alias lh='exa -1a'
 alias lk='exa -1a --group-directories-first'
