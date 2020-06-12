@@ -12,7 +12,7 @@ prompt_setup_pygmalion(){
   ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%})%{$fg_bold[magenta]%}✗"
   ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
-  venvinfo="%{$fg[magenta]%}$(virtualenv_prompt_info)%{$reset_color%}"
+  venvinfo="%{$fg[magenta]%}$(virtualenv_prompt_info)%{$reset_color%} "
   base_prompt='%{$fg[yellow]%}%2~%{$reset_color%}'
   #post_prompt='%{$fg[red]%} |%{$reset_color%}%{$fg[cyan]%} ➜%{$reset_color%} '
   post_prompt='%{$fg[red]%} |%{$reset_color%}'

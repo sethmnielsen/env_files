@@ -379,15 +379,15 @@ gstats() {
   echo "\n--$name1--"
   cd $dir1
   git status -s
-  echo "--$name4--"
-  cd $dir4
-  git status -s
-  echo " -- $name2 --"
-  cd $dir2
-  git status -s
-  echo " -- $name3 --"
-  cd $dir3
-  git status -s
+  #echo "--$name4--"
+  #cd $dir4
+  #git status -s
+  #echo " -- $name2 --"
+  #cd $dir2
+  #git status -s
+  #echo " -- $name3 --"
+  #cd $dir3
+  #git status -s
   echo ""
   cd $A
 }

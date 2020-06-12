@@ -19,14 +19,10 @@ zstyle :compinstall filename '~/.zshrc'
 ##### Added by me #####
 export LS_COLORS="di=1;36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
 
-# ranger prompt
-if [[ -n "$RANGER_LEVEL" ]]; then
-  export PS1="[ranger]":$PS1
-fi
-
 export DEFAULT_USER=seth  # for shortening prompt
 export TERM=alacritty
-export MYVIMRC=~/.vimrc
+export ZSH_TMUX_CONFIG=~/.tmux.conf
+export MYVIMRC=~/env/.vimrc
 export EDITOR=vim
 export RANGER_LOAD_DEFAULT_RC="false"
 

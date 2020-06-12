@@ -3,7 +3,7 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 source $HOME/.local/bin/virtualenvwrapper.sh
 
 
-stheme="source $HOME/.oh-my-zsh/custom/themes/$ZSH_THEME.zsh-theme"
+stheme="source $HOME/env/themes/$ZSH_THEME.zsh-theme"
 
 # note: '-n string' evaluates to true if length of 'string' is non-zero
 workon() {

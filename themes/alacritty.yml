@@ -6,9 +6,9 @@ env:
 
 window:
   # Specified in number of columns/lines, not pixels.
-  #dimensions:
-  #  columns: 0
-  #  lines: 0
+  dimensions:
+    columns: 70
+    lines: 25
 
   # Specified in number of pixels.
   #position:
@@ -84,7 +84,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 13.0
+  size: 11.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
