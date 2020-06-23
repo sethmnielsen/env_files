@@ -30,7 +30,7 @@ Plugin 'Valloric/YouCompleteMe'
 "Plugin 'airblade/vim-gitgutter'
 Plugin 'Raimondi/delimitMate'
 Plugin 'cespare/vim-toml'
-Plugin 'vim-pandoc/vim-pandoc'
+"Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'Konfekt/vim-CtrlXA'
 "Plugin 'justinmk/vim-sneak'
 Plugin 'christoomey/vim-tmux-navigator'
@@ -39,7 +39,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 "Plugin 'morhetz/gruvbox'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'Jamedjo/setcolors.vim'
-Plugin 'doums/darcula'
+"Plugin 'doums/darcula'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'junegunn/seoul256.vim'
 
@@ -54,6 +54,9 @@ augroup VimAfter
       \ ['sweet', 'bitter'],
       \ ] + g:CtrlXA_Toggles
         augroup END
+
+"pandoc folding
+"let g:pandoc#modules#disabled = ["folding", "formatting"]
 
 " ------------------------- COLORS 'N STUFF ----------------------------
 

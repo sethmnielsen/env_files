@@ -36,7 +36,8 @@
     "**/build": true,
     "**/devel": true,
     "**/target/": true,
-    "**F450.yaml": true
+    "**F450.yaml": true,
+    "**/*.pyo": true
 },
 "files.associations": {
     "*.*rc": "shellscript",
@@ -58,7 +59,7 @@
 "python.pythonPath": "/home/seth/.virtualenvs/v3.8/bin/python3",
 "python.venvPath": "/home/seth/.virtualenvs",
 "python.terminal.activateEnvironment": false,
-"workbench.activityBar.visible": false,
+"workbench.activityBar.visible": true,
 "workbench.iconTheme": "ayu",
 "zenMode.hideLineNumbers": false,
 "editor.cursorSmoothCaretAnimation": true,
@@ -542,7 +543,6 @@
 "python.linting.mypyEnabled": true,
 "python.testing.autoTestDiscoverOnSaveEnabled": false,
 "python.testing.promptToConfigure": false,
-"editor.renderWhitespace": "none",
 "markdown.preview.scrollEditorWithPreview": false,
 "markdown.preview.scrollPreviewWithEditor": false,
 "extensions.ignoreRecommendations": true,
@@ -573,5 +573,7 @@
         "name": "extensions",
         "codicon": "extensions"
     }
-]
+],
+"files.trimTrailingWhitespace": true,
+"python.languageServer": "Microsoft"
 }
