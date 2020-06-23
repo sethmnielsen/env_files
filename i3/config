@@ -26,9 +26,9 @@ set $mute --no-startup-id pactl set-sink-mute @DEFAULT_SINK@
 set $mic_mute --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@
 
 # internet browser
-set $browser --no-startup-id google-chrome --process-per-site 
+set $browser --no-startup-id google-chrome --process-per-site
 
-# Define names for default workspaces 
+# Define names for default workspaces
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -43,8 +43,9 @@ set $ws10 "10"
 # ---------------------------------------------------------------------------- #
 # ---------------------------------- Config ---------------------------------- #
 # ---------------------------------------------------------------------------- #
-# font pango:DejaVu Sans Mono 8
-font xft:URWGothic-Book 10
+ font pango:DejaVu Sans Mono 8
+#font xft:URWGothic-Book 10
+#font pango:monospace 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -57,14 +58,14 @@ for_window [class="Holodeck" instance="Holodeck"] floating enable border pixel 1
 #======================================
 # apps
 exec --no-startup-id blueman-tray
-exec --no-startup-id slack --startup  
-exec --no-startup-id discord --start-minimized
+exec --no-startup-id slack --startup
+#exec --no-startup-id discord --start-minimized
 exec --no-startup-id dunst
 
 #exec_always --no-startup-id $HOME/.config/polybar/i3wmthemer_bar_launch.sh
 
 # Necessary?
-exec_always --no-startup-id fix_xcursor 
+exec_always --no-startup-id fix_xcursor
 
 #======================================
 # Scratchpad windows
@@ -86,46 +87,33 @@ for_window [instance="spad_*"] border pixel 5
 #======================================
 # bar
 #======================================
-#bar {
-        #status_command i3status
-
-        ## output                LVDS1
-        ## status_command        i3status
-        ## position              bottom
-        ## mode                  dock
-        ## workspace_buttons     yes
-        ## tray_output           none
-
-    ## font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-
-         #separator_symbol "|"
-        ##separator_symbol "■"
-        ## separator_block_width = 5
-
-
-        #colors {
-                #background      #000000
-                #statusline      #ffffff
-
-                #focused_workspace       #ffffff #285577
-                #active_workspace        #ffffff #333333
-                #inactive_workspace      #888888 #222222
-                #urgent_workspace        #ffffff #900000
-        #}
-#}
 bar {
-    font pango:Source Sans Pro-10 10
-    status_command i3blocks -c ~/.config/i3blocks/config
-    colors {
-        separator #268bd2
-        background #002b36
-        statusline #839496
-        focused_workspace #fdf6e3 #6c71c4 #fdf6e3
-        active_workspace #fdf6e3 #6c71c4 #fdf6e3
-        inactive_workspace #002b36 #586e75 #002b36
-        urgent_workspace #d33682 #d33682 #fdf6e3
-    }
-} 
+    status_command i3status
+    font pango:Source Sans Pro-12 12
+    separator_symbol "|"
+    #colors {
+        #background      #000000
+        #statusline      #ffffff
+
+        #focused_workspace       #ffffff #285577
+        #active_workspace        #ffffff #333333
+        #inactive_workspace      #888888 #222222
+        #urgent_workspace        #ffffff #900000
+    #}
+}
+#bar {
+    #font pango:Source Sans Pro-10 10
+    #status_command i3blocks -c ~/.config/i3blocks/config
+    #colors {
+        #separator #268bd2
+        #background #002b36
+        #statusline #839496
+        #focused_workspace #fdf6e3 #6c71c4 #fdf6e3
+        #active_workspace #fdf6e3 #6c71c4 #fdf6e3
+        #inactive_workspace #002b36 #586e75 #002b36
+        #urgent_workspace #d33682 #d33682 #fdf6e3
+    #}
+#}
 
 #bar {
   #status_command i3blocks
@@ -140,6 +128,7 @@ bindsym $mod+Return exec $term
 
 # kill focused window
 bindsym $mod+q kill
+bindsym $alt+q kill
 
 #======================================
 # rofi
@@ -156,10 +145,10 @@ set $app9 code
 set $app8 google-chrome
 set $app7 slack
 
-bindsym $alt+0 exec --no-startup-id jumpapp -wC $app0
-bindsym $alt+9 exec --no-startup-id jumpapp -wC $app9
-bindsym $alt+8 exec --no-startup-id jumpapp -wC $app8
-bindsym $alt+7 exec --no-startup-id jumpapp -wC $app7
+bindsym $alt+0 exec --no-startup-id jumpapp -C $app0
+bindsym $alt+9 exec --no-startup-id jumpapp -C $app9
+bindsym $alt+8 exec --no-startup-id jumpapp -C $app8
+bindsym $alt+7 exec --no-startup-id jumpapp -C $app7
 
 bindsym $mod+0 exec --no-startup-id jumpapp -wC $app0
 bindsym $mod+9 exec --no-startup-id jumpapp -wC $app9
@@ -167,7 +156,12 @@ bindsym $mod+8 exec --no-startup-id jumpapp -wC $app8
 bindsym $mod+7 exec --no-startup-id jumpapp -wC $app7
 
 
-# change focus
+bindsym $mod+g exec --no-startup-id google-chrome --process-per-site
+bindsym $mod+c exec --no-startup-id caprine
+
+#======================================
+# focusing
+#======================================
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
@@ -178,11 +172,17 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+# move focused window to screen
+bindsym $mod+Shift+h move to output left; focus output left
+bindsym $mod+Shift+j move to output down; focus output down
+bindsym $mod+Shift+k move to output up; focus output up
+bindsym $mod+Shift+l move to output right; focus output  right
+
+# move focused window to next/prev workspace
+bindsym $mod+Ctrl+Shift+h move to workspace prev; workspace prev
+bindsym $mod+Ctrl+Shift+j move to workspace prev; workspace prev
+bindsym $mod+Ctrl+Shift+k move to workspace next; workspace next
+bindsym $mod+Ctrl+Shift+l move to workspace next; workspace next
 
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
@@ -230,21 +230,24 @@ bindsym $mod+5 workspace number $ws5
 bindsym $mod+6 workspace number $ws6
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
-bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+Shift+1 move to workspace number $ws1;  workspace number $ws1
+bindsym $mod+Shift+2 move to workspace number $ws2;  workspace number $ws2
+bindsym $mod+Shift+3 move to workspace number $ws3;  workspace number $ws3
+bindsym $mod+Shift+4 move to workspace number $ws4;  workspace number $ws4
+bindsym $mod+Shift+5 move to workspace number $ws5;  workspace number $ws5
+bindsym $mod+Shift+6 move to workspace number $ws6;  workspace number $ws6
+bindsym $mod+Shift+7 move to workspace number $ws7;  workspace number $ws7
+bindsym $mod+Shift+8 move to workspace number $ws8;  workspace number $ws8
+bindsym $mod+Shift+9 move to workspace number $ws9;  workspace number $ws9
+bindsym $mod+Shift+0 move to workspace number $ws10; workspace number $ws10
 
 # border
 bindsym $mod+u border none
 bindsym $mod+y border pixel 1
 bindsym $mod+n border normal
+
+# redshift
+bindsym $mod+F11 exec --no-startup-id redshift
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -261,11 +264,11 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym h resize shrink width 5 px or 5 ppt
+        bindsym j resize grow height 5 px or 5 ppt
+        bindsym k resize shrink height 5 px or 5 ppt
         # bindsym semicolon resize grow width 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        bindsym l resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -282,9 +285,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Remap CapsLock to Escape
-exec --no-startup-id xmodmap -e 'clear Lock'
-exec --no-startup-id xmodmap -e 'keycode 0x42=Escape'
-exec --no-startup-id xmodmap -e 'keycode 0x09=Caps_Lock'
+exec_always --no-startup-id xmodmap -e 'clear Lock'
+exec_always --no-startup-id xmodmap -e 'keycode 0x42=Escape'
+exec_always --no-startup-id xmodmap -e 'keycode 0x09=Caps_Lock'
 
 
 
@@ -344,23 +347,47 @@ bindsym $mod+minus scratchpad show
 focus_follows_mouse no
 
 
-# Display setup
-# bindsym $mod+Shift+p move container to output HDMI-1
-# bindsym $mod+x exec --no-startup-id lock
-# bindsym $mod+z exec --no-startup-id mysuspend
+# ---------------------------------------------------------------------------- #
+# --------------------------------- Display ---------------------------------- #
+# ---------------------------------------------------------------------------- #
 
-# bindsym $mod+F9  exec --no-startup-id displayport-only
-bindsym $mod+F3 exec --no-startup-id xrandr --auto
-# bindsym $mod+F6 exec --no-startup-id xrandr --output DP-2 --pos 0x0 --output HDMI-1 --pos 3841x961 --output eDP-1 --pos 2881x2161
-bindsym $mod+F6 exec --no-startup-id xrandr --output eDP-1-1 --pos 0x0 --output DP-0 --pos 1921x0 
+set $intern eDP-1-1
+set $extern DP-0
+set $extern2 HDMI-1-1
 
-# bindsym $mod+Ctrl+Shift+Left exec --no-startup-id i3-msg move workspace to output left
-# bindsym $mod+Ctrl+Shift+Right exec --no-startup-id i3-msg move workspace to output right
+bindsym $mod+F3 exec --no-startup-id xrandr --auto; \
+    exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wps/*
 
-# bindsym $mod+c exec deepin-calculator
-# bindsym $mod+Shift+s exec gnome-screenshot -i
+bindsym $mod+F6 exec --no-startup-id xrandr \
+    --output $extern \
+        --primary \
+        --pos 0x0 \
+    --output $intern \
+        --right-of $extern; \
+    workspace $ws1, move workspace to output $extern; \
+    workspace $ws2, move workspace to output $intern; \
+    exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wps/*
 
-bindsym $mod+g exec --no-startup-id google-chrome --process-per-site
+bindsym $mod+F7 exec --no-startup-id xrandr \
+    --output $intern \
+        --primary    \
+        --pos 0x1201 \
+    --output $extern \
+        --pos 960x0; \
+    workspace $ws1, move workspace to output $intern; \
+    workspace $ws2, move workspace to output $extern; \
+    exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wps/*
+
+bindsym $mod+F8 exec --no-startup-id xrandr \
+    --output $extern2 \
+        --primary \
+        --auto    \
+        --pos 0x0 \
+    --output $intern \
+        --right-of $extern; \
+    workspace $ws1, move workspace to output $extern; \
+    workspace $ws2, move workspace to output $intern; \
+    exec --no-startup-id feh --randomize --bg-fill ~/Pictures/wps/*
 
 
 #### COLORS ####
@@ -417,32 +444,25 @@ mode "$mode_gaps_outer" {
 }
 
 # set power-manager and volume control
-exec --no-startup-id mate-power-manager
-
-
+#exec --no-startup-id mate-power-manager
 
 # https://faq.i3wm.org/question/3747/enabling-multimedia-keys.1.html
- bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
- bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
- bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-
-# I had these but they weren't working:
-#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ && $refresh_i3status
-#bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%- && $refresh_i3status
-#bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle     && $refresh_i3status
-#bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle
-
-# others use `backlight` but my soln does not require another program installed
-# only a small, executable bash script. Can use a value instead of $p20_bness.
-
-#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -c 0 -q set Master 2dB+ unmute
-#bindsym XF86AudioLowerVolume exec --no-startup-id amixer -c 0 -q set Master 2db- unmute
-#bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # touchpad on and off controller on laptop with Fn+<touchpad control functional key>
 bindsym XF86TouchpadOn exec --no-startup-id synclient Touchpadoff=0
 bindsym XF86TouchpadOff exec --no-startup-id synclient Touchpadoff=1
 
-bindsym XF86MonBrightnessUp   exec --no-startup-id xbacklight -inc 5 
+bindsym XF86MonBrightnessUp   exec --no-startup-id xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
 
+
+# i3-gnome
+exec --no-startup-id /usr/lib/gsd-xsettings
+exec_always --no-startup-id gnome-power-manager
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id gnome-flashback
+#exec --no-startup-id /usr/bin/gnome-screensaver
+    #dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock

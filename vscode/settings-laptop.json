@@ -387,6 +387,7 @@
 ],
 
 "vim.vimrc.enable": true,
+"vim.vimrc.path": "/home/seth/env/.vimrc",
 "vim.useCtrlKeys": true,
 "vim.sneak": true,
 "vim.sneakReplacesF": true,
@@ -504,7 +505,6 @@
 "editor.smoothScrolling": true,
 "breadcrumbs.filePath": "off",
 "path-intellisense.autoSlashAfterDirectory": true,
-"python.linting.pylintPath": "/home/seth/.virtualenvs/v3.8/bin/pylint_with_timeout.sh",
 "python.linting.pylintUseMinimalCheckers": false,
 "python.linting.ignorePatterns": [
     ".vscode/*.py",
@@ -548,4 +548,5 @@
 "files.trimTrailingWhitespace": true,
 "diffEditor.ignoreTrimWhitespace": false,
 "files.eol": "\n",
+"python.languageServer": "Microsoft",
 }

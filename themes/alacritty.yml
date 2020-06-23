@@ -100,7 +100,7 @@ font:
   #  y: 0
 
 # If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 
 # Colors (Tomorrow Night Bright)
 colors:
@@ -135,17 +135,29 @@ colors:
   #  background: '#404040'
 
   # Normal colors
+  ### Previous ###
+  #normal:
+    #black:   '#616161'
+    #red:     '#d54e53'
+    #green:   '#b9ca4a'
+    #yellow:  '#e6c547'
+    #blue:    '#7aa6da'
+    #magenta: '#c397d8'
+    #cyan:    '#70c0ba'
+    #white:   '#eaeaea'
+  ### Mine ###
   normal:
-    black:   '#616161'
-    red:     '#d54e53'
-    green:   '#b9ca4a'
-    yellow:  '#e6c547'
-    blue:    '#7aa6da'
-    magenta: '#c397d8'
-    cyan:    '#70c0ba'
-    white:   '#eaeaea'
-
+    black:   '#01060E'
+    red:     '#EA6C73'
+    green:   '#91B362'
+    yellow:  '#F9AF4F'
+    blue:    '#53BDFA'
+    magenta: '#FAE994'
+    cyan:    '#90E1C6'
+    white:   '#C7C7C7'
+               
   # Bright colors
+  ### Previous ###
   #bright:
   #  black:   '#666666'
   #  red:     '#ff3334'
@@ -155,20 +167,30 @@ colors:
   #  magenta: '#b77ee0'
   #  cyan:    '#54ced6'
   #  white:   '#ffffff'
+  ### Mine ###
+  bright:
+    black:   '#686868'
+    red:     '#F07178'
+    green:   '#C2D94C'
+    yellow:  '#FFB454'
+    blue:    '#59C2FF'
+    magenta: '#FFEE99'
+    cyan:    '#95E6CB'
+    white:   '#FFFFFF'
 
   # Dim colors
   #
   # If the dim colors are not set, they will be calculated automatically based
   # on the `normal` colors.
-  dim:
-    black:   '#000000'
-    red:     '#8c3336'
-    green:   '#7a8530'
-    yellow:  '#97822e'
-    blue:    '#506d8f'
-    magenta: '#80638e'
-    cyan:    '#497e7a'
-    white:   '#9a9a9a'
+  #dim:
+    #black:   '#000000'
+    #red:     '#8c3336'
+    #green:   '#7a8530'
+    #yellow:  '#97822e'
+    #blue:    '#506d8f'
+    #magenta: '#80638e'
+    #cyan:    '#497e7a'
+    #white:   '#9a9a9a'
 
   # Indexed Colors
   #
@@ -213,10 +235,10 @@ colors:
 #background_opacity: 1.0
 
 selection:
-  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+  #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-  #save_to_clipboard: false
+  save_to_clipboard: true
 
 # Allow terminal applications to change Alacritty's window title.
 dynamic_title: true

@@ -31,12 +31,19 @@ alias ssh_desktop='ssh desktop'
 alias remarkable='reMarkable'
 alias blender='~/.local/share/blender/blender'
 alias bim='vim'
+alias tmux_init='tmux -f ~/env/.tmux.conf new-session'
+alias blueman='blueman-tray'
 
+
+# Arch
+alias wifi_stop='sudo systemctl stop netctl-auto@wlp2s0.service'
+alias wifi_start='sudo systemctl start netctl-auto@wlp2s0.service'
 mount_ubuntu() {
     sudo mkdir -p /mnt/ubuntu
     sudo mount /dev/nvme0n1p6 /mnt/ubuntu
+    cd /mnt/ubuntu/home/seth
     echo "Mounted ubuntu partition (nvme0n1p6) to /mnt/ubuntu"
-    echo ""
+    echo "cwd: $(pwd)"
 }
 umount_ubuntu() {
     sudo umount /mnt/ubuntu
@@ -46,17 +53,8 @@ umount_ubuntu() {
     echo ""
 }
 
-alias chmod_rm_green_highlight='chmod -R a-x,o-w,+X'
-zath() {
-  tabbed -cd zathura $1 -e
-}
-upload_gdrive() { # upload file to Sync dir on Google Drive
-  gdrive upload -p 0B0rj1VEWGIltcmJ1UGNIQTVfTmc $1
-}
-
-# exa
-alias x='exa'
 # exa to replace ls -- EXPERIMENTAL
+alias x='exa'
 alias ls='exa'
 alias l='exa -1'
 alias lh='exa -1a'
@@ -78,8 +76,21 @@ alias lak='exa -la --group-directories-first'
 #alias la='ls -lAh'
 #alias lak='ls -lAh --group-directories-first'
 
+
+# Files stuff
 alias count_files='find . ! -name . -prune -type f -print | grep -c /'
 alias count_files_recurse='find .//. ! -name . -print -type f | grep -c /'
+alias chmod_rm_green_highlight='chmod -R a-x,o-w,+X'
+zath() {
+  tabbed -cd zathura $1 -e
+}
+upload_gdrive() { # upload file to Sync dir on Google Drive
+  gdrive upload -p 0B0rj1VEWGIltcmJ1UGNIQTVfTmc $1
+}
+
+sizes() {
+  sudo find . -mindepth 1 -maxdepth 1 -print0 | xargs -0 du -hsc | sort -hr
+}
 
 # bat
 alias man='batman'
@@ -90,9 +101,6 @@ alias brg='batgrep'
 alias rgf='rg --no-ignore-vcs --hidden --files | rg'
 alias rgf_sudo='sudo rg --no-ignore-vcs --hidden --files | rg'
 
-sizes() {
-  sudo find . -mindepth 1 -maxdepth 1 -print0 | xargs -0 du -hsc | sort -hr
-}
 power_draw() {
   echo - | awk "{printf \"%.1f\", \
       $(cat /sys/class/power_supply/BAT0/power_now) / 1000000 }"
@@ -184,7 +192,7 @@ alias vala='vim ~/.config/alacritty/alacritty.yml'
 alias vi3='vim ~/.config/i3/config'
 alias vi3status='vim ~/.config/i3status/config'
 alias vi3blocks='vim ~/.config/i3blocks/config'
-alias vthp='sudo vim /sys/devices/platform/asus-nb-wmi/throttle_thermal_policy'
+alias vth='sudo vim /sys/devices/platform/asus-nb-wmi/throttle_thermal_policy'
 
 # zsh / sourcing / environment
 alias szsh='source ~/.zshrc'
@@ -226,6 +234,7 @@ alias cd_q='cd ~/dev/quadsim_ws/src/quadsim'
 alias cd_models='cd ~/dev/models/research/deeplab'
 alias cd_holodeck_worlds='cd ~/.local/share/holodeck/0.3.1/worlds'
 alias cd_exer='cd ~/snap/exercism/5/exercism/rust'
+alias ev='ranger-cd ~/env'
 
 if [[ -n "$rfh" ]]; then
   alias cd_holodeck='cd $rfh/python/holodeck && echo $(pwd)'
@@ -356,22 +365,22 @@ push_changes() {
   git add -A
   git commit -m "Auto-pushed changes"
   git push
-  echo "\n--$name2--"
-  cd $dir2
-  git add -A
-  git commit -m "Auto-pushed changes"
-  git push
-  echo "\n--$name3--"
-  cd $dir3
-  git add -A
-  git commit -m "Auto-pushed changes"
-  git push
-  echo "\n--$name4--"
-  cd $dir4
-  git add -A
-  git commit -m "Auto-pushed changes"
-  git push
-  echo "\n"
+  #echo "\n--$name2--"
+  #cd $dir2
+  #git add -A
+  #git commit -m "Auto-pushed changes"
+  #git push
+  #echo "\n--$name3--"
+  #cd $dir3
+  #git add -A
+  #git commit -m "Auto-pushed changes"
+  #git push
+  #echo "\n--$name4--"
+  #cd $dir4
+  #git add -A
+  #git commit -m "Auto-pushed changes"
+  #git push
+  #echo "\n"
   cd $A
 }
 gstats() {
