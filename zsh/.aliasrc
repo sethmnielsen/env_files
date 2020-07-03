@@ -349,12 +349,12 @@ pull_changes() {
   A=$(pwd)
   cd $dir1
   git pull
-  cd $dir2
-  git pull
-  cd $dir3
-  git pull
-  cd $dir4
-  git pull
+  #cd $dir2
+  #git pull
+  #cd $dir3
+  #git pull
+  #cd $dir4
+  #git pull
   cd $A
   echo "\npersonal repos have been updated on this machine.\n"
 }
