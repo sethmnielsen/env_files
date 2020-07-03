@@ -59,7 +59,7 @@
 "python.pythonPath": "/home/seth/.virtualenvs/v3.8/bin/python3",
 "python.venvPath": "/home/seth/.virtualenvs",
 "python.terminal.activateEnvironment": false,
-"workbench.activityBar.visible": true,
+"workbench.activityBar.visible": false,
 "workbench.iconTheme": "ayu",
 "zenMode.hideLineNumbers": false,
 "editor.cursorSmoothCaretAnimation": true,
@@ -79,7 +79,7 @@
     "/opt/ros/melodic/lib/python2.7/dist-packages"
 ],
 "C_Cpp.default.intelliSenseMode": "msvc-x64",
-"editor.rulers": [79],
+"editor.rulers": [90],
 "macros.list": {
     "closePanelSidebar": [
         "workbench.action.toggleSidebarVisibility",
@@ -551,7 +551,7 @@
 "code-eol.highlightNonDefault": true,
 "diffEditor.ignoreTrimWhitespace": false,
 "files.eol": "\n",
-"workbench.colorTheme": "ayu-custom",
+"workbench.colorTheme": "Gruvbox Dark Hard Custom",
 "activitusbar.views": [
     {
         "name": "explorer",

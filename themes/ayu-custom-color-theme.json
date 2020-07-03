@@ -128,7 +128,7 @@
 		"list.highlightForeground": "#e6b450",
 		"list.hoverBackground": "#01060e",
 		"list.hoverForeground": "#3d424d",
-		"list.inactiveSelectionBackground": "#01060e",
+		"list.inactiveSelectionBackground": "#13151a",
 		"list.inactiveSelectionForeground": "#3d424d",
 		"list.invalidItemForeground": "#2e323c",
 		"panel.background": "#161c25",
