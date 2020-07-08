@@ -5,11 +5,6 @@
 	default = simple
 [pull]
 	rebase = false
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
 [core]
   pager = delta --plus-color="#006000" --plus-emph-color="#00af00"  --theme='1337'
 [interactive]
@@ -18,3 +13,8 @@
     tool = vscode
 [difftool "vscode"]
     cmd = code --wait --diff $LOCAL $REMOTE
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
