@@ -29,7 +29,7 @@
 		"terminal.ansiBrightCyan": "#95e6cb",
 		"terminal.ansiBrightWhite": "#ffffff",
 
-		"terminal.background": "#0a0e14",
+		"terminal.background": "#10151b",
 		"terminal.foreground": "#b3b1ad",
 
 		//Formatted for terminal profile:
@@ -156,7 +156,7 @@
 		"settings.headerForeground": "#b3b1ad",
 		"settings.modifiedItemIndicator": "#6994bf",
 		"sideBar.background": "#161c25",
-		"sideBarSectionHeader.background": "#0a0e14",
+		"sideBarSectionHeader.background": "#121820",
 		"sideBarSectionHeader.foreground": "#3d424d",
 		"sideBarTitle.foreground": "#3d424d",
 		"statusBar.background": "#0a0e14",

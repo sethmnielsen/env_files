@@ -7,6 +7,7 @@ alias sctl='systemctl'
 alias ssctl='sudo systemctl'
 alias refind_edit='sudo vim /boot/EFI/refind/refind.conf'
 alias rust_evcxr='evcxr'
+alias unzip_='/usr/bin/unzip'
 alias unzip='unzip -q'
 #alias open='open_command'
 alias upgrades='sudo apt update && sudo apt upgrade -y'
@@ -39,7 +40,6 @@ alias blueman='blueman-tray'
 alias wifi_stop='sudo systemctl stop netctl-auto@wlp2s0.service'
 alias wifi_start='sudo systemctl start netctl-auto@wlp2s0.service'
 mount_ubuntu() {
-    sudo mkdir -p /mnt/ubuntu
     sudo mount /dev/nvme0n1p6 /mnt/ubuntu
     cd /mnt/ubuntu/home/seth
     echo "Mounted ubuntu partition (nvme0n1p6) to /mnt/ubuntu"
@@ -47,9 +47,20 @@ mount_ubuntu() {
 }
 umount_ubuntu() {
     sudo umount /mnt/ubuntu
-    sudo rm -rf /mnt/ubuntu
-    echo "Unmounted ubuntu parition"
+    echo "Unmounted ubuntu partition"
     echo "Deleted '/mnt/ubuntu' mount point"
+    echo ""
+}
+
+mount_windows() {
+    sudo mount /dev/nvme0n1p3 /mnt/windows
+    cd /mnt/windows/Users/sethm/
+    echo "Mounted windows partition (nvme0n1p3) to /mnt/windows"
+    echo "cwd: $(pwd)"
+}
+umount_windows() {
+    sudo umount /mnt/windows
+    echo "Unmounted windows partition"
     echo ""
 }
 
@@ -187,7 +198,8 @@ cdll() {cd "$@" && ll}
 # edit common files with vim
 alias vz='vim ~/.zshrc'
 alias va='vim ~/env/zsh/.aliasrc'
-alias vv='vim ~/.vimrc'
+alias vv='vim ~/env/.vimrc'
+alias vt='vim ~/env/.tmux.conf'
 alias vala='vim ~/.config/alacritty/alacritty.yml'
 alias vi3='vim ~/.config/i3/config'
 alias vi3status='vim ~/.config/i3status/config'
@@ -234,7 +246,7 @@ alias cd_quadws='cd ~/dev/quadsim_ws'
 alias cd_q='cd ~/dev/quadsim_ws/src/quadsim'
 alias cd_models='cd ~/dev/models/research/deeplab'
 alias cd_holodeck_worlds='cd ~/.local/share/holodeck/0.3.1/worlds'
-alias cd_exer='cd ~/snap/exercism/5/exercism/rust'
+alias cd_exer='cd ~/dev/exercism/rust'
 alias ev='ranger-cd ~/env'
 
 if [[ -n "$rfh" ]]; then
@@ -249,7 +261,7 @@ alias serv_call='rosservice call /param_set MIXER 2 && rosservice call /calibrat
 alias cdm='code ~/dev/models/research/deeplab'
 alias cdb='code ~/dev/boat_landing_sim'
 alias cdq='code ~/dev/quadsim_ws'
-alias cde='code ~/snap/exercism/5/exercism/rust'
+alias cde='code ~/dev/exercism/rust'
 
 # Print the 256 color test pattern
 print256colors() {

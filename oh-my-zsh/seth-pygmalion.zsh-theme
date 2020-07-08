@@ -4,7 +4,7 @@ prompt_setup_pygmalion(){
   DGREEN=$'\e[33;38;5;65m'
   ssh_prompt=""
   if [[ -n $SSH_CONNECTION ]]; then
-    ssh_prompt=" %{$DGREEN%}%m%{$reset_color%} "
+    ssh_prompt="%{$DGREEN%}%m%{$reset_color%} "
   fi
 
   ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[red]%}:%{$reset_color%}%{$fg[blue]%}(%{$fg[cyan]%}"

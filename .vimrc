@@ -26,7 +26,7 @@ Plugin 'lervag/vimtex'
 Plugin 'preservim/nerdcommenter'
 Plugin 'preservim/nerdtree'
 Plugin 'vim-airline/vim-airline'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 "Plugin 'airblade/vim-gitgutter'
 Plugin 'Raimondi/delimitMate'
 Plugin 'cespare/vim-toml'
@@ -156,7 +156,6 @@ map! <C-y> <Esc>mwlbgUl`wa
 " Send to black hole register (actually delete)
 nnoremap <leader>d "_d
 vnoremap <leader>d "_d
-"vnoremap <leader>p "_dP"
 
 " press // to search for highlighted text (visual mode)
 vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>")
@@ -207,6 +206,7 @@ vnoremap J 10j
 vnoremap K 10k
 
 " Move and stay in Insert mode using alt-hjkl 
+" causing problems with escape taking too long to leave insert mode
 "inoremap h <Left>
 "inoremap j <Down>
 "inoremap k <Up>
@@ -224,12 +224,3 @@ nnoremap <leader>ycm :vsplit ~/.vim/.ycm_extra_conf.py<cr>
 " Remap for latex compiling
 nnoremap <leader>ll :w<CR>:!rubber --pdf --warn all %<CR>
 nnoremap <leader>lv :!mupdf %:r.pdf &<CR><CR>
-
-" Mappings for Git (vim-fugitive and git-gutter)
-nnoremap <leader>gc :Gcommit <CR>
-nnoremap <leader>gp :Gpush <CR>
-nnoremap <leader>gb :Gbrowse <CR>
-nmap <leader>ga <Plug>GitGutterStageHunk
-nmap <leader>gd <Plug>GitGutterPreviewHunk
-nmap <leader>gj <Plug>GitGutterNextHunk
-nmap <leader>gk <Plug>GitGutterPrevHunk
