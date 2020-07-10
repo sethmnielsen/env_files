@@ -17,7 +17,6 @@ zstyle :compinstall filename '~/.zshrc'
 ##### Added by me #####
 #export LS_COLORS="di=1;36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
 
-TERM=alacritty
 export DEFAULT_USER=seth  # for shortening prompt
 export VIMINIT='source $MYVIMRC'
 export MYVIMRC=~/env/.vimrc
@@ -27,11 +26,10 @@ export RANGER_LOAD_DEFAULT_RC="false"
 # PATH
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/opencv/lib
 #export PATH=$PATH:~/dev/UnrealEngine/Engine/Binaries/Linux
-export PATH=$PATH:/usr/local/opencv/bin
 export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
 export PATH=$PATH:$HOME/software/blender
+export PATH=/usr/local/opencv/bin:$PATH
 
 ############################################################################################
 #export QT_QPA_PLATFORMTHEME=qt5ct   # HEEEYYYY LOOK AT THISSSSSSS
@@ -141,4 +139,8 @@ if [[ "$(hostname)" != "zepharch" ]]; then
     # pip
     eval "`pip completion --zsh`"
     compctl -K _pip_completion pip3
+else
+    TERM=alacritty
 fi
+
+export LD_LIBRARY_PATH=/usr/local/opencv/lib:$LD_LIBRARY_PATH

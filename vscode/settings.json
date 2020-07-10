@@ -551,7 +551,7 @@
 "code-eol.highlightNonDefault": true,
 "diffEditor.ignoreTrimWhitespace": false,
 "files.eol": "\n",
-"workbench.colorTheme": "Gruvbox Dark Hard Custom",
+"workbench.colorTheme": "ayu-custom",
 "activitusbar.views": [
     {
         "name": "explorer",

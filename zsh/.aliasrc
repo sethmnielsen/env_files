@@ -15,6 +15,7 @@ alias o='exit'
 alias tm='gio trash'
 alias mntjet='sshfs nvidia@tx2_rv:/home/nvidia/ /home/seth/kbcar_home'
 alias umntjet='fusermount -u /home/seth/kbcar_home'
+alias mnt-remarkable='sshfs root@10.11.99.1:/ /home/seth/sshmnt'
 alias unreal='~/dev/UnrealEngine/Engine/Binaries/Linux/UE4Editor'
 alias scaedm='ssh smn45@ssh.et.byu.edu'
 alias nuke='pkill -SIGKILL -fe '
@@ -35,6 +36,11 @@ alias bim='vim'
 alias tmux_init='tmux -f ~/env/.tmux.conf new-session'
 alias blueman='blueman-tray'
 
+get_alias() {
+    local a
+    a=$(alias $1)
+    echo $(echo ${a} | awk -F"['']" '{print $2}')
+}
 
 # Arch
 alias wifi_stop='sudo systemctl stop netctl-auto@wlp2s0.service'
@@ -110,7 +116,7 @@ alias brg='batgrep'
 
 # ripgrep
 alias rgf='rg --no-ignore-vcs --hidden --files | rg'
-alias rgf_sudo='sudo rg --no-ignore-vcs --hidden --files | rg'
+alias rgf_all='rg --no-ignore --hidden --files | rg'
 
 power_draw() {
   echo - | awk "{printf \"%.1f\", \
