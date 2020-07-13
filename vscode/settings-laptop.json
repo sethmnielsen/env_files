@@ -3,12 +3,10 @@
 "files.autoSave": "afterDelay",
 "editor.fontFamily": "'Iosevka', 'monospace'",
 "editor.fontLigatures": false,
-"editor.fontSize": 15,
-"window.zoomLevel": 0,
 "terminal.integrated.fontFamily": "'FantasqueSansMono Nerd Font Mono', 'DejaVuSansMono Nerd Font Mono'",
-"terminal.integrated.fontSize": 13,
 "workbench.colorTheme": "ayu-custom",
 "editor.wordWrapColumn": 90,
+"editor.rulers": [90],
 "files.exclude": {
     "**/*.jop": false,
     ".env": true,
@@ -81,7 +79,6 @@
     // "/opt/ros/melodic/lib/python2.7/dist-packages"
 ],
 "C_Cpp.default.intelliSenseMode": "msvc-x64",
-"editor.rulers": [90],
 "macros.list": {
     "closePanelSidebar": [
         "workbench.action.toggleSidebarVisibility",
@@ -254,12 +251,12 @@
 // "latex-workshop.hover.preview.newcommand.newcommandFile": "/home/seth/texmf/tex/latex/resume/documentMETADATA.cls",
 "latex-workshop.chktex.enabled": true,
 "latex-workshop.chktex.args.root": [ "-wall", "-n22", "-n30", "-n46", "-e16", "-q" ],
-"latex-workshop.chktex.args.active": [ "-wall", "-n9", "-n17", "-n22", "-n30", "-n46", "-e16", "-q" ],
+"latex-workshop.chktex.args.active": [ "-wall", "-n9", "-n17", "-n22", "-n30", "-n45", "-n46", "-e16", "-q" ],
 "latex-workshop.chktex.run": "onType",
 "latex-workshop.chktex.delay": 2000,
 "latex-workshop.latex.autoBuild.run": "never",
 "latex-workshop.message.update.show": false,
-"latex-workshop.view.pdf.viewer": "tab",
+"latex-workshop.view.pdf.viewer": "external",
 "latex-workshop.latex.outDir": "%DIR%/pdf",
 "latex-workshop.latex.recipe.default": "first",
 "latex-workshop.view.pdf.hand": true,
@@ -267,85 +264,7 @@
 "latex-workshop.message.error.show": false,
 "latex-workshop.message.warning.show": false,
 "latex-workshop.view.pdf.backgroundColor": "#e6e6e6",
-"latex-workshop.latex.recipes": [
-    {
-        "name": "optimization-hw",
-        "tools": [
-            "optimization-hw"
-        ]
-    },
-    {
-        "name": "latexmk-resume",
-        "tools": [
-            "latexmk-resume"
-        ]
-    },
-    {
-        "name": "latexmk 🔃",
-        "tools": [
-            "latexmk"
-        ]
-    },
-    {
-        "name": "latexmk (latexmkrc)",
-        "tools": [
-            "latexmk_rconly"
-        ]
-    },
-    {
-        "name": "latexmk (lualatex)",
-        "tools": [
-            "lualatexmk"
-        ]
-    },
-    {
-        "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
-        "tools": [
-            "pdflatex",
-            "bibtex",
-            "pdflatex",
-            "pdflatex"
-        ]
-    }
-],
 "latex-workshop.latex.tools": [
-    {
-        "name": "optimization-hw",
-        "command": "latexmk",
-        "args": [
-            "-synctex=1",
-            "-interaction=nonstopmode",
-            "-file-line-error",
-            "-lualatex",
-            "-outdir=pdf",
-            "%DOC%"
-        ],
-    },
-    {
-        "name": "latexmk-resume",
-        "command": "latexmk",
-        "args": [
-            "-synctex=1",
-            "-interaction=nonstopmode",
-            "-file-line-error",
-            "-lualatex",
-            "-outdir=/home/seth/Documents/sethnielsen_resume",
-            "%DOC%"
-        ],
-    },
-    {
-        "name": "latexmk",
-        "command": "latexmk",
-        "args": [
-            "-synctex=1",
-            "-interaction=nonstopmode",
-            "-file-line-error",
-            "-pdf",
-            "-outdir=/home/seth/Documents/sethnielsen_resume",
-            "%DOC%"
-        ],
-        "env": {}
-    },
     {
         "name": "lualatexmk",
         "command": "latexmk",
@@ -360,12 +279,28 @@
         "env": {}
     },
     {
-        "name": "latexmk_rconly",
+        "name": "xelatexmk",
         "command": "latexmk",
         "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-xelatex",
+            "-outdir=%OUTDIR%",
             "%DOC%"
         ],
         "env": {}
+    },
+    {
+        "name": "xelatex",
+        "command": "xelatex",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-output-directory=%OUTDIR%",
+            "%DOC%"
+        ]
     },
     {
         "name": "pdflatex",
@@ -379,15 +314,61 @@
         "env": {}
     },
     {
+        "name": "biber",
+        "command": "biber",
+        "args": [
+            "%OUTDIR%/%DOCFILE%"
+        ],
+        "env": {}
+    },
+    {
         "name": "bibtex",
         "command": "bibtex",
         "args": [
-            "%DOCFILE%"
+            "%OUTDIR%/%DOCFILE%"
         ],
         "env": {}
     },
 ],
-
+"latex-workshop.latex.recipes": [
+    {
+        "name": "latexmk (lualatex)",
+        "tools": [
+            "biber",
+            "lualatexmk"
+        ]
+    },
+    {
+        "name": "biber ➞ latexmk (xelatex)",
+        "tools": [
+            "biber",
+            "xelatexmk"
+        ]
+    },
+    {
+        "name": "xelatex ➞ biber ➞ xelatex x2",
+        "tools": [
+            "xelatex",
+            "biber",
+            "xelatexmk"
+        ]
+    },
+    {
+        "name": "latexmk 🔃",
+        "tools": [
+            "latexmk"
+        ]
+    },
+    {
+        "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+        "tools": [
+            "pdflatex",
+            "bibtex",
+            "pdflatex",
+            "pdflatex"
+        ]
+    }
+],
 "vim.vimrc.enable": true,
 "vim.vimrc.path": "/home/seth/env/.vimrc",
 "vim.useCtrlKeys": true,
@@ -521,7 +502,7 @@
 "editor.trimAutoWhitespace": false,
 "breadcrumbs.showModules": false,
 "[markdown]": {
-    "editor.wordWrap": "bounded",
+    "editor.wordWrap": "on",
     "editor.fontFamily": "'Iosevka Aile'",
     "editor.quickSuggestions": false,
     "editor.tabSize": 4
@@ -552,4 +533,11 @@
 "files.eol": "\n",
 "python.languageServer": "Microsoft",
 "python.defaultInterpreterPath": "/home/seth/.virtualenvs/v3.8/bin/python3",
+"latex-workshop.message.log.show": false,
+"editor.fontSize": 15,
+"terminal.integrated.fontSize": 16,
+"window.zoomLevel": 1,
+"code-runner.enableAppInsights": false,
+"code-runner.showRunCommandInExplorerContextMenu": false,
+"code-runner.showRunCommandInEditorContextMenu": false,
 }
