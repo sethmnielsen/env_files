@@ -431,8 +431,8 @@
 "editor.scrollBeyondLastLine": false,
 "editor.smoothScrolling": true,
 "breadcrumbs.filePath": "off",
-"path-intellisense.autoSlashAfterDirectory": true,
 "python.linting.pylintUseMinimalCheckers": false,
+"python.linting.pylintArgs": ["--generate-members"],
 "python.linting.ignorePatterns": [
     ".vscode/*.py",
     "**/site-packages/**/*.py",
