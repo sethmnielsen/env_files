@@ -279,41 +279,6 @@
         "env": {}
     },
     {
-        "name": "xelatexmk",
-        "command": "latexmk",
-        "args": [
-            "-synctex=1",
-            "-interaction=nonstopmode",
-            "-file-line-error",
-            "-xelatex",
-            "-outdir=%OUTDIR%",
-            "%DOC%"
-        ],
-        "env": {}
-    },
-    {
-        "name": "xelatex",
-        "command": "xelatex",
-        "args": [
-            "-synctex=1",
-            "-interaction=nonstopmode",
-            "-file-line-error",
-            "-output-directory=%OUTDIR%",
-            "%DOC%"
-        ]
-    },
-    {
-        "name": "pdflatex",
-        "command": "pdflatex",
-        "args": [
-            "-synctex=1",
-            "-interaction=nonstopmode",
-            "-file-line-error",
-            "%DOC%"
-        ],
-        "env": {}
-    },
-    {
         "name": "biber",
         "command": "biber",
         "args": [
@@ -328,35 +293,14 @@
             "%OUTDIR%/%DOCFILE%"
         ],
         "env": {}
-    },
+    }
 ],
 "latex-workshop.latex.recipes": [
     {
-        "name": "latexmk (lualatex)",
+        "name": "biber ➞ lualatexmk",
         "tools": [
             "biber",
             "lualatexmk"
-        ]
-    },
-    {
-        "name": "biber ➞ latexmk (xelatex)",
-        "tools": [
-            "biber",
-            "xelatexmk"
-        ]
-    },
-    {
-        "name": "xelatex ➞ biber ➞ xelatex x2",
-        "tools": [
-            "xelatex",
-            "biber",
-            "xelatexmk"
-        ]
-    },
-    {
-        "name": "latexmk 🔃",
-        "tools": [
-            "latexmk"
         ]
     },
     {

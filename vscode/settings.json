@@ -252,98 +252,20 @@
 // "latex-workshop.hover.preview.newcommand.newcommandFile": "/home/seth/texmf/tex/latex/resume/documentMETADATA.cls",
 "latex-workshop.chktex.enabled": true,
 "latex-workshop.chktex.args.root": [ "-wall", "-n22", "-n30", "-n46", "-e16", "-q" ],
-"latex-workshop.chktex.args.active": [ "-wall", "-n9", "-n17", "-n22", "-n30", "-n46", "-e16", "-q" ],
+"latex-workshop.chktex.args.active": [ "-wall", "-n9", "-n17", "-n22", "-n30", "-n45", "-n46", "-e16", "-q" ],
 "latex-workshop.chktex.run": "onType",
 "latex-workshop.chktex.delay": 2000,
 "latex-workshop.latex.autoBuild.run": "never",
 "latex-workshop.message.update.show": false,
 "latex-workshop.view.pdf.viewer": "tab",
-"latex-workshop.latex.outDir": "%DIR%/pdf",
+"latex-workshop.latex.outDir": "%DIR%",
 "latex-workshop.latex.recipe.default": "first",
 "latex-workshop.view.pdf.hand": true,
 "latex-workshop.view.pdf.trim": 1,
 "latex-workshop.message.error.show": false,
 "latex-workshop.message.warning.show": false,
 "latex-workshop.view.pdf.backgroundColor": "#e6e6e6",
-"latex-workshop.latex.recipes": [
-    {
-        "name": "optimization-hw",
-        "tools": [
-            "optimization-hw"
-        ]
-    },
-    {
-        "name": "latexmk-resume",
-        "tools": [
-            "latexmk-resume"
-        ]
-    },
-    {
-        "name": "latexmk 🔃",
-        "tools": [
-            "latexmk"
-        ]
-    },
-    {
-        "name": "latexmk (latexmkrc)",
-        "tools": [
-            "latexmk_rconly"
-        ]
-    },
-    {
-        "name": "latexmk (lualatex)",
-        "tools": [
-            "lualatexmk"
-        ]
-    },
-    {
-        "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
-        "tools": [
-            "pdflatex",
-            "bibtex",
-            "pdflatex",
-            "pdflatex"
-        ]
-    }
-],
 "latex-workshop.latex.tools": [
-    {
-        "name": "optimization-hw",
-        "command": "latexmk",
-        "args": [
-            "-synctex=1",
-            "-interaction=nonstopmode",
-            "-file-line-error",
-            "-lualatex",
-            "-outdir=pdf",
-            "%DOC%"
-        ],
-    },
-    {
-        "name": "latexmk-resume",
-        "command": "latexmk",
-        "args": [
-            "-synctex=1",
-            "-interaction=nonstopmode",
-            "-file-line-error",
-            "-lualatex",
-            "-outdir=/home/seth/Documents/sethnielsen_resume",
-            "%DOC%"
-        ],
-    },
-    {
-        "name": "latexmk",
-        "command": "latexmk",
-        "args": [
-            "-synctex=1",
-            "-interaction=nonstopmode",
-            "-file-line-error",
-            "-pdf",
-            "-outdir=/home/seth/Documents/sethnielsen_resume",
-            "%DOC%"
-        ],
-        "env": {}
-    },
     {
         "name": "lualatexmk",
         "command": "latexmk",
@@ -353,14 +275,6 @@
             "-file-line-error",
             "-lualatex",
             "-outdir=%OUTDIR%",
-            "%DOC%"
-        ],
-        "env": {}
-    },
-    {
-        "name": "latexmk_rconly",
-        "command": "latexmk",
-        "args": [
             "%DOC%"
         ],
         "env": {}
@@ -377,13 +291,47 @@
         "env": {}
     },
     {
-        "name": "bibtex",
-        "command": "bibtex",
+        "name": "biber",
+        "command": "biber",
         "args": [
-            "%DOCFILE%"
+            "%OUTDIR%/%DOCFILE%"
         ],
         "env": {}
     },
+    {
+        "name": "bibtex",
+        "command": "bibtex",
+        "args": [
+            "%OUTDIR%/%DOCFILE%"
+        ],
+        "env": {}
+    }
+],
+"latex-workshop.latex.recipes": [
+    {
+        "name": "bibtex ➞ lualatexmk",
+        "tools": [
+            "pdflatex",
+            "bibtex",
+            "lualatexmk"
+        ]
+    },
+    {
+        "name": "biber ➞ lualatexmk",
+        "tools": [
+            "biber",
+            "lualatexmk"
+        ]
+    },
+    {
+        "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+        "tools": [
+            "pdflatex",
+            "bibtex",
+            "pdflatex",
+            "pdflatex"
+        ]
+    }
 ],
 
 "vim.vimrc.enable": true,
@@ -575,5 +523,8 @@
     }
 ],
 "files.trimTrailingWhitespace": true,
-"python.languageServer": "Microsoft"
+"python.languageServer": "Microsoft",
+"python.linting.pylintArgs": [
+    "--generate-members"
+]
 }
