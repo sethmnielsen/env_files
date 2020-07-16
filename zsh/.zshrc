@@ -90,7 +90,7 @@ plugins=(
   git
   tmux
   virtualenv-seth
-  #forgit
+  forgit
 )
 
 source $ZSH/oh-my-zsh.sh
