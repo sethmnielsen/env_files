@@ -1,17 +1,19 @@
 # Auto-completion
 # ---------------
 
-#[[ $- == *i* ]] && source "/home/seth/.fzf/shell/completion.zsh" 2> /dev/null
+[[ $- == *i* ]] && source "/usr/share/fzf/completion.zsh" 2> /dev/null
 
 # Key bindings
 # ------------
-#source "/home/seth/.fzf/shell/key-bindings.zsh"
+
+source "/usr/share/fzf/key-bindings.zsh"
 
 # RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case "
 # INITIAL_QUERY=""
 # FZF_DEFAULT_COMMAND="$RG_PREFIX '$INITIAL_QUERY'" \
 #   fzf --bind "change:reload:$RG_PREFIX {q} || true" \
 #       --ansi --phony --query "$INITIAL_QUERY"
+
 
 
 fif() {
@@ -26,7 +28,7 @@ export FZF_COMPLETION_TRIGGER=''
 
 export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
 bindkey '^T' fzf-completion
-#bindkey '^I' $fzf_default_completion  # this makes <TAB> and <^I> retain the default behavior
+bindkey '^I' $fzf_default_completion  # this makes <TAB> and <^I> retain the default behavior
 
 export FORGIT_FZF_DEFAULT_OPTS="$FORGIT_FZF_DEFAULT_OPTS --layout=reverse"
 
