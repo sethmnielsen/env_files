@@ -25,24 +25,17 @@ export EDITOR=/usr/bin/vim
 export RANGER_LOAD_DEFAULT_RC="false"
 
 # PATH
-export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export LD_LIBRARY_PATH=/opt/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export LD_LIBRARY_PATH=/usr/lib:$LD_LIBRARY_PATH
 #export PATH=$PATH:~/dev/UnrealEngine/Engine/Binaries/Linux
-export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
 export PATH=$PATH:$HOME/software/blender
-export PATH=/usr/local/opencv/bin:$PATH
 export QT_QPA_PLATFORMTHEME=qt5ct
-
-############################################################################################
-#export QT_QPA_PLATFORMTHEME=qt5ct   # HEEEYYYY LOOK AT THISSSSSSS
-############################################################################################
 
 # HOLODECK
 #export HOLODECKPATH=~/.local/share/holodeck-0.2.2dev
 
 #### SETTING PYTHONPATH ####
 #export PYTHONPATH=~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src
-#export PYTHONPATH=/usr/local/opencv/lib/python3.6/dist-packages:$PYTHONPATH
 
 # Rust
 export RUST_LOG=info
@@ -57,9 +50,6 @@ export LANG=en_US.UTF-8
 #eval "$(register-python-argcomplete /path/to/the/to/be/completed/file1)"
 
 ##### oh-my-zsh #####
-
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -96,27 +86,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Other custom stuff
 
 # Keybindings
 bindkey '^P' up-line-or-beginning-search
@@ -133,4 +104,3 @@ source ~/env/zsh/.aliasrc
 # fzf
 [ -f ~/env/fzf.zsh ] && source ~/env/fzf.zsh
 
-export LD_LIBRARY_PATH=/usr/local/opencv/lib:$LD_LIBRARY_PATH

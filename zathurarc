@@ -32,3 +32,6 @@ set window-title-basename "true"
 set window-title-page "true"
 
 set zoom-center "true"
+
+
+map I feedkeys ":info<Return>"
