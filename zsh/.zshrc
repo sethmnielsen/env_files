@@ -15,12 +15,13 @@ zstyle :compinstall filename '~/.zshrc'
 
 
 ##### Added by me #####
-#export LS_COLORS="di=1;36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
+export LS_COLORS="di=1;36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
 
 export DEFAULT_USER=seth  # for shortening prompt
-export VIMINIT='source $MYVIMRC'
+export TERM=alacritty
 export MYVIMRC=~/env/.vimrc
-export EDITOR=vim
+export VIMINIT='source $MYVIMRC'
+export EDITOR=/usr/bin/vim
 export RANGER_LOAD_DEFAULT_RC="false"
 
 # PATH
@@ -30,6 +31,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PAT
 export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
 export PATH=$PATH:$HOME/software/blender
 export PATH=/usr/local/opencv/bin:$PATH
+export QT_QPA_PLATFORMTHEME=qt5ct
 
 ############################################################################################
 #export QT_QPA_PLATFORMTHEME=qt5ct   # HEEEYYYY LOOK AT THISSSSSSS
@@ -89,7 +91,6 @@ plugins=(
   cargo
   git
   tmux
-  virtualenv-seth
   forgit
 )
 
@@ -131,16 +132,5 @@ source ~/env/zsh/.aliasrc
 
 # fzf
 [ -f ~/env/fzf.zsh ] && source ~/env/fzf.zsh
-
-if [[ "$(hostname)" != "zepharch" ]]; then
-    # virtualenv -- this needs to be done after sourcing oh-my-zsh.sh
-    source ~/env/zsh/.myvirtenvrc.zsh
-
-    # pip
-    eval "`pip completion --zsh`"
-    compctl -K _pip_completion pip3
-else
-    TERM=alacritty
-fi
 
 export LD_LIBRARY_PATH=/usr/local/opencv/lib:$LD_LIBRARY_PATH

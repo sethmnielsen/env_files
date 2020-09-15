@@ -11,7 +11,7 @@ import sys
 #except ImportError:
 #    pass
 
-np.set_printoptions(precision=4, suppress=True, sign=' ', linewidth=100)
+# np.set_printoptions(precision=4, suppress=True, sign=' ', linewidth=100)
 
 
 def npaddr(x):

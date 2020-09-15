@@ -47,6 +47,7 @@ Plugin 'junegunn/seoul256.vim'
 call vundle#end()            " required
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:tex_flavor = 'latex'
 
 augroup VimAfter
     autocmd!

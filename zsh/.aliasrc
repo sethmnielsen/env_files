@@ -128,7 +128,7 @@ power_draw() {
 # ranger file manager
 ranger-cd() {
     tempfile="$(mktemp -t tmp.XXXXXX)"
-    /usr/local/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
+    ranger --choosedir="$tempfile" "${@:-$(pwd)}"
     test -f "$tempfile" &&
     if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
         cd -- "$(cat "$tempfile")"
@@ -254,6 +254,7 @@ alias cd_q='cd ~/dev/quadsim_ws/src/quadsim'
 alias cd_models='cd ~/dev/models/research/deeplab'
 alias cd_holodeck_worlds='cd ~/.local/share/holodeck/0.3.1/worlds'
 alias cd_exer='cd ~/dev/exercism/rust'
+alias cd_windows_docs='cd /mnt/windows/Users/sethm/Documents'
 alias ev='ranger-cd ~/env'
 
 if [[ -n "$rfh" ]]; then
