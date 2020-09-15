@@ -6,12 +6,12 @@ map h navigate previous
 #map J scroll down
 #map K scroll up
 
-map ^0 feedkeys ":blist 0<Return>"
-map ^1 feedkeys ":blist 1<Return>"
-map ^2 feedkeys ":blist 2<Return>"
-map ^3 feedkeys ":blist 3<Return>"
-map ^4 feedkeys ":blist 4<Return>"
-map ^5 feedkeys ":blist 5<Return>"
+map <C-0> feedkeys ":blist 0<Return>"
+map <C-1> feedkeys ":blist 1<Return>"
+map <C-2> feedkeys ":blist 2<Return>"
+map <C-3> feedkeys ":blist 3<Return>"
+map <C-4> feedkeys ":blist 4<Return>"
+map <C-5> feedkeys ":blist 5<Return>"
 
 map <C-a> feedkeys ":exec okular %<Return>"
 
@@ -32,3 +32,6 @@ set window-title-basename "true"
 set window-title-page "true"
 
 set zoom-center "true"
+
+
+map I feedkeys ":info<Return>"

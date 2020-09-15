@@ -24,16 +24,15 @@ export EDITOR=vim
 export RANGER_LOAD_DEFAULT_RC="false"
 
 # PATH
-export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+#export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}  # CUDA
+export LD_LIBRARY_PATH=/opt/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export LD_LIBRARY_PATH=/usr/lib:$LD_LIBRARY_PATH
 #export PATH=$PATH:~/dev/UnrealEngine/Engine/Binaries/Linux
-export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
+#export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
 export PATH=$PATH:$HOME/software/blender
-export PATH=/usr/local/opencv/bin:$PATH
+#export PATH=/usr/local/opencv/bin:$PATH
 
-############################################################################################
-#export QT_QPA_PLATFORMTHEME=qt5ct   # HEEEYYYY LOOK AT THISSSSSSS
-############################################################################################
+#export QT_QPA_PLATFORMTHEME=qt5ct
 
 # HOLODECK
 #export HOLODECKPATH=~/.local/share/holodeck-0.2.2dev
@@ -89,7 +88,7 @@ plugins=(
   cargo
   git
   tmux
-  virtualenv-seth
+  #virtualenv-seth
   forgit
 )
 
@@ -143,4 +142,3 @@ else
     TERM=alacritty
 fi
 
-export LD_LIBRARY_PATH=/usr/local/opencv/lib:$LD_LIBRARY_PATH

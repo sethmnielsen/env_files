@@ -28,7 +28,7 @@ alias df_='/bin/df'
 alias df='df -h -x tmpfs -x devtmpfs |grep -v loop'
 alias kill_holodeck='killall Holodeck && killall Holodeck'
 alias msger='fb-messenger-cli'
-alias watch_='watch -n 0.2 '
+alias watch_='watch -x -c -n 0.2 '
 alias nv='nvidia-smi'
 alias ssh_desktop='ssh desktop'
 alias remarkable='reMarkable'
@@ -36,11 +36,17 @@ alias remarkable='reMarkable'
 alias bim='vim'
 alias tmux_init='tmux -f ~/env/.tmux.conf new-session'
 alias blueman='blueman-tray'
+alias feh='feh -B black'
+
+chseth() {
+    sudo chown seth:seth $1
+    chmod 666 $1
+}
 
 get_alias() {
     local a
-    a=$(alias $1)
-    echo $(echo ${a} | awk -F"['']" '{print $2}')
+    a=$(which $1)
+    echo $(echo ${a} | awk -F"[ ]" '{print $4}')
 }
 
 # Arch
@@ -109,6 +115,9 @@ upload_gdrive() { # upload file to Sync dir on Google Drive
 sizes() {
   sudo find . -mindepth 1 -maxdepth 1 -print0 | xargs -0 du -hsc | sort -hr
 }
+sizes_nosudo() {
+  find . -mindepth 1 -maxdepth 1 -print0 | xargs -0 du -hsc | sort -hr
+}
 
 # bat
 alias man='batman'
@@ -120,9 +129,11 @@ alias rgf='rg --no-ignore-vcs --hidden --files | rg'
 alias rgf_all='rg --no-ignore --hidden --files | rg'
 
 power_draw() {
-  echo - | awk "{printf \"%.1f\", \
-      $(cat /sys/class/power_supply/BAT0/power_now) / 1000000 }"
-  echo " W "
+  awk '{print $1*10^-6 " W"}' /sys/class/power_supply/BAT0/power_now
+}
+
+power_draw_watch() {
+  watch -x -c -n 1.0 awk '{print $1*10^-6 " W"}' /sys/class/power_supply/BAT0/power_now
 }
 
 # ranger file manager
@@ -232,8 +243,9 @@ alias catkin_make_debug='catkin_make -DCMAKE_BUILD_TYPE=Debug'
 alias catkin_make_py36='catkin_make -DPYTHON_EXECUTABLE=~/.virtualenvs/v3.6/bin/python3'
 alias catkin_make_py36_debug='catkin_make_py36 -DCMAKE_BUILD_TYPE=Debug'
 alias catkin_make_py36_release='catkin_make_py36 -DCMAKE_BUILD_TYPE=Release'
-alias explode='rm -rf build devel && catkin_make_py36 && source devel/setup.zsh'
+alias catkin_make_clean='rm -rf build devel && catkin_make && source devel/setup.zsh'
 alias nodeprocess_edit='sudo vim /opt/ros/melodic/lib/python2.7/dist-packages/roslaunch/nodeprocess.py'
+alias nodeprocess_edit_noetic='sudo vim /opt/ros/noetic/lib/python3.8/site-packages/roslaunch/nodeprocess.py'
 catkin_make_opencv4() {
   catkin_make \
     -DCMAKE_BUILD_TYPE=Debug \
@@ -269,6 +281,7 @@ alias cdm='code ~/dev/models/research/deeplab'
 alias cdb='code ~/dev/boat_landing_sim'
 alias cdq='code ~/dev/quadsim_ws'
 alias cde='code ~/dev/exercism/rust'
+alias cdv='code ~/Documents/research/vision_based_boat_landing'
 
 # Print the 256 color test pattern
 print256colors() {

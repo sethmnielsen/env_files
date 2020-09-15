@@ -182,7 +182,6 @@
     "suppressGitDisabledWarning": true
 },
 "gitlens.statusBar.reduceFlicker": true,
-"C_Cpp.default.cppStandard": "c++14",
 "python.dataScience.askForKernelRestart": false,
 "python.dataScience.changeDirOnImportExport": false,
 "diffEditor.renderSideBySide": true,
@@ -211,10 +210,10 @@
     }
 ],
 "shellformat.effectLanguages": [
-"shellscript",
-"dockerfile",
-"dotenv",
-"hosts",
+    "shellscript",
+    "dockerfile",
+    "dotenv",
+    "hosts",
     "jvmoptions",
     "ignore",
     "gitignore",

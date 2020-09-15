@@ -26,7 +26,7 @@ Plugin 'lervag/vimtex'
 Plugin 'preservim/nerdcommenter'
 Plugin 'preservim/nerdtree'
 Plugin 'vim-airline/vim-airline'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 "Plugin 'airblade/vim-gitgutter'
 Plugin 'Raimondi/delimitMate'
 Plugin 'cespare/vim-toml'
@@ -46,7 +46,8 @@ Plugin 'junegunn/seoul256.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_show_diagnostics_ui = 0
+let g:ycm_auto_hover=''
 
 augroup VimAfter
     autocmd!
@@ -163,17 +164,6 @@ vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>")
 " Highlight search term in file
 nnoremap <leader>l :set invhlsearch<cr>
 
-" Mappings to move between panes
-"nnoremap <C-l> <C-w><C-l>
-"nnoremap <C-h> <C-w><C-h>
-"nnoremap <C-j> <C-w><C-j>
-"nnoremap <C-k> <C-w><C-k>
-
-"inoremap <C-l> <Esc><C-w><C-l>
-"inoremap <C-h> <Esc><C-w><C-h>
-"inoremap <C-j> <Esc><C-w><C-j>
-"inoremap <C-k> <Esc><C-w><C-k>
-
 " Split panes vertically, horizontally
 nnoremap <c-w>\ <c-w>v
 nnoremap <c-w>- <c-w>s
@@ -183,12 +173,6 @@ nnoremap qq <c-w>q
 nnoremap QQ ZQ
 
 map <C-n> :NERDTreeToggle<CR>
-
-" vim-sneak plugin
-"noremap f <Plug>Sneak_f
-"noremap F <Plug>Sneak_F
-"noremap t <Plug>Sneak_t
-"noremap T <Plug>Sneak_T
 
 " Mappings to go to end of line and beginning of line
 nnoremap L $

@@ -1,6 +1,5 @@
 // Place your key bindings in this file to override the defaults
 [
-    { "key": "ctrl+shift+x",             "command": "editor.action.deleteLines", "when": "textInputFocus && !editorReadonly" },
     { "key": "shift+alt+2",              "command": "workbench.action.editorLayoutTwoColumns" },
     { "key": "shift+alt+1",              "command": "workbench.action.editorLayoutSingle" },
     { "key": "ctrl+alt+shift+l",         "command": "workbench.action.moveEditorToRightGroup", "when": "editorFocus" },
@@ -9,6 +8,8 @@
     { "key": "ctrl+alt+shift+p",         "command": "workbench.action.moveEditorToPreviousGroup", "when": "editorFocus" },
     { "key": "ctrl+tab",                 "command": "workbench.action.nextEditor" },
     { "key": "ctrl+shift+tab",           "command": "workbench.action.previousEditor" },
+    { "key": "ctrl+shift+l",             "command": "workbench.action.nextEditor" },
+    { "key": "ctrl+shift+h",             "command": "workbench.action.previousEditor" },
     { "key": "alt+k",                    "command": "cursorUp", "when": "inputFocus && !inKeybindings" },
     { "key": "alt+j",                    "command": "cursorDown", "when": "inputFocus" },
     { "key": "alt+h",                    "command": "cursorLeft", "when": "inputFocus" },
@@ -22,9 +23,11 @@
     { "key": "ctrl+n",                   "command": "workbench.action.focusNextGroup", "when": "textInputFocus || searchInputBoxFocus"},
     { "key": "shift+alt+k",              "command": "editor.action.insertCursorAbove", "when": "editorTextFocus" },
     { "key": "shift+alt+j",              "command": "editor.action.insertCursorBelow", "when": "editorTextFocus" },
-    { "key": "ctrl+shift+h",             "command": "cursorHomeSelect", "when": "textInputFocus" },
-    { "key": "ctrl+shift+l",             "command": "cursorEndSelect", "when": "textInputFocus" },
-    { "key": "ctrl+alt+l",               "command": "expandLineSelection", "when": "textInputFocus" },
+    {
+        "key": "ctrl+alt+l",
+        "command": "expandLineSelection",
+        "when": "textInputFocus"
+    },
     { "key": "shift+alt+l",              "command": "cursorRightSelect", "when": "textInputFocus" },
     { "key": "shift+alt+h",              "command": "cursorLeftSelect", "when": "textInputFocus" },
     { "key": "ctrl+shift+`",             "command": "macros.closePanelSidebar" },
@@ -55,8 +58,10 @@
     { "key": "alt+\\",                   "command": "workbench.debug.action.focusVariablesView", "when": "inDebugMode" },
     { "key": "alt+\\",                   "command": "search.action.focusSearchList", "when": "searchViewletVisible" },
     { "key": "ctrl+shift+'",             "command": "workbench.action.toggleMaximizedPanel" },
-    { "key": "ctrl+shift+q",             "command": "clock.insertDateTime" },
-    { "key": "ctrl+alt+backspace",       "command": "bracketeer.removeBrackets" },
+    {
+        "key": "ctrl+alt+backspace",
+        "command": "bracketeer.removeBrackets"
+    },
     { "key": "ctrl+0",                   "command": "workbench.action.terminal.toggleTerminal", "when": "!terminalFocus" },
     { "key": "ctrl+0",                   "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus" },
     { "key": "ctrl+alt+enter",           "command": "search.action.replaceAll", "when": "searchViewletVisible && !findWidgetVisible" },
@@ -273,11 +278,6 @@
     {
         "key": "ctrl+shift+0",
         "command": "latex-workshop.actions"
-    },
-    {
-        "key": "shift+enter",
-        "command": "latex-workshop.build",
-        "when": "editorLangId == 'latex'"
     },
     {
         "key": "alt+enter",
@@ -601,5 +601,17 @@
         "key": "ctrl+shift+right",
         "command": "-workbench.action.terminal.resizePaneRight",
         "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "-workbench.action.editor.changeLanguageMode"
+    },
+    {
+        "key": "ctrl+shift+h",
+        "command": "-activitusbar.showReplaceViewWithSelection"
+    },
+    {
+        "key": "ctrl+shift+h",
+        "command": "-workbench.action.replaceInFiles"
     }
 ]
