@@ -28,7 +28,7 @@ export RMVIEW_CONF=~/.config/rmview/rmview.json
 export LD_LIBRARY_PATH=/opt/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 export LD_LIBRARY_PATH=/usr/lib:$LD_LIBRARY_PATH
 #export PATH=$PATH:~/dev/UnrealEngine/Engine/Binaries/Linux
-export PATH=$PATH:$HOME/software/blender
+export PATH=$PATH:$HOME/.local/bin:$HOME/software/blender
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 # HOLODECK
