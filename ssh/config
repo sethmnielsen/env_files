@@ -15,9 +15,13 @@ Host remarkable-usb
   User root 
 
 Host rm-edu
-    Hostname rm-host-edu
+    Hostname host-rm-edu
     User root
 
 Host rm-magicc
-    Hostname rm-host-magicc
+    Hostname host-rm-magiccwifi
+    User root
+
+Host rm-laguna
+    Hostname host-rm-laguna
     User root

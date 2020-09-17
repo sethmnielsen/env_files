@@ -506,7 +506,7 @@
 "python.languageServer": "Microsoft",
 "python.defaultInterpreterPath": "/usr/bin/python",
 "terminal.integrated.fontSize": 16,
-"window.zoomLevel": 0,
+"window.zoomLevel": 1,
 "code-runner.enableAppInsights": false,
 "code-runner.showRunCommandInExplorerContextMenu": false,
 "code-runner.showRunCommandInEditorContextMenu": false,
