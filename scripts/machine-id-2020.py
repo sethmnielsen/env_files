@@ -3,6 +3,7 @@
 import time
 import uuid
 import random
+import sys
 
 import requests
 
@@ -59,10 +60,16 @@ while True:
     if len(resp.text) != 0:
         updateline = resp.text.splitlines()[5]
         if "noupdate" not in updateline:
-            print(f"\nRESPONSE:\n{resp.text}")
+            machine_str = f"params:\n{params}\nRESPONSE:\n{resp.text}"
+            print(f"{machine_str}")
+            with open('good_machine_id.xml', 'w') as f:
+                f.write(machine_str)
+            print(f"Done!")
+            sys.exit(0)
         else:
             print(".", end='', flush=True)
-        # print(resp.text.find("updatecheck"))
+
+        time.sleep(1.0)
 
 
     # if "noupdate" in resp.text:
@@ -75,4 +82,3 @@ while True:
 
     #     break
 
-    time.sleep(1)
