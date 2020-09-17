@@ -48,39 +48,44 @@ while True:
         "sessionid": get_uuid(),
         "machineid": get_uuid().replace("-", ""),
         "oem": get_oem(),
-        "bootid": orig_bootid,
+        "bootid": "fddcd3cd-3bf6-4cee-9a0a-31577b58b6da",
+        # "bootid": orig_bootid,
         # "machineid": "759c63f7f10c448f8991afad149e4345",
         # "requestid": "6ec2ba6b-2e9c-4d4c-823a-d19a094062e5",
         # "sessionid": "3c4fa8b9-6aeb-4314-be22-5fa90a782fb9",
         "appid": orig_appid
         # "bootid": "48cfc9fb-e90a-4ace-81aa-2b9eeb928e83"
     }
+    # resp = requests.post(url, req.format(**params))
     resp = requests.post(url, req.format(**params))
 
+    # if len(resp.text) != 0:
+    #     if "noupdate" in resp.text:
+    #         print("0", end='', flush=True)
+    #     else:
+    #         machine_str = f"params:\n{params}\nRESPONSE:\n{resp.text}"
+    #         print(f"{machine_str}")
+    #         with open('good_machine_id.xml', 'w') as f:
+    #             f.write(machine_str)
+    #         print(f"Done!")
+    #         sys.exit(0)
+    #     time.sleep(2.0)
+    # else:
+    #     print(".", end='', flush=True)
+    #     time.sleep(61.0)
+
+
     if len(resp.text) != 0:
-        updateline = resp.text.splitlines()[5]
-        if "noupdate" not in updateline:
-            machine_str = f"params:\n{params}\nRESPONSE:\n{resp.text}"
-            print(f"{machine_str}")
-            with open('good_machine_id.xml', 'w') as f:
-                f.write(machine_str)
-            print(f"Done!")
-            sys.exit(0)
+        if "noupdate" in resp.text:
+            print(f"\nNo update ---- OEM: {params['oem']}, m-id: {params['machineid']}")
+            time.sleep(1)
         else:
-            print("0", end='', flush=True)
-        time.sleep(1.0)
+            print("Found params to get update: ")
+            print(f"{params}\n")
+            print(resp.text)
+            break
     else:
         print(".", end='', flush=True)
-        time.sleep(5.0)
+        time.sleep(20)
 
-
-    # if "noupdate" in resp.text:
-    #     print(f"No update.. OEM: {params['oem']}, m-id: {params['machineid']}")
-    # else:
-    #     print("Found params to get update: ")
-    #     print(params)
-    #     print()
-    #     print(resp.text)
-
-    #     break
 
