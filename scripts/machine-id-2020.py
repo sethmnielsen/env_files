@@ -67,9 +67,11 @@ while True:
             print(f"Done!")
             sys.exit(0)
         else:
-            print(".", end='', flush=True)
-
+            print("0", end='', flush=True)
         time.sleep(1.0)
+    else:
+        print(".", end='', flush=True)
+        time.sleep(5.0)
 
 
     # if "noupdate" in resp.text:
