@@ -215,8 +215,8 @@ cdll() {cd "$@" && ll}
 #alias cd='cdls'
 
 # edit common files with vim
-alias vz='vim ~/.zshrc'
-alias va='vim ~/env/zsh/.aliasrc'
+alias vz='vim ~/.zshrc && source ~/.zshrc'
+alias va='vim ~/env/zsh/.aliasrc && source ~/env/zsh/.aliasrc'
 alias vv='vim ~/env/.vimrc'
 alias vt='vim ~/env/.tmux.conf'
 alias vala='vim ~/.config/alacritty/alacritty.yml'
@@ -281,6 +281,7 @@ alias cdb='code ~/dev/boat_landing_sim'
 alias cdq='code ~/dev/quadsim_ws'
 alias cde='code ~/dev/exercism/rust'
 alias cdv='code ~/Documents/research/vision_based_boat_landing'
+alias cds='code ~/school/me570/color-science-sethmnielsen'
 
 # Print the 256 color test pattern
 print256colors() {
@@ -433,4 +434,4 @@ gstats() {
   cd $A
 }
 
-source ~/.other
+source ~/.cups/.other

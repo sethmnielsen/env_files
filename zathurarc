@@ -35,3 +35,6 @@ set zoom-center "true"
 
 
 map I feedkeys ":info<Return>"
+
+set recolor-keephue true
+set recolor-darkcolor "\#AAAAAA"

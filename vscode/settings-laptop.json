@@ -506,9 +506,11 @@
 "python.languageServer": "Microsoft",
 "python.defaultInterpreterPath": "/usr/bin/python",
 "terminal.integrated.fontSize": 16,
-"window.zoomLevel": 1,
+"window.zoomLevel": 2,
 "code-runner.enableAppInsights": false,
 "code-runner.showRunCommandInExplorerContextMenu": false,
 "code-runner.showRunCommandInEditorContextMenu": false,
-"python.showStartPage": false
+"python.showStartPage": false,
+"npm.autoDetect": "off",
+"cmake.skipConfigureIfCachePresent": true
 }
