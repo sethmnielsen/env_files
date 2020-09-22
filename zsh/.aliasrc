@@ -359,6 +359,7 @@ ffmpeg_mov_to_mp4_resolve() {
 # git
 alias gs='git status'
 alias gsu='git status -uno'
+alias gfs='git fetch && git status'
 alias gch='git checkout'
 alias gcm='git commit -m'
 alias subup='git submodule update --init --recursive'
