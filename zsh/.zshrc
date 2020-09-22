@@ -23,6 +23,7 @@ export VIMINIT='source $MYVIMRC'
 export EDITOR=/usr/bin/vim
 export RANGER_LOAD_DEFAULT_RC="false"
 export RMVIEW_CONF=~/.config/rmview/rmview.json
+export RIPGREP_CONFIG_PATH=~/.config/ripgrep/.ripgreprc
 
 # PATH
 export LD_LIBRARY_PATH=/opt/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
