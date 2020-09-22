@@ -1,0 +1,6 @@
+jumpapp -wC -t "Messages for web" google-chrome-stable --app=https://messages.google.com/web/conversations
+jumpapp -wC tabbed -cd zathura -e
+/home/seth/env/scripts/planner-extract.sh
+
+
+/home/seth/.local/bin/nightlight-toggle

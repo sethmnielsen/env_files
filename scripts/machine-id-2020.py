@@ -77,7 +77,7 @@ while True:
 
     if len(resp.text) != 0:
         if "noupdate" in resp.text:
-            print(f"\nNo update ---- OEM: {params['oem']}, m-id: {params['machineid']}")
+            print(f"\nNo update ---- OEM: {params['oem']}, m-id: {params['machineid']} ", end='')
             time.sleep(1)
         else:
             print("Found params to get update: ")
