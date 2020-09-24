@@ -489,8 +489,6 @@
 "workbench.colorCustomizations": {
     "editorBracketMatch.border": "#58b898"
 },
-"python.dataScience.runStartupCommands":
-    "%load_ext autoreload \n%autoreload 2 \n %matplotlib notebook",
 "python.dataScience.useDefaultConfigForJupyter": false,
 "editor.accessibilitySupport": "off",
 "python.linting.pylintEnabled": true,
@@ -506,7 +504,7 @@
 "python.languageServer": "Microsoft",
 "python.defaultInterpreterPath": "/usr/bin/python",
 "terminal.integrated.fontSize": 16,
-"window.zoomLevel": 2,
+"window.zoomLevel": 1,
 "code-runner.enableAppInsights": false,
 "code-runner.showRunCommandInExplorerContextMenu": false,
 "code-runner.showRunCommandInEditorContextMenu": false,

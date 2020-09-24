@@ -127,6 +127,7 @@ alias brg='batgrep'
 
 # ripgrep
 alias rgf='rg --no-ignore-vcs --hidden --files | rg'
+alias rgf_sudo='sudo rg --no-ignore-vcs --hidden --files | rg'
 alias rgf_all='rg --no-ignore --hidden --files | rg'
 
 power_draw() {
