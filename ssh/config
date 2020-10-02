@@ -19,7 +19,7 @@ Host rm-edu
     User root
 
 Host rm-magicc
-    Hostname host-rm-magiccwifi
+    Hostname host-rm-magicc
     User root
 
 Host rm-laguna

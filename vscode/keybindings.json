@@ -282,7 +282,7 @@
     {
         "key": "alt+enter",
         "command": "latex-workshop.build",
-        "when": "editorLangId == 'latex'"
+        "when": "editorLangId == 'latex' || latex-structure.active"
     },
     {
         "key": "ctrl+h",
@@ -350,8 +350,8 @@
     },
     {
         "key": "ctrl+j",
-        "command": "workbench.panel.terminal.focus",
-        "when": "editorTextFocus && workbench.panel.terminal.visible && panelPosition == 'bottom'"
+        "command": "terminal.focus",
+        "when": "editorTextFocus && terminal.visible && panelPosition == 'bottom'"
     },
     {
         "key": "ctrl+h",
@@ -360,8 +360,8 @@
     },
     {
         "key": "ctrl+l",
-        "command": "workbench.panel.terminal.focus",
-        "when": "editorTextFocus && activeEditorGroupLast && workbench.panel.terminal.visible && panelPosition == 'right' && vim.mode != 'Insert'"
+        "command": "terminal.focus",
+        "when": "editorTextFocus && activeEditorGroupLast && terminal.visible && panelPosition == 'right' && vim.mode != 'Insert'"
     },
     {
         "key": "ctrl+q",

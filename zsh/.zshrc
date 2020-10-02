@@ -4,7 +4,6 @@ HISTSIZE=8000
 SAVEHIST=8000
 setopt appendhistory autocd extendedglob nomatch
 unsetopt beep notify
-bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '~/.zshrc'
@@ -44,12 +43,6 @@ export RUSTFLAGS="$RUSTFLAGS -A unused_imports"
 export JAX_ENABLE_X64="true"
 export TF_CPP_MIN_LOG_LEVEL="2"
 
-# For autocomplete-python to work correctly
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-
-#eval "$(register-python-argcomplete /path/to/the/to/be/completed/file1)"
-
 ##### oh-my-zsh #####
 
 # Path to your oh-my-zsh installation.
@@ -69,6 +62,7 @@ DISABLE_AUTO_UPDATE="true"
 ZSH_CUSTOM=~/env/oh-my-zsh
 ZSH_THEME="seth-pygmalion"
 ZSH_COMPDUMP="${HOME}/.cache/zsh/.zcompdump-${HOST/.*/}-${ZSH_VERSION}"
+setopt rmstarsilent
 
 # tmux
 export ZSH_TMUX_CONFIG=~/env/.tmux.conf
@@ -83,6 +77,7 @@ plugins=(
   git
   tmux
   forgit
+  zsh-vim-mode
 )
 
 source $ZSH/oh-my-zsh.sh

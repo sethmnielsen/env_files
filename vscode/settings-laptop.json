@@ -10,7 +10,7 @@
 "search.useReplacePreview": false,
 "C_Cpp.default.cppStandard": "c++11",
 "C_Cpp.default.compilerPath": "/usr/bin/gcc",
-"editor.fontSize": 13,
+"editor.fontSize": 13.5,
 "files.exclude": {
     "**/*.jop": false,
     ".env": false,
@@ -111,11 +111,11 @@
     "positionPanelRightTerminalFocus": [
         "workbench.action.positionPanelRight",
         "workbench.action.focusActiveEditorGroup",
-        "workbench.panel.terminal.focus"
+        "terminal.focus"
     ],
     "positionPanelBottomTerminalFocus": [
         "workbench.action.positionPanelBottom",
-        "workbench.panel.terminal.focus"
+        "terminal.focus"
     ],
     "positionPanelRightEditorFocus": [
         "workbench.action.positionPanelRight",
@@ -188,7 +188,6 @@
 "python.dataScience.changeDirOnImportExport": false,
 "diffEditor.renderSideBySide": true,
 "editor.suggest.maxVisibleSuggestions": 6,
-"window.menuBarVisibility": "hidden",
 "problems.decorations.enabled": true,
 "markdown.preview.breaks": true,
 "markdown.preview.markEditorSelection": false,
@@ -228,7 +227,7 @@
 "matlab.lintOnSave": false,
 "editor.snippetSuggestions": "bottom",
 "rust.show_warnings": false,
-"extensions.autoUpdate": true,
+"extensions.autoUpdate": false,
 "editor.links": false,
 "code-runner.executorMap": {
     "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
@@ -238,8 +237,18 @@
     "rust": "cd $dir && cargo run --release"
 },
 "code-runner.runInTerminal": true,
+"cmake.generator": "Unix Makefiles",
 "cmake.configureOnOpen": false,
-
+"cmake.skipConfigureIfCachePresent": true,
+"cmake.configureOnEdit": false,
+"cmake.statusbar.visibility": "compact",
+"cmake.statusbar.advanced": {
+    "buildTarget": {"visibility": "hidden"},
+    "ctest": {"visibility": "hidden"},
+    "debug": {"visibility": "hidden"},
+    "kit": {"visibility": "hidden"},
+    "launch": {"visibility": "hidden"}
+},
 "[latex]": {
     "editor.formatOnPaste": false,
     "editor.formatOnSave": false,
@@ -394,7 +403,6 @@
     {
         "before": ["o"],
         "commands": ["editor.action.insertLineAfter","extension.vim_insert"]
-
     },
     {
         "before": ["O"],
@@ -429,10 +437,10 @@
         "before": ["<C-r>"],
         "commands": ["redo"]
     },
-    {
-        "before": ["S"],
-        "after": ["y", "s", "a", "W", "$"]
-    },
+    // {
+    //     "before": ["S"],
+    //     "after": ["y", "s", "a", "W", "$"]
+    // },
 ],
 "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -504,11 +512,18 @@
 "python.languageServer": "Microsoft",
 "python.defaultInterpreterPath": "/usr/bin/python",
 "terminal.integrated.fontSize": 16,
-"window.zoomLevel": 1,
+"window.zoomLevel": 0,
 "code-runner.enableAppInsights": false,
 "code-runner.showRunCommandInExplorerContextMenu": false,
 "code-runner.showRunCommandInEditorContextMenu": false,
 "python.showStartPage": false,
 "npm.autoDetect": "off",
-"cmake.skipConfigureIfCachePresent": true
+"window.menuBarVisibility": "hidden",
+"update.mode": "manual",
+"C_Cpp.default.includePath": [
+    "/usr/include/eigen3",
+    "${workspaceFolder}/**"
+],
+"extensions.ignoreRecommendations": true,
+"terminal.integrated.allowChords": false,
 }

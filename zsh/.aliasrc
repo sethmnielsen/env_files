@@ -1,18 +1,12 @@
 # General
-alias py='ipython3'
-alias python36='~/.virtualenvs/v3.6/bin/python3'
-alias python36_sudo='sudo ~/.virtualenvs/v3.6/bin/python3'
+alias qq='exit'
+alias py='ipython'
 alias pcs='sudo pacman -S'
-alias sctl='systemctl'
 alias ssctl='sudo systemctl'
 alias planner='/home/seth/env/scripts/planner-extract.sh'
-alias refind_edit='sudo vim /boot/EFI/refind/refind.conf'
 alias rust_evcxr='evcxr'
-alias unzip_='/usr/bin/unzip'
 alias unzip='unzip -q'
-#alias open='open_command'
-alias upgrades='sudo apt update && sudo apt upgrade -y'
-alias o='exit'
+alias unzip_='/usr/bin/unzip'
 alias tm='gio trash'
 alias mntjet='sshfs nvidia@tx2_rv:/home/nvidia/ /home/seth/kbcar_home'
 alias umntjet='fusermount -u /home/seth/kbcar_home'
@@ -21,20 +15,22 @@ alias unreal='~/dev/ue4/UnrealEngine-4.22.3/Engine/Binaries/Linux/UE4Editor'
 alias unreal_4.25='~/dev/ue4/UnrealEngine-4.25.1/Engine/Binaries/Linux/UE4Editor'
 alias scaedm='ssh smn45@ssh.et.byu.edu'
 alias nuke='pkill -SIGKILL -fe '
-alias htop_='htop'
 alias htop='htop -u seth'
-alias lsblk_='/bin/lsblk'
+alias htop_='/usr/bin/htop'
 alias lsblk='lsblk -o NAME,FSTYPE,SIZE,STATE,TYPE,MOUNTPOINT |grep -v loop'
-alias df_='/bin/df'
+alias lsblk_='/bin/lsblk'
 alias df='df -h -x tmpfs -x devtmpfs |grep -v loop'
+alias df_='/bin/df'
+unalias grep
+alias grep='grep --color'
 alias kill_holodeck='killall Holodeck && killall Holodeck'
 alias msger='fb-messenger-cli'
-alias watch_='watch -x -c -n 0.2 '
+alias watch='watch -x -c -n 0.2 '
+alias watch_='/usr/bin/watch'
 alias nv='nvidia-smi'
 alias ssh_desktop='ssh desktop'
 alias remarkable='reMarkable'
 #alias blender='~/.local/share/blender/blender'
-alias bim='vim'
 alias tmux_init='tmux -f ~/env/.tmux.conf new-session'
 alias blueman='blueman-tray'
 alias feh='feh -B black'
@@ -50,35 +46,8 @@ get_alias() {
     echo $(echo ${a} | awk -F"[ ]" '{print $4}')
 }
 
-# Arch
-alias wifi_stop='sudo systemctl stop netctl-auto@wlp2s0.service'
-alias wifi_start='sudo systemctl start netctl-auto@wlp2s0.service'
-mount_ubuntu() {
-    sudo mount /dev/nvme0n1p6 /mnt/ubuntu
-    cd /mnt/ubuntu/home/seth
-    echo "Mounted ubuntu partition (nvme0n1p6) to /mnt/ubuntu"
-    echo "cwd: $(pwd)"
-}
-umount_ubuntu() {
-    sudo umount /mnt/ubuntu
-    echo "Unmounted ubuntu partition"
-    echo "Deleted '/mnt/ubuntu' mount point"
-    echo ""
-}
 
-mount_windows() {
-    sudo mount /dev/nvme0n1p3 /mnt/windows
-    cd /mnt/windows/Users/sethm/
-    echo "Mounted windows partition (nvme0n1p3) to /mnt/windows"
-    echo "cwd: $(pwd)"
-}
-umount_windows() {
-    sudo umount /mnt/windows
-    echo "Unmounted windows partition"
-    echo ""
-}
-
-# exa to replace ls -- EXPERIMENTAL
+# exa to replace ls
 alias x='exa'
 alias ls='exa'
 alias l='exa -1'
@@ -100,6 +69,11 @@ alias lak='exa -la --group-directories-first'
 #alias lla='ls -l'
 #alias la='ls -lAh'
 #alias lak='ls -lAh --group-directories-first'
+
+rmview_change(){
+    rm ~/.config/rmview/rmview.json
+    ln -s ~/.config/rmview/rmview-$1.json ~/.config/rmview/rmview.json
+}
 
 
 # Files stuff
@@ -126,6 +100,7 @@ alias bgrep='batgrep'
 alias brg='batgrep'
 
 # ripgrep
+alias rga='rg --no-ignore --hidden $1'
 alias rgf='rg --no-ignore-vcs --hidden --files | rg'
 alias rgf_sudo='sudo rg --no-ignore-vcs --hidden --files | rg'
 alias rgf_all='rg --no-ignore --hidden --files | rg'
@@ -159,7 +134,7 @@ alias rpprog='rsync -ahv --progress'
 alias sudo_rp='sudo rsync -ahv --no-owner'
 alias sudo_rpprog='sudo rsync -ahv --no-owner --progress'
 alias rsync_ssh='rsync -ahzPv "$@"'
-#rsync_ssh() {
+# rsync_ssh() {
   #if [[ $1 == "--delete" || $1 == "-d" ]]; then
     #dir=$2
     #ops="--delete"
@@ -190,7 +165,7 @@ alias rsync_ssh='rsync -ahzPv "$@"'
   #fi
 #}
 
-#rsync_ssh_school() {
+# rsync_ssh_school() {
   #if [[ $(uname -n) == "seth-xps-13" ]]; then
     #rsync -ahzP ~/Documents/School-Optimization/ desktop:~/Documents/School-Optimization
     #rsync -ahzP ~/Documents/School-Nonlinear/ desktop:~/Documents/School-Nonlinear
@@ -213,8 +188,6 @@ mvf() { mv "$@" && goto "$_"; }
 cdl() {cd "$@" && ls}
 cdll() {cd "$@" && ll}
 
-#alias cd='cdls'
-
 # edit common files with vim
 alias vz='vim ~/.zshrc && source ~/.zshrc'
 alias va='vim ~/env/zsh/.aliasrc && source ~/env/zsh/.aliasrc'
@@ -225,6 +198,8 @@ alias vi3='vim ~/.config/i3/config'
 alias vi3status='vim ~/.config/i3status/config'
 alias vi3blocks='vim ~/.config/i3blocks/config'
 alias vth='sudo vim /sys/devices/platform/asus-nb-wmi/throttle_thermal_policy'
+alias vrefind='sudo vim /boot/EFI/refind/refind.conf'
+alias vho='sudo vim /etc/hosts'
 
 # zsh / sourcing / environment
 alias szsh='source ~/.zshrc'
@@ -275,14 +250,13 @@ if [[ -n "$rfh" ]]; then
 fi
 
 # Handy code-related aliases
-alias OptView='python3 ~/dev/pyoptsparse/postprocessing/OptView.py'
 alias serv_call='rosservice call /param_set MIXER 2 && rosservice call /calibrate_imu'
 alias cdm='code ~/dev/models/research/deeplab'
 alias cdb='code ~/dev/boat_landing_sim'
 alias cdq='code ~/dev/quadsim_ws'
 alias cde='code ~/dev/exercism/rust'
 alias cdv='code ~/Documents/research/vision_based_boat_landing'
-alias cds='code ~/school/me570/color-science-sethmnielsen'
+alias cds='code ~/school/me570/linked-list-sethmnielsen'
 
 # Print the 256 color test pattern
 print256colors() {
