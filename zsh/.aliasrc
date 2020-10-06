@@ -33,6 +33,7 @@ alias remarkable='reMarkable'
 #alias blender='~/.local/share/blender/blender'
 alias tmux_init='tmux -f ~/env/.tmux.conf new-session'
 alias blueman='blueman-tray'
+alias btr='sudo systemctl restart bluetooth.service'
 alias feh='feh -B black'
 
 chseth() {
@@ -241,6 +242,7 @@ alias cd_models='cd ~/dev/models/research/deeplab'
 alias cd_holodeck_worlds='cd ~/.local/share/holodeck/0.3.1/worlds'
 alias cd_exer='cd ~/dev/exercism/rust'
 alias cd_windows_docs='cd /mnt/windows/Users/sethm/Documents'
+alias cd_me570='cd ~/school/me570/linked-list-sethmnielsen'
 alias ev='ranger-cd ~/env'
 
 if [[ -n "$rfh" ]]; then
