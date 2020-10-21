@@ -1,8 +1,11 @@
 # General
 alias qq='exit'
 alias py='ipython'
-alias pcs='sudo pacman -S'
 alias ssctl='sudo systemctl'
+#alias sctlr='systemctl reboot'
+alias reboot_='reboot'
+alias reboot='systemctl reboot'
+alias upgrades='yay -Sy && yay -Qu'
 alias planner='/home/seth/env/scripts/planner-extract.sh'
 alias rust_evcxr='evcxr'
 alias unzip='unzip -q'
@@ -17,12 +20,8 @@ alias scaedm='ssh smn45@ssh.et.byu.edu'
 alias nuke='pkill -SIGKILL -fe '
 alias htop='htop -u seth'
 alias htop_='/usr/bin/htop'
-alias lsblk='lsblk -o NAME,FSTYPE,SIZE,STATE,TYPE,MOUNTPOINT |grep -v loop'
-alias lsblk_='/bin/lsblk'
 alias df='df -h -x tmpfs -x devtmpfs |grep -v loop'
 alias df_='/bin/df'
-unalias grep
-alias grep='grep --color'
 alias kill_holodeck='killall Holodeck && killall Holodeck'
 alias msger='fb-messenger-cli'
 alias watch='watch -x -c -n 0.2 '
@@ -35,6 +34,14 @@ alias tmux_init='tmux -f ~/env/.tmux.conf new-session'
 alias blueman='blueman-tray'
 alias btr='sudo systemctl restart bluetooth.service'
 alias feh='feh -B black'
+alias ipa='ip --brief address show'
+lsblc() {
+    lsblk -o NAME,FSTYPE,SIZE,STATE,MOUNTPOINT${1}
+}
+#alias lsblk='lsblk -o NAME,FSTYPE,SIZE,STATE,MOUNTPOINT' 
+alias lsblk_='/bin/lsblk'
+unalias grep
+alias grep='grep --color'
 
 chseth() {
     sudo chown seth:seth $1
@@ -97,7 +104,6 @@ sizes_nosudo() {
 
 # bat
 alias man='batman'
-alias bgrep='batgrep'
 alias brg='batgrep'
 
 # ripgrep
@@ -126,6 +132,7 @@ ranger-cd() {
 }
 
 alias ra='ranger-cd'
+alias ra_='ranger'
 bindkey -s '^O' 'ranger-cd\n'
 
 # Copying with progress/speed info
@@ -201,6 +208,7 @@ alias vi3blocks='vim ~/.config/i3blocks/config'
 alias vth='sudo vim /sys/devices/platform/asus-nb-wmi/throttle_thermal_policy'
 alias vrefind='sudo vim /boot/EFI/refind/refind.conf'
 alias vho='sudo vim /etc/hosts'
+alias vpac='sudo vim /etc/pacman.conf'
 
 # zsh / sourcing / environment
 alias szsh='source ~/.zshrc'
@@ -242,7 +250,7 @@ alias cd_models='cd ~/dev/models/research/deeplab'
 alias cd_holodeck_worlds='cd ~/.local/share/holodeck/0.3.1/worlds'
 alias cd_exer='cd ~/dev/exercism/rust'
 alias cd_windows_docs='cd /mnt/windows/Users/sethm/Documents'
-alias cd_me570='cd ~/school/me570/linked-list-sethmnielsen'
+alias cd_me570='cd ~/school/me570/midterm-project'
 alias ev='ranger-cd ~/env'
 
 if [[ -n "$rfh" ]]; then
@@ -258,7 +266,7 @@ alias cdb='code ~/dev/boat_landing_sim'
 alias cdq='code ~/dev/quadsim_ws'
 alias cde='code ~/dev/exercism/rust'
 alias cdv='code ~/Documents/research/vision_based_boat_landing'
-alias cds='code ~/school/me570/linked-list-sethmnielsen'
+alias cds='code ~/school/me570/midterm-project'
 
 # Print the 256 color test pattern
 print256colors() {

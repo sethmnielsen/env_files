@@ -3,8 +3,6 @@ map + zoom default
 
 map l navigate next
 map h navigate previous
-#map J scroll down
-#map K scroll up
 
 map <C-0> feedkeys ":blist 0<Return>"
 map <C-1> feedkeys ":blist 1<Return>"

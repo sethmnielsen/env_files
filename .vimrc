@@ -34,6 +34,7 @@ Plugin 'cespare/vim-toml'
 Plugin 'Konfekt/vim-CtrlXA'
 "Plugin 'justinmk/vim-sneak'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'google/vim-searchindex'
 
 " Colorscheme related
 "Plugin 'morhetz/gruvbox'
@@ -46,8 +47,10 @@ Plugin 'junegunn/seoul256.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
+" ------------------------- NICE OPTIONS ------------------------------
+
 let g:tex_flavor = 'latex'
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+"let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_auto_hover=''
 
@@ -60,6 +63,7 @@ augroup VimAfter
 
 "pandoc folding
 "let g:pandoc#modules#disabled = ["folding", "formatting"]
+"set shortmess-=S
 
 " ------------------------- COLORS 'N STUFF ----------------------------
 
@@ -80,7 +84,6 @@ set background=dark
 "set lazyredraw
 set nostartofline
 set whichwrap=b,s,h,l
-set shortmess-=S
 set completeopt-=preview
 
 let g:airline_powerline_fonts = 1
@@ -204,7 +207,7 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>ssv :w <bar> :source $MYVIMRC<cr>
 
 " Mapping to edit ~/.vim/.ycm_extra_conf.py
-nnoremap <leader>ycm :vsplit ~/.vim/.ycm_extra_conf.py<cr>
+"nnoremap <leader>ycm :vsplit ~/.vim/.ycm_extra_conf.py<cr>
 "inoremap {<CR> {<CR>}<Esc>ko
 
 " Remap for latex compiling
