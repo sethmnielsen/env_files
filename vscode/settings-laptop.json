@@ -4,46 +4,49 @@
 "editor.fontFamily": "'Iosevka', 'monospace'",
 "editor.fontLigatures": false,
 "terminal.integrated.fontFamily": "'FantasqueSansMono Nerd Font Mono', 'DejaVuSansMono Nerd Font Mono'",
-"workbench.colorTheme": "ayu-custom",
 "editor.wordWrapColumn": 90,
 "editor.rulers": [90],
 "search.useReplacePreview": false,
 "C_Cpp.default.cppStandard": "c++11",
 "C_Cpp.default.compilerPath": "/usr/bin/gcc",
-"editor.fontSize": 13.5,
+"C_Cpp.default.includePath": [
+    "${workspaceFolder}**",
+    "/usr/include/eigen3"
+],
 "files.exclude": {
-    "**/*.jop": false,
-    ".env": false,
-    "**/*__pycache__": false,
-    "**/*.~*": false,
-    "**/*.catkin_workspace": false,
-    "**/*.clang_complete": false,
-    "**/*.github/": false,
-    "**/*.gitignore": false,
-    "**/*.gitmodules": false,
-    "**/*.ipynb_checkpoints": false,
-    "**/*.m": false,
-    "**/*.mypy_cache": false,
-    "**/*.o": false,
-    "**/*.ods": false,
-    "**/*.odt": false,
-    "**/*.pyc": false,
-    "**/*.rst": false,
-    "**/*.so": false,
-    "**/*.swp": false,
-    "**/*.tar.gz": false,
-    "**/*.zip": false,
-    "**/*airbourne": false,
-    "**/*breezy": false,
-    "**/*CMakeLists.txt.user": false,
-    "**/*docs": false,
-    "**/*rosflight_memory": false,
-    "**/Cargo.lock": false,
-    "**/build": false,
-    "**/devel": false,
-    "**/target/": false,
-    "**F450.yaml": false,
-    "**/*.pytest_cache/": false
+    ".env": true,
+    "**/*__pycache__": true,
+    "**/*.~*": true,
+    "**/*.catkin_workspace": true,
+    "**/*.code-workspace": true,
+    "**/*.clang_complete": true,
+    "**/*.github/": true,
+    "**/*.gitignore": true,
+    "**/*.gitmodules": true,
+    "**/*.ipynb_checkpoints": true,
+    "**/*.m": true,
+    "**/*.mypy_cache": true,
+    "**/*.o": true,
+    "**/*.ods": true,
+    "**/*.odt": true,
+    "**/*.pyc": true,
+    "**/*.rst": true,
+    "**/*.so": true,
+    "**/*.swp": true,
+    "**/*.tar.gz": true,
+    "**/*.zip": true,
+    "**/*airbourne": true,
+    "**/*breezy": true,
+    "**/*CMakeLists.txt.user": true,
+    "**/*docs": true,
+    "**/*rosflight_memory": true,
+    "**/Cargo.lock": true,
+    "**/build": true,
+    "**/devel": true,
+    "**/target/": true,
+    "**F450.yaml": true,
+    "**/*.pytest_cache/": true,
+    "**/*.ui": true
 },
 "files.associations": {
     "*.*rc": "shellscript",
@@ -60,7 +63,6 @@
 "editor.minimap.enabled": false,
 "atomKeymap.promptV3Features": true,
 "editor.multiCursorModifier": "alt",
-"workbench.editor.tabSizing": "shrink",
 "keyboard.dispatch": "keyCode",
 "python.jediEnabled": false,
 "python.venvPath": "/home/seth/.virtualenvs",
@@ -74,14 +76,12 @@
 "activitusbar.toggleSidebar": false,
 "clock.dateFormat": "h:MM TT",
 "breadcrumbs.enabled": true,
-"python.autoComplete.extraPaths": [
-    "/usr/lib/python3.8/site-packages/"
-    // "/home/seth/school/nonlinear",
-    // "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src",
-    // "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python",
-    // "/home/seth/dev/boat_landing_sim/src/rf_joy/src/rosflight_joy",
-    // "/opt/ros/melodic/lib/python2.7/dist-packages"
-],
+// "python.autoComplete.extraPaths": [
+//     "/usr/lib/python3.8/site-packages/",
+// ],
+// "python.analysis.extraPaths": [
+//     "/usr/lib/python3.8/site-packages/"
+// ],
 "macros.list": {
     "closePanelSidebar": [
         "workbench.action.toggleSidebarVisibility",
@@ -151,15 +151,6 @@
 "explorer.confirmDragAndDrop": false,
 "editor.suggestSelection": "first",
 "explorer.confirmDelete": false,
-// "bracket-pair-colorizer-2.colors": [
-    // "Gold",
-    // "Olive",
-    // "Teal"
-    // "DarkOrange",
-    // "OliveDrab",
-    // "Crimson",
-    // "BlueViolet",
-// ],
 "files.watcherExclude": {
     "/home/seth/.local/share/**": true,
     "/home/seth/Downloads/**": true
@@ -367,12 +358,13 @@
     "<C-Z>": false,
     "<C-]>": false,
     "<C-[>": false,
+    "u": false,
     "<C-y>": true,
     "Up": true,
     "Down": true,
     "Left": true,
     "Right": true,
-    "<C-k>": false
+    "<C-k>": false,
 },
 "vim.insertModeKeyBindingsNonRecursive": [
     {
@@ -385,7 +377,7 @@
     },
     {
         "before": ["<leader>","c","i"],
-        "after": ["editor.action.commentLine"]
+        "commands": ["editor.action.commentLine"]
     },
 ],
 "vim.normalModeKeyBindingsNonRecursive": [
@@ -426,7 +418,6 @@
         "after": ["1","0","+"]
     },
     {
-
         "before": ["u"],
         "commands": ["undo"]
     },
@@ -459,12 +450,18 @@
     {
         "before": [ "p"],
         "after": [ "p", "g", "v", "y" ]
-    }
+    },
+    {
+        "before": ["u"],
+        "commands": ["undo"]
+    },
+    {
+        "before": ["<C-r>"],
+        "commands": ["redo"]
+    },
 ],
 "editor.scrollBeyondLastLine": false,
 "editor.smoothScrolling": true,
-"python.linting.pylintUseMinimalCheckers": false,
-"python.linting.pylintArgs": ["--generate-members"],
 // "python.linting.ignorePatterns": [
 //     ".vscode/*.py",
 //     "**/site-packages/**/*.py",
@@ -496,7 +493,13 @@
 "python.dataScience.useDefaultConfigForJupyter": false,
 "editor.accessibilitySupport": "off",
 "python.linting.pylintEnabled": true,
-"python.linting.mypyEnabled": false,
+"python.linting.pylintArgs": [
+    "--ignored-modules=cv2,numpy",
+    "--disable=all",
+    "--enable=F,E,unreachable,duplicate-key,unnecessary-semicolon,global-variable-not-assigned,binary-op-exception,bad-format-string,anomalous-backslash-in-string,bad-open-mode",
+    "--disable=unresolved-import"
+],
+// "python.linting.mypyEnabled": true,
 "python.testing.autoTestDiscoverOnSaveEnabled": false,
 "python.testing.promptToConfigure": false,
 "terminal.integrated.shell.linux": "/usr/bin/zsh",
@@ -507,8 +510,6 @@
 "files.eol": "\n",
 "python.languageServer": "Microsoft",
 "python.defaultInterpreterPath": "/usr/bin/python",
-"terminal.integrated.fontSize": 16,
-"window.zoomLevel": 0,
 "code-runner.enableAppInsights": false,
 "code-runner.showRunCommandInExplorerContextMenu": false,
 "code-runner.showRunCommandInEditorContextMenu": false,
@@ -516,10 +517,18 @@
 "npm.autoDetect": "off",
 "window.menuBarVisibility": "hidden",
 "update.mode": "manual",
-"C_Cpp.default.includePath": [
-    "/usr/include/eigen3",
-    "${workspaceFolder}/**"
-],
 "extensions.ignoreRecommendations": true,
 "terminal.integrated.allowChords": false,
+"breadcrumbs.filePath": "off",
+"workbench.editor.pinnedTabSizing": "shrink",
+"workbench.colorTheme": "solarized-light-seth",
+"window.zoomLevel": 0,
+"debug.onTaskErrors": "abort",
+"workbench.editor.tabSizing": "shrink",
+"editor.fontSize": 12.5,
+"outline.showConstants": false,
+"breadcrumbs.showConstants": false,
+"files.autoSaveDelay": 2000,
+"outline.showBooleans": false,
+"rust-client.disableRustup": true,
 }

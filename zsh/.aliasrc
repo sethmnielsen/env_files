@@ -35,6 +35,9 @@ alias blueman='blueman-tray'
 alias btr='sudo systemctl restart bluetooth.service'
 alias feh='feh -B black'
 alias ipa='ip --brief address show'
+alias boost='asusctl -p boost'
+alias silent='asusctl -p silent'
+alias eswap='setxkbmap -v 10 -option caps:swapescape'
 lsblc() {
     lsblk -o NAME,FSTYPE,SIZE,STATE,MOUNTPOINT${1}
 }
@@ -49,9 +52,8 @@ chseth() {
 }
 
 get_alias() {
-    local a
-    a=$(which $1)
-    echo $(echo ${a} | awk -F"[ ]" '{print $4}')
+    #echo $(echo ${a} | awk -F"[ ]" '{print $4}')
+    echo "$(which $1)" | awk -F"[ ]" '{print $4,$NF}'
 }
 
 
@@ -108,9 +110,11 @@ alias brg='batgrep'
 
 # ripgrep
 alias rga='rg --no-ignore --hidden $1'
+alias rga_sudo='sudo rg --no-ignore --hidden $1'
 alias rgf='rg --no-ignore-vcs --hidden --files | rg'
+alias rgfa='rg --no-ignore --hidden --files | rg'
 alias rgf_sudo='sudo rg --no-ignore-vcs --hidden --files | rg'
-alias rgf_all='rg --no-ignore --hidden --files | rg'
+alias rgfa_sudo='sudo rg --no-ignore --hidden --files | rg'
 
 power_draw() {
   awk '{print $1*10^-6 " W"}' /sys/class/power_supply/BAT0/power_now
@@ -136,8 +140,7 @@ alias ra_='ranger'
 bindkey -s '^O' 'ranger-cd\n'
 
 # Copying with progress/speed info
-alias rp='rsync -ahv'
-alias rpprog='rsync -ahv --progress'
+alias rp='rsync -ahvP'
 
 alias sudo_rp='sudo rsync -ahv --no-owner'
 alias sudo_rpprog='sudo rsync -ahv --no-owner --progress'
@@ -193,11 +196,12 @@ cpf() { cp "$@" && goto "$_"; }
 mvf() { mv "$@" && goto "$_"; }
 
 # cd and ls
-cdl() {cd "$@" && ls}
-cdll() {cd "$@" && ll}
+cdl() {cd "$@" && ll}
+cdls() {cd "$@" && ls}
 
 # edit common files with vim
 alias vz='vim ~/.zshrc && source ~/.zshrc'
+alias vprof='vim ~/.zprofile && source ~/.zprofile'
 alias va='vim ~/env/zsh/.aliasrc && source ~/env/zsh/.aliasrc'
 alias vv='vim ~/env/.vimrc'
 alias vt='vim ~/env/.tmux.conf'
@@ -209,6 +213,7 @@ alias vth='sudo vim /sys/devices/platform/asus-nb-wmi/throttle_thermal_policy'
 alias vrefind='sudo vim /boot/EFI/refind/refind.conf'
 alias vho='sudo vim /etc/hosts'
 alias vpac='sudo vim /etc/pacman.conf'
+alias vasus='sudo vim /etc/asusd/asusd.conf'
 
 # zsh / sourcing / environment
 alias szsh='source ~/.zshrc'
@@ -245,7 +250,7 @@ alias cd_rfhq='cd ~/dev/quadsim_ws/src/rosflight_holodeck'
 alias cd_boat='cd ~/dev/boat_landing_sim'
 alias cd_oe='cd ~/Documents/unreal_projects/ocean-world/ocean-engine-seth'
 alias cd_quadws='cd ~/dev/quadsim_ws'
-alias cd_q='cd ~/dev/quadsim_ws/src/quadsim'
+alias cd_q='cd ~/dev/boat_landing_sim/src/quadsim'
 alias cd_models='cd ~/dev/models/research/deeplab'
 alias cd_holodeck_worlds='cd ~/.local/share/holodeck/0.3.1/worlds'
 alias cd_exer='cd ~/dev/exercism/rust'
@@ -279,6 +284,8 @@ print256colors() {
 }
 
 # FFMPEG converting MP4 or MOV to MOV for Resolve video editor
+# Valid profiles: 1920x1080; bitrate (b:v): 45M; pixel format: yuv422p
+#                 1280x720;  bitrate (b:v): 60M; pixel format: yuv422p
 ffmpeg_mp4_to_mov_resolve() {
   if [[ "$#" -ne 1 ]]; then
     echo "Usage: $0 [dir]"
@@ -306,9 +313,9 @@ ffmpeg_mp4_to_mov_resolve() {
           ffmpeg -i ${f}      \
             -vcodec dnxhd     \
             -acodec pcm_s16le \
-            -s 1920x1080      \
+            -s 1280x720       \
             -r $fps           \
-            -b:v 45M          \
+            -b:v 60M          \
             -pix_fmt yuv422p  \
             -f mov            \
             "${CONV_DIR}/${fname}_R.MOV"

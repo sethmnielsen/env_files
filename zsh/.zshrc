@@ -3,6 +3,7 @@ HISTFILE=~/.histfile
 HISTSIZE=8000
 SAVEHIST=8000
 setopt appendhistory autocd extendedglob nomatch
+setopt rmstarsilent
 unsetopt beep notify
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -63,7 +64,6 @@ DISABLE_AUTO_UPDATE="true"
 ZSH_CUSTOM=~/env/oh-my-zsh
 ZSH_THEME="seth-pygmalion"
 ZSH_COMPDUMP="${HOME}/.cache/zsh/.zcompdump-${HOST/.*/}-${ZSH_VERSION}"
-setopt rmstarsilent
 
 # tmux
 export ZSH_TMUX_CONFIG=~/env/.tmux.conf

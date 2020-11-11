@@ -39,3 +39,7 @@ Host remarkable2-usb
 Host rm2-magicc
   Hostname host-rm2-magicc
   User root
+
+Host rm2-laguna
+  Hostname host-rm2-laguna
+  User root

@@ -6,7 +6,8 @@
 [pull]
 	rebase = false
 [core]
-  pager = delta --plus-color="#006000" --plus-emph-color="#00af00"  --theme='1337'
+  ;pager = delta --plus-color="#006000" --plus-emph-color="#00af00"  --theme='1337' --line-numbers
+  pager = delta
 [interactive]
   diffFilter = delta --color-only
 [diff]
@@ -18,3 +19,9 @@
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
     required = true
+[delta]
+    syntax-theme = 1337
+    plus-style = syntax "#006000"
+    plus-emph-style = syntax "#00af00"
+    line-numbers = true
+

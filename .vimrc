@@ -95,13 +95,15 @@ augroup cpp
   set shiftwidth=2
 augroup END
 
-autocmd FileType c,cpp setlocal comments-=:// comments+=f://
+autocmd FileType c,cpp  setlocal comments-=:// comments+=f://
 autocmd FileType make set noexpandtab softtabstop=0
+
+let g:NERDCustomDelimiters = { 'dosini': { 'left': '#'} }
 
 "Sets syntax highlighting for files or filetypes
 autocmd BufRead,BufNewFile .launch set filetype=xml
 autocmd BufRead,BufNewFile .rosrc,.aliasrc set filetype=zsh
-autocmd BufRead,BufNewFile zathurarc set filetype=sh
+autocmd BufRead,BufNewFile zathurarc set filetype=conf
 autocmd BufRead,BufNewFile .conf set filetype=dosini
 
 filetype plugin indent on    " required
@@ -151,9 +153,6 @@ nnoremap <leader>r :%s///g<left><left>
 
 " Y copies to end of line, not entire line like yy
 nnoremap Y y$
-
-" Toggle case of letter under cursor
-nnoremap U vU
 
 " Make word before Cursor Uppercase in normal mode
 nnoremap <C-y> mwlbgUl`w
