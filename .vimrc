@@ -69,15 +69,15 @@ augroup VimAfter
 
 " Colorscheme
 "colorscheme luna-term
-colorscheme mango
+"colorscheme mango
 "colorscheme nord
 "
 "let g:gruvbox_contrast_dark="hard"
 "colorscheme gruvbox
 
-"let g:seoul256_background = 233
-"let g:seoul256_srgb = 1
-"colorscheme seoul256
+let g:seoul_background = 233
+let g:seoul_srgb = 1
+colorscheme seoul
 
 set background=dark
 

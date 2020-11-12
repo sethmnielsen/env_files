@@ -20,7 +20,7 @@ alias scaedm='ssh smn45@ssh.et.byu.edu'
 alias nuke='pkill -SIGKILL -fe '
 alias htop='htop -u seth'
 alias htop_='/usr/bin/htop'
-alias df='df -h -x tmpfs -x devtmpfs |grep -v loop'
+alias df='/bin/df -h -x tmpfs -x devtmpfs |grep -v loop'
 alias df_='/bin/df'
 alias kill_holodeck='killall Holodeck && killall Holodeck'
 alias msger='fb-messenger-cli'
@@ -38,6 +38,7 @@ alias ipa='ip --brief address show'
 alias boost='asusctl -p boost'
 alias silent='asusctl -p silent'
 alias eswap='setxkbmap -v 10 -option caps:swapescape'
+alias lscpu_='lscpu | rg boost'
 lsblc() {
     lsblk -o NAME,FSTYPE,SIZE,STATE,MOUNTPOINT${1}
 }
