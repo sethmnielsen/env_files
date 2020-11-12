@@ -13,6 +13,10 @@ Host desktop-eth
   Hostname tmplab-32-114-126
   IdentityFile ~/.ssh/id_rsa
   User seth
+ 
+Host laptop
+  Hostname 10.32.114.122
+  User seth
 
 #Host remarkable-usb
   #Hostname 10.11.99.1
