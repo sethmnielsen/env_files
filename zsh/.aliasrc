@@ -35,10 +35,11 @@ alias blueman='blueman-tray'
 alias btr='sudo systemctl restart bluetooth.service'
 alias feh='feh -B black'
 alias ipa='ip --brief address show'
-alias boost='asusctl -p boost'
-alias silent='asusctl -p silent'
+alias boost='asusctl profile boost; asusctl -p boost'
+alias silent='asusctl profile silent; asusctl -p silent'
 alias eswap='setxkbmap -v 10 -option caps:swapescape'
 alias lscpu_='lscpu | rg boost'
+alias delete_known_host_line='sed -i '\''${0}d'\'' ~/.ssh/known_hosts'
 lsblc() {
     lsblk -o NAME,FSTYPE,SIZE,STATE,MOUNTPOINT${1}
 }

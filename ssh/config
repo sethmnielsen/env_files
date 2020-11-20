@@ -18,9 +18,10 @@ Host laptop
   Hostname 10.32.114.137
   User seth
 
-#Host remarkable-usb
-  #Hostname 10.11.99.1
-  #User root 
+Host remarkable-usb
+  Hostname 10.11.99.1
+  IdentityFile ~/.ssh/id_rsa
+  User root 
 
 Host rm-edu
   Hostname host-rm-edu
@@ -33,12 +34,6 @@ Host rm-magicc
 Host rm-laguna
   Hostname host-rm-laguna
   User root
-
-# rM2
-Host remarkable2-usb
-  Hostname 10.11.99.1
-  IdentityFile ~/.ssh/id_rsa
-  User root 
 
 Host rm2-magicc
   Hostname host-rm2-magicc

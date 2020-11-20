@@ -63,8 +63,6 @@
 "editor.minimap.enabled": false,
 "atomKeymap.promptV3Features": true,
 "editor.multiCursorModifier": "alt",
-"keyboard.dispatch": "keyCode",
-"python.jediEnabled": false,
 "python.venvPath": "/home/seth/.virtualenvs",
 "python.terminal.activateEnvironment": false,
 "workbench.activityBar.visible": false,
@@ -74,7 +72,6 @@
 "editor.acceptSuggestionOnEnter": "off",
 "activitusbar.activeColour": "#4989b6",
 "activitusbar.toggleSidebar": false,
-"clock.dateFormat": "h:MM TT",
 "breadcrumbs.enabled": true,
 // "python.autoComplete.extraPaths": [
 //     "/usr/lib/python3.8/site-packages/",
@@ -172,10 +169,7 @@
     "suppressGitDisabledWarning": true
 },
 "gitlens.statusBar.reduceFlicker": true,
-"python.dataScience.askForKernelRestart": false,
-"python.dataScience.changeDirOnImportExport": false,
 "diffEditor.renderSideBySide": true,
-"editor.suggest.maxVisibleSuggestions": 6,
 "problems.decorations.enabled": true,
 "markdown.preview.breaks": true,
 "markdown.preview.markEditorSelection": false,
@@ -337,9 +331,9 @@
 "vim.vimrc.enable": true,
 "vim.vimrc.path": "/home/seth/env/.vimrc",
 "vim.useCtrlKeys": true,
-"vim.sneak": false,
-"vim.sneakReplacesF": true,
-"vim.whichwrap": "h,l,<,>,[,]",
+// "vim.sneak": false,
+// "vim.sneakReplacesF": true,
+// "vim.whichwrap": "h,l,<,>,[,]",
 "vim.textwidth": 90,
 "vim.smartcase": false,
 "vim.ignorecase": false,
@@ -375,10 +369,10 @@
         "before": ["<alt-j>"],
         "after": ["g", "j"]
     },
-    {
-        "before": ["<leader>","c","i"],
-        "commands": ["editor.action.commentLine"]
-    },
+    // {
+    //     "before": ["<leader>","c","i"],
+    //     "commands": ["editor.action.commentLine"]
+    // },
 ],
 "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -490,16 +484,15 @@
 "workbench.colorCustomizations": {
     "editorBracketMatch.border": "#58b898"
 },
-"python.dataScience.useDefaultConfigForJupyter": false,
 "editor.accessibilitySupport": "off",
-"python.linting.pylintEnabled": true,
+"python.linting.lintOnSave": false,
 "python.linting.pylintArgs": [
     "--ignored-modules=cv2,numpy",
     "--disable=all",
     "--enable=F,E,unreachable,duplicate-key,unnecessary-semicolon,global-variable-not-assigned,binary-op-exception,bad-format-string,anomalous-backslash-in-string,bad-open-mode",
     "--disable=unresolved-import"
 ],
-// "python.linting.mypyEnabled": true,
+"python.analysis.disabled": ["undefined-variable"],
 "python.testing.autoTestDiscoverOnSaveEnabled": false,
 "python.testing.promptToConfigure": false,
 "terminal.integrated.shell.linux": "/usr/bin/zsh",
@@ -508,7 +501,7 @@
 "files.trimTrailingWhitespace": true,
 "diffEditor.ignoreTrimWhitespace": false,
 "files.eol": "\n",
-"python.languageServer": "Microsoft",
+"python.languageServer": "Pylance",
 "python.defaultInterpreterPath": "/usr/bin/python",
 "code-runner.enableAppInsights": false,
 "code-runner.showRunCommandInExplorerContextMenu": false,
@@ -521,7 +514,7 @@
 "terminal.integrated.allowChords": false,
 "breadcrumbs.filePath": "off",
 "workbench.editor.pinnedTabSizing": "shrink",
-"workbench.colorTheme": "solarized-light-seth",
+"workbench.colorTheme": "ayu-seth",
 "window.zoomLevel": 0,
 "debug.onTaskErrors": "abort",
 "workbench.editor.tabSizing": "shrink",
@@ -531,4 +524,8 @@
 "files.autoSaveDelay": 2000,
 "outline.showBooleans": false,
 "rust-client.disableRustup": true,
+"jupyter.askForKernelRestart": false,
+"jupyter.changeDirOnImportExport": false,
+"jupyter.useDefaultConfigForJupyter": false,
+"keyboard.dispatch": "keyCode",
 }

@@ -92,6 +92,8 @@ bindkey '^P' up-line-or-beginning-search
 bindkey '^N' down-line-or-beginning-search
 bindkey '^D' delete-char
 bindkey '^Y' menu-expand-or-complete
+bindkey '^Xl' clear-screen
+
 
 # ROS
 # sourcing this will override virtualenv to be 'v3.6' (python 3.6)

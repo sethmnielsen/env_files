@@ -193,7 +193,7 @@
 		{
 			"scope": "keyword.control",
 			"settings": {
-				"foreground": "#a974ff"
+				"foreground": "#a483ff"
 			}
 		},
 		{
@@ -918,7 +918,8 @@
 		"dropdown.background": "#1d2021",
 		"dropdown.border": "#3c3836",
 		"dropdown.foreground": "#ebdbb2",
-		"editor.background": "#121414",
+		//"editor.background": "#121414",
+		"editor.background": "#1d2021",
 		"editor.findMatchBackground": "#83a59870",
 		"editor.findMatchHighlightBackground": "#fe801930",
 		"editor.findRangeHighlightBackground": "#83a59870",

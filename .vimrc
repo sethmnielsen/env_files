@@ -70,14 +70,16 @@ augroup VimAfter
 " Colorscheme
 "colorscheme luna-term
 "colorscheme mango
+colorscheme lilypink-seth
+"colorscheme lxvc 
 "colorscheme nord
 "
 "let g:gruvbox_contrast_dark="hard"
 "colorscheme gruvbox
 
-let g:seoul_background = 233
-let g:seoul_srgb = 1
-colorscheme seoul
+"let g:seoul_background = 233
+"let g:seoul_srgb = 1
+"colorscheme seoul
 
 set background=dark
 
@@ -144,6 +146,12 @@ noremap = +
 " Quickly insert an empty new line without entering insert mode
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
+
+" Use [] commands even when { or } isn't in first column
+noremap [[ ?{<CR>w99[{
+noremap ][ /}<CR>b99]}
+noremap ]] j0[[%/{<CR>
+noremap [] k$][%?}<CR>
 
 " Save any changes to current file
 noremap <leader>w :update<CR>

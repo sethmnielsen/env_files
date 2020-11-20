@@ -1,7 +1,7 @@
 {
 	"aururl": "https://aur.archlinux.org",
-	"buildDir": "$HOME/.cache/yay",
-	"absdir": "$HOME/.cache/yay/abs",
+	"buildDir": "/home/seth/.cache/yay",
+	"absdir": "/home/seth/.cache/yay/abs",
 	"editor": "",
 	"editorflags": "",
 	"makepkgbin": "makepkg",
@@ -33,7 +33,7 @@
 	"cleanAfter": false,
 	"provides": true,
 	"pgpfetch": true,
-	"upgrademenu": true,
+	"upgrademenu": false,
 	"cleanmenu": false,
 	"diffmenu": false,
 	"editmenu": false,
