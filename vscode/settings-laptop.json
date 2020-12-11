@@ -8,7 +8,7 @@
 "editor.rulers": [90],
 "search.useReplacePreview": false,
 "C_Cpp.default.cppStandard": "c++11",
-"C_Cpp.default.compilerPath": "/usr/bin/gcc",
+// "C_Cpp.default.compilerPath": "/usr/bin/gcc",
 "C_Cpp.default.includePath": [
     "${workspaceFolder}**",
     "/usr/include/eigen3"
@@ -46,7 +46,6 @@
     "**/target/": true,
     "**F450.yaml": true,
     "**/*.pytest_cache/": true,
-    "**/*.ui": true
 },
 "files.associations": {
     "*.*rc": "shellscript",
@@ -514,14 +513,13 @@
 "terminal.integrated.allowChords": false,
 "breadcrumbs.filePath": "off",
 "workbench.editor.pinnedTabSizing": "shrink",
-"workbench.colorTheme": "ayu-seth",
+"workbench.colorTheme": "solarized-light-seth",
 "window.zoomLevel": 0,
 "debug.onTaskErrors": "abort",
 "workbench.editor.tabSizing": "shrink",
 "editor.fontSize": 12.5,
 "outline.showConstants": false,
 "breadcrumbs.showConstants": false,
-"files.autoSaveDelay": 2000,
 "outline.showBooleans": false,
 "rust-client.disableRustup": true,
 "jupyter.askForKernelRestart": false,
