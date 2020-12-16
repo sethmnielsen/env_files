@@ -108,7 +108,7 @@ sizes_nosudo() {
 }
 
 # bat
-alias man='batman'
+#alias man='batman'
 alias brg='batgrep'
 
 # ripgrep
@@ -236,6 +236,7 @@ alias catkin_make_cuda='catkin_make -DOpenCV_DIR=/usr/local/share/OpenCV -DVISUA
 alias catkin_make_debug='catkin_make -DCMAKE_BUILD_TYPE=Debug'
 alias catkin_make_release='catkin_make -DCMAKE_BUILD_TYPE=Release'
 alias catkin_make_clean='rm -rf build devel && catkin_make && source devel/setup.zsh'
+alias catkin_make_cleanj1='rm -rf build devel && catkin_make -j1'
 alias nodeprocess_edit='sudo vim /opt/ros/noetic/lib/python3.8/site-packages/roslaunch/nodeprocess.py'
 catkin_make_opencv4() {
   catkin_make \

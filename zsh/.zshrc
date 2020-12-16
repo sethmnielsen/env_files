@@ -24,6 +24,7 @@ export EDITOR=/usr/bin/vim
 export RANGER_LOAD_DEFAULT_RC="false"
 export RMVIEW_CONF=~/.config/rmview/rmview.json
 export RIPGREP_CONFIG_PATH=~/.config/ripgrep/.ripgreprc
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 #export PAGER=bat
 
 # PATH
@@ -38,8 +39,7 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 
 #### SETTING PYTHONPATH ####
 #export PYTHONPATH=~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src
-export PYTHONPATH=$PYTHONPATH:$HOME/school/me570/me570-project/python/holodeck/src
-#export PYTHONPATH=$PYTHONPATH:$HOME/school/me570/me570-project/python
+#export PYTHONPATH=$PYTHONPATH:$HOME/school/me570/me570-project/python/holodeck/src
 
 # Rust
 export RUST_LOG=info
@@ -53,7 +53,7 @@ export TF_CPP_MIN_LOG_LEVEL="2"
 export ZSH="$HOME/.oh-my-zsh"
 
 
-CASE_SENSITIVE="true"
+#CASE_SENSITIVE="true"
 #zstyle ':completion:*'  matcher-list 'm:{a-z}={A-Z}'
 
 

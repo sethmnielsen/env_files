@@ -19,7 +19,7 @@ Host laptop
   User seth
 
 Host remarkable-usb
-  Hostname 10.11.99.1
+  Hostname host-rm-usb
   IdentityFile ~/.ssh/id_rsa
   User root 
 

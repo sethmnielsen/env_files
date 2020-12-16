@@ -18,13 +18,13 @@ orig_appid = "98DA7DF2-4E3E-4744-9DE6-EC931886ABAB"
 orig_bootid = "fddcd3cd-3bf6-4cee-9a0a-31577b58b6da"
 
 # these two DO matter
-orig_machineid = "0968003611624c548b6684b5e1d80bfe" #example id, run 'cat /etc/machine-id' on tablet for yours
+orig_machineid = "35a2579eba8544e7bbd688400ea99bdb" #example id, run 'cat /etc/machine-id' on tablet for yours
 orig_oem = "RM110-039-51902" #find in /home/root/.config/remarkable/xochitl.conf as 'deviceid=RM110-xxx-xxxxx'
 
 # this is the request to send; fill in the desired software version and your current version
 # in this example, current version is 2.3.1.27 and desire to update to 2.4.0.27
-cur_firmware_ver = "2.3.1.27"
-des_firmware_ver = "2.4.0.27"
+cur_firmware_ver = "2.4.1.30"
+des_firmware_ver = "2.5.0.27"
 req = """<?xml version="1.0" encoding="UTF-8"?>
 <request protocol="3.0" version="{des_firmware}" requestid="{{{requestid}}}" sessionid="{{{sessionid}}}" updaterversion="0.4.2" installsource="{installsource}" ismachine="1">
     <os version="zg" platform="reMarkable" sp="0.0.4.81_armv7l" arch="armv7l"></os>
@@ -65,7 +65,6 @@ while True:
     }
     req_fulltext = req.format(**params)
     resp = requests.post(url, req_fulltext)
-    print(params)
 
     if "Bad Request" in resp.text:
         msg = f"Bad request. Request content:\n{req_fulltext}"
@@ -73,7 +72,7 @@ while True:
 
     if len(resp.text) != 0:
         if "noupdate" in resp.text:
-            print(f"\nNo update ---- OEM: {params['oem']}, machine-id: {params['machineid']} ", end='')
+r            print(f"\nNo update ---- OEM: {params['oem']}, machine-id: {params['machineid']} ", end='')
             time.sleep(1)
         else:
             print("Found params to get update: ")

@@ -513,7 +513,7 @@
 "terminal.integrated.allowChords": false,
 "breadcrumbs.filePath": "off",
 "workbench.editor.pinnedTabSizing": "shrink",
-"workbench.colorTheme": "solarized-light-seth",
+"workbench.colorTheme": "ayu-seth",
 "window.zoomLevel": 0,
 "debug.onTaskErrors": "abort",
 "workbench.editor.tabSizing": "shrink",
@@ -526,4 +526,8 @@
 "jupyter.changeDirOnImportExport": false,
 "jupyter.useDefaultConfigForJupyter": false,
 "keyboard.dispatch": "keyCode",
+"editor.renderWhitespace": "trailing",
+"gitlens.views.repositories.enabled": true,
+"files.trimFinalNewlines": true,
+"jupyter.enablePlotViewer": false,
 }
