@@ -15,7 +15,7 @@ Host desktop-eth
   User seth
  
 Host laptop
-  Hostname 10.32.114.137
+  Hostname host-laptop
   User seth
 
 Host remarkable-usb
