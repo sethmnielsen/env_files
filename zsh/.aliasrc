@@ -1,10 +1,12 @@
 # General
 alias qq='exit'
 alias py='ipython'
+alias vim='nvim'
 alias ssctl='sudo systemctl'
 #alias sctlr='systemctl reboot'
 alias reboot_='reboot'
 alias reboot='systemctl reboot'
+alias grep='grep --color'
 alias upgrades='yay -Sy && yay -Qu'
 alias planner='/home/seth/env/scripts/planner-extract.sh'
 alias rust_evcxr='evcxr'
@@ -22,7 +24,6 @@ alias htop='htop -u seth'
 alias htop_='/usr/bin/htop'
 alias df='/bin/df -h -x tmpfs -x devtmpfs |grep -v loop'
 alias df_='/bin/df'
-alias kill_holodeck='killall Holodeck && killall Holodeck'
 alias msger='fb-messenger-cli'
 alias watch='watch -x -c -n 0.2 '
 alias watch_='/usr/bin/watch'
@@ -41,13 +42,10 @@ alias silent='asusctl profile silent; asusctl -p silent'
 alias eswap='setxkbmap -v 10 -option caps:swapescape'
 alias lscpu_='lscpu | rg boost'
 alias delete_known_host_line='sed -i '\''${0}d'\'' ~/.ssh/known_hosts'
-lsblc() {
+lsblk() {
     lsblk -o NAME,FSTYPE,SIZE,STATE,MOUNTPOINT${1}
 }
-#alias lsblk='lsblk -o NAME,FSTYPE,SIZE,STATE,MOUNTPOINT' 
 alias lsblk_='/bin/lsblk'
-unalias grep
-alias grep='grep --color'
 
 chseth() {
     sudo chown seth:seth $1
@@ -59,6 +57,17 @@ get_alias() {
     echo "$(which $1)" | awk -F"[ ]" '{print $4,$NF}'
 }
 
+# holodeck
+alias kill_holodeck='killall Holodeck && killall Holodeck'
+alias holodeck_ver='python -c "import holodeck; print(holodeck.__version__)"'
+holodeck_normal() {
+    cd ~/packages/python-holodeck
+    yes y | makepkg -i ${1}
+}
+holodeck_custom() {
+    cd ~/packages/python-holodeck-seth
+    yes y | makepkg -i ${1}
+}
 
 # exa to replace ls
 alias x='exa'
@@ -112,6 +121,7 @@ sizes_nosudo() {
 alias brg='batgrep'
 
 # ripgrep
+alias rg_sudo='sudo rg $1'
 alias rga='rg --no-ignore --hidden $1'
 alias rga_sudo='sudo rg --no-ignore --hidden $1'
 alias rgf='rg --no-ignore-vcs --hidden --files | rg'
@@ -204,7 +214,7 @@ cdls() {cd "$@" && ls}
 
 # edit common files with vim
 alias vz='vim ~/.zshrc && source ~/.zshrc'
-alias vprof='vim ~/.zprofile && source ~/.zprofile'
+alias ve='vim ~/env/.environment && source ~/env/.environment'
 alias va='vim ~/env/zsh/.aliasrc && source ~/env/zsh/.aliasrc'
 alias vv='vim ~/env/.vimrc'
 alias vtmux='vim ~/env/.tmux.conf'
@@ -230,14 +240,14 @@ path_python_sys() {
 }
 
 # ROS/Catkin
-alias ros_env='env | grep ROS'
+alias ros_env='env | rg ROS'
 alias rosp='rospack profile'
 alias catkin_make_cuda='catkin_make -DOpenCV_DIR=/usr/local/share/OpenCV -DVISUAL_MTT_CUDA=ON'
 alias catkin_make_debug='catkin_make -DCMAKE_BUILD_TYPE=Debug'
 alias catkin_make_release='catkin_make -DCMAKE_BUILD_TYPE=Release'
 alias catkin_make_clean='rm -rf build devel && catkin_make && source devel/setup.zsh'
 alias catkin_make_cleanj1='rm -rf build devel && catkin_make -j1'
-alias nodeprocess_edit='sudo vim /opt/ros/noetic/lib/python3.8/site-packages/roslaunch/nodeprocess.py'
+alias nodeprocess_edit='sudo vim /opt/ros/noetic/lib/python3.9/site-packages/roslaunch/nodeprocess.py'
 catkin_make_opencv4() {
   catkin_make \
     -DCMAKE_BUILD_TYPE=Debug \
@@ -259,7 +269,7 @@ alias cd_models='cd ~/dev/models/research/deeplab'
 alias cd_holodeck_worlds='cd ~/.local/share/holodeck/0.3.1/worlds'
 alias cd_exer='cd ~/dev/exercism/rust'
 alias cd_windows_docs='cd /mnt/windows/Users/sethm/Documents'
-alias cd_me570='cd ~/school/me570/me570-project'
+alias cd_dl='cd ~/school/adv_dl'
 alias ev='ranger-cd ~/env'
 
 if [[ -n "$rfh" ]]; then
@@ -275,7 +285,7 @@ alias cdb='code ~/dev/boat_landing_sim'
 alias cdq='code ~/dev/quadsim_ws'
 alias cde='code ~/dev/exercism/rust'
 alias cdv='code ~/Documents/research/vision_based_boat_landing'
-alias cds='code ~/school/me570/me570-project'
+alias cdd='code ~/school/adv_dl'
 
 # Print the 256 color test pattern
 print256colors() {

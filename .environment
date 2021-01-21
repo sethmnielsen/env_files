@@ -1,0 +1,40 @@
+export TERM=alacritty
+
+export DEFAULT_USER=seth  # for shortening prompt
+export MYVIMRC=~/env/.vimrc
+export VIMINIT='source $MYVIMRC'
+export EDITOR=/usr/bin/nvim
+export RANGER_LOAD_DEFAULT_RC="false"
+export RMVIEW_CONF=~/.config/rmview/rmview.json
+export RIPGREP_CONFIG_PATH=~/.config/ripgrep/.ripgreprc
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+#export GREP_OPTIONS="--color=auto"
+
+# ssh
+export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Theme for Qt apps
+export QT_QPA_PLATFORMTHEME=qt5ct
+
+### PATH ###
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.vim/bundle/vim-superman/bin
+export LD_LIBRARY_PATH=/opt/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export LD_LIBRARY_PATH=/usr/lib:$LD_LIBRARY_PATH
+
+### PYTHONPATH ###
+#export PYTHONPATH=~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src
+#export PYTHONPATH=$PYTHONPATH:$HOME/school/me570/me570-project/python/holodeck/src
+
+# HOLODECK
+#export HOLODECKPATH=~/.local/share/holodeck/0.3.1
+
+# Rust
+export RUST_LOG=info
+export RUSTFLAGS="$RUSTFLAGS -A unused_imports"
+
+
+export JAX_ENABLE_X64="true"
+export TF_CPP_MIN_LOG_LEVEL="2"
+
+#export LS_COLORS="di=1;36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"

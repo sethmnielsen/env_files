@@ -278,6 +278,15 @@
 			}
 		},
 		{
+			"name": "Storage modifier",
+			"scope": [
+				"storage.modifier"
+			],
+			"settings": {
+				"foreground": "#a077ff"
+			}
+		},
+		{
 			"name": "Keyword",
 			"scope": [
 				"keyword"

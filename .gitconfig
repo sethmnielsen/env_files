@@ -25,3 +25,5 @@
     plus-emph-style = syntax "#00af00"
     line-numbers = true
 
+[init]
+	defaultBranch = main

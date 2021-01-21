@@ -452,6 +452,10 @@
         "before": ["<C-r>"],
         "commands": ["redo"]
     },
+    {
+        "before": ["<leader>","c","i"],
+        "commands": ["editor.action.commentLine"]
+    },
 ],
 "editor.scrollBeyondLastLine": false,
 "editor.smoothScrolling": true,
@@ -514,10 +518,9 @@
 "breadcrumbs.filePath": "off",
 "workbench.editor.pinnedTabSizing": "shrink",
 "workbench.colorTheme": "ayu-seth",
-"window.zoomLevel": 0,
 "debug.onTaskErrors": "abort",
 "workbench.editor.tabSizing": "shrink",
-"editor.fontSize": 12.5,
+"editor.fontSize": 12,
 "outline.showConstants": false,
 "breadcrumbs.showConstants": false,
 "outline.showBooleans": false,
@@ -530,4 +533,5 @@
 "gitlens.views.repositories.enabled": true,
 "files.trimFinalNewlines": true,
 "jupyter.enablePlotViewer": false,
+"window.zoomLevel": 0,
 }

@@ -6,6 +6,8 @@ set number
 
 set tags=tags
 
+set termguicolors
+
 " ----------------------------- PLUGINS --------------------------------
 
 " set the runtime path to include Vundle and initialize
@@ -35,12 +37,11 @@ Plugin 'Konfekt/vim-CtrlXA'
 "Plugin 'justinmk/vim-sneak'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'google/vim-searchindex'
+Plugin 'jez/vim-superman'
 
 " Colorscheme related
-"Plugin 'morhetz/gruvbox'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'Jamedjo/setcolors.vim'
-"Plugin 'doums/darcula'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'junegunn/seoul256.vim'
 
@@ -70,12 +71,12 @@ augroup VimAfter
 " Colorscheme
 "colorscheme luna-term
 "colorscheme mango
-colorscheme lilypink-seth
+"colorscheme lilypink-seth
 "colorscheme lxvc 
 "colorscheme nord
-"
-"let g:gruvbox_contrast_dark="hard"
-"colorscheme gruvbox
+
+let g:gruvbox_contrast_dark="hard"
+colorscheme gruvbox
 
 "let g:seoul_background = 233
 "let g:seoul_srgb = 1
@@ -102,12 +103,6 @@ autocmd FileType make set noexpandtab softtabstop=0
 
 let g:NERDCustomDelimiters = { 'dosini': { 'left': '#'} }
 
-"Sets syntax highlighting for files or filetypes
-autocmd BufRead,BufNewFile .launch set filetype=xml
-autocmd BufRead,BufNewFile .rosrc,.aliasrc set filetype=zsh
-autocmd BufRead,BufNewFile zathurarc set filetype=conf
-autocmd BufRead,BufNewFile .conf set filetype=dosini
-
 filetype plugin indent on    " required
 filetype plugin on
 syntax on
@@ -116,23 +111,31 @@ set shiftwidth=4
 set expandtab
 set t_Co=256
 
+"Sets syntax highlighting for files or filetypes
+au BufRead,BufNewFile .rosrc,.aliasrc,.environment set filetype=zsh
+au BufRead,BufNewFile zathurarc set filetype=conf
+au BufRead,BufNewFile *.conf set filetype=dosini
+au BufRead,BufNewFile *.launch set filetype=xml
+
+
 " ----------------------------- CLIPBOARD --------------------------------
 
-set clipboard=unnamedplus,autoselectplus
+"set clipboard=unnamedplus,autoselectplus
+set clipboard+=unnamedplus
 
 "Use xclip for clipboard
-let g:clipboard = {
-  \   'name': 'xclip-xfce4-clipman',
-  \   'copy': {
-  \      '+': 'xclip -selection clipboard',
-  \      '*': 'xclip -selection clipboard',
-  \    },
-  \   'paste': {
-  \      '+': 'xclip -selection clipboard -o',
-  \      '*': 'xclip -selection clipboard -o',
-  \   },
-  \   'cache_enabled': 1,
-  \ }
+"let g:clipboard = {
+  "\   'name': 'xclip-xfce4-clipman',
+  "\   'copy': {
+  "\      '+': 'xclip -selection clipboard',
+  "\      '*': 'xclip -selection clipboard',
+  "\    },
+  "\   'paste': {
+  "\      '+': 'xclip -selection clipboard -o',
+  "\      '*': 'xclip -selection clipboard -o',
+  "\   },
+  "\   'cache_enabled': 1,
+  "\ }
 
 
 " ---------------------------- KEY MAPPINGS ------------------------------
