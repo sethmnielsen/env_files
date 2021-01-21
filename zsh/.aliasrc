@@ -41,11 +41,15 @@ alias normal='asusctl profile normal; asusctl -p normal'
 alias silent='asusctl profile silent; asusctl -p silent'
 alias eswap='setxkbmap -v 10 -option caps:swapescape'
 alias lscpu_='lscpu | rg boost'
-alias delete_known_host_line='sed -i '\''${0}d'\'' ~/.ssh/known_hosts'
+alias delete_known_host_line='sed -i '\''${1}d'\'' ~/.ssh/known_hosts'
 lsblk() {
     lsblk -o NAME,FSTYPE,SIZE,STATE,MOUNTPOINT${1}
 }
 alias lsblk_='/bin/lsblk'
+yros() {
+    #txt='yay -S ros-noetic-'
+    yay -S ros-noetic-${1}
+}
 
 chseth() {
     sudo chown seth:seth $1
