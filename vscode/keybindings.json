@@ -1063,5 +1063,27 @@
     {
         "key": "ctrl+shift+/",
         "command": "python.runLinting"
+    },
+    {
+        "key": "alt+c",
+        "command": "-toggleFindCaseSensitive",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "-notebook.cell.split",
+        "when": "editorTextFocus && inputFocus && notebookEditorFocused && notebookViewType == 'jupyter-notebook'"
+    },
+    {
+        "key": "ctrl+shift+=",
+        "command": "-workbench.action.zoomIn"
+    },
+    {
+        "key": "ctrl+shift+=",
+        "command": "editor.action.fontZoomIn"
+    },
+    {
+        "key": "ctrl+shift+-",
+        "command": "editor.action.fontZoomOut"
     }
 ]
