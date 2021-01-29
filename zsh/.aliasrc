@@ -43,7 +43,7 @@ alias eswap='setxkbmap -v 10 -option caps:swapescape'
 alias lscpu_='lscpu | rg boost'
 alias delete_known_host_line='sed -i '\''${1}d'\'' ~/.ssh/known_hosts'
 lsblk() {
-    lsblk -o NAME,FSTYPE,SIZE,STATE,MOUNTPOINT${1}
+    /bin/lsblk -o NAME,FSTYPE,SIZE,STATE,MOUNTPOINT${1}
 }
 alias lsblk_='/bin/lsblk'
 yros() {
@@ -290,6 +290,7 @@ alias cdq='code ~/dev/quadsim_ws'
 alias cde='code ~/dev/exercism/rust'
 alias cdv='code ~/Documents/research/vision_based_boat_landing'
 alias cdd='code ~/school/adv_dl'
+alias cdn='code ~/notes'
 
 # Print the 256 color test pattern
 print256colors() {
@@ -386,7 +387,6 @@ name4=$(echo $(echo "print('$dir4'.upper())"| python) | cut -d'/' -f 4)
 
 alias cd_nonlinear='cd $dir2'
 alias cd_optimization='cd $dir3'
-alias cdn='code $dir2'
 alias cdo='code $dir3'
 
 pull_changes() {
