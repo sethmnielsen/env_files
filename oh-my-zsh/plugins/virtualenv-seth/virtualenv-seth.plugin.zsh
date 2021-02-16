@@ -1,7 +1,8 @@
 function virtualenv_prompt_info(){
-  [[ -n ${VIRTUAL_ENV} ]] || return
-  echo "${ZSH_THEME_VIRTUALENV_PREFIX:=(}${VIRTUAL_ENV:t}${ZSH_THEME_VIRTUALENV_SUFFIX:=)}"
+  if [[ -n ${VIRTUAL_ENV} ]]; then
+      echo "${ZSH_THEME_VIRTUALENV_PREFIX:=(}${VIRTUAL_ENV:t}${ZSH_THEME_VIRTUALENV_SUFFIX:=)}"
+  fi
 }
 
 # disables prompt mangling in virtual_env/bin/activate
-export VIRTUAL_ENV_DISABLE_PROMPT=1
+export VIRTUAL_ENV_DISABLE_PROMPT=0

@@ -6,6 +6,7 @@ logs/
 Trash/
 conv_holo_ws/
 .ros/
+.git/
 rM_dev/
 Backup/
 .config/Code/logs/

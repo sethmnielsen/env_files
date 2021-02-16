@@ -16,8 +16,7 @@ alias tm='gio trash'
 alias mntjet='sshfs nvidia@tx2_rv:/home/nvidia/ /home/seth/kbcar_home'
 alias umntjet='fusermount -u /home/seth/kbcar_home'
 alias mnt-remarkable='sshfs root@10.11.99.1:/ /home/seth/sshmnt'
-alias unreal='~/dev/ue4/UnrealEngine-4.22.3/Engine/Binaries/Linux/UE4Editor'
-alias unreal_4.25='~/dev/ue4/UnrealEngine-4.25.3/Engine/Binaries/Linux/UE4Editor'
+alias unreal='~/dev/ue4/UnrealEngine-${UE_VERSION}/Engine/Binaries/Linux/UE4Editor'
 alias scaedm='ssh smn45@ssh.et.byu.edu'
 alias nuke='pkill -SIGKILL -fe '
 alias htop='htop -u seth'
@@ -41,7 +40,14 @@ alias normal='asusctl profile normal; asusctl -f normal'
 alias silent='asusctl profile silent; asusctl -f silent'
 alias eswap='setxkbmap -v 10 -option caps:swapescape'
 alias lscpu_='lscpu | rg boost'
-alias delete_known_host_line='sed -i '\''${1}d'\'' ~/.ssh/known_hosts'
+alias clickup='/opt/clickup'
+rr() {
+    xrandr --output eDP-1-0 --mode 1920x1080 --rate  60.00
+    xrandr --output eDP-1-0 --mode 1920x1080 --rate 120.00
+}
+delete_known_host_line() {
+    sed -i ''${1}d'' ~/.ssh/known_hosts
+}
 lsblk() {
     /bin/lsblk -o NAME,FSTYPE,SIZE,STATE,MOUNTPOINT${1}
 }
@@ -328,12 +334,12 @@ ffmpeg_mp4_to_mov_resolve() {
         echo "\n\n ------- Converting file $f -------\n\n"
         if [[ -f $f ]]; then
           fname=${f:2:-4}     \
-          fps=$(ffmpeg -i ${f} 2>&1 | sed -n "s/.*, \(.*\) fp.*/\1/p")
+          fps=$(ffprobe -i ${f} 2>&1 | sed -n "s/.*, \(.*\) fp.*/\1/p")
                               \
           ffmpeg -i ${f}      \
             -vcodec dnxhd     \
             -acodec pcm_s16le \
-            -s 1280x720       \
+            -s 640x360        \
             -r $fps           \
             -b:v 60M          \
             -pix_fmt yuv422p  \

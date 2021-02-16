@@ -17,10 +17,9 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 ### PATH ###
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$HOME/.local/bin:$PATH
 export PATH=$PATH:$HOME/.vim/bundle/vim-superman/bin
 export LD_LIBRARY_PATH=/opt/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-export LD_LIBRARY_PATH=/usr/lib:$LD_LIBRARY_PATH
 
 ### PYTHONPATH ###
 #export PYTHONPATH=~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src
@@ -38,3 +37,6 @@ export JAX_ENABLE_X64="true"
 export TF_CPP_MIN_LOG_LEVEL="2"
 
 #export LS_COLORS="di=1;36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
+
+export UE_VERSION="4.24.3"
+#export UE_VERSION="4.25.1"

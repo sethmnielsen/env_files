@@ -35,6 +35,7 @@ plugins=(
   tmux
   forgit
   zsh-vim-mode
+  virtualenv-seth 
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -52,6 +53,7 @@ bindkey '^Xl' clear-screen
 source ~/env/.environment
 source ~/.rosrc
 source ~/env/zsh/.aliasrc
+source ~/env/zsh/.myvirtenvrc.zsh
 
 # fzf
 [ -f ~/env/fzf.zsh ] && source ~/env/fzf.zsh
