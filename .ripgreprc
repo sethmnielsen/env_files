@@ -1,7 +1,7 @@
-#--ignore-file "~/.config/ripgrep/.rgignore"
+#--ignore-file "~/.config/ripgrep/.rgignore" <--doesn't work anymore
 
 
 # Don't let ripgrep vomit really long lines to my terminal, and show a preview.
-#--max-columns=150
-#--max-columns-preview
+--max-columns=150
+--max-columns-preview
 

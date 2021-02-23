@@ -526,11 +526,6 @@
         "command": "-activitusbar.showScmView"
     },
     {
-        "key": "ctrl+shift+v",
-        "command": "-markdown.showPreview",
-        "when": "editorLangId == 'markdown'"
-    },
-    {
         "key": "ctrl+shift+m",
         "command": "-workbench.actions.view.problems"
     },
@@ -643,26 +638,6 @@
         "when": "gitlens:key:."
     },
     {
-        "key": "shift+enter",
-        "command": "-python.execSelectionInTerminal",
-        "when": "editorTextFocus && !findInputFocussed && !python.datascience.ownsSelection && !replaceInputFocussed && editorLangId == 'python'"
-    },
-    {
-        "key": "shift+enter",
-        "command": "-python.execSelectionInTerminal",
-        "when": "editorTextFocus && !findInputFocussed && !python.datascience.ownsSelection && !replaceInputFocussed && editorLangId == 'python'"
-    },
-    {
-        "key": "ctrl+enter",
-        "command": "-jupyter.runcurrentcell",
-        "when": "editorTextFocus && jupyter.featureenabled && jupyter.hascodecells && !editorHasSelection"
-    },
-    {
-        "key": "shift+alt+enter",
-        "command": "jupyter.runcurrentcell",
-        "when": "editorTextFocus && jupyter.featureenabled && jupyter.hascodecells && !editorHasSelection"
-    },
-    {
         "key": "alt+c p",
         "command": "-extension.colorHelper.pick",
         "when": "editorTextFocus"
@@ -673,8 +648,9 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+alt+u",
-        "command": "macros.runAllAndRestartKernel"
+        "key": "ctrl+shift+alt+enter",
+        "command": "macros.runAllAndRestartKernel",
+        "when": "editorTextFocus && jupyter.hascodecells && !editorHasSelection && !notebookEditorFocused"
     },
     {
         "key": "ctrl+shift+alt+,",
@@ -916,10 +892,6 @@
     },
     {
         "key": "insert",
-        "command": "jupyter.runFileInteractive"
-    },
-    {
-        "key": "insert",
         "command": "-extension.vim_insert",
         "when": "editorTextFocus && vim.active && !inDebugRepl"
     },
@@ -1085,5 +1057,25 @@
     {
         "key": "ctrl+shift+-",
         "command": "editor.action.fontZoomOut"
+    },
+    {
+        "key": "shift+alt+enter",
+        "command": "jupyter.runallcells",
+        "when": "editorTextFocus && jupyter.hascodecells && !editorHasSelection && !notebookEditorFocused"
+    },
+    {
+        "key": "shift+alt+p",
+        "command": "jupyter.restartkernel",
+        "when": "editorTextFocus && jupyter.hascodecells && !notebookEditorFocused"
+    },
+    {
+        "key": "shift+alt+i",
+        "command": "jupyter.interruptkernel",
+        "when": "editorTextFocus && jupyter.hascodecells && !notebookEditorFocused"
+    },
+    {
+        "key": "shift+alt+i",
+        "command": "jupyter.interruptkernel",
+        "when": "editorTextFocus && jupyter.hascodecells && !notebookEditorFocused"
     }
 ]

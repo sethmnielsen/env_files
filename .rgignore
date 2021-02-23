@@ -16,6 +16,7 @@ Backup/
 .thunderbird/
 .dbus/
 .gvfs/
+.npm/
 rhythmbox/
 LinuxNoEditor/
 .local/share/gwenview/recentfolders/
@@ -25,5 +26,8 @@ Documents/.list
 .local/share/gvfs-metadata/home
 .mypy_cache/
 .vscode-server/
-UnrealEngine/
+ue4/
+.wireshark/
+.wine/
+google-chrome/
 /home/seth/random/backups

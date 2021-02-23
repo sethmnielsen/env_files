@@ -1,6 +1,7 @@
 # General
 alias qq='exit'
 alias py='ipython'
+alias dv='dirs -v'
 alias vim='nvim'
 alias ssctl='sudo systemctl'
 #alias sctlr='systemctl reboot'
@@ -41,10 +42,7 @@ alias silent='asusctl profile silent; asusctl -f silent'
 alias eswap='setxkbmap -v 10 -option caps:swapescape'
 alias lscpu_='lscpu | rg boost'
 alias clickup='/opt/clickup'
-rr() {
-    xrandr --output eDP-1-0 --mode 1920x1080 --rate  60.00
-    xrandr --output eDP-1-0 --mode 1920x1080 --rate 120.00
-}
+alias rr='~/.local/bin/fix_mouse_refresh_amdgpu.sh'
 delete_known_host_line() {
     sed -i ''${1}d'' ~/.ssh/known_hosts
 }
@@ -80,7 +78,7 @@ holodeck_custom() {
 }
 
 # exa to replace ls
-alias x='exa'
+#alias x='exa'
 alias ls='exa'
 alias l='exa -1'
 alias lh='exa -1a'

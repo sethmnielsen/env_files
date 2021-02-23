@@ -1,3 +1,29 @@
+# hide statusbar by default
+set guioptions "" 
+
+# background color
+set default-bg "#303030"
+
+# set first page of document as the window icon
+set window-icon-document "true"
+
+set statusbar-basename "true"
+set window-title-basename "true"
+set window-title-page "true"
+
+set zoom-center "true"
+
+set first-page-column 1:1
+
+map I feedkeys ":info<Return>"
+
+set recolor-keephue true
+#set recolor-darkcolor "#AAAAAA"
+
+set selection-clipboard clipboard
+
+
+#### key mappings ####
 map = zoom in
 map + zoom default 
 
@@ -16,25 +42,3 @@ map <C-a> feedkeys ":exec okular %<Return>"
 map @ feedkeys ":set first-page-column 1:2<Return>"
 map \# feedkeys ":set first-page-column 1:1<Return>"
 
-# hide statusbar by default
-set guioptions "" 
-
-# background color
-set default-bg "#303030"
-
-# set first page of document as the window icon
-set window-icon-document "true"
-
-set statusbar-basename "true"
-set window-title-basename "true"
-set window-title-page "true"
-
-set zoom-center "true"
-
-
-map I feedkeys ":info<Return>"
-
-set recolor-keephue true
-#set recolor-darkcolor "#AAAAAA"
-
-set selection-clipboard clipboard
