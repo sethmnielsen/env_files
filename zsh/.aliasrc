@@ -277,7 +277,9 @@ alias cd_models='cd ~/dev/models/research/deeplab'
 alias cd_holodeck_worlds='cd ~/.local/share/holodeck/0.3.1/worlds'
 alias cd_exer='cd ~/dev/exercism/rust'
 alias cd_windows_docs='cd /mnt/windows/Users/sethm/Documents'
-alias cd_dl='cd ~/school/adv_dl'
+alias cd_dl='cd ~/school/adv_dl/project2/'
+alias cd_vplug='cd ~/Documents/unreal_projects/Blocks/Plugins/vtol-AirSim'
+alias cd_alib='cd ~/Documents/unreal_projects/Blocks/Plugins/vtol-AirSim/Source/AirLib'
 alias ev='ranger-cd ~/env'
 
 if [[ -n "$rfh" ]]; then
@@ -288,14 +290,15 @@ fi
 
 # Handy code-related aliases
 alias serv_call='rosservice call /param_set MIXER 2 && rosservice call /calibrate_imu'
-alias cdm='code ~/dev/models/research/deeplab'
 alias cdb='code ~/dev/boat_landing_sim'
 alias cdq='code ~/dev/quadsim_ws'
 alias cde='code ~/dev/exercism/rust'
-alias cdv='code ~/Documents/research/vision_based_boat_landing'
-alias cdd='code ~/school/adv_dl'
+alias cdd='code ~/school/adv_dl/project2/tch-rs'
 alias cdn='code ~/notes'
-alias cdt='code ~/dev/tornado-migrate/t6'
+alias cda='code ~/Documents/unreal_projects/Blocks/Plugins/vtol-AirSim'
+#alias cdm='code ~/dev/models/research/deeplab'
+#alias cdv='code ~/Documents/research/vision_based_boat_landing'
+#alias cdt='code ~/dev/tornado-migrate/t6'
 
 # Print the 256 color test pattern
 print256colors() {

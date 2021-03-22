@@ -1,8 +1,5 @@
 import numpy as np
-import scipy as sp
 import numpy.linalg as npl
-import scipy.linalg as spl
-#import holodeck
 import os
 import sys
 

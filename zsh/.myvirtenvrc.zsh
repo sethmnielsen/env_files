@@ -25,6 +25,8 @@ workoff() {
 
 alias deactiv='workoff'
 
+alias wa='workon airsim'
+
 #source $HOME/.virtualenvs/v3.6/bin/activate
 # Activate v3.8 virtual env, unless already set to v3.6
 #if [[ $(basename "$VIRTUAL_ENV") != "v3.6"  ]]; then

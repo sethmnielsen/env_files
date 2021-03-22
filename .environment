@@ -18,19 +18,24 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 
 ### PATH ###
 export PATH=$HOME/.local/bin:$PATH
+#export PATH=$HOME/.cargo/bin:$PATH
+# vman as man
 export PATH=$PATH:$HOME/.vim/bundle/vim-superman/bin
 export LD_LIBRARY_PATH=/opt/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+export LIBTORCH=/home/seth/packages/libtorch
+export LD_LIBRARY_PATH=${LIBTORCH}/lib:$LD_LIBRARY_PATH
 
 ### PYTHONPATH ###
 #export PYTHONPATH=~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src
 #export PYTHONPATH=$PYTHONPATH:$HOME/school/me570/me570-project/python/holodeck/src
 
-# HOLODECK
-#export HOLODECKPATH=~/.local/share/holodeck/0.3.1
+export AIRSIMPATH=~/dev/AirSim
 
 # Rust
 export RUST_LOG=info
 export RUSTFLAGS="$RUSTFLAGS -A unused_imports"
+export RUST_BACKTRACE=1
 
 
 export JAX_ENABLE_X64="true"
@@ -40,3 +45,12 @@ export TF_CPP_MIN_LOG_LEVEL="2"
 
 export UE_VERSION="4.24.3"
 #export UE_VERSION="4.25.1"
+
+# Wine
+#WINEARCH=win32
+#WINEDEBUG=-all
+# vblank_mode: 
+#   - 0 forced off
+#   - 2 default on, app can choose
+#   - 3 always on, app chooses min swap interval
+#vblank_mode=0 

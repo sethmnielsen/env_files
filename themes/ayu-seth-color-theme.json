@@ -82,7 +82,7 @@
 		"editorHoverWidget.border": "#000000",
 		"editorHoverWidget.foreground": "#dfd4bf",
 		"editorLineNumber.activeForeground": "#3d424de6",
-		"editorLineNumber.foreground": "#3d424d99",
+		"editorLineNumber.foreground": "#4f545e",
 		"editorLink.activeForeground": "#e6b450",
 		"editorMarkerNavigation.background": "#0d1016",
 		"editorOverviewRuler.addedForeground": "#91b36299",
@@ -658,6 +658,15 @@
 			],
 			"settings": {
 				"background": "#b3b1ad0f"
+			}
+		},
+		{
+			"name": "Markdown Math",
+			"scope": [
+				"markup.inserted.math.inline.markdown"
+			],
+			"settings": {
+				"foreground": "#7fe8a1"
 			}
 		},
 		{

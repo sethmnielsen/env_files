@@ -23,8 +23,10 @@ ZSH_COMPDUMP="${HOME}/.cache/zsh/.zcompdump-${HOST/.*/}-${ZSH_VERSION}"
 #CASE_SENSITIVE="true"
 
 # tmux
+if [[ "${TERM_PROGRAM}" != "vscode" ]]; then
+    export ZSH_TMUX_AUTOSTART="true"
+fi
 export ZSH_TMUX_CONFIG=~/env/.tmux.conf
-export ZSH_TMUX_AUTOSTART="true"
 export ZSH_TMUX_AUTOCONNECT="false"
 export ZSH_TMUX_AUTOQUIT="false"
 export ZSH_TMUX_FIXTERM="false"
