@@ -1,0 +1,3 @@
+[submodule "oh-my-zsh/plugins/forgit"]
+	path = oh-my-zsh/plugins/forgit
+	url = git@github.com:wfxr/forgit.git
