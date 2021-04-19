@@ -24,7 +24,7 @@ def mem_layout(x):
     #print('['+('  '.join(str(n) for n in np.nditer(x)))+']')
 
 def meters(feet):
-    return int(feet / 3.2808)
+    return feet / 3.2808
 
 def feet(meters):
-    return int(meters * 3.2808)
+    return meters * 3.2808

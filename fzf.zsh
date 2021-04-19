@@ -31,4 +31,4 @@ bindkey '^T' fzf-completion
 bindkey '^I' $fzf_default_completion  # this makes <TAB> and <^I> retain the default behavior
 
 export FORGIT_FZF_DEFAULT_OPTS="$FORGIT_FZF_DEFAULT_OPTS --layout=reverse"
-
+export FORGIT_COPY_CMD='xclip -selection clipboard'

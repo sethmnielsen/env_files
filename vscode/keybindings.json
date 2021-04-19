@@ -850,7 +850,7 @@
     {
         "key": "ctrl+alt+v",
         "command": "latex-workshop.view",
-        "when": "editorLangId == 'latex'"
+        "when": "editorLangId == 'latex' || editorLangId == 'tex'"
     },
     {
         "key": "ctrl+alt+v",
@@ -1077,5 +1077,19 @@
         "key": "shift+alt+i",
         "command": "jupyter.interruptkernel",
         "when": "editorTextFocus && jupyter.hascodecells && !notebookEditorFocused"
+    },
+    {
+        "key": "alt+enter",
+        "command": "python.execInTerminal",
+        "when": "editorTextFocus && !findInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+    },
+    {
+        "key": "ctrl+shift+]",
+        "command": "-editor.unfold",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "shift+alt+3",
+        "command": "workbench.action.editorLayoutThreeColumns"
     }
 ]

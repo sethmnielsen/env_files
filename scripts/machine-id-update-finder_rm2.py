@@ -5,7 +5,7 @@ import uuid
 import random
 import requests
 
-# This script is tested and working as of September 2020.
+# This script is tested and working as of March 2021.
 # It is only a slightly modified version of leezu's script: https://gist.github.com/leezu/2efb1533d453b70db406b58eb6e3a2af
 # leezu gets 99.9% of the credit
 
@@ -18,13 +18,13 @@ orig_appid = "98DA7DF2-4E3E-4744-9DE6-EC931886ABAB"
 orig_bootid = "fddcd3cd-3bf6-4cee-9a0a-31577b58b6da"
 
 # these two DO matter
-orig_machineid = "35a2579eba8544e7bbd688400ea99bdb" #example id, run 'cat /etc/machine-id' on tablet for yours
-orig_oem = "RM110-039-51902" #find in /home/root/.config/remarkable/xochitl.conf as 'deviceid=RM110-xxx-xxxxx'
+orig_machineid = "000d6fcff6a643bc9d4ec898073429f9" #example id, run 'cat /etc/machine-id' on tablet for yours
+orig_oem = "RM110-106-52242" #find this on back of tablet as 'Serial number'
 
 # this is the request to send; fill in the desired software version and your current version
-# in this example, current version is 2.3.1.27 and desire to update to 2.4.0.27
-cur_firmware_ver = "2.4.1.30"
-des_firmware_ver = "2.5.0.27"
+# in this example, current version is 2.5.0.27 (from /usr/share/remarkable/update.conf) and desire to update to 2.62.75
+cur_firmware_ver = "2.5.0.27"
+des_firmware_ver = "2.6.2.75"
 req = """<?xml version="1.0" encoding="UTF-8"?>
 <request protocol="3.0" version="{des_firmware}" requestid="{{{requestid}}}" sessionid="{{{sessionid}}}" updaterversion="0.4.2" installsource="{installsource}" ismachine="1">
     <os version="zg" platform="reMarkable" sp="0.0.4.81_armv7l" arch="armv7l"></os>
@@ -46,7 +46,7 @@ def get_uuid():
 
 def get_oem():
     base = "RM110"
-    middle = "039"
+    middle = "106"
     end = str(random.randint(40000, 70000))
 
     return "-".join([base,middle,end])
@@ -72,7 +72,7 @@ while True:
 
     if len(resp.text) != 0:
         if "noupdate" in resp.text:
-r            print(f"\nNo update ---- OEM: {params['oem']}, machine-id: {params['machineid']} ", end='')
+            print(f"\nNo update ---- OEM: {params['oem']}, machine-id: {params['machineid']} ", end='')
             time.sleep(1)
         else:
             print("Found params to get update: ")

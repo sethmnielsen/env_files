@@ -1,12 +1,17 @@
 {
 "workbench.startupEditor": "none",
 "files.autoSave": "afterDelay",
-"editor.fontFamily": "'Iosevka', 'monospace'",
 "editor.fontLigatures": false,
-"editor.fontSize": 12,
-"terminal.integrated.fontFamily": "'Cousine for Powerline', 'PowerlineSymbols'",
-"terminal.integrated.fontSize": 12,
-"editor.wordWrapColumn": 90,
+"terminal.integrated.fontFamily": "'FantasqueSansMono Nerd Font Mono', 'DejaVuSansMono Nerd Font Mono'",
+"editor.wordWrapColumn": 100,
+"editor.rulers": [100],
+"search.useReplacePreview": false,
+"C_Cpp.default.cppStandard": "c++14",
+// "C_Cpp.default.compilerPath": "/usr/bin/gcc",
+// "C_Cpp.default.includePath": [
+//     "${workspaceFolder}**",
+//     "/usr/include/eigen3"
+// ],
 "files.exclude": {
     ".env": true,
     "**/*__pycache__": true,
@@ -17,6 +22,7 @@
     "**/*.gitignore": true,
     "**/*.gitmodules": true,
     "**/*.ipynb_checkpoints": true,
+    "**/*.m": true,
     "**/*.mypy_cache": true,
     "**/*.o": true,
     "**/*.ods": true,
@@ -37,7 +43,13 @@
     "**/devel": true,
     "**/target/": true,
     "**F450.yaml": true,
-    "**/*.pyo": true
+    "**/*.pytest_cache/": true,
+    "**/*.vcxproj": true,
+    "**/*.vcxproj.filters": true,
+    "**/*.svg": true,
+    "**/*.png": true,
+    "**/*.jpg": true,
+    "**/*.bat": true
 },
 "files.associations": {
     "*.*rc": "shellscript",
@@ -45,41 +57,21 @@
     "CMakeLists.txt": "cmake",
     "<ipython-input*": "python",
     "*.tex": "latex",
-    ".vimrc": "vimrc"
+    ".vimrc": "vimrc",
+    "*.metadata": "json"
 },
 "explorer.autoReveal": false,
-"workbench.tree.indent": 20,
 "explorer.openEditors.visible": 0,
 "editor.minimap.enabled": false,
 "atomKeymap.promptV3Features": true,
 "editor.multiCursorModifier": "alt",
-"workbench.editor.tabSizing": "shrink",
-"keyboard.dispatch": "keyCode",
-"python.jediEnabled": false,
-"python.pythonPath": "/home/seth/.virtualenvs/v3.8/bin/python3",
 "python.venvPath": "/home/seth/.virtualenvs",
 "python.terminal.activateEnvironment": false,
-"workbench.activityBar.visible": false,
-"workbench.iconTheme": "ayu",
 "zenMode.hideLineNumbers": false,
 "editor.cursorSmoothCaretAnimation": true,
 "editor.acceptSuggestionOnEnter": "off",
 "activitusbar.activeColour": "#4989b6",
 "activitusbar.toggleSidebar": false,
-"clock.dateFormat": "h:MM TT",
-"breadcrumbs.enabled": true,
-"python.autoComplete.extraPaths": [
-    // "/home/seth/dev/boat_landing_sim/devel/lib/python3/dist-packages",
-    // "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src",
-    // "/home/seth/dev/boat_landing_sim/src/rosflight_holodeck/python",
-    // "/home/seth/dev/boat_landing_sim/src/rf_joy/src/rosflight_joy",
-    "/home/seth/dev/quadsim_ws/devel/lib/python3/dist-packages",
-    "/home/seth/dev/quadsim_ws/src/rosflight_holodeck/python",
-    "/home/seth/dev/quadsim_ws/src/quadsim/scripts",
-    "/opt/ros/melodic/lib/python2.7/dist-packages"
-],
-"C_Cpp.default.intelliSenseMode": "msvc-x64",
-"editor.rulers": [90],
 "macros.list": {
     "closePanelSidebar": [
         "workbench.action.toggleSidebarVisibility",
@@ -109,11 +101,11 @@
     "positionPanelRightTerminalFocus": [
         "workbench.action.positionPanelRight",
         "workbench.action.focusActiveEditorGroup",
-        "workbench.panel.terminal.focus"
+        "terminal.focus"
     ],
     "positionPanelBottomTerminalFocus": [
         "workbench.action.positionPanelBottom",
-        "workbench.panel.terminal.focus"
+        "terminal.focus"
     ],
     "positionPanelRightEditorFocus": [
         "workbench.action.positionPanelRight",
@@ -124,17 +116,17 @@
         "workbench.action.focusActiveEditorGroup"
     ],
     "runAllAndRestartKernel": [
-        "python.datascience.restartkernel",
-        "python.datascience.runallcells",
+        "jupyter.restartkernel",
+        "jupyter.runallcells",
     ],
     "runAboveAndRestartKernel": [
-        "python.datascience.restartkernel",
-        "python.datascience.runallcellsabove.palette",
+        "jupyter.restartkernel",
+        "jupyter.runallcellsabove.palette",
     ],
     "runAboveAndDebugCurrentCell": [
-        "python.datascience.restartkernel",
-        "python.datascience.runallcellsabove.palette",
-        "python.datascience.debugcurrentcell.palette"
+        "jupyter.restartkernel",
+        "jupyter.runallcellsabove.palette",
+        "jupyter.debugcurrentcell.palette"
     ],
     "focusEditorAndVimCtrlW": [
         "workbench.action.focusActiveEditorGroup",
@@ -149,27 +141,13 @@
 "explorer.confirmDragAndDrop": false,
 "editor.suggestSelection": "first",
 "explorer.confirmDelete": false,
-// "bracket-pair-colorizer-2.colors": [
-    // "Gold",
-    // "Olive",
-    // "Teal"
-    // "DarkOrange",
-    // "OliveDrab",
-    // "Crimson",
-    // "BlueViolet",
-// ],
 "files.watcherExclude": {
     "/home/seth/.local/share/**": true,
-    "/home/seth/.virtualenvs/default/lib/python3.6/site-packages/holodeck/**": true,
-    "/home/seth/dev/**": true,
     "/home/seth/Downloads/**": true
 },
 "workbench.sideBar.location": "left",
 "workbench.list.automaticKeyboardNavigation": false,
-"vsicons.dontShowNewVersionMessage": true,
 "activitusbar.searchViewInPanel": false,
-"git.enabled": true,
-"git.enableStatusBarSync": false,
 "gitlens.views.repositories.location": "explorer",
 "gitlens.views.fileHistory.location": "gitlens",
 "gitlens.views.lineHistory.location": "gitlens",
@@ -182,14 +160,7 @@
     "suppressGitDisabledWarning": true
 },
 "gitlens.statusBar.reduceFlicker": true,
-"python.dataScience.askForKernelRestart": false,
-"python.dataScience.changeDirOnImportExport": false,
-"diffEditor.renderSideBySide": true,
-"editor.suggest.maxVisibleSuggestions": 6,
-"window.menuBarVisibility": "hidden",
 "problems.decorations.enabled": true,
-"markdown.preview.breaks": true,
-"markdown.preview.markEditorSelection": false,
 "todohighlight.keywords": [
     {
         "text": "HACK:",
@@ -209,35 +180,22 @@
         // "borderRadius": "2px", //NOTE: using borderRadius along with `border` or you will see nothing change
     }
 ],
-"shellformat.effectLanguages": [
-    "shellscript",
-    "dockerfile",
-    "dotenv",
-    "hosts",
-    "jvmoptions",
-    "ignore",
-    "gitignore",
-    "properties",
-    "spring-boot-properties",
-    "azcli"
-],
 "window.customMenuBarAltFocus": false,
 "window.enableMenuBarMnemonics": false,
-"matlab.lintOnSave": false,
 "editor.snippetSuggestions": "bottom",
-"rust.show_warnings": false,
-"extensions.autoUpdate": true,
+"extensions.autoUpdate": false,
 "editor.links": false,
 "code-runner.executorMap": {
     "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "python": "ipython3",
+    "python": "cd $dir && ipython $fileName",
     "shellscript": "bash",
-    "rust": "cd $dir && cargo run --release"
+    "rust": "cargo run"
 },
 "code-runner.runInTerminal": true,
-"cmake.configureOnOpen": false,
-
+"code-runner.enableAppInsights": false,
+"code-runner.showRunCommandInExplorerContextMenu": false,
+"code-runner.showRunCommandInEditorContextMenu": false,
 "[latex]": {
     "editor.formatOnPaste": false,
     "editor.formatOnSave": false,
@@ -251,12 +209,12 @@
 // "latex-workshop.hover.preview.newcommand.newcommandFile": "/home/seth/texmf/tex/latex/resume/documentMETADATA.cls",
 "latex-workshop.chktex.enabled": true,
 "latex-workshop.chktex.args.root": [ "-wall", "-n22", "-n30", "-n46", "-e16", "-q" ],
-"latex-workshop.chktex.args.active": [ "-wall", "-n9", "-n17", "-n22", "-n30", "-n45", "-n46", "-e16", "-q" ],
+"latex-workshop.chktex.args.active": [ "-wall", "-n9", "-n13", "-n17", "-n22", "-n30", "-n45", "-n46", "-e16", "-q" ],
 "latex-workshop.chktex.run": "onType",
 "latex-workshop.chktex.delay": 2000,
 "latex-workshop.latex.autoBuild.run": "never",
 "latex-workshop.message.update.show": false,
-"latex-workshop.view.pdf.viewer": "tab",
+"latex-workshop.view.pdf.viewer": "external",
 "latex-workshop.latex.outDir": "%DIR%",
 "latex-workshop.latex.recipe.default": "first",
 "latex-workshop.view.pdf.hand": true,
@@ -264,6 +222,7 @@
 "latex-workshop.message.error.show": false,
 "latex-workshop.message.warning.show": false,
 "latex-workshop.view.pdf.backgroundColor": "#e6e6e6",
+"latex-workshop.message.log.show": false,
 "latex-workshop.latex.tools": [
     {
         "name": "lualatexmk",
@@ -279,12 +238,11 @@
         "env": {}
     },
     {
-        "name": "pdflatex",
-        "command": "pdflatex",
+        "name": "latexmk",
+        "command": "latexmk",
         "args": [
-            "-synctex=1",
-            "-interaction=nonstopmode",
-            "-file-line-error",
+            "-pdf",
+            "-f",
             "%DOC%"
         ],
         "env": {}
@@ -308,11 +266,15 @@
 ],
 "latex-workshop.latex.recipes": [
     {
-        "name": "bibtex ➞ lualatexmk",
+        "name": "lualatexmk",
         "tools": [
-            "pdflatex",
-            "bibtex",
             "lualatexmk"
+        ]
+    },
+    {
+        "name": "latexmk",
+        "tools": [
+            "latexmk"
         ]
     },
     {
@@ -332,15 +294,15 @@
         ]
     }
 ],
-
 "vim.vimrc.enable": true,
+"vim.vimrc.path": "/home/seth/env/.vimrc",
 "vim.useCtrlKeys": true,
-"vim.sneak": true,
-"vim.sneakReplacesF": true,
-"vim.whichwrap": "h,l,<,>,[,]",
+// "vim.sneak": false,
+// "vim.sneakReplacesF": true,
+// "vim.whichwrap": "h,l,<,>,[,]",
 "vim.textwidth": 90,
-"vim.smartcase": false,
-"vim.ignorecase": false,
+"vim.smartcase": true,
+"vim.ignorecase": true,
 "vim.foldfix": true,
 "vim.useSystemClipboard": true,
 "vim.searchHighlightColor": "gray",
@@ -356,12 +318,13 @@
     "<C-Z>": false,
     "<C-]>": false,
     "<C-[>": false,
-    "<C-n>": false,
+    "u": false,
     "<C-y>": true,
     "Up": true,
     "Down": true,
     "Left": true,
-    "Right": true
+    "Right": true,
+    "<C-k>": false,
 },
 "vim.insertModeKeyBindingsNonRecursive": [
     {
@@ -372,37 +335,28 @@
         "before": ["<alt-j>"],
         "after": ["g", "j"]
     },
-    {
-        "before": ["<leader>","c","i"],
-        "after": ["editor.action.commentLine"]
-    },
+    // {
+    //     "before": ["<leader>","c","i"],
+    //     "commands": ["editor.action.commentLine"]
+    // },
 ],
 "vim.normalModeKeyBindingsNonRecursive": [
     {
-        "before": ["k"],
+        "before": ["<alt-k>"],
         "after": ["g", "k"]
     },
     {
-        "before": ["j"],
+        "before": ["<alt-j>"],
         "after": ["g", "j"]
     },
-    {
-        "before": ["o"],
-        "commands": ["editor.action.insertLineAfter","extension.vim_insert"]
-
-    },
-    {
-        "before": ["O"],
-        "commands": ["editor.action.insertLineBefore","extension.vim_insert"]
-    },
-    {
-        "before": ["Z","Z"],
-        "commands": [":wq"]
-    },
-    {
-        "before": ["Q","Q"],
-        "commands": ["workbench.action.closeActiveEditor"]
-    },
+    // {
+    //     "before": ["o"],
+    //     "commands": ["editor.action.insertLineAfter", "extension.vim_insert"]
+    // },
+    // {
+    //     "before": ["O"],
+    //     "commands": ["editor.action.insertLineBefore", "extension.vim_insert"]
+    // },
     {
         "before": ["<leader>","c","i"],
         "commands": ["editor.action.commentLine"]
@@ -416,14 +370,17 @@
         "after": ["1","0","+"]
     },
     {
-
         "before": ["u"],
         "commands": ["undo"]
     },
     {
         "before": ["<C-r>"],
         "commands": ["redo"]
-    }
+    },
+    // {
+    //     "before": ["S"],
+    //     "after": ["y", "s", "a", "W", "$"]
+    // },
 ],
 "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -445,85 +402,145 @@
     {
         "before": [ "p"],
         "after": [ "p", "g", "v", "y" ]
-    }
+    },
+    {
+        "before": ["u"],
+        "commands": ["undo"]
+    },
+    {
+        "before": ["<C-r>"],
+        "commands": ["redo"]
+    },
+    {
+        "before": ["<leader>","c","i"],
+        "commands": ["editor.action.commentLine"]
+    },
 ],
-"editor.scrollBeyondLastLine": false,
 "editor.smoothScrolling": true,
-"breadcrumbs.filePath": "off",
-"path-intellisense.autoSlashAfterDirectory": true,
-"python.linting.pylintUseMinimalCheckers": false,
-"python.linting.ignorePatterns": [
-    ".vscode/*.py",
-    "**/site-packages/**/*.py",
-    "*.m",
-    "*.png"
-],
 "terminal.integrated.commandsToSkipShell": [
     "macros.positionPanelRight",
     "macros.positionPanelBottom"
 ],
-"breadcrumbs.showModules": false,
+"editor.trimAutoWhitespace": false,
 "[markdown]": {
-    "editor.wordWrap": "bounded",
-    "editor.fontFamily": "'Iosevka Aile'",
-    "editor.quickSuggestions": false
+    "editor.wordWrap": "on",
+    "editor.fontFamily": "'Iosevka'",
+    "editor.quickSuggestions": false,
+    "editor.tabSize": 4,
+    "editor.fontSize": 13.0
 },
-"editor.suggest.showSnippets": false,
+"zenMode.silentNotifications": false,
+"workbench.colorCustomizations": {
+},
+"editor.accessibilitySupport": "off",
+// "python.linting.pylintArgs": [
+//     "--ignored-modules=cv2,numpy",
+//     "--disable=all",
+//     "--enable=F,E,unreachable,duplicate-key,unnecessary-semicolon,global-variable-not-assigned,binary-op-exception,bad-format-string,anomalous-backslash-in-string,bad-open-mode",
+//     "--disable=unresolved-import"
+// ],
+"python.testing.autoTestDiscoverOnSaveEnabled": false,
+"python.testing.promptToConfigure": false,
+"terminal.integrated.shell.linux": "/usr/bin/zsh",
+"files.trimTrailingWhitespace": true,
+"python.languageServer": "Pylance",
+"python.defaultInterpreterPath": "/usr/bin/python",
+"python.showStartPage": false,
+"npm.autoDetect": "off",
+"update.mode": "manual",
+"extensions.ignoreRecommendations": true,
+"terminal.integrated.allowChords": false,
+"workbench.editor.pinnedTabSizing": "shrink",
+"debug.onTaskErrors": "abort",
+"workbench.editor.tabSizing": "shrink",
+"outline.showConstants": false,
+"outline.showModules": false,
+"outline.showBooleans": false,
+"jupyter.askForKernelRestart": false,
+"jupyter.changeDirOnImportExport": false,
+"jupyter.useDefaultConfigForJupyter": false,
+"keyboard.dispatch": "keyCode",
+"editor.renderWhitespace": "trailing",
+"jupyter.enablePlotViewer": false,
+"cSpell.userWords": [
+    "abstractive",
+    "convolutional",
+    "dois",
+    "gans",
+    "hypderlinking",
+    "lamba",
+    "overfit",
+    "parallelization",
+    "rmse",
+    "subfigures"
+],
+"python.linting.lintOnSave": true,
+"editor.scrollBeyondLastLine": false,
+"jupyter.textOutputLimit": 0,
+"editor.wrappingIndent": "indent",
+"markdown.preview.fontSize": 14,
+"markdown.preview.lineHeight": 1.4,
+"workbench.activityBar.visible": false,
+"breadcrumbs.enabled": true,
+"breadcrumbs.showModules": false,
+"breadcrumbs.showBooleans": false,
+"breadcrumbs.showEnumMembers": false,
+"breadcrumbs.showFields": false,
+"breadcrumbs.showNull": false,
+"breadcrumbs.showStrings": false,
 "breadcrumbs.showFiles": false,
 "breadcrumbs.showVariables": false,
 "breadcrumbs.showPackages": false,
-"outline.showModules": false,
-"outline.showVariables": false,
-"zenMode.hideStatusBar": false,
-"zenMode.silentNotifications": false,
-"workbench.colorCustomizations": {
-    "editorBracketMatch.border": "#58b898"
-},
-"window.zoomLevel": 0,
-"gitlens.sortBranchesBy": "date:desc",
-"editor.parameterHints.enabled": false,
-"python.dataScience.runStartupCommands":
-    "%load_ext autoreload \n%autoreload 2 \n %matplotlib notebook",
-"python.dataScience.themeMatplotlibPlots": true,
-"python.dataScience.useDefaultConfigForJupyter": false,
-"editor.accessibilitySupport": "off",
-"python.linting.mypyEnabled": true,
-"python.testing.autoTestDiscoverOnSaveEnabled": false,
-"python.testing.promptToConfigure": false,
-"markdown.preview.scrollEditorWithPreview": false,
-"markdown.preview.scrollPreviewWithEditor": false,
-"extensions.ignoreRecommendations": true,
-"git.autofetch": true,
-"code-eol.highlightExtraWhitespace": true,
-"code-eol.highlightNonDefault": true,
-"diffEditor.ignoreTrimWhitespace": false,
-"files.eol": "\n",
-"workbench.colorTheme": "ayu-custom",
-"activitusbar.views": [
+"breadcrumbs.filePath": "off",
+"breadcrumbs.showConstants": false,
+"workbench.editorAssociations": [
     {
-        "name": "explorer",
-        "codicon": "files"
-    },
-    {
-        "name": "search",
-        "codicon": "search"
-    },
-    {
-        "name": "scm",
-        "codicon": "source-control"
-    },
-    {
-        "name": "debug",
-        "codicon": "debug-alt"
-    },
-    {
-        "name": "extensions",
-        "codicon": "extensions"
+        "viewType": "jupyter.notebook.ipynb",
+        "filenamePattern": "*.ipynb"
     }
 ],
-"files.trimTrailingWhitespace": true,
-"python.languageServer": "Microsoft",
-"python.linting.pylintArgs": [
-    "--generate-members"
-]
+"editor.autoClosingOvertype": "always",
+"rust-client.enableMultiProjectSetup": true,
+"rust.all_features": true,
+"rust.clippy_preference": "on",
+"rust-client.disableRustup": true,
+"rust.show_warnings": false,
+"rust-analyzer.inlayHints.enable": false,
+"rust-analyzer.hoverActions.gotoTypeDef": false,
+"rust-analyzer.hoverActions.debug": false,
+"rust-analyzer.lens.debug": false,
+"rust-analyzer.cargo.runBuildScripts": true,
+"C_Cpp.experimentalFeatures": "Enabled",
+"C_Cpp.updateChannel": "Insiders",
+"rust-analyzer.lens.implementations": false,
+"typescript.suggest.paths": false,
+"window.title": "${activeEditorShort}${separator}${rootName}",
+"workbench.iconTheme": "vscode-great-icons",
+"vsicons.dontShowNewVersionMessage": true,
+"terminal.integrated.scrollback": 5000,
+"workbench.editor.decorations.colors": false,
+"workbench.editor.decorations.badges": false,
+"window.menuBarVisibility": "hidden",
+"C_Cpp.configurationWarnings": "Disabled",
+"C_Cpp.errorSquiggles": "Enabled",
+"C_Cpp.intelliSenseUpdateDelay": 1000,
+"C_Cpp.vcpkg.enabled": false,
+"workbench.tree.indent": 16,
+"workbench.colorTheme": "ayu-seth",
+"editor.fontFamily": "'Iosevka', 'monospace'",
+"editor.fontSize": 15,
+"diffEditor.ignoreTrimWhitespace": false,
+"window.zoomLevel": -1,
+"workbench.tree.renderIndentGuides": "always",
+"gitlens.statusBar.enabled": false,
+"git.enableStatusBarSync": false,
+"git.ignoreLimitWarning": true,
+"python.analysis.completeFunctionParens": true,
+"git.enableSmartCommit": true,
+"git.autofetch": true,
+"git.autofetchPeriod": 1200,
+"outline.showVariables": false,
+// "python.analysis.diagnosticSeverityOverrides":{
+//     // ""
+// }
 }

@@ -407,6 +407,15 @@
 	},
 	"tokenColors": [
 		{
+			"name": "CSS Properties",
+			"scope": [
+				"support.type.property-name"
+			],
+			"settings": {
+				"foreground": "#859900"
+			}
+		},
+		{
 			"scope": [
 				"comment",
 				"meta.documentation"

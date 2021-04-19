@@ -35,7 +35,8 @@
 		//Formatted for terminal profile:
 		//['#01060E','#EA6C73','#91B362','#F9AF4F','#53BDFA','#FAE994','#90E1C6','#C7C7C7','#686868','#F07178','#C2D94C','#FFB454','#59C2FF','#FFEE99','#95E6CB','#FFFFFF']
 
-		"activityBar.background": "#161c25",
+		// "activityBar.background": "#161c25",
+		"activityBar.background": "#181d22",
 		"activityBar.border": "#0a0e14",
 		"activityBar.foreground": "#45ffc7",
 		"activityBarBadge.background": "#e6b450",
@@ -53,7 +54,7 @@
 		"dropdown.background": "#0d1016",
 		"dropdown.border": "#191e25",
 		"dropdown.foreground": "#3d424d",
-		"editor.background": "#161c25",
+		"editor.background": "#181d22",
 		"editor.findMatchBackground": "#e6b4500d",
 		"editor.findMatchBorder": "#e6b450",
 		"editor.findMatchHighlightBackground": "#e6b4500d",
@@ -67,7 +68,7 @@
 		"editor.wordHighlightBackground": "#121922",
 		"editor.wordHighlightStrongBackground": "#e6b45033",
 		"editorBracketMatch.background": "#3d424d4d",
-		"editorBracketMatch.border": "#3d424d99",
+		"editorBracketMatch.border": "#58b898",
 		"editorCodeLens.foreground": "#626a73",
 		"editorCursor.foreground": "#e6b450",
 		"editorError.foreground": "#ff3333",
@@ -131,7 +132,7 @@
 		"list.inactiveSelectionBackground": "#13151a",
 		"list.inactiveSelectionForeground": "#3d424d",
 		"list.invalidItemForeground": "#2e323c",
-		"panel.background": "#161c25",
+		"panel.background": "#181d22",
 		"panel.border": "#01060e",
 		"panelTitle.activeBorder": "#e6b450",
 		"panelTitle.activeForeground": "#b3b1ad",
@@ -155,7 +156,7 @@
 		"selection.background": "#161f2afd",
 		"settings.headerForeground": "#b3b1ad",
 		"settings.modifiedItemIndicator": "#6994bf",
-		"sideBar.background": "#161c25",
+		"sideBar.background": "#181d22",
 		"sideBarSectionHeader.background": "#121820",
 		"sideBarSectionHeader.foreground": "#3d424d",
 		"sideBarTitle.foreground": "#3d424d",
@@ -169,7 +170,7 @@
 		"statusBarItem.hoverBackground": "#00000030",
 		"statusBarItem.prominentBackground": "#01060e",
 		"statusBarItem.prominentHoverBackground": "#00000030",
-		"tab.activeBackground": "#161c25",
+		"tab.activeBackground": "#181d22",
 		"tab.activeBorder": "#e6b450",
 		"tab.activeForeground": "#b3b1ad",
 		"tab.border": "#0a0e14",
@@ -552,7 +553,7 @@
 				"support.type.property-name"
 			],
 			"settings": {
-				"fontStyle": "normal",
+				"fontStyle": "",
 				"foreground": "#39bae6"
 			}
 		},
@@ -676,7 +677,6 @@
 			],
 			"settings": {
 				"fontStyle": "bold",
-				"background": "#b3b1ad0f",
 				"foreground": "#626a73"
 			}
 		},

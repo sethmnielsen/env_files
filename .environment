@@ -18,13 +18,14 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 
 ### PATH ###
 export PATH=$HOME/.local/bin:$PATH
-#export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
 # vman as man
 export PATH=$PATH:$HOME/.vim/bundle/vim-superman/bin
 export LD_LIBRARY_PATH=/opt/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
 export LIBTORCH=/home/seth/packages/libtorch
 export LD_LIBRARY_PATH=${LIBTORCH}/lib:$LD_LIBRARY_PATH
+
 
 ### PYTHONPATH ###
 #export PYTHONPATH=~/dev/boat_landing_sim/src/rosflight_holodeck/python/holodeck/src
@@ -37,14 +38,16 @@ export RUST_LOG=info
 export RUSTFLAGS="$RUSTFLAGS -A unused_imports"
 export RUST_BACKTRACE=1
 
-
-export JAX_ENABLE_X64="true"
-export TF_CPP_MIN_LOG_LEVEL="2"
+# node
+export PATH=$HOME/.node_modules/bin:$PATH
+export npm_config_prefix=~/.node_modules
 
 #export LS_COLORS="di=1;36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
 
-export UE_VERSION="4.24.3"
-#export UE_VERSION="4.25.1"
+#export UE_VERSION="4.24.3"
+export UE_VERSION="4.25.4"
+
+export LD_LIBRARY_PATH=~/dev/ue4/UnrealEngine-${UE_VERSION}/Engine/Source/ThirdParty/OpenVR/OpenVRv1_5_17/lib/linux64:$LD_LIBRARY_PATH
 
 # Wine
 #WINEARCH=win32

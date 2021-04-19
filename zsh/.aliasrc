@@ -25,7 +25,7 @@ alias htop_='/usr/bin/htop'
 alias df='/bin/df -h -x tmpfs -x devtmpfs |grep -v loop'
 alias df_='/bin/df'
 alias msger='fb-messenger-cli'
-alias watch='watch -x -c -n 0.2 '
+alias watch='watch -x -c -n 0.5 '
 alias watch_='/usr/bin/watch'
 alias nv='nvidia-smi'
 alias ssh_desktop='ssh desktop'
@@ -39,10 +39,17 @@ alias ipa='ip --brief address show'
 alias boost='asusctl profile boost; asusctl -f boost'
 alias normal='asusctl profile normal; asusctl -f normal'
 alias silent='asusctl profile silent; asusctl -f silent'
-alias eswap='setxkbmap -v 10 -option caps:swapescape'
+alias g_integrated='asusctl graphics -m integrated'
+alias g_nvidia='asusctl graphics -m nvidia'
 alias lscpu_='lscpu | rg boost'
 alias clickup='/opt/clickup'
-alias rr='~/.local/bin/fix_mouse_refresh_amdgpu.sh'
+
+# ue_build_blocks (){
+    #mono /home/seth/dev/ue4/UnrealEngine-4.24.3/Engine/Binaries/DotNET/UnrealBuildTool.exe Development Linux -Project="/home/seth/Documents/unreal_projects/Blocks/Blocks.uproject" -TargetType=Editor -Progress -NoHotReloadFromIDE
+#}
+ue_build_blocks() {
+    ~/dev/ue4/UnrealEngine-${UE_VERSION}/Engine/Build/BatchFiles/Linux/Build.sh BlocksEditor Linux Development ~/Documents/unreal_projects/Blocks/Blocks.uproject -waitmutex
+}
 delete_known_host_line() {
     sed -i ''${1}d'' ~/.ssh/known_hosts
 }
@@ -137,6 +144,8 @@ alias rgfa='rg --no-ignore --hidden --files | rg'
 alias rgf_sudo='sudo rg --no-ignore-vcs --hidden --files | rg'
 alias rgfa_sudo='sudo rg --no-ignore --hidden --files | rg'
 
+alias rgt='rg --no-ignore --text $1'
+
 power_draw() {
   awk '{print $1*10^-6 " W"}' /sys/class/power_supply/BAT0/power_now
 }
@@ -230,7 +239,6 @@ alias vala='vim ~/.config/alacritty/alacritty.yml'
 alias vi3='vim ~/.config/i3/config'
 alias vi3status='vim ~/.config/i3status/config'
 alias vi3blocks='vim ~/.config/i3blocks/config'
-alias vth='sudo vim /sys/devices/platform/asus-nb-wmi/throttle_thermal_policy'
 alias vrefind='sudo vim /boot/EFI/refind/refind.conf'
 alias vho='sudo vim /etc/hosts'
 alias vpac='sudo vim /etc/pacman.conf'
@@ -265,22 +273,25 @@ catkin_make_opencv4() {
 	-DOpenCV_DIR=/usr/local/opencv
 }
 
+alias px4_init='cd ~/dev/px4/Firmware && make px4_sitl_default none_convergence'
+
 # Common directories
 rfh="$(rospack find rosflight_holodeck)" > /dev/null 2>&1
+alias ev='ranger-cd ~/env'
 alias cd_rfhb='cd ~/dev/boat_landing_sim/src/rosflight_holodeck'
 alias cd_rfhq='cd ~/dev/quadsim_ws/src/rosflight_holodeck'
 alias cd_boat='cd ~/dev/boat_landing_sim'
-alias cd_oe='cd ~/Documents/unreal_projects/ocean-world/ocean-engine-seth'
 alias cd_quadws='cd ~/dev/quadsim_ws'
 alias cd_q='cd ~/dev/boat_landing_sim/src/quadsim'
 alias cd_models='cd ~/dev/models/research/deeplab'
 alias cd_holodeck_worlds='cd ~/.local/share/holodeck/0.3.1/worlds'
 alias cd_exer='cd ~/dev/exercism/rust'
 alias cd_windows_docs='cd /mnt/windows/Users/sethm/Documents'
-alias cd_dl='cd ~/school/adv_dl/project2/'
+alias cd_dl='cd ~/school/adv_dl/multirotorRL'
+alias cd_blocks='cd ~/Documents/unreal_projects/Blocks'
 alias cd_vplug='cd ~/Documents/unreal_projects/Blocks/Plugins/vtol-AirSim'
 alias cd_alib='cd ~/Documents/unreal_projects/Blocks/Plugins/vtol-AirSim/Source/AirLib'
-alias ev='ranger-cd ~/env'
+alias cd_px4='cd ~/dev/px4/Firmware'
 
 if [[ -n "$rfh" ]]; then
   alias cd_holodeck='cd $rfh/python/holodeck && echo $(pwd)'
@@ -293,9 +304,10 @@ alias serv_call='rosservice call /param_set MIXER 2 && rosservice call /calibrat
 alias cdb='code ~/dev/boat_landing_sim'
 alias cdq='code ~/dev/quadsim_ws'
 alias cde='code ~/dev/exercism/rust'
-alias cdd='code ~/school/adv_dl/project2/tch-rs'
+alias cdd='code ~/school/adv_dl/multirotorRL'
 alias cdn='code ~/notes'
 alias cda='code ~/Documents/unreal_projects/Blocks/Plugins/vtol-AirSim'
+alias cdaa='code ~/Documents/unreal_projects/Blocks/Plugins/vtol-AirSim/Source/AirLib'
 #alias cdm='code ~/dev/models/research/deeplab'
 #alias cdv='code ~/Documents/research/vision_based_boat_landing'
 #alias cdt='code ~/dev/tornado-migrate/t6'

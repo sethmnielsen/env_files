@@ -1,13 +1,14 @@
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=8000
-SAVEHIST=8000
+HISTSIZE=10000
+SAVEHIST=10000
 setopt appendhistory autocd extendedglob nomatch
 setopt rmstarsilent
 unsetopt beep notify
 zstyle :compinstall filename '~/.zshrc'
+zstyle ':completion:*'  matcher-list 'm:{a-z}={A-Z}'
 zmodload -i zsh/complist
-
+fpath+=~/.zfunc
 
 ##### oh-my-zsh #####
 export ZSH="$HOME/.oh-my-zsh"
@@ -33,7 +34,6 @@ export ZSH_TMUX_FIXTERM="false"
 
 plugins=(
   cargo
-  git
   tmux
   forgit
   zsh-vim-mode
@@ -62,6 +62,3 @@ source ~/env/zsh/.myvirtenvrc.zsh
 
 
 compdef vman="man"
-
-
-zstyle ':completion:*'  matcher-list 'm:{a-z}={A-Z}'
