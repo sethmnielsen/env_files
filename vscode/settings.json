@@ -214,7 +214,7 @@
 "latex-workshop.chktex.delay": 2000,
 "latex-workshop.latex.autoBuild.run": "never",
 "latex-workshop.message.update.show": false,
-"latex-workshop.view.pdf.viewer": "external",
+"latex-workshop.view.pdf.viewer": "tab",
 "latex-workshop.latex.outDir": "%DIR%",
 "latex-workshop.latex.recipe.default": "first",
 "latex-workshop.view.pdf.hand": true,
@@ -480,8 +480,6 @@
 "editor.wrappingIndent": "indent",
 "markdown.preview.fontSize": 14,
 "markdown.preview.lineHeight": 1.4,
-"workbench.activityBar.visible": false,
-"breadcrumbs.enabled": true,
 "breadcrumbs.showModules": false,
 "breadcrumbs.showBooleans": false,
 "breadcrumbs.showEnumMembers": false,
@@ -526,11 +524,9 @@
 "C_Cpp.intelliSenseUpdateDelay": 1000,
 "C_Cpp.vcpkg.enabled": false,
 "workbench.tree.indent": 16,
-"workbench.colorTheme": "ayu-seth",
+"workbench.colorTheme": "solarized-light-seth",
 "editor.fontFamily": "'Iosevka', 'monospace'",
-"editor.fontSize": 15,
 "diffEditor.ignoreTrimWhitespace": false,
-"window.zoomLevel": -1,
 "workbench.tree.renderIndentGuides": "always",
 "gitlens.statusBar.enabled": false,
 "git.enableStatusBarSync": false,
@@ -540,7 +536,37 @@
 "git.autofetch": true,
 "git.autofetchPeriod": 1200,
 "outline.showVariables": false,
-// "python.analysis.diagnosticSeverityOverrides":{
-//     // ""
-// }
+"files.eol": "\n",
+"activitusbar.views": [
+
+    {
+        "name": "explorer",
+        "codicon": "explorer-view-icon"
+    },
+    {
+        "name": "search",
+        "codicon": "search-view-icon"
+    },
+    {
+        "name": "scm",
+        "codicon": "source-control-view-icon"
+    },
+    {
+        "name": "debug",
+        "codicon": "run-view-icon"
+    },
+    {
+        "name": "extensions",
+        "codicon": "extensions-view-icon"
+    },
+    {
+        "name": "extension.liveshare",
+        "codicon": "live-share"
+    }
+],
+"liveshare.presence": true,
+"workbench.activityBar.visible": false,
+"terminal.integrated.fontSize": 13,
+"window.zoomLevel": -1,
+"editor.fontSize": 15,
 }

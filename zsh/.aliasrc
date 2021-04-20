@@ -43,10 +43,10 @@ alias g_integrated='asusctl graphics -m integrated'
 alias g_nvidia='asusctl graphics -m nvidia'
 alias lscpu_='lscpu | rg boost'
 alias clickup='/opt/clickup'
+alias remouse0='remouse --orientation left --monitor 0'
+alias remouse1='remouse --orientation left --monitor 1'
 
-# ue_build_blocks (){
-    #mono /home/seth/dev/ue4/UnrealEngine-4.24.3/Engine/Binaries/DotNET/UnrealBuildTool.exe Development Linux -Project="/home/seth/Documents/unreal_projects/Blocks/Blocks.uproject" -TargetType=Editor -Progress -NoHotReloadFromIDE
-#}
+alias blocks_run='~/Documents/AirSim/worlds/Blocks/Blocks.sh'
 ue_build_blocks() {
     ~/dev/ue4/UnrealEngine-${UE_VERSION}/Engine/Build/BatchFiles/Linux/Build.sh BlocksEditor Linux Development ~/Documents/unreal_projects/Blocks/Blocks.uproject -waitmutex
 }
@@ -236,9 +236,6 @@ alias va='vim ~/env/zsh/.aliasrc && source ~/env/zsh/.aliasrc'
 alias vv='vim ~/env/.vimrc'
 alias vtmux='vim ~/env/.tmux.conf'
 alias vala='vim ~/.config/alacritty/alacritty.yml'
-alias vi3='vim ~/.config/i3/config'
-alias vi3status='vim ~/.config/i3status/config'
-alias vi3blocks='vim ~/.config/i3blocks/config'
 alias vrefind='sudo vim /boot/EFI/refind/refind.conf'
 alias vho='sudo vim /etc/hosts'
 alias vpac='sudo vim /etc/pacman.conf'
@@ -394,6 +391,9 @@ alias gfs='git fetch && git status'
 alias gch='git checkout'
 alias gcm='git commit -m'
 alias subup='git submodule update --init --recursive'
+alias gp='git push'
+alias gl='git pull'
+alias grv='git remote -v'
 
 dir1=~/env
 dir2=~/school/nonlinear
