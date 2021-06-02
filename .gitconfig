@@ -6,19 +6,14 @@
 [pull]
 	rebase = false
 [core]
-  ;pager = delta --plus-color="#006000" --plus-emph-color="#00af00"  --theme='1337' --line-numbers
-  pager = delta
+    ;pager = delta --plus-color="#006000" --plus-emph-color="#00af00"  --theme='1337' --line-numbers
+    pager = delta
 [interactive]
-  diffFilter = delta --color-only
+    diffFilter = delta --color-only
 [diff]
     tool = vscode
 [difftool "vscode"]
     cmd = code --wait --diff $LOCAL $REMOTE
-[filter "lfs"]
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-    required = true
 [delta]
     syntax-theme = 1337
     plus-style = syntax "#006000"
@@ -29,3 +24,6 @@
 	defaultBranch = main
 [credential]
 	helper = cache
+
+[alias]
+    addnw=!sh -c 'git diff -U0 -w --no-color "$@" | git apply --cached --ignore-whitespace --unidiff-zero -'

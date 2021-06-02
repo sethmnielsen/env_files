@@ -33,6 +33,7 @@
 		"editorGroupHeader.tabsBackground": "#d9d2c2",
 		"editorHoverWidget.background": "#ccc4b0",
 		"editorIndentGuide.background": "#3f3d3812",
+		"editorIndentGuide.activeBackground": "#aa9b69",
 		"editorLink.activeForeground": "#268bd2",
 		"editorWhitespace.foreground": "#eee8d5",
 		"editorWidget.background": "#eee8d5",
@@ -469,6 +470,24 @@
 			"scope": "variable.function",
 			"settings": {
 				"foreground": "#B58900"
+			}
+		},
+		{
+			"name": "Markup List Bullet",
+			"scope": [
+				"markup.list punctuation.definition.list.begin"
+			],
+			"settings": {
+				"foreground": "#B58900"
+			}
+		},
+		{
+			"name": "Markup Numbered List",
+			"scope": [
+				"markup.list.numbered punctuation.definition.list.begin"
+			],
+			"settings": {
+				"foreground": "#6C71C4"
 			}
 		},
 		{

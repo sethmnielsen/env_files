@@ -47,10 +47,13 @@ export npm_config_prefix=~/.node_modules
 #export UE_VERSION="4.24.3"
 export UE_VERSION="4.25.4"
 
-export LD_LIBRARY_PATH=~/dev/ue4/UnrealEngine-${UE_VERSION}/Engine/Source/ThirdParty/OpenVR/OpenVRv1_5_17/lib/linux64:$LD_LIBRARY_PATH
+#export LD_LIBRARY_PATH=~/dev/ue4/UnrealEngine-${UE_VERSION}/Engine/Source/ThirdParty/OpenVR/OpenVRv1_5_17/lib/linux64:$LD_LIBRARY_PATH
 
 # Wine
-#WINEARCH=win32
+#export WINEARCH=win32
+#export WINEPREFIX="$HOME/.wine"
+export WINEARCH=win64
+export WINEPREFIX="$HOME/.wine-64"
 #WINEDEBUG=-all
 # vblank_mode: 
 #   - 0 forced off

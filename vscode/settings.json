@@ -1,23 +1,15 @@
 {
 "workbench.startupEditor": "none",
-"files.autoSave": "afterDelay",
 "editor.fontLigatures": false,
 "terminal.integrated.fontFamily": "'FantasqueSansMono Nerd Font Mono', 'DejaVuSansMono Nerd Font Mono'",
 "editor.wordWrapColumn": 100,
 "editor.rulers": [100],
 "search.useReplacePreview": false,
 "C_Cpp.default.cppStandard": "c++14",
-// "C_Cpp.default.compilerPath": "/usr/bin/gcc",
-// "C_Cpp.default.includePath": [
-//     "${workspaceFolder}**",
-//     "/usr/include/eigen3"
-// ],
 "files.exclude": {
-    ".env": true,
     "**/*__pycache__": true,
     "**/*.~*": true,
     "**/*.catkin_workspace": true,
-    "**/*.clang_complete": true,
     "**/*.github/": true,
     "**/*.gitignore": true,
     "**/*.gitmodules": true,
@@ -31,7 +23,7 @@
     "**/*.rst": true,
     "**/*.so": true,
     "**/*.swp": true,
-    "**/*.tar.gz": true,
+    "**/*.gz": true,
     "**/*.zip": true,
     "**/*airbourne": true,
     "**/*breezy": true,
@@ -46,19 +38,29 @@
     "**/*.pytest_cache/": true,
     "**/*.vcxproj": true,
     "**/*.vcxproj.filters": true,
-    "**/*.svg": true,
-    "**/*.png": true,
-    "**/*.jpg": true,
-    "**/*.bat": true
+    "**/*.svg": false,
+    "**/*.png": false,
+    "**/*.jpg": false,
+    "**/*.bat": true,
+    "**/*.aux": true,
+    "**/*.bbl": true,
+    "**/*.blg": true,
+    "**/*.fdb_latexmk": true,
+    "**/*.fls": true,
+    "**/*.lof": true,
+    "**/*.lot": true,
+    "**/*.toc": true,
+    "**/*.out": true,
+    "**/*.lb": true,
+    "**/*.gitkeep": true,
 },
 "files.associations": {
     "*.*rc": "shellscript",
     "*.launch": "xml",
     "CMakeLists.txt": "cmake",
     "<ipython-input*": "python",
-    "*.tex": "latex",
-    ".vimrc": "vimrc",
-    "*.metadata": "json"
+    "*.bbl": "tex",
+    "*.metadata": "json",
 },
 "explorer.autoReveal": false,
 "explorer.openEditors.visible": 0,
@@ -72,6 +74,37 @@
 "editor.acceptSuggestionOnEnter": "off",
 "activitusbar.activeColour": "#4989b6",
 "activitusbar.toggleSidebar": false,
+"activitusbar.searchViewInPanel": false,
+"activitusbar.views": [
+    {
+        "name": "explorer",
+        "codicon": "explorer-view-icon"
+    },
+    {
+        "name": "search",
+        "codicon": "search-view-icon"
+    },
+    {
+        "name": "scm",
+        "codicon": "source-control-view-icon"
+    },
+    {
+        "name": "debug",
+        "codicon": "run-view-icon"
+    },
+    {
+        "name": "extensions",
+        "codicon": "extensions-view-icon"
+    },
+    {
+        "name": "extension.liveshare",
+        "codicon": "live-share"
+    },
+    {
+        "name": "extension.latex",
+        "codicon": "whitespace"
+    },
+],
 "macros.list": {
     "closePanelSidebar": [
         "workbench.action.toggleSidebarVisibility",
@@ -145,9 +178,7 @@
     "/home/seth/.local/share/**": true,
     "/home/seth/Downloads/**": true
 },
-"workbench.sideBar.location": "left",
 "workbench.list.automaticKeyboardNavigation": false,
-"activitusbar.searchViewInPanel": false,
 "gitlens.views.repositories.location": "explorer",
 "gitlens.views.fileHistory.location": "gitlens",
 "gitlens.views.lineHistory.location": "gitlens",
@@ -200,22 +231,19 @@
     "editor.formatOnPaste": false,
     "editor.formatOnSave": false,
     "editor.suggestSelection": "recentlyUsedByPrefix",
-    "editor.wordWrap": "on",
+    "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 100,
     "editor.tabSize": 4,
     "editor.suggest.showSnippets": true,
     "editor.snippetSuggestions": "inline"
 },
-// "latex-workshop.hover.preview.newcommand.newcommandFile": "/home/seth/texmf/tex/latex/resume/documentMETADATA.cls",
 "latex-workshop.chktex.enabled": true,
-"latex-workshop.chktex.args.root": [ "-wall", "-n22", "-n30", "-n46", "-e16", "-q" ],
-"latex-workshop.chktex.args.active": [ "-wall", "-n9", "-n13", "-n17", "-n22", "-n30", "-n45", "-n46", "-e16", "-q" ],
+"latex-workshop.chktex.args.root": [ "-wall", "-n1", "-n22", "-n30", "-n46", "-e16", "-q" ],
+"latex-workshop.chktex.args.active": [ "-wall", "-n1", "-n9", "-n13", "-n17", "-n22", "-n30", "-n45", "-n46", "-e16", "-q" ],
 "latex-workshop.chktex.run": "onType",
 "latex-workshop.chktex.delay": 2000,
 "latex-workshop.latex.autoBuild.run": "never",
-"latex-workshop.message.update.show": false,
-"latex-workshop.view.pdf.viewer": "tab",
-"latex-workshop.latex.outDir": "%DIR%",
+"latex-workshop.view.pdf.viewer": "external",
 "latex-workshop.latex.recipe.default": "first",
 "latex-workshop.view.pdf.hand": true,
 "latex-workshop.view.pdf.trim": 1,
@@ -297,10 +325,6 @@
 "vim.vimrc.enable": true,
 "vim.vimrc.path": "/home/seth/env/.vimrc",
 "vim.useCtrlKeys": true,
-// "vim.sneak": false,
-// "vim.sneakReplacesF": true,
-// "vim.whichwrap": "h,l,<,>,[,]",
-"vim.textwidth": 90,
 "vim.smartcase": true,
 "vim.ignorecase": true,
 "vim.foldfix": true,
@@ -325,6 +349,7 @@
     "Left": true,
     "Right": true,
     "<C-k>": false,
+    "<C-n>": false
 },
 "vim.insertModeKeyBindingsNonRecursive": [
     {
@@ -377,6 +402,18 @@
         "before": ["<C-r>"],
         "commands": ["redo"]
     },
+    {
+        "before": ["<leader>","a"],
+        "after": ["G","V","g","g"]
+    },
+    // {
+    //     "before": ["<leader>", "p"],
+    //     "after": ["P", "v", "T", "]"]
+    // },
+    {
+        "before": ["<leader>", "w"],
+        "after": [":", "w", "<CR>"]
+    }
     // {
     //     "before": ["S"],
     //     "after": ["y", "s", "a", "W", "$"]
@@ -415,19 +452,35 @@
         "before": ["<leader>","c","i"],
         "commands": ["editor.action.commentLine"]
     },
+    {
+        "before": ["<leader>","p"],
+        "after": ["p","G"]
+    },
+    {
+        "before": ["<leader>","y"],
+        "after": ["y","G"]
+    },
+    {
+        "before": ["<leader>","t"],
+        "commands": ["editor.action.transformToTitlecase", "extension.vim_end", "extension.vim_escape"]
+    },
 ],
 "editor.smoothScrolling": true,
 "terminal.integrated.commandsToSkipShell": [
     "macros.positionPanelRight",
-    "macros.positionPanelBottom"
+    "macros.positionPanelBottom",
+    "workbench.action.terminal.kill"
 ],
-"editor.trimAutoWhitespace": false,
 "[markdown]": {
-    "editor.wordWrap": "on",
+    "editor.wordWrap": "bounded",
     "editor.fontFamily": "'Iosevka'",
     "editor.quickSuggestions": false,
     "editor.tabSize": 4,
     "editor.fontSize": 13.0
+},
+"[html]": {
+    "editor.wordWrap": "bounded",
+    "editor.tabSize": 2,
 },
 "zenMode.silentNotifications": false,
 "workbench.colorCustomizations": {
@@ -441,8 +494,7 @@
 // ],
 "python.testing.autoTestDiscoverOnSaveEnabled": false,
 "python.testing.promptToConfigure": false,
-"terminal.integrated.shell.linux": "/usr/bin/zsh",
-"files.trimTrailingWhitespace": true,
+"terminal.integrated.defaultProfile.linux": "/usr/bin/zsh",
 "python.languageServer": "Pylance",
 "python.defaultInterpreterPath": "/usr/bin/python",
 "python.showStartPage": false,
@@ -452,7 +504,6 @@
 "terminal.integrated.allowChords": false,
 "workbench.editor.pinnedTabSizing": "shrink",
 "debug.onTaskErrors": "abort",
-"workbench.editor.tabSizing": "shrink",
 "outline.showConstants": false,
 "outline.showModules": false,
 "outline.showBooleans": false,
@@ -464,15 +515,24 @@
 "jupyter.enablePlotViewer": false,
 "cSpell.userWords": [
     "abstractive",
+    "airbrake",
     "convolutional",
     "dois",
     "gans",
     "hypderlinking",
     "lamba",
+    "magicc",
+    "microcontrollers",
+    "multirotors",
     "overfit",
     "parallelization",
+    "performant",
+    "quadrotor",
     "rmse",
-    "subfigures"
+    "subfigures",
+    "teleporting",
+    "tiltrotor",
+    "uavs"
 ],
 "python.linting.lintOnSave": true,
 "editor.scrollBeyondLastLine": false,
@@ -497,7 +557,6 @@
         "filenamePattern": "*.ipynb"
     }
 ],
-"editor.autoClosingOvertype": "always",
 "rust-client.enableMultiProjectSetup": true,
 "rust.all_features": true,
 "rust.clippy_preference": "on",
@@ -513,7 +572,6 @@
 "rust-analyzer.lens.implementations": false,
 "typescript.suggest.paths": false,
 "window.title": "${activeEditorShort}${separator}${rootName}",
-"workbench.iconTheme": "vscode-great-icons",
 "vsicons.dontShowNewVersionMessage": true,
 "terminal.integrated.scrollback": 5000,
 "workbench.editor.decorations.colors": false,
@@ -524,7 +582,7 @@
 "C_Cpp.intelliSenseUpdateDelay": 1000,
 "C_Cpp.vcpkg.enabled": false,
 "workbench.tree.indent": 16,
-"workbench.colorTheme": "solarized-light-seth",
+"workbench.colorTheme": "ayu-seth",
 "editor.fontFamily": "'Iosevka', 'monospace'",
 "diffEditor.ignoreTrimWhitespace": false,
 "workbench.tree.renderIndentGuides": "always",
@@ -537,36 +595,26 @@
 "git.autofetchPeriod": 1200,
 "outline.showVariables": false,
 "files.eol": "\n",
-"activitusbar.views": [
-
-    {
-        "name": "explorer",
-        "codicon": "explorer-view-icon"
-    },
-    {
-        "name": "search",
-        "codicon": "search-view-icon"
-    },
-    {
-        "name": "scm",
-        "codicon": "source-control-view-icon"
-    },
-    {
-        "name": "debug",
-        "codicon": "run-view-icon"
-    },
-    {
-        "name": "extensions",
-        "codicon": "extensions-view-icon"
-    },
-    {
-        "name": "extension.liveshare",
-        "codicon": "live-share"
-    }
-],
 "liveshare.presence": true,
 "workbench.activityBar.visible": false,
 "terminal.integrated.fontSize": 13,
-"window.zoomLevel": -1,
-"editor.fontSize": 15,
+"workbench.iconTheme": "vscode-icons",
+"editor.fontSize": 12.3,
+"vsicons.presets.foldersAllDefaultIcon": true,
+"vsicons.presets.hideExplorerArrows": true,
+"markdown-preview-enhanced.scrollSync": false,
+"markdown.extension.orderedList.autoRenumber": false,
+"markdown.extension.orderedList.marker": "one",
+"workbench.editor.untitled.hint": "hidden",
+"workbench.editor.limit.enabled": true,
+"workbench.editor.closeOnFileDelete": true,
+"workbench.sideBar.location": "right",
+"workbench.editor.tabSizing": "shrink",
+"files.autoSave": "afterDelay",
+"activitusbar.showSourceControlCounter": false,
+"python.pythonPath": "/home/seth/.virtualenvs/airsim/bin/python",
+"jupyter.interactiveWindowMode": "perFile",
+"gitlens.defaultDateSource": "committed",
+"markdown-preview-enhanced.previewTheme": "solarized-light.css",
+"markdown.extension.list.indentationSize": "inherit",
 }

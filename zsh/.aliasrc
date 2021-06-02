@@ -7,6 +7,8 @@ alias ssctl='sudo systemctl'
 #alias sctlr='systemctl reboot'
 alias reboot_='reboot'
 alias reboot='systemctl reboot'
+alias lgout='gnome-session-quit --no-prompt && tmux kill-server'
+alias lgout_keeptmux='gnome-session-quit --no-prompt'
 alias grep='grep --color'
 alias upgrades='yay -Sy && yay -Qu'
 alias planner='/home/seth/env/scripts/planner-extract.sh'
@@ -17,9 +19,8 @@ alias tm='gio trash'
 alias mntjet='sshfs nvidia@tx2_rv:/home/nvidia/ /home/seth/kbcar_home'
 alias umntjet='fusermount -u /home/seth/kbcar_home'
 alias mnt-remarkable='sshfs root@10.11.99.1:/ /home/seth/sshmnt'
-alias unreal='~/dev/ue4/UnrealEngine-${UE_VERSION}/Engine/Binaries/Linux/UE4Editor'
 alias scaedm='ssh smn45@ssh.et.byu.edu'
-alias nuke='pkill -SIGKILL -fe '
+alias nuke='sudo pkill -SIGKILL -fe '
 alias htop='htop -u seth'
 alias htop_='/usr/bin/htop'
 alias df='/bin/df -h -x tmpfs -x devtmpfs |grep -v loop'
@@ -42,15 +43,24 @@ alias silent='asusctl profile silent; asusctl -f silent'
 alias g_integrated='asusctl graphics -m integrated'
 alias g_nvidia='asusctl graphics -m nvidia'
 alias lscpu_='lscpu | rg boost'
-alias clickup='/opt/clickup'
 alias remouse0='remouse --orientation left --monitor 0'
 alias remouse1='remouse --orientation left --monitor 1'
+alias fd='fd -uu'
+alias fd_='/usr/bin/fd'
 
 alias blocks_run='~/Documents/AirSim/worlds/Blocks/Blocks.sh'
-ue_build_blocks() {
-    ~/dev/ue4/UnrealEngine-${UE_VERSION}/Engine/Build/BatchFiles/Linux/Build.sh BlocksEditor Linux Development ~/Documents/unreal_projects/Blocks/Blocks.uproject -waitmutex
+# ue_build() {
+    #~/dev/ue4/UnrealEngine-${UE_VERSION}/Engine/Build/BatchFiles/Linux/Build.sh BlocksEditor Linux Development ~/Documents/ue_projects/Blocks/Blocks.uproject -waitmutex
+#}
+
+unreal() {
+    ~/dev/ue4/UnrealEngine-${UE_VERSION}/Engine/Binaries/Linux/UE4Editor "${1}"
 }
-delete_known_host_line() {
+ue_build() {
+    ~/dev/ue4/UnrealEngine-${UE_VERSION}/Engine/Build/BatchFiles/Linux/Build.sh CityBlocksEditor Linux Development ~/Documents/ue_projects/CityBlocks/CityBlocks.uproject -waitmutex
+}
+
+known_host_delete_line() {
     sed -i ''${1}d'' ~/.ssh/known_hosts
 }
 lsblk() {
@@ -273,10 +283,12 @@ catkin_make_opencv4() {
 alias px4_init='cd ~/dev/px4/Firmware && make px4_sitl_default none_convergence'
 
 # Common directories
-rfh="$(rospack find rosflight_holodeck)" > /dev/null 2>&1
+export cityblocks=~/Documents/ue_projects/CityBlocks
+export blocks=~/Documents/ue_projects/Blocks
+export ue_vplug=$cityblocks/Plugins/vtol-AirSim-Plugin
+export ue_alib=$ue_vplug/Source/AirLib
+
 alias ev='ranger-cd ~/env'
-alias cd_rfhb='cd ~/dev/boat_landing_sim/src/rosflight_holodeck'
-alias cd_rfhq='cd ~/dev/quadsim_ws/src/rosflight_holodeck'
 alias cd_boat='cd ~/dev/boat_landing_sim'
 alias cd_quadws='cd ~/dev/quadsim_ws'
 alias cd_q='cd ~/dev/boat_landing_sim/src/quadsim'
@@ -285,29 +297,29 @@ alias cd_holodeck_worlds='cd ~/.local/share/holodeck/0.3.1/worlds'
 alias cd_exer='cd ~/dev/exercism/rust'
 alias cd_windows_docs='cd /mnt/windows/Users/sethm/Documents'
 alias cd_dl='cd ~/school/adv_dl/multirotorRL'
-alias cd_blocks='cd ~/Documents/unreal_projects/Blocks'
-alias cd_vplug='cd ~/Documents/unreal_projects/Blocks/Plugins/vtol-AirSim'
-alias cd_alib='cd ~/Documents/unreal_projects/Blocks/Plugins/vtol-AirSim/Source/AirLib'
+cd_blocks() { cd $blocks; }
+cd_cityblocks() { cd "$cityblocks"; }
+cd_vplug() { cd $ue_vplug; }
+cd_alib() { cd $ue_alib; }
 alias cd_px4='cd ~/dev/px4/Firmware'
-
-if [[ -n "$rfh" ]]; then
-  alias cd_holodeck='cd $rfh/python/holodeck && echo $(pwd)'
-  alias cd_rfh='cd $rfh && echo $(pwd)'
-  alias cdh='code $rfh/python/holodeck'
-fi
+alias cd_airsim='cd ~/dev/AirSim'
+alias cd_thesis='cd ~/Documents/thesis'
+alias cd_resume='cd ~/Documents/my_resume/resume_v2'
+alias cd_personal_website='cd ~/dev/personal-website'
+alias hugo_personal_website='cd ~/dev/personal-website && ./view.sh'
 
 # Handy code-related aliases
 alias serv_call='rosservice call /param_set MIXER 2 && rosservice call /calibrate_imu'
 alias cdb='code ~/dev/boat_landing_sim'
 alias cdq='code ~/dev/quadsim_ws'
 alias cde='code ~/dev/exercism/rust'
+alias cdp='code ~/dev/personal-website'
 alias cdd='code ~/school/adv_dl/multirotorRL'
 alias cdn='code ~/notes'
-alias cda='code ~/Documents/unreal_projects/Blocks/Plugins/vtol-AirSim'
-alias cdaa='code ~/Documents/unreal_projects/Blocks/Plugins/vtol-AirSim/Source/AirLib'
-#alias cdm='code ~/dev/models/research/deeplab'
-#alias cdv='code ~/Documents/research/vision_based_boat_landing'
-#alias cdt='code ~/dev/tornado-migrate/t6'
+cda() { code $ue_vplug; }
+cdaa() { code $ue_alib; }
+alias cdt='code ~/Documents/thesis'
+alias cdr='code ~/Documents/my_resume/resume_v2'
 
 # Print the 256 color test pattern
 print256colors() {
@@ -322,6 +334,7 @@ print256colors() {
 # FFMPEG converting MP4 or MOV to MOV for Resolve video editor
 # Valid profiles: 1920x1080; bitrate (b:v): 45M; pixel format: yuv422p
 #                 1280x720;  bitrate (b:v): 60M; pixel format: yuv422p
+#                  970c720;  bitrate (b:v): 60M; pixel format: yuv422p
 ffmpeg_mp4_to_mov_resolve() {
   if [[ "$#" -ne 1 ]]; then
     echo "Usage: $0 [dir]"
@@ -335,21 +348,21 @@ ffmpeg_mp4_to_mov_resolve() {
         FILES=${1}/*
       fi
       CONV_DIR=${FILES:0:-2}/converted_resolve
-      if [[ -e $CONV_DIR ]]; then
-        echo "Error: directory for converted files already exists!"
-        return 1
+      if [[ -e "$CONV_DIR" ]]; then
+        rm -rf "$CONV_DIR"
       fi
       mkdir $CONV_DIR
       for f in $~FILES; do
-        echo "\n\n ------- Converting file $f -------\n\n"
         if [[ -f $f ]]; then
+          echo "\n\n ------- Converting file $f -------\n\n"
           fname=${f:2:-4}     \
           fps=$(ffprobe -i ${f} 2>&1 | sed -n "s/.*, \(.*\) fp.*/\1/p")
+          size=$(ffprobe -i ${f} 2>&1 | sed -n "s/.*, \(.*\) \[.*/\1/p")
                               \
           ffmpeg -i ${f}      \
             -vcodec dnxhd     \
             -acodec pcm_s16le \
-            -s 640x360        \
+            -s 960x720           \
             -r $fps           \
             -b:v 60M          \
             -pix_fmt yuv422p  \
@@ -394,6 +407,9 @@ alias subup='git submodule update --init --recursive'
 alias gp='git push'
 alias gl='git pull'
 alias grv='git remote -v'
+gmp() {
+    git commit -m $1 && git push
+}
 
 dir1=~/env
 dir2=~/school/nonlinear

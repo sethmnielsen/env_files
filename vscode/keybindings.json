@@ -1,11 +1,15 @@
 [
     {
+        "key": "shift+alt+1",
+        "command": "workbench.action.editorLayoutSingle"
+    },
+    {
         "key": "shift+alt+2",
         "command": "workbench.action.editorLayoutTwoColumns"
     },
     {
-        "key": "shift+alt+1",
-        "command": "workbench.action.editorLayoutSingle"
+        "key": "shift+alt+3",
+        "command": "workbench.action.editorLayoutThreeColumns"
     },
     {
         "key": "ctrl+alt+shift+l",
@@ -64,6 +68,26 @@
         "when": "inputFocus"
     },
     {
+        "key": "up",
+        "command": "cursorUp",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    },
+    {
+        "key": "down",
+        "command": "cursorDown",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    },
+    {
+        "key": "k",
+        "command": "cursorUp",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    },
+    {
+        "key": "j",
+        "command": "cursorDown",
+        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    },
+    {
         "key": "ctrl+alt+k",
         "command": "editor.action.moveLinesUpAction",
         "when": "editorTextFocus"
@@ -82,11 +106,6 @@
         "command": "workbench.action.focusActiveEditorGroup"
     },
     {
-        "key": "ctrl+n",
-        "command": "workbench.action.focusNextGroup",
-        "when": "textInputFocus || searchInputBoxFocus"
-    },
-    {
         "key": "shift+alt+k",
         "command": "editor.action.insertCursorAbove",
         "when": "editorTextFocus"
@@ -95,11 +114,6 @@
         "key": "shift+alt+j",
         "command": "editor.action.insertCursorBelow",
         "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+alt+l",
-        "command": "expandLineSelection",
-        "when": "textInputFocus"
     },
     {
         "key": "shift+alt+l",
@@ -212,10 +226,6 @@
     {
         "key": "ctrl+shift+w",
         "command": "activitusbar.showDebugView"
-    },
-    {
-        "key": "alt+\\",
-        "command": "workbench.action.focusSideBar"
     },
     {
         "key": "alt+\\",
@@ -398,10 +408,6 @@
     {
         "key": "ctrl+\\",
         "command": "-workbench.action.splitEditor"
-    },
-    {
-        "key": "ctrl+0",
-        "command": "-workbench.action.focusSideBar"
     },
     {
         "key": "ctrl+j",
@@ -713,16 +719,6 @@
         "when": "editorTextFocus && vim.active && vim.use<C-a> && vim.mode != 'Insert'  && !inDebugRepl"
     },
     {
-        "key": "ctrl+h",
-        "command": "cursorLineStart",
-        "when": "editorTextFocus && vim.active && vim.mode == 'Insert' && !inDebugRepl"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "cursorLineEnd",
-        "when": "editorTextFocus && vim.active && vim.mode == 'Insert' && !inDebugRepl"
-    },
-    {
         "key": "ctrl+q",
         "command": "workbench.action.closeActiveEditor"
     },
@@ -827,26 +823,16 @@
         "key": "ctrl+r",
         "command": "-workbench.action.gotoSymbol"
     },
-    {
-        "key": "up",
-        "command": "cursorUp",
-        "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
-    },
-    {
-        "key": "down",
-        "command": "cursorDown",
-        "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
-    },
-    {
-        "key": "k",
-        "command": "cursorUp",
-        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible && (editorLangId == 'latex' || editorLangId == 'markdown')"
-    },
-    {
-        "key": "j",
-        "command": "cursorDown",
-        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisibl && (editorLangId == 'latex' || editorLangId == 'markdown')"
-    },
+    // {
+    //     "key": "up",
+    //     "command": "cursorUp",
+    //     "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    // },
+    // {
+    //     "key": "down",
+    //     "command": "cursorDown",
+    //     "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    // },
     {
         "key": "ctrl+alt+v",
         "command": "latex-workshop.view",
@@ -972,11 +958,6 @@
         "when": "editorFocus"
     },
     {
-        "key": "f8",
-        "command": "editor.action.marker.next",
-        "when": "editorFocus"
-    },
-    {
         "key": "alt+f8",
         "command": "-editor.action.marker.next",
         "when": "editorFocus"
@@ -1089,7 +1070,101 @@
         "when": "editorTextFocus && foldingEnabled"
     },
     {
-        "key": "shift+alt+3",
-        "command": "workbench.action.editorLayoutThreeColumns"
-    }
+        "key": "ctrl+d",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+alt+s",
+        "command": "workbench.view.scm"
+    },
+    {
+        "key": "ctrl+9",
+        "command": "workbench.action.compareEditor.focusOtherSide"
+    },
+    {
+        "key": "alt+.",
+        "command": "-gitlens.diffWithNext",
+        "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /revision/ && gitlens:activeFileStatus =~ /revision/"
+    },
+    {
+        "key": "alt+.",
+        "command": "-gitlens.diffWithNextInDiffLeft",
+        "when": "editorTextFocus && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /revision/ && gitlens:activeFileStatus =~ /revision/"
+    },
+    {
+        "key": "alt+.",
+        "command": "-gitlens.diffWithNextInDiffRight",
+        "when": "editorTextFocus && isInDiffRightEditor && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /revision/ && gitlens:activeFileStatus =~ /revision/"
+    },
+    {
+        "key": "alt+.",
+        "command": "-gitlens.key.alt+.",
+        "when": "gitlens:key:."
+    },
+    {
+        "key": "alt+,",
+        "command": "-gitlens.diffWithPrevious",
+        "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /tracked/"
+    },
+    {
+        "key": "alt+,",
+        "command": "-gitlens.diffWithPreviousInDiffLeft",
+        "when": "editorTextFocus && isInDiffEditor && !isInDiffRightEditor && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /tracked/"
+    },
+    {
+        "key": "alt+,",
+        "command": "-gitlens.diffWithPreviousInDiffRight",
+        "when": "editorTextFocus && isInDiffRightEditor && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /tracked/"
+    },
+    {
+        "key": "alt+,",
+        "command": "-gitlens.key.alt+,",
+        "when": "gitlens:key:,"
+    },
+    // {
+    //     "key": "ctrl+shift+v",
+    //     "command": "-markdown.showPreview",
+    //     "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    // },
+    // {
+    //     "key": "ctrl+shift+v",
+    //     "command": "-markdown.extension.togglePreview",
+    //     "when": "!terminalFocus"
+    // },
+    // {
+    //     "key": "ctrl+shift+v",
+    //     "command": "markdown-preview-enhanced.openPreviewToTheSide",
+    //     "when": "editorLangId == 'markdown'"
+    // },
+    // {
+    //     "key": "ctrl+k v",
+    //     "command": "-markdown-preview-enhanced.openPreviewToTheSide",
+    //     "when": "editorLangId == 'markdown'"
+    // },
+    // {
+    //     "key": "ctrl+shift+v",
+    //     "command": "-markdown-preview-enhanced.openPreview",
+    //     "when": "editorLangId == 'markdown'"
+    // },
+    // {
+    //     "key": "f10",
+    //     "command": "merge-conflict.next"
+    // },
+    // {
+    //     "key": "f6",
+    //     "command": "-workbench.action.focusNextPart"
+    // },
+    // {
+    //     "key": "f7",
+    //     "command": "merge-conflict.accept.incoming"
+    // },
+    // {
+    //     "key": "f6",
+    //     "command": "merge-conflict.accept.current"
+    // },
+    // {
+    //     "key": "f8",
+    //     "command": "merge-conflict.accept.both"
+    // }
 ]
