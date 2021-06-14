@@ -25,22 +25,15 @@
     "**/*.swp": true,
     "**/*.gz": true,
     "**/*.zip": true,
-    "**/*airbourne": true,
-    "**/*breezy": true,
     "**/*CMakeLists.txt.user": true,
     "**/*docs": true,
-    "**/*rosflight_memory": true,
     "**/Cargo.lock": true,
     "**/build": true,
     "**/devel": true,
     "**/target/": true,
-    "**F450.yaml": true,
     "**/*.pytest_cache/": true,
     "**/*.vcxproj": true,
     "**/*.vcxproj.filters": true,
-    "**/*.svg": false,
-    "**/*.png": false,
-    "**/*.jpg": false,
     "**/*.bat": true,
     "**/*.aux": true,
     "**/*.bbl": true,
@@ -167,7 +160,7 @@
     ],
     "saveAndRunCode": [
         "workbench.action.files.save",
-        "code-runner.run"
+        "code-runner.run",
     ]
 },
 "scm.diffDecorationsGutterWidth": 1,
@@ -179,11 +172,6 @@
     "/home/seth/Downloads/**": true
 },
 "workbench.list.automaticKeyboardNavigation": false,
-"gitlens.views.repositories.location": "explorer",
-"gitlens.views.fileHistory.location": "gitlens",
-"gitlens.views.lineHistory.location": "gitlens",
-"gitlens.views.compare.location": "gitlens",
-"gitlens.views.search.location": "gitlens",
 "gitlens.codeLens.authors.enabled": false,
 "gitlens.codeLens.recentChange.enabled": false,
 "gitlens.currentLine.enabled": false,
@@ -246,7 +234,6 @@
 "latex-workshop.view.pdf.viewer": "external",
 "latex-workshop.latex.recipe.default": "first",
 "latex-workshop.view.pdf.hand": true,
-"latex-workshop.view.pdf.trim": 1,
 "latex-workshop.message.error.show": false,
 "latex-workshop.message.warning.show": false,
 "latex-workshop.view.pdf.backgroundColor": "#e6e6e6",
@@ -360,10 +347,6 @@
         "before": ["<alt-j>"],
         "after": ["g", "j"]
     },
-    // {
-    //     "before": ["<leader>","c","i"],
-    //     "commands": ["editor.action.commentLine"]
-    // },
 ],
 "vim.normalModeKeyBindingsNonRecursive": [
     {
@@ -374,14 +357,6 @@
         "before": ["<alt-j>"],
         "after": ["g", "j"]
     },
-    // {
-    //     "before": ["o"],
-    //     "commands": ["editor.action.insertLineAfter", "extension.vim_insert"]
-    // },
-    // {
-    //     "before": ["O"],
-    //     "commands": ["editor.action.insertLineBefore", "extension.vim_insert"]
-    // },
     {
         "before": ["<leader>","c","i"],
         "commands": ["editor.action.commentLine"]
@@ -406,17 +381,21 @@
         "before": ["<leader>","a"],
         "after": ["G","V","g","g"]
     },
-    // {
-    //     "before": ["<leader>", "p"],
-    //     "after": ["P", "v", "T", "]"]
-    // },
+    {
+        "before": ["<space>","l"],
+        "commands": ["dendron.lookup"]
+    },
+    {
+        "before": ["<space>","L"],
+        "commands": ["dendron.lookupSchema"]
+    },
     {
         "before": ["<leader>", "w"],
         "after": [":", "w", "<CR>"]
-    }
+    },
     // {
-    //     "before": ["S"],
-    //     "after": ["y", "s", "a", "W", "$"]
+    //     "before": ["<space>"],
+    //     "commands": ["whichkey.show"]
     // },
 ],
 "vim.visualModeKeyBindingsNonRecursive": [
@@ -461,8 +440,12 @@
         "after": ["y","G"]
     },
     {
-        "before": ["<leader>","t"],
-        "commands": ["editor.action.transformToTitlecase", "extension.vim_end", "extension.vim_escape"]
+        "before": ["<space>","l"],
+        "commands": ["dendron.lookup"]
+    },
+    {
+        "before": ["<space>","L"],
+        "commands": ["dendron.lookupSchema"]
     },
 ],
 "editor.smoothScrolling": true,
@@ -535,7 +518,6 @@
     "uavs"
 ],
 "python.linting.lintOnSave": true,
-"editor.scrollBeyondLastLine": false,
 "jupyter.textOutputLimit": 0,
 "editor.wrappingIndent": "indent",
 "markdown.preview.fontSize": 14,
@@ -551,17 +533,9 @@
 "breadcrumbs.showPackages": false,
 "breadcrumbs.filePath": "off",
 "breadcrumbs.showConstants": false,
-"workbench.editorAssociations": [
-    {
-        "viewType": "jupyter.notebook.ipynb",
-        "filenamePattern": "*.ipynb"
-    }
-],
-"rust-client.enableMultiProjectSetup": true,
-"rust.all_features": true,
-"rust.clippy_preference": "on",
-"rust-client.disableRustup": true,
-"rust.show_warnings": false,
+"workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+},
 "rust-analyzer.inlayHints.enable": false,
 "rust-analyzer.hoverActions.gotoTypeDef": false,
 "rust-analyzer.hoverActions.debug": false,
@@ -596,15 +570,12 @@
 "outline.showVariables": false,
 "files.eol": "\n",
 "liveshare.presence": true,
-"workbench.activityBar.visible": false,
 "terminal.integrated.fontSize": 13,
 "workbench.iconTheme": "vscode-icons",
 "editor.fontSize": 12.3,
 "vsicons.presets.foldersAllDefaultIcon": true,
 "vsicons.presets.hideExplorerArrows": true,
 "markdown-preview-enhanced.scrollSync": false,
-"markdown.extension.orderedList.autoRenumber": false,
-"markdown.extension.orderedList.marker": "one",
 "workbench.editor.untitled.hint": "hidden",
 "workbench.editor.limit.enabled": true,
 "workbench.editor.closeOnFileDelete": true,
@@ -617,4 +588,6 @@
 "gitlens.defaultDateSource": "committed",
 "markdown-preview-enhanced.previewTheme": "solarized-light.css",
 "markdown.extension.list.indentationSize": "inherit",
+"security.workspace.trust.untrustedFiles": "open",
+"workbench.activityBar.visible": false,
 }
