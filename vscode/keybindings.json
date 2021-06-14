@@ -619,16 +619,6 @@
         "when": "editorTextFocus && hasWordHighlights"
     },
     {
-        "key": "ctrl+f3",
-        "command": "-editor.action.nextSelectionMatchFindAction",
-        "when": "editorFocus"
-    },
-    {
-        "key": "ctrl+shift+f3",
-        "command": "-editor.action.previousSelectionMatchFindAction",
-        "when": "editorFocus"
-    },
-    {
         "key": "alt+.",
         "command": "-gitlens.diffWithNext",
         "when": "editorTextFocus && !isInDiffEditor && config.gitlens.keymap == 'alternate' && gitlens:activeFileStatus =~ /revision/"
@@ -1075,6 +1065,10 @@
         "when": "terminalFocus"
     },
     {
+        "key": "ctrl+alt+d",
+        "command": "workbench.action.terminal.kill",
+    },
+    {
         "key": "ctrl+alt+s",
         "command": "workbench.view.scm"
     },
@@ -1121,6 +1115,36 @@
         "key": "alt+,",
         "command": "-gitlens.key.alt+,",
         "when": "gitlens:key:,"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "extension.advancedNewFile"
+    },
+    {
+        "key": "ctrl+alt+n",
+        "command": "-extension.advancedNewFile"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "ctrl+alt+o",
+        "command": "journal.day"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "-journal.day"
+    },
+    {
+        "key": "ctrl+shift+alt+d",
+        "command": "cursorUndo",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+u",
+        "command": "-cursorUndo",
+        "when": "textInputFocus"
     },
     // {
     //     "key": "ctrl+shift+v",

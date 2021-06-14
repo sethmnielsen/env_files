@@ -429,13 +429,13 @@
 		{
 			"scope": "string",
 			"settings": {
-				"foreground": "#2AA198"
+				"foreground": "#06a99d"
 			}
 		},
 		{
 			"scope": "string.regexp",
 			"settings": {
-				"foreground": "#2AA198"
+				"foreground": "#06A99D"
 			}
 		},
 		{
@@ -665,7 +665,7 @@
 				"string.quoted.single"
 			],
 			"settings": {
-				"foreground": "#2AA198"
+				"foreground": "#06A99D"
 			}
 		},
 		{
@@ -793,7 +793,7 @@
 		{
 			"scope": "constant.other.symbol.ruby",
 			"settings": {
-				"foreground": "#2AA198"
+				"foreground": "#06A99D"
 			}
 		},
 		{
@@ -825,7 +825,7 @@
 				"meta.preprocessor.c.include punctuation.definition.string.end.c"
 			],
 			"settings": {
-				"foreground": "#2AA198"
+				"foreground": "#06A99D"
 			}
 		},
 		{
@@ -840,7 +840,7 @@
 		{
 			"scope": "other.add",
 			"settings": {
-				"foreground": "#2AA198"
+				"foreground": "#06A99D"
 			}
 		},
 		{
@@ -886,7 +886,7 @@
 				"constant.character.math.tex"
 			],
 			"settings": {
-				"foreground": "#2AA198"
+				"foreground": "#06A99D"
 			}
 		},
 		{
@@ -910,7 +910,7 @@
 				"text.tex.latex constant.other.general.math.tex"
 			],
 			"settings": {
-				"foreground": "#2AA198"
+				"foreground": "#06A99D"
 			}
 		},
 		{
@@ -934,13 +934,13 @@
 		{
 			"scope": "support.function.general.tex",
 			"settings": {
-				"foreground": "#2AA198"
+				"foreground": "#06A99D"
 			}
 		},
 		{
 			"scope": "keyword.control.ref.latex",
 			"settings": {
-				"foreground": "#2AA198"
+				"foreground": "#06A99D"
 			}
 		},
 		{
@@ -1045,7 +1045,7 @@
 		{
 			"scope": "markup.changed",
 			"settings": {
-				"foreground": "#2AA198"
+				"foreground": "#06A99D"
 			}
 		},
 		{
@@ -1087,7 +1087,7 @@
 				"meta.link.reference constant.other.reference.link.markdown"
 			],
 			"settings": {
-				"foreground": "#2AA198"
+				"foreground": "#06A99D"
 			}
 		},
 		{
@@ -1171,7 +1171,7 @@
 		{
 			"scope": "entity.name.filename.find-in-files",
 			"settings": {
-				"foreground": "#2AA198"
+				"foreground": "#06A99D"
 			}
 		},
 		{

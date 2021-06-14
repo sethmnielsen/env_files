@@ -37,9 +37,9 @@ alias blueman='blueman-tray'
 alias btr='sudo systemctl restart bluetooth.service'
 alias feh='feh -B black'
 alias ipa='ip --brief address show'
-alias boost='asusctl profile boost; asusctl -f boost'
-alias normal='asusctl profile normal; asusctl -f normal'
-alias silent='asusctl profile silent; asusctl -f silent'
+alias boost=' asusctl profile boost  && asusctl profile -f boost  && asusctl profile -t true'
+alias normal='asusctl profile normal && asusctl profile -f normal && asusctl profile -t false'
+alias silent='asusctl profile silent && asusctl profile -f silent && asusctl profile -t false'
 alias g_integrated='asusctl graphics -m integrated'
 alias g_nvidia='asusctl graphics -m nvidia'
 alias lscpu_='lscpu | rg boost'
@@ -320,6 +320,7 @@ cda() { code $ue_vplug; }
 cdaa() { code $ue_alib; }
 alias cdt='code ~/Documents/thesis'
 alias cdr='code ~/Documents/my_resume/resume_v2'
+alias cdcpp='code ~/dev/cpp_playground'
 
 # Print the 256 color test pattern
 print256colors() {
@@ -407,7 +408,7 @@ alias subup='git submodule update --init --recursive'
 alias gp='git push'
 alias gl='git pull'
 alias grv='git remote -v'
-gmp() {
+gcmp() {
     git commit -m $1 && git push
 }
 
