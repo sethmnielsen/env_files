@@ -577,7 +577,8 @@
 		{
 			"scope": "markup.italic",
 			"settings": {
-				"fontStyle": "italic"
+				"fontStyle": "italic",
+				"foreground": "#83a598"
 			}
 		},
 		{
@@ -613,7 +614,8 @@
 		{
 			"scope": [
 				"markup.inline.raw",
-				"markup.fenced_code.block"
+				"markup.fenced_code.block",
+				"markup.raw.block.markdown"
 			],
 			"settings": {
 				"foreground": "#8ec07c"
@@ -901,7 +903,6 @@
 	"colors": {
 		"activityBar.background": "#1d2021",
 		"activityBar.border": "#3c3836",
-		"activityBar.dropBackground": "#1d2021",
 		"activityBar.foreground": "#ebdbb2",
 		"activityBarBadge.background": "#458588",
 		"activityBarBadge.foreground": "#ebdbb2",

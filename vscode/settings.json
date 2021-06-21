@@ -205,8 +205,9 @@
 "extensions.autoUpdate": false,
 "editor.links": false,
 "code-runner.executorMap": {
-    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
+    // "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
+    "cpp": "g++ $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
     "python": "cd $dir && ipython $fileName",
     "shellscript": "bash",
     "rust": "cargo run"
@@ -329,14 +330,14 @@
     "<C-Z>": false,
     "<C-]>": false,
     "<C-[>": false,
-    "u": false,
     "<C-y>": true,
     "Up": true,
     "Down": true,
     "Left": true,
     "Right": true,
     "<C-k>": false,
-    "<C-n>": false
+    "<C-n>": false,
+    "<C-m>": false,
 },
 "vim.insertModeKeyBindingsNonRecursive": [
     {
@@ -352,6 +353,22 @@
     {
         "before": ["<alt-k>"],
         "after": ["g", "k"]
+    },
+    {
+        "before": ["<alt-j>"],
+        "after": ["g", "j"]
+    },
+    {
+        "before": ["g","L"],
+        "after": ["g", "$", "g", "e"]
+    },
+    {
+        "before": ["L"],
+        "commands": ["cursorEnd"]
+    },
+    {
+        "before": ["H"],
+        "commands": ["cursorHome"]
     },
     {
         "before": ["<alt-j>"],
@@ -382,6 +399,10 @@
         "after": ["G","V","g","g"]
     },
     {
+        "before": ["<leader>", "w"],
+        "after": [":", "w", "<CR>"]
+    },
+    {
         "before": ["<space>","l"],
         "commands": ["dendron.lookup"]
     },
@@ -390,13 +411,13 @@
         "commands": ["dendron.lookupSchema"]
     },
     {
-        "before": ["<leader>", "w"],
-        "after": [":", "w", "<CR>"]
+        "before": ["<space>","D"],
+        "commands": ["dendron.deleteNode"]
     },
-    // {
-    //     "before": ["<space>"],
-    //     "commands": ["whichkey.show"]
-    // },
+    {
+        "before": ["<space>","<space>"],
+        "commands": ["dendron.gotoNote"]
+    },
 ],
 "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -447,6 +468,10 @@
         "before": ["<space>","L"],
         "commands": ["dendron.lookupSchema"]
     },
+    {
+        "before": ["<space>","<space>"],
+        "commands": ["dendron.gotoNote"]
+    },
 ],
 "editor.smoothScrolling": true,
 "terminal.integrated.commandsToSkipShell": [
@@ -456,14 +481,16 @@
 ],
 "[markdown]": {
     "editor.wordWrap": "bounded",
+    "editor.wrappingIndent": "indent",
     "editor.fontFamily": "'Iosevka'",
-    "editor.quickSuggestions": false,
-    "editor.tabSize": 4,
-    "editor.fontSize": 13.0
+    "editor.tabSize": 2,
+    "editor.fontSize": 13.0,
+    // "editor.quickSuggestions": false,
 },
 "[html]": {
     "editor.wordWrap": "bounded",
     "editor.tabSize": 2,
+    "editor.autoClosingBrackets": "never"
 },
 "zenMode.silentNotifications": false,
 "workbench.colorCustomizations": {
@@ -520,7 +547,7 @@
 "python.linting.lintOnSave": true,
 "jupyter.textOutputLimit": 0,
 "editor.wrappingIndent": "indent",
-"markdown.preview.fontSize": 14,
+"markdown.preview.fontSize": 15,
 "markdown.preview.lineHeight": 1.4,
 "breadcrumbs.showModules": false,
 "breadcrumbs.showBooleans": false,
@@ -534,7 +561,7 @@
 "breadcrumbs.filePath": "off",
 "breadcrumbs.showConstants": false,
 "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
+    "*.ipynb": "jupyter-notebook"
 },
 "rust-analyzer.inlayHints.enable": false,
 "rust-analyzer.hoverActions.gotoTypeDef": false,
@@ -556,7 +583,6 @@
 "C_Cpp.intelliSenseUpdateDelay": 1000,
 "C_Cpp.vcpkg.enabled": false,
 "workbench.tree.indent": 16,
-"workbench.colorTheme": "ayu-seth",
 "editor.fontFamily": "'Iosevka', 'monospace'",
 "diffEditor.ignoreTrimWhitespace": false,
 "workbench.tree.renderIndentGuides": "always",
@@ -586,8 +612,27 @@
 "python.pythonPath": "/home/seth/.virtualenvs/airsim/bin/python",
 "jupyter.interactiveWindowMode": "perFile",
 "gitlens.defaultDateSource": "committed",
-"markdown-preview-enhanced.previewTheme": "solarized-light.css",
 "markdown.extension.list.indentationSize": "inherit",
 "security.workspace.trust.untrustedFiles": "open",
+"dendron.logLevel": "error",
+"dendron.rootDir": "/home/seth/notes",
+"files.trimTrailingWhitespace": true,
 "workbench.activityBar.visible": false,
+"markdown-preview-enhanced.codeBlockTheme": "darcula.css",
+"editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+},
+"editor.inlineSuggest.enabled": true,
+"dendron.dailyJournalDomain": "journal",
+"dendron.defaultJournalName": "daily",
+"markdown-preview-enhanced.previewTheme": "atom-dark.css",
+"workbench.colorTheme": "ayu-seth",
+"dendron.trace.server": "off",
+"notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+},
+"workbench.editor.tabCloseButton": "off",
 }

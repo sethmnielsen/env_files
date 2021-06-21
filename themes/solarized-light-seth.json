@@ -1072,13 +1072,26 @@
 		{
 			"scope": "markup.italic",
 			"settings": {
-				"fontStyle": "italic"
+				"fontStyle": "italic",
+				"foreground": "#6C71C4"
+				// "foreground": "#D33682"
 			}
 		},
 		{
 			"scope": "markup.bold",
 			"settings": {
-				"fontStyle": "bold"
+				"fontStyle": "bold",
+				"foreground": "#6C71C4"
+			}
+		},
+		{
+			"name": "Markup Raw Inline",
+			"scope": [
+				"text.html.markdown markup.inline.raw"
+			],
+			"settings": {
+				"foreground": "#2AA198"
+				// "foreground": "#1957b4"
 			}
 		},
 		{
@@ -1227,6 +1240,23 @@
 			"settings": {
 				"foreground": "#800080"
 			}
-		}
+		},
+		// {
+		// 	"name": "URL",
+		// 	"scope": [
+		// 		"*url*",
+		// 		"*link*",
+		// 		"*uri*"
+		// 	],
+		// 	"settings": {
+		// 		"fontStyle": "underline"
+		// 	}
+		// },
+		// {
+		// 	"scope": "string.other.link.title.markdown",
+		// 	"settings": {
+		// 		"fontStyle": "underline"
+		// 	}
+		// },
 	]
 }

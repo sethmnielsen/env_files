@@ -48,6 +48,18 @@ alias remouse1='remouse --orientation left --monitor 1'
 alias fd='fd -uu'
 alias fd_='/usr/bin/fd'
 
+mon3() {
+    xrandr --output HDMI-A-1-0  --mode 1920x1200 --rate 60.0 --set "PRIME Synchronization" 1 --primary \
+           --output eDP-1-0 --mode 1920x1080 --rate 120.0 --set "PRIME Synchronization" 1 --below HDMI-A-1-0 \
+           --output DP-0 --mode 2560x1440 --rate 75.0 --right-of HDMI-A-1-0
+}
+
+mon2() {
+    xrandr --output HDMI-A-1-0  --mode 1920x1200 --rate 60.0 --set "PRIME Synchronization" 1 --primary \
+           --output eDP-1-0 --off \
+           --output DP-0 --mode 2560x1440 --rate 75.0 --right-of HDMI-A-1-0
+}
+
 alias blocks_run='~/Documents/AirSim/worlds/Blocks/Blocks.sh'
 # ue_build() {
     #~/dev/ue4/UnrealEngine-${UE_VERSION}/Engine/Build/BatchFiles/Linux/Build.sh BlocksEditor Linux Development ~/Documents/ue_projects/Blocks/Blocks.uproject -waitmutex
@@ -250,6 +262,7 @@ alias vrefind='sudo vim /boot/EFI/refind/refind.conf'
 alias vho='sudo vim /etc/hosts'
 alias vpac='sudo vim /etc/pacman.conf'
 alias vasus='sudo vim /etc/asusd/asusd.conf'
+alias vset='vim ~/Documents/AirSim/settings.json'
 
 # zsh / sourcing / environment
 alias szsh='source ~/.zshrc'
@@ -314,13 +327,13 @@ alias cdb='code ~/dev/boat_landing_sim'
 alias cdq='code ~/dev/quadsim_ws'
 alias cde='code ~/dev/exercism/rust'
 alias cdp='code ~/dev/personal-website'
-alias cdd='code ~/school/adv_dl/multirotorRL'
 alias cdn='code ~/notes'
 cda() { code $ue_vplug; }
 cdaa() { code $ue_alib; }
 alias cdt='code ~/Documents/thesis'
 alias cdr='code ~/Documents/my_resume/resume_v2'
 alias cdcpp='code ~/dev/cpp_playground'
+alias cdleet='code ~/dev/leetcode'
 
 # Print the 256 color test pattern
 print256colors() {
