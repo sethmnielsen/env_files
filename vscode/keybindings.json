@@ -722,11 +722,11 @@
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "terminalFocus"
     },
-    // {
-    //     "key": "ctrl+w",
-    //     "command": "macros.focusEditorAndVimCtrlW",
-    //     "when": "explorerViewletFocus && vim.active && vim.use<C-w> && !inDebugRepl"
-    // },
+    {
+        "key": "ctrl+w",
+        "command": "macros.focusEditorAndVimCtrlW",
+        "when": "explorerViewletFocus && vim.active && vim.use<C-w> && !inDebugRepl"
+    },
     {
         "key": "ctrl+w",
         "command": "-workbench.action.closeActiveEditor"
