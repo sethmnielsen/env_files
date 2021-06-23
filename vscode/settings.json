@@ -54,6 +54,7 @@
     "<ipython-input*": "python",
     "*.bbl": "tex",
     "*.metadata": "json",
+    "*.vim": "shellscript"
 },
 "explorer.autoReveal": false,
 "explorer.openEditors.visible": 0,
@@ -153,10 +154,6 @@
         "jupyter.restartkernel",
         "jupyter.runallcellsabove.palette",
         "jupyter.debugcurrentcell.palette"
-    ],
-    "focusEditorAndVimCtrlW": [
-        "workbench.action.focusActiveEditorGroup",
-        "extension.vim_ctrl+w"
     ],
     "saveAndRunCode": [
         "workbench.action.files.save",
@@ -339,52 +336,10 @@
     "<C-n>": false,
     "<C-m>": false,
 },
-"vim.insertModeKeyBindingsNonRecursive": [
-    {
-        "before": ["<alt-k>"],
-        "after": ["g", "k"]
-    },
-    {
-        "before": ["<alt-j>"],
-        "after": ["g", "j"]
-    },
-],
 "vim.normalModeKeyBindingsNonRecursive": [
-    {
-        "before": ["<alt-k>"],
-        "after": ["g", "k"]
-    },
-    {
-        "before": ["<alt-j>"],
-        "after": ["g", "j"]
-    },
     {
         "before": ["g","L"],
         "after": ["g", "$", "g", "e"]
-    },
-    {
-        "before": ["L"],
-        "commands": ["cursorEnd"]
-    },
-    {
-        "before": ["H"],
-        "commands": ["cursorHome"]
-    },
-    {
-        "before": ["<alt-j>"],
-        "after": ["g", "j"]
-    },
-    {
-        "before": ["<leader>","c","i"],
-        "commands": ["editor.action.commentLine"]
-    },
-    {
-        "before": ["K"],
-        "after": ["1","0","-"]
-    },
-    {
-        "before": ["J"],
-        "after": ["1","0","+"]
     },
     {
         "before": ["u"],
@@ -395,28 +350,12 @@
         "commands": ["redo"]
     },
     {
+        "before": ["<leader>","w"],
+        "commands": ["workbench.action.files.save"]
+    },
+    {
         "before": ["<leader>","a"],
         "after": ["G","V","g","g"]
-    },
-    {
-        "before": ["<leader>", "w"],
-        "after": [":", "w", "<CR>"]
-    },
-    {
-        "before": ["<space>","l"],
-        "commands": ["dendron.lookup"]
-    },
-    {
-        "before": ["<space>","L"],
-        "commands": ["dendron.lookupSchema"]
-    },
-    {
-        "before": ["<space>","D"],
-        "commands": ["dendron.deleteNode"]
-    },
-    {
-        "before": ["<space>","<space>"],
-        "commands": ["dendron.gotoNote"]
     },
 ],
 "vim.visualModeKeyBindingsNonRecursive": [
@@ -430,11 +369,11 @@
     },
     {
         "before": ["K"],
-        "after": ["1","0","-"]
+        "after": ["1","0","k"]
     },
     {
         "before": ["J"],
-        "after": ["1","0","+"]
+        "after": ["1","0","j"]
     },
     {
         "before": [ "p"],
@@ -459,18 +398,6 @@
     {
         "before": ["<leader>","y"],
         "after": ["y","G"]
-    },
-    {
-        "before": ["<space>","l"],
-        "commands": ["dendron.lookup"]
-    },
-    {
-        "before": ["<space>","L"],
-        "commands": ["dendron.lookupSchema"]
-    },
-    {
-        "before": ["<space>","<space>"],
-        "commands": ["dendron.gotoNote"]
     },
 ],
 "editor.smoothScrolling": true,
@@ -533,6 +460,7 @@
     "lamba",
     "magicc",
     "microcontrollers",
+    "multirotor",
     "multirotors",
     "overfit",
     "parallelization",
@@ -625,8 +553,6 @@
     "strings": false
 },
 "editor.inlineSuggest.enabled": true,
-"dendron.dailyJournalDomain": "journal",
-"dendron.defaultJournalName": "daily",
 "markdown-preview-enhanced.previewTheme": "atom-dark.css",
 "workbench.colorTheme": "ayu-seth",
 "dendron.trace.server": "off",
@@ -635,4 +561,8 @@
     "jupyter-notebook": "left"
 },
 "workbench.editor.tabCloseButton": "off",
+"vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+"vscode-neovim.neovimInitVimPaths.linux": "/home/seth/.config/nvim/init.vim",
+"editor.lineNumbers": "relative",
+"dendron.defaultJournalName": "daily"
 }

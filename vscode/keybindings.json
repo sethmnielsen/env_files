@@ -70,22 +70,27 @@
     {
         "key": "up",
         "command": "cursorUp",
-        "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+        "when": "editorTextFocus && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
     },
     {
         "key": "down",
         "command": "cursorDown",
-        "when": "editorTextFocus && vim.active && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+        "when": "editorTextFocus && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
     },
     {
         "key": "k",
         "command": "cursorUp",
-        "when": "editorWordWrap && editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+        "when": "editorWordWrap && editorTextFocus && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
     },
     {
         "key": "j",
         "command": "cursorDown",
-        "when": "editorWordWrap && editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+        "when": "editorWordWrap && editorTextFocus && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    },
+    {
+        "key": "o",
+        "command": "markdown.extension.onCtrlEnterKey",
+        "when": "editorLangId == 'markdown' && editorTextFocus && vim.mode == 'Normal'"
     },
     {
         "key": "ctrl+alt+k",
@@ -703,11 +708,11 @@
         "command": "macros.positionPanelBottomEditorFocus",
         "when": "editorTextFocus && panelPosition == 'right'"
     },
-    {
-        "key": "ctrl+a",
-        "command": "extension.vim_ctrl+a",
-        "when": "editorTextFocus && vim.active && vim.use<C-a> && vim.mode != 'Insert'  && !inDebugRepl"
-    },
+    // {
+    //     "key": "ctrl+a",
+    //     "command": "extension.vim_ctrl+a",
+    //     "when": "editorTextFocus && vim.active && vim.use<C-a> && vim.mode != 'Insert'  && !inDebugRepl"
+    // },
     {
         "key": "ctrl+q",
         "command": "workbench.action.closeActiveEditor"
@@ -717,11 +722,11 @@
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "terminalFocus"
     },
-    {
-        "key": "ctrl+w",
-        "command": "macros.focusEditorAndVimCtrlW",
-        "when": "explorerViewletFocus && vim.active && vim.use<C-w> && !inDebugRepl"
-    },
+    // {
+    //     "key": "ctrl+w",
+    //     "command": "macros.focusEditorAndVimCtrlW",
+    //     "when": "explorerViewletFocus && vim.active && vim.use<C-w> && !inDebugRepl"
+    // },
     {
         "key": "ctrl+w",
         "command": "-workbench.action.closeActiveEditor"
@@ -781,20 +786,16 @@
         "command": "-workbench.action.files.openLocalFile",
         "when": "remoteFileDialogVisible"
     },
-    {
-        "key": "ctrl+x",
-        "command": "extension.vim_ctrl+x",
-        "when": "editorTextFocus && vim.active && vim.mode != 'Insert' && vim.use<C-x> && !inDebugRepl"
-    },
-    {
-        "key": "ctrl+x",
-        "command": "-extension.vim_ctrl+x",
-        "when": "editorTextFocus && vim.active && vim.use<C-x> && !inDebugRepl"
-    },
-    {
-        "key": "ctrl+r",
-        "command": "-workbench.action.openRecent"
-    },
+    // {
+    //     "key": "ctrl+x",
+    //     "command": "extension.vim_ctrl+x",
+    //     "when": "editorTextFocus && vim.mode != 'Insert' && vim.use<C-x> && !inDebugRepl"
+    // },
+    // {
+    //     "key": "ctrl+x",
+    //     "command": "-extension.vim_ctrl+x",
+    //     "when": "editorTextFocus && vim.active && vim.use<C-x> && !inDebugRepl"
+    // },
     {
         "key": "ctrl+r",
         "command": "-workbench.action.openRecent"
@@ -829,24 +830,6 @@
         "when": "editorTextFocus && !editorReadonly && !suggestWidgetVisible && editorLangId == 'latex'"
     },
     {
-        "key": "ctrl+shift+g a",
-        "command": "git.stageSelectedRanges"
-    },
-    {
-        "key": "ctrl+shift+g r",
-        "command": "git.revertSelectedRanges"
-    },
-    {
-        "key": "ctrl+backspace",
-        "command": "-deleteWordLeft",
-        "when": "textInputFocus && !editorReadonly && vim.mode == 'Normal'"
-    },
-    {
-        "key": "shift+backspace",
-        "command": "-deleteLeft",
-        "when": "textInputFocus && !editorReadonly"
-    },
-    {
         "key": "alt+m",
         "command": "markdown.extension.editing.toggleMath",
         "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
@@ -856,16 +839,16 @@
         "command": "-markdown.extension.editing.toggleMath",
         "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
     },
-    {
-        "key": "insert",
-        "command": "-extension.vim_insert",
-        "when": "editorTextFocus && vim.active && !inDebugRepl"
-    },
-    {
-        "key": "ctrl+q",
-        "command": "-extension.vim_winCtrlQ",
-        "when": "editorTextFocus && vim.active && vim.use<C-q> && !inDebugRepl"
-    },
+    // {
+    //     "key": "insert",
+    //     "command": "-extension.vim_insert",
+    //     "when": "editorTextFocus && vim.active && !inDebugRepl"
+    // },
+    // {
+    //     "key": "ctrl+q",
+    //     "command": "-extension.vim_winCtrlQ",
+    //     "when": "editorTextFocus && vim.active && vim.use<C-q> && !inDebugRepl"
+    // },
     {
         "key": "ctrl+shift+7",
         "command": "python.runtests",
@@ -1174,10 +1157,37 @@
     {
         "key": "space l",
         "command": "dendron.lookup",
-        "when": "activeEditorGroupEmpty"
+        "when": "vim.mode != 'Insert' && dendron:pluginActive && editorFocus"
+    },
+    {
+        "key": "space space",
+        "command": "dendron.gotoNote",
+        "when": "vim.mode != 'Insert' && dendron:pluginActive && editorFocus"
+    },
+    {
+        "key": "space shift+l",
+        "command": "dendron.lookupSchema",
+        "when": "vim.mode != 'Insert' && dendron:pluginActive && editorFocus"
+    },
+    {
+        "key": "space shift+d",
+        "command": "dendron.deleteNode",
+        "when": "vim.mode != 'Insert' && dendron:pluginActive && editorFocus"
     },
     {
         "key": "ctrl+m",
         "command": "-editor.action.toggleTabFocusMode"
+    },
+    {
+        "command": "-vscode-neovim.send",
+        "key": "ctrl+]",
+    },
+    {
+        "command": "-vscode-neovim.escape",
+        "key": "ctrl+[",
+    },
+    {
+        "command": "-vscode-neovim.send",
+        "key": "ctrl+[",
     },
 ]

@@ -255,7 +255,7 @@ cdls() {cd "$@" && ls}
 alias vz='vim ~/.zshrc && source ~/.zshrc'
 alias ve='vim ~/env/.environment && source ~/env/.environment'
 alias va='vim ~/env/zsh/.aliasrc && source ~/env/zsh/.aliasrc'
-alias vv='vim ~/env/.vimrc'
+alias vv='vim ~/env/init.vim'
 alias vtmux='vim ~/env/.tmux.conf'
 alias vala='vim ~/.config/alacritty/alacritty.yml'
 alias vrefind='sudo vim /boot/EFI/refind/refind.conf'
