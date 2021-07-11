@@ -42,6 +42,7 @@ alias normal='asusctl profile normal && asusctl profile -f normal && asusctl pro
 alias silent='asusctl profile silent && asusctl profile -f silent && asusctl profile -t false'
 alias g_integrated='asusctl graphics -m integrated'
 alias g_nvidia='asusctl graphics -m nvidia'
+alias actlr='sudo systemctl restart asusd'
 alias lscpu_='lscpu | rg boost'
 alias remouse0='remouse --orientation left --monitor 0'
 alias remouse1='remouse --orientation left --monitor 1'
@@ -60,7 +61,8 @@ mon2() {
            --output DP-0 --mode 2560x1440 --rate 75.0 --right-of HDMI-A-1-0
 }
 
-alias blocks_run='~/Documents/AirSim/worlds/Blocks/Blocks.sh'
+#alias blocks_run='~/Documents/AirSim/worlds/Blocks/Blocks.sh'
+alias run_cityblocks='~/Documents/ue_projects/Packaged/cityblocks_v2.1.1_intruders_21-06-17/LinuxNoEditor/CityBlocks.sh'
 # ue_build() {
     #~/dev/ue4/UnrealEngine-${UE_VERSION}/Engine/Build/BatchFiles/Linux/Build.sh BlocksEditor Linux Development ~/Documents/ue_projects/Blocks/Blocks.uproject -waitmutex
 #}
@@ -117,17 +119,6 @@ alias ll='exa -l'
 alias llk='exa -l --group-directories-first'
 alias la='exa -la'
 alias lak='exa -la --group-directories-first'
-
-# ls aliases - in order from most to least comfortable
-#alias l='ls -1'
-#alias lh='l -A'
-#alias lk='l --group-directories-first'
-#alias lsk='ls --group-directories-first'
-#alias ll='ls -lhgG'
-#alias llk='ll --group-directories-first'
-#alias lla='ls -l'
-#alias la='ls -lAh'
-#alias lak='ls -lAh --group-directories-first'
 
 rmview_change(){
     rm ~/.config/rmview/rmview.json
@@ -320,6 +311,7 @@ alias cd_thesis='cd ~/Documents/thesis'
 alias cd_resume='cd ~/Documents/my_resume/resume_v2'
 alias cd_personal_website='cd ~/dev/personal-website'
 alias hugo_personal_website='cd ~/dev/personal-website && ./view.sh'
+alias cd_vtol_paper='cd ~/Documents/vtol_advanced_mobility_paper'
 
 # Handy code-related aliases
 alias serv_call='rosservice call /param_set MIXER 2 && rosservice call /calibrate_imu'
@@ -327,13 +319,13 @@ alias cdb='code ~/dev/boat_landing_sim'
 alias cdq='code ~/dev/quadsim_ws'
 alias cde='code ~/dev/exercism/rust'
 alias cdp='code ~/dev/personal-website'
-alias cdn='code ~/notes'
 cda() { code $ue_vplug; }
 cdaa() { code $ue_alib; }
 alias cdt='code ~/Documents/thesis'
 alias cdr='code ~/Documents/my_resume/resume_v2'
 alias cdcpp='code ~/dev/cpp_playground'
 alias cdleet='code ~/dev/leetcode'
+alias cdv='code ~/Documents/vtol_advanced_mobility_paper'
 
 # Print the 256 color test pattern
 print256colors() {

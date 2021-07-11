@@ -7,7 +7,8 @@ filetype off                  " required
 
 if !exists('g:vscode')
     set termguicolors
-    set rnu                   " show line numbers
+    set number
+    set rnu
 endif
 
 
@@ -59,10 +60,16 @@ set whichwrap=b,s,h,l
 set backspace=indent,eol,start
 nnoremap <backspace> <nop>
 
+nnoremap <leader>s` :execute "normal \<Plug>Ysurroundiw`"<CR>
+nnoremap <leader>s* :execute "normal \<Plug>Ysurroundiw\*"<CR>
+nnoremap <leader>s_ :execute "normal \<Plug>Ysurroundiw_"<CR>
+nnoremap <leader>s" :execute "normal \<Plug>Ysurroundiw\""<CR>
+nnoremap <leader>s' :execute "normal \<Plug>Ysurroundiw\'"<CR>
+
 " The = function seems pretty useless
 noremap = +
 
-" Quickly insert an empty new line without entering insert mode
+" Insert an empty new line without entering insert mode
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
 
@@ -76,8 +83,8 @@ noremap [] k$][%?}<CR>
 nnoremap Y y$
 
 " Make word before Cursor Uppercase in normal mode
-nnoremap <C-y> mwlbgUl`w
-map! <C-y> <Esc>mwlbgUl`wa
+"nnoremap <C-y> mwlbgUl`w
+"map! <C-y> <Esc>mwlbgUl`wa
 
 " Send to black hole register (actually delete)
 nnoremap <leader>d "_d
@@ -95,23 +102,24 @@ vnoremap L $
 nnoremap H ^
 vnoremap H ^
 
-" Mappings to move up and down faster
-nnoremap J <C-d>
-vnoremap J <C-d>
-nnoremap K <C-u>
-vnoremap K <C-u>
+nnoremap J 10j
+vnoremap J 10j
+nnoremap K 10k
+vnoremap K 10k
 
-if exists('g:vscode')
+" Save any changes to current file
+noremap <leader>w :update<CR>
 
-    noremap <leader>w <Cmd>Write<CR>
-    " Closing out of panes
-    noremap <leader>q <Cmd>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>
-    noremap <leader>z <Cmd>Wq<CR>
-    noremap QQ <Cmd>Quit!<CR>
+" Closing out of panes
+noremap <leader>q <c-w>q
+noremap <leader>z :x<CR>
+noremap QQ <c-w>q
 
-    nnoremap <C-]> <Cmd>call VSCodeNotify('')
+" Split panes vertically, horizontally
+nnoremap <c-w>\ <c-w>v
+nnoremap <c-w>- <c-w>s
 
-else
+if !exists('g:vscode')
 
     " ------------------------- NICE OPTIONS ------------------------------
 
@@ -171,25 +179,34 @@ else
     set clipboard+=unnamedplus
 
     " ---------------------------- KEY MAPPINGS ------------------------------
-    
-    " Save any changes to current file
-    noremap <leader>w :update<CR>
 
-    " Closing out of panes
-    noremap <leader>q <c-w>q
-    noremap <leader>z :x<CR>
-    noremap QQ :qa!<CR>
+    " Mappings to move up and down faster
+    "nnoremap J <C-d>
+    "vnoremap J <C-d>
+    "nnoremap K <C-u>
+    "vnoremap K <C-u>
 
     " Highlight search term in file
     nnoremap <leader>l :set invhlsearch<cr>
-
-    " Split panes vertically, horizontally
-    nnoremap <c-w>\ <c-w>v
-    nnoremap <c-w>- <c-w>s
 
     map <C-n> :NERDTreeToggle<CR>
 
     nnoremap <leader>sv :source /home/seth/env/init.vim<CR>
     nnoremap <leader>ssv :w <bar> :source /home/seth/env/init.vim<CR>
+
+else
+
+    "nnoremap J 10j
+    "vnoremap J 10j
+    "nnoremap K 10k
+    "vnoremap K 10k
+
+    " This is for Neovim VS Code
+    "noremap <leader>w <Cmd>Write<CR>
+    "noremap <leader>q <Cmd>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>
+    "noremap <leader>z <Cmd>Wq<CR>
+    "noremap QQ <Cmd>Quit!<CR>
+
+    "nnoremap <C-]> <Cmd>call VSCodeNotify('')
 
 endif

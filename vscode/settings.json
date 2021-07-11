@@ -155,6 +155,10 @@
         "jupyter.runallcellsabove.palette",
         "jupyter.debugcurrentcell.palette"
     ],
+    "focusEditorAndVimCtrlW": [
+        "workbench.action.focusActiveEditorGroup",
+        "extension.vim_ctrl+w"
+    ],
     "saveAndRunCode": [
         "workbench.action.files.save",
         "code-runner.run",
@@ -310,8 +314,8 @@
 "vim.vimrc.enable": true,
 "vim.vimrc.path": "/home/seth/env/.vimrc",
 "vim.useCtrlKeys": true,
-"vim.smartcase": true,
-"vim.ignorecase": true,
+"vim.smartcase": false,
+"vim.ignorecase": false,
 "vim.foldfix": true,
 "vim.useSystemClipboard": true,
 "vim.searchHighlightColor": "gray",
@@ -327,11 +331,6 @@
     "<C-Z>": false,
     "<C-]>": false,
     "<C-[>": false,
-    "<C-y>": true,
-    "Up": true,
-    "Down": true,
-    "Left": true,
-    "Right": true,
     "<C-k>": false,
     "<C-n>": false,
     "<C-m>": false,
@@ -350,31 +349,19 @@
         "commands": ["redo"]
     },
     {
-        "before": ["<leader>","w"],
-        "commands": ["workbench.action.files.save"]
-    },
-    {
         "before": ["<leader>","a"],
         "after": ["G","V","g","g"]
     },
 ],
 "vim.visualModeKeyBindingsNonRecursive": [
-    {
-        "before": ["k"],
-        "after": ["g", "k"]
-    },
-    {
-        "before": ["j"],
-        "after": ["g", "j"]
-    },
-    {
-        "before": ["K"],
-        "after": ["1","0","k"]
-    },
-    {
-        "before": ["J"],
-        "after": ["1","0","j"]
-    },
+    // {
+    //     "before": ["k"],
+    //     "after": ["g", "k"]
+    // },
+    // {
+    //     "before": ["j"],
+    //     "after": ["g", "j"]
+    // },
     {
         "before": [ "p"],
         "after": [ "p", "g", "v", "y" ]
@@ -400,7 +387,6 @@
         "after": ["y","G"]
     },
 ],
-"editor.smoothScrolling": true,
 "terminal.integrated.commandsToSkipShell": [
     "macros.positionPanelRight",
     "macros.positionPanelBottom",
@@ -433,7 +419,7 @@
 "python.testing.promptToConfigure": false,
 "terminal.integrated.defaultProfile.linux": "/usr/bin/zsh",
 "python.languageServer": "Pylance",
-"python.defaultInterpreterPath": "/usr/bin/python",
+"python.defaultInterpreterPath": "/home/seth/.virtualenvs/airsim/bin/python",
 "python.showStartPage": false,
 "npm.autoDetect": "off",
 "update.mode": "manual",
@@ -467,6 +453,7 @@
     "performant",
     "quadrotor",
     "rmse",
+    "rotorcraft",
     "subfigures",
     "teleporting",
     "tiltrotor",
@@ -529,11 +516,9 @@
 "editor.fontSize": 12.3,
 "vsicons.presets.foldersAllDefaultIcon": true,
 "vsicons.presets.hideExplorerArrows": true,
-"markdown-preview-enhanced.scrollSync": false,
 "workbench.editor.untitled.hint": "hidden",
 "workbench.editor.limit.enabled": true,
 "workbench.editor.closeOnFileDelete": true,
-"workbench.sideBar.location": "right",
 "workbench.editor.tabSizing": "shrink",
 "files.autoSave": "afterDelay",
 "activitusbar.showSourceControlCounter": false,
@@ -542,20 +527,15 @@
 "gitlens.defaultDateSource": "committed",
 "markdown.extension.list.indentationSize": "inherit",
 "security.workspace.trust.untrustedFiles": "open",
-"dendron.logLevel": "error",
-"dendron.rootDir": "/home/seth/notes",
 "files.trimTrailingWhitespace": true,
 "workbench.activityBar.visible": false,
-"markdown-preview-enhanced.codeBlockTheme": "darcula.css",
 "editor.quickSuggestions": {
     "other": true,
     "comments": false,
     "strings": false
 },
 "editor.inlineSuggest.enabled": true,
-"markdown-preview-enhanced.previewTheme": "atom-dark.css",
 "workbench.colorTheme": "ayu-seth",
-"dendron.trace.server": "off",
 "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
@@ -563,6 +543,6 @@
 "workbench.editor.tabCloseButton": "off",
 "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
 "vscode-neovim.neovimInitVimPaths.linux": "/home/seth/.config/nvim/init.vim",
-"editor.lineNumbers": "relative",
-"dendron.defaultJournalName": "daily"
+"editor.cursorSurroundingLines": 5,
+"editor.parameterHints.enabled": false
 }

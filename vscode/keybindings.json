@@ -67,16 +67,16 @@
         "command": "cursorRight",
         "when": "inputFocus"
     },
-    {
-        "key": "up",
-        "command": "cursorUp",
-        "when": "editorTextFocus && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
-    },
-    {
-        "key": "down",
-        "command": "cursorDown",
-        "when": "editorTextFocus && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
-    },
+    // {
+    //     "key": "up",
+    //     "command": "cursorUp",
+    //     "when": "editorTextFocus && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    // },
+    // {
+    //     "key": "down",
+    //     "command": "cursorDown",
+    //     "when": "editorTextFocus && !inDebugRepl && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+    // },
     {
         "key": "k",
         "command": "cursorUp",
@@ -87,11 +87,11 @@
         "command": "cursorDown",
         "when": "editorWordWrap && editorTextFocus && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
     },
-    {
-        "key": "o",
-        "command": "markdown.extension.onCtrlEnterKey",
-        "when": "editorLangId == 'markdown' && editorTextFocus && vim.mode == 'Normal'"
-    },
+    // {
+    //     "key": "o",
+    //     "command": "markdown.extension.onCtrlEnterKey",
+    //     "when": "editorLangId == 'markdown' && editorTextFocus && vim.mode == 'Normal'"
+    // },
     {
         "key": "ctrl+alt+k",
         "command": "editor.action.moveLinesUpAction",
@@ -296,10 +296,6 @@
         "key": "shift+alt+o",
         "command": "editor.action.showHover",
         "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+g l",
-        "command": "gitlens.toggleLineBlame"
     },
     {
         "key": "ctrl+shift+j",
@@ -820,6 +816,11 @@
         "when": "editorLangId == 'latex' || editorLangId == 'tex'"
     },
     {
+        "key": "ctrl+shift+v",
+        "command": "latex-workshop.tab",
+        "when": "editorLangId == 'latex' || editorLangId == 'tex'"
+    },
+    {
         "key": "ctrl+alt+v",
         "command": "-latex-workshop.view",
         "when": "!config.latex-workshop.bind.altKeymap.enabled && editorLangId == 'latex'"
@@ -1144,6 +1145,18 @@
     //     "key": "f8",
     //     "command": "merge-conflict.accept.both"
     // }
+    // {
+    //     "command": "-vscode-neovim.send",
+    //     "key": "ctrl+]",
+    // },
+    // {
+    //     "command": "-vscode-neovim.escape",
+    //     "key": "ctrl+[",
+    // },
+    // {
+    //     "command": "-vscode-neovim.send",
+    //     "key": "ctrl+[",
+    // },
     {
         "key": "ctrl+shift+alt+d",
         "command": "cursorUndo",
@@ -1157,37 +1170,35 @@
     {
         "key": "space l",
         "command": "dendron.lookup",
-        "when": "vim.mode != 'Insert' && dendron:pluginActive && editorFocus"
+        "when": "vim.mode == 'Normal' && dendron:pluginActive && editorFocus || activeEditorGroupEmpty"
     },
     {
-        "key": "space space",
-        "command": "dendron.gotoNote",
-        "when": "vim.mode != 'Insert' && dendron:pluginActive && editorFocus"
+        "key": "space g",
+        "command": "dendron.showNoteGraphV2",
+        "when": "vim.mode == 'Normal' && dendron:pluginActive && editorFocus || activeEditorGroupEmpty"
     },
     {
         "key": "space shift+l",
         "command": "dendron.lookupSchema",
-        "when": "vim.mode != 'Insert' && dendron:pluginActive && editorFocus"
+        "when": "vim.mode == 'Normal' && dendron:pluginActive && editorFocus || activeEditorGroupEmpty"
+    },
+    {
+        "key": "space space",
+        "command": "dendron.gotoNote",
+        "when": "vim.mode == 'Normal' && dendron:pluginActive && editorFocus"
     },
     {
         "key": "space shift+d",
         "command": "dendron.deleteNode",
-        "when": "vim.mode != 'Insert' && dendron:pluginActive && editorFocus"
+        "when": "vim.mode == 'Normal' && dendron:pluginActive && editorFocus"
+    },
+    {
+        "key": "space shift+r",
+        "command": "dendron.renameNote",
+        "when": "vim.mode == 'Normal' && dendron:pluginActive && editorFocus"
     },
     {
         "key": "ctrl+m",
         "command": "-editor.action.toggleTabFocusMode"
-    },
-    {
-        "command": "-vscode-neovim.send",
-        "key": "ctrl+]",
-    },
-    {
-        "command": "-vscode-neovim.escape",
-        "key": "ctrl+[",
-    },
-    {
-        "command": "-vscode-neovim.send",
-        "key": "ctrl+[",
     },
 ]
